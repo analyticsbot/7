@@ -1,0 +1,1923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+  
+   <meta name="Robots" content="index,follow" />  
+  
+  
+  <!-- highscalability -->
+
+  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+
+  <link id="primaryStylesheet" rel="stylesheet" type="text/css" href="/display/common.css?styleId=512250&amp;RK=1338871095817&amp;CE=72"/>
+  
+  <link id="slideShowStylesheet" rel="stylesheet" type="text/css" href="/universal/styles/squarespace-gallery-slideshow.css?CE=72"/>
+  
+  
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/HighScalability" />
+  
+  
+  <!-- Google Web Fonts -->
+  <script type="text/javascript">
+    	WebFontConfig = {};
+  
+   
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <script type="text/javascript" src="/universal/yui/yahoo-dom-event/yahoo-dom-event.js?CE=72"></script>
+<script type="text/javascript" src="/universal/yui/connection/connection_core-min.js?CE=72"></script>
+<script type="text/javascript" src="/universal/yui/json/json-min.js?CE=72"></script>
+<script type="text/javascript" src="/universal/yui/animation/animation-min.js?CE=72"></script>
+<script type="text/javascript" src="/universal/yui/selector/selector.js?CE=72"></script>
+<script type="text/javascript" src="/universal/yui/element/element.js?CE=72"></script>
+<script type="text/javascript" src="/universal/scripts/global.js?CE=72"></script>
+<script type="text/javascript" src="/universal/scripts/lightbox.js?CE=72"></script>
+<script type="text/javascript" src="/universal/scripts/api.js?CE=72"></script>
+<script type="text/javascript" src="/universal/scripts/base64.js?CE=72"></script>
+<script type="text/javascript" src="/universal/scripts/yui2-yui3-bridge.js?CE=72"></script>
+<script type="text/javascript" src="/universal/scripts/squarespace-gallery-slideshow.js?CE=72"></script>
+
+
+  <script type="text/javascript">
+  // <![CDATA[
+
+    Squarespace.Constants.SS_AUTHKEY = encodeURIComponent("");
+    Squarespace.Constants.WEBSITE_TITLE =  "High Scalability"; 
+    
+     Squarespace.Constants.CURRENT_MODULE_ID = "4867632"; 
+    
+    
+    
+    Squarespace.Constants.ADMINISTRATION_UI =  false; 
+    
+    
+     Squarespace.Constants.OBJECT_PERMALINK = "http://highscalability.com/blog/2012/10/22/spanner-its-about-programmers-building-apps-using-sql-semant.html"; 
+    Squarespace.Constants.CORE_APPLICATION_DOMAIN = "squarespace.com";
+    Squarespace.Constants.CORE_V6_APPLICATION_DOMAIN = "squarespace.com";
+    Squarespace.Constants.V5_FRONTSITE = "http://five.squarespace.com";
+
+    
+
+    
+
+    
+
+  // ]]>
+  </script>
+
+      <title>High Scalability - High Scalability - Spanner - It's About Programmers Building Apps Using SQL Semantics at NoSQL&nbsp;Scale</title>
+    <meta property="og:title" content="High Scalability - High Scalability - Spanner - It's About Programmers Building Apps Using SQL Semantics at NoSQL&nbsp;Scale" /> 
+  
+
+      <meta property="og:description" content=" A lot of people seem to passionately dislike the term NewSQL , or pretty much any newly coined ter..." />
+  
+
+  
+      <meta property="og:image" content="http://farm2.static.flickr.com/1278/5179816576_2b186d41b3.jpg" />
+  
+
+  <!-- End Heading -->
+
+  <script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/1044643/SS_HS_Ad1', [125, 125], 'div-gpt-ad-1325175098795-0').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad10', [125, 125], 'div-gpt-ad-1325175098795-1').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad11', [125, 125], 'div-gpt-ad-1325175098795-2').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad12', [125, 125], 'div-gpt-ad-1325175098795-3').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad13', [125, 125], 'div-gpt-ad-1325175098795-4').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad14', [125, 125], 'div-gpt-ad-1325175098795-5').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad15', [125, 125], 'div-gpt-ad-1325175098795-6').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad16', [125, 125], 'div-gpt-ad-1325175098795-7').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad17', [125, 125], 'div-gpt-ad-1325175098795-8').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad2', [125, 125], 'div-gpt-ad-1325175098795-9').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad3', [125, 125], 'div-gpt-ad-1325175098795-10').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad4', [125, 125], 'div-gpt-ad-1325175098795-11').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad5', [125, 125], 'div-gpt-ad-1325175098795-12').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad6', [125, 125], 'div-gpt-ad-1325175098795-13').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_ad7', [125, 125], 'div-gpt-ad-1325175098795-14').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad8', [125, 125], 'div-gpt-ad-1325175098795-15').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad9', [125, 125], 'div-gpt-ad-1325175098795-16').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad18', [125, 125], 'div-gpt-ad-1325175098795-17').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad19', [125, 125], 'div-gpt-ad-1325175098795-18').addService(googletag.pubads());
+googletag.defineSlot('/1044643/SS_HS_Ad20', [125, 125], 'div-gpt-ad-1325175098795-19').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+
+  <script type="text/javascript" src="/universal/scripts/cookie-min.js"></script>
+  <script type="text/javascript" src="/universal/scripts/eu-cookie-policy.js"></script>
+
+</head>
+
+<body  id="modulePage4867632"   class="objectId29989888"  >
+
+  <script type="text/javascript">
+  YAHOO.util.Event.onDOMReady(function() {
+    if (document.location.href.indexOf("SSLogoutOk=true") != -1) {
+      new Squarespace.FixedPositionTip("Logout Successful", "You have been successfully logged out.", { xMargin: 15, yMargin: 15, icon: "/universal/images/helptip-info.png", orientation: "upper-right", viewportFixed: true, autoHide: 1800 }).show();
+    }
+  });
+</script>
+
+    
+
+  <script type="text/javascript">
+    YAHOO.util.Event.addListener(document, "keyup", function (e) { if (!e) { e = event; } if (e.keyCode == 27) { document.location.href = "/login/?returnUrl=%2Fblog%2F2012%2F10%2F22%2Fspanner-its-about-programmers-building-apps-using-sql-semant.html%3Futm_source%3Dfeedburner%26utm_medium%3Dfeed%26utm_campaign%3DFeed%3A%20HighScalability%20%28High%20Scalability%29%26utm_content%3DFeedBurner"; } });
+  </script>
+
+
+
+
+  
+
+  <div id="canvasWrapper"><div id="canvas">
+  
+  
+
+  <div id="pageHeaderWrapper"><div id="pageHeader">
+
+      <div id="navigationTop"><div id="navigationTop-sectionContent2191792" class="horizontalNavigationBar"><ul class="content-navigation">
+    
+  <li class="module active-module  " id="navigationTop-moduleContentWrapper4867632">
+
+    <div id="navigationTop-moduleContent4867632">
+
+              <a id="navigationTop-moduleLink4867632" class=" " href="/" ><span>Home</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4850438">
+
+    <div id="navigationTop-moduleContent4850438">
+
+              <a id="navigationTop-moduleLink4850438" class=" " href="/blog/category/example" ><span>Real Life Architectures</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper10576114">
+
+    <div id="navigationTop-moduleContent10576114">
+
+              <a id="navigationTop-moduleLink10576114" class=" " href="http://highscalability.squarespace.com/blog/category/strategy" ><span>Strategies</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4847294">
+
+    <div id="navigationTop-moduleContent4847294">
+
+              <a id="navigationTop-moduleLink4847294" class=" " href="/all-posts/" ><span>All Posts</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4850431">
+
+    <div id="navigationTop-moduleContent4850431">
+
+              <a id="navigationTop-moduleLink4850431" class=" " href="/advertising/" ><span>Advertising</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper5498762">
+
+    <div id="navigationTop-moduleContent5498762">
+
+              <a id="navigationTop-moduleLink5498762" class=" " href="http://astore.amazon.com/possiboutpos-20" ><span>Book Store</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4850400">
+
+    <div id="navigationTop-moduleContent4850400">
+
+              <a id="navigationTop-moduleLink4850400" class=" " href="/start-here/" ><span>Start Here</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4850388">
+
+    <div id="navigationTop-moduleContent4850388">
+
+              <a id="navigationTop-moduleLink4850388" class=" " href="/contact/" ><span>contact</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper15178301">
+
+    <div id="navigationTop-moduleContent15178301">
+
+              <a id="navigationTop-moduleLink15178301" class=" " href="/all-time-favorites/" ><span>All Time Favorites</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper5861345">
+
+    <div id="navigationTop-moduleContent5861345">
+
+              <a id="navigationTop-moduleLink5861345" class=" " href="http://feeds.feedburner.com/HighScalability" ><span>RSS</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper18971493">
+
+    <div id="navigationTop-moduleContent18971493">
+
+              <a id="navigationTop-moduleLink18971493" class=" " href="https://twitter.com/highscal" ><span>Twitter</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper18971509">
+
+    <div id="navigationTop-moduleContent18971509">
+
+              <a id="navigationTop-moduleLink18971509" class=" " href="http://www.facebook.com/pages/Highscalability/441249225918692" ><span>Facebook</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper19028422">
+
+    <div id="navigationTop-moduleContent19028422">
+
+              <a id="navigationTop-moduleLink19028422" class=" " href="https://plus.google.com/b/116966782604206517628/116966782604206517628/posts" ><span>G+</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  </ul><br class="clearer"/></div></div>
+
+    
+        
+      
+  
+      <div id="bannerAreaWrapper"><div id="bannerArea">
+
+        
+        <div id="bannerWrapper">
+          <a href="http://highscalability.com/"><img id="banner" src="/storage/HSBannerTrebuchet.jpg" alt="High Scalability" title="High Scalability"/></a>
+        </div>  
+
+      
+      
+      </div></div>
+    
+    
+    
+
+      <div id="navigationBottom"><div id="navigationBottom-sectionContent2191792" class="horizontalNavigationBar"><ul class="content-navigation">
+    
+  <li class="module active-module  " id="navigationBottom-moduleContentWrapper4867632">
+
+    <div id="navigationBottom-moduleContent4867632">
+
+              <a id="navigationBottom-moduleLink4867632" class=" " href="/" ><span>Home</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4850438">
+
+    <div id="navigationBottom-moduleContent4850438">
+
+              <a id="navigationBottom-moduleLink4850438" class=" " href="/blog/category/example" ><span>Real Life Architectures</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper10576114">
+
+    <div id="navigationBottom-moduleContent10576114">
+
+              <a id="navigationBottom-moduleLink10576114" class=" " href="http://highscalability.squarespace.com/blog/category/strategy" ><span>Strategies</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4847294">
+
+    <div id="navigationBottom-moduleContent4847294">
+
+              <a id="navigationBottom-moduleLink4847294" class=" " href="/all-posts/" ><span>All Posts</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4850431">
+
+    <div id="navigationBottom-moduleContent4850431">
+
+              <a id="navigationBottom-moduleLink4850431" class=" " href="/advertising/" ><span>Advertising</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper5498762">
+
+    <div id="navigationBottom-moduleContent5498762">
+
+              <a id="navigationBottom-moduleLink5498762" class=" " href="http://astore.amazon.com/possiboutpos-20" ><span>Book Store</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4850400">
+
+    <div id="navigationBottom-moduleContent4850400">
+
+              <a id="navigationBottom-moduleLink4850400" class=" " href="/start-here/" ><span>Start Here</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4850388">
+
+    <div id="navigationBottom-moduleContent4850388">
+
+              <a id="navigationBottom-moduleLink4850388" class=" " href="/contact/" ><span>contact</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper15178301">
+
+    <div id="navigationBottom-moduleContent15178301">
+
+              <a id="navigationBottom-moduleLink15178301" class=" " href="/all-time-favorites/" ><span>All Time Favorites</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper5861345">
+
+    <div id="navigationBottom-moduleContent5861345">
+
+              <a id="navigationBottom-moduleLink5861345" class=" " href="http://feeds.feedburner.com/HighScalability" ><span>RSS</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper18971493">
+
+    <div id="navigationBottom-moduleContent18971493">
+
+              <a id="navigationBottom-moduleLink18971493" class=" " href="https://twitter.com/highscal" ><span>Twitter</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper18971509">
+
+    <div id="navigationBottom-moduleContent18971509">
+
+              <a id="navigationBottom-moduleLink18971509" class=" " href="http://www.facebook.com/pages/Highscalability/441249225918692" ><span>Facebook</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper19028422">
+
+    <div id="navigationBottom-moduleContent19028422">
+
+              <a id="navigationBottom-moduleLink19028422" class=" " href="https://plus.google.com/b/116966782604206517628/116966782604206517628/posts" ><span>G+</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  </ul><br class="clearer"/></div></div>
+
+
+  </div></div>
+  
+  
+
+  
+
+  
+  <div id="pageBodyWrapper"><div id="pageBody">
+  
+  <div id="sidebar1Wrapper" class="verticalNavigationBarWrapper"><div class="iw-vnb1"><div class="iw-vnb2"><div class="iw-vnb3"><div class="iw-vnb4"><div id="sidebar1" class="verticalNavigationBar">
+
+  
+
+    <div id="sectionContent2251797" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+      
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper4876569" class="widget-wrapper  widget-type-search"><div id="moduleContent4876569">
+
+
+<!-- <form method="get" action="/display/Search">
+	<div class="search-form-pt-wrapper">
+	  <div class="search-form-pt">
+	    <span class="queryFieldWrapper"><input type="text" class="text queryField" name="searchQuery" value=""/></span>
+	    <span class="queryButtonWrapper"><input type="submit" class="button queryButton" value="&raquo;"/></span>
+	    <input type="hidden" name="moduleId" value="4876569"/>
+	    <br class="clearer"/>
+	  </div>
+	</div>
+</form> -->
+
+<form method="get" action="/display/Search">
+	<input type="hidden" name="moduleId" value="4876569"/>
+	<table class="search-form-pt-wrapper search-form-table" border="0" cellpadding="0" cellspacing="0">
+		<tr class="search-form-pt search-form-row">
+			<td class="queryFieldCell search-form-cell">
+				<span class="queryFieldWrapper">
+					<input type="text" class="text queryField" name="searchQuery" value=""/>
+				</span>
+			</td>
+			<td class="queryButtonCell search-form-cell">
+				<span class="queryButtonWrapper">
+					<input type="submit" class="button queryButton" value="&rarr;"/>
+				</span>
+			</td>
+		</tr>
+	</table> 
+</form></div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent3898026" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+      
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper9287263" class="widget-wrapper  widget-type-page"><div id="moduleContent9287263">
+
+
+
+
+
+  <center>
+  
+  <!-- SS_HS_Ad3 -->
+  <div id='div-gpt-ad-1325175098795-10' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-10'); });
+  </script>
+  </div>
+  
+  <!-- SS_HS_Ad4 -->
+  <div id='div-gpt-ad-1325175098795-11' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-11'); });
+  </script>
+  </div>
+  
+  
+  <!-- SS_HS_Ad5 -->
+  <div id='div-gpt-ad-1325175098795-12' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-12'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad6 -->
+  <div id='div-gpt-ad-1325175098795-13' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-13'); });
+  </script>
+  </div>
+  
+  <!-- SS_HS_ad7 -->
+  <div id='div-gpt-ad-1325175098795-14' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-14'); });
+  </script>
+  </div>
+  
+  
+  <!-- SS_HS_Ad8 -->
+  <div id='div-gpt-ad-1325175098795-15' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-15'); });
+  </script>
+  </div>
+  
+  
+  <!-- SS_HS_Ad9 -->
+  <div id='div-gpt-ad-1325175098795-16' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-16'); });
+  </script>
+  </div>
+  
+  
+  <!-- SS_HS_Ad18 --> 
+  <div id='div-gpt-ad-1325175098795-17' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-17'); });
+  </script>
+  </div>
+  
+  
+  <!-- SS_HS_Ad19
+  <div id='div-gpt-ad-1325175098795-18' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-18'); });
+  </script>
+  </div>
+  -->
+  
+  <!-- SS_HS_Ad20 
+  <div id='div-gpt-ad-1325175098795-19' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-19'); });
+  </script>
+  </div>
+  -->
+  
+  </center>
+</div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent2191792" class="sectionWrapper promotedContainer "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+       <div class="caption">Top</div> 
+
+      
+        
+          <ul class="content-navigation">
+  <li class="module active-module  " id="moduleContentWrapper4867632">
+
+    <div id="moduleContent4867632">
+
+              <a id="moduleLink4867632" class=" " href="/" ><span>Home</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4850438">
+
+    <div id="moduleContent4850438">
+
+              <a id="moduleLink4850438" class=" " href="/blog/category/example" ><span>Real Life Architectures</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper10576114">
+
+    <div id="moduleContent10576114">
+
+              <a id="moduleLink10576114" class=" " href="http://highscalability.squarespace.com/blog/category/strategy" ><span>Strategies</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4847294">
+
+    <div id="moduleContent4847294">
+
+              <a id="moduleLink4847294" class=" " href="/all-posts/" ><span>All Posts</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4850431">
+
+    <div id="moduleContent4850431">
+
+              <a id="moduleLink4850431" class=" " href="/advertising/" ><span>Advertising</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper5498762">
+
+    <div id="moduleContent5498762">
+
+              <a id="moduleLink5498762" class=" " href="http://astore.amazon.com/possiboutpos-20" ><span>Book Store</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4850400">
+
+    <div id="moduleContent4850400">
+
+              <a id="moduleLink4850400" class=" " href="/start-here/" ><span>Start Here</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4850388">
+
+    <div id="moduleContent4850388">
+
+              <a id="moduleLink4850388" class=" " href="/contact/" ><span>contact</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper15178301">
+
+    <div id="moduleContent15178301">
+
+              <a id="moduleLink15178301" class=" " href="/all-time-favorites/" ><span>All Time Favorites</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper5861345">
+
+    <div id="moduleContent5861345">
+
+              <a id="moduleLink5861345" class=" " href="http://feeds.feedburner.com/HighScalability" ><span>RSS</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper18971493">
+
+    <div id="moduleContent18971493">
+
+              <a id="moduleLink18971493" class=" " href="https://twitter.com/highscal" ><span>Twitter</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper18971509">
+
+    <div id="moduleContent18971509">
+
+              <a id="moduleLink18971509" class=" " href="http://www.facebook.com/pages/Highscalability/441249225918692" ><span>Facebook</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper19028422">
+
+    <div id="moduleContent19028422">
+
+              <a id="moduleLink19028422" class=" " href="https://plus.google.com/b/116966782604206517628/116966782604206517628/posts" ><span>G+</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+</ul>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent2248744" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+       <div class="caption">Recent Posts</div> 
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper4867742" class="widget-wrapper  widget-type-journalarchive"><div id="moduleContent4867742">
+
+
+
+
+
+
+
+  <ul class="archive-item-list-pt">
+     <li><a href="/blog/2012/10/26/stuff-the-internet-says-on-scalability-for-october-26-2012.html">Stuff The Internet Says On Scalability For October 26, 2012</a></li>  <li><a href="/blog/2012/10/25/not-all-regions-are-created-equal-south-america-es-bueno.html">Not All Regions are Created Equal - South America Es Bueno</a></li>  <li><a href="/blog/2012/10/24/saving-cash-using-less-cache-90-savings-in-the-caching-tier.html">Saving Cash Using Less Cache -  90% Savings in the Caching Tier</a></li>  <li><a href="/blog/2012/10/22/spanner-its-about-programmers-building-apps-using-sql-semant.html">Spanner - It's About Programmers Building Apps Using SQL Semantics at NoSQL Scale</a></li>  <li><a href="/blog/2012/10/19/stuff-the-internet-says-on-scalability-for-october-19-2012.html">Stuff The Internet Says On Scalability For October 19, 2012</a></li>  <li><a href="/blog/2012/10/18/save-up-to-30-by-selecting-better-performing-amazon-instance.html">Save up to 30% by Selecting Better Performing Amazon Instances</a></li>  <li><a href="/blog/2012/10/17/world-of-warcrafts-lead-designer-rob-pardo-on-the-role-of-th.html">World of Warcraft's Lead designer Rob Pardo on the Role of the Cloud in Games</a></li>  <li><a href="/blog/2012/10/16/sponsored-post-server-stack-akiban-wiredrive-ny-times-couchc.html">Sponsored Post: Server Stack, Akiban, Wiredrive, NY Times, CouchConf, FiftyThree, Percona, ElasticHosts, ScaleOut, New Relic, NetDNA, GigaSpaces,  AiCache, Logic Monitor, AppDynamics, CloudSigma</a></li>  <li><a href="/blog/2012/10/15/simpler-cheaper-faster-playtomics-move-from-net-to-node-and.html">Simpler, Cheaper, Faster: Playtomic's Move from .NET to Node and Heroku</a></li>  <li><a href="/blog/2012/10/12/stuff-the-internet-says-on-scalability-for-october-12-2012.html">Stuff The Internet Says On Scalability For October 12, 2012</a></li> 
+  </ul>
+
+
+
+</div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent2248756" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+       <div class="caption">All Time Favorites</div> 
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper4869720" class="widget-wrapper  widget-type-page"><div id="moduleContent4869720">
+
+
+
+
+
+  <ul style="padding-left: 0; margin-left: 0; list-style-type: square;">
+  <li><a href="http://highscalability.com/all-time-favorites/">More Favorites...</a></li>
+  <li><a href="http://highscalability.com/youtube-architecture">YouTube Architecture</a></li>
+  <li><a href="http://highscalability.com/plentyoffish-architecture">Plenty Of Fish Architecture</a></li>
+  <li><a href="http://highscalability.com/google-architecture">Google Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html">How Twitter Stores 250 Million Tweets A Day Using MySQL</a></li>
+  <li><a href="http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster">Scaling Twitter: Making Twitter 10000 Percent Faster</a></li>
+  <li><a href="http://highscalability.com/flickr-architecture">Flickr Architecture</a></li>
+  <li><a href="http://highscalability.com/amazon-architecture">Amazon Architecture</a></li>
+  <li><a href="http://highscalability.com/how-i-learned-stop-worrying-and-love-using-lot-disk-space-scale">How I Learned to Stop Worrying and Love Using a Lot of Disk Space to Scale</a></li>
+  <li><a href="http://highscalability.com/blog/2009/8/5/stack-overflow-architecture.html">Stack Overflow Architecture</a> </li>
+  <li><a href="http://highscalability.com/blog/category/facebook">Facebook</a></li>
+  <li><a href="http://highscalability.com/blog/2009/8/6/an-unorthodox-approach-to-database-design-the-coming-of-the.html">An Unorthodox Approach to Database Design : The Coming of the Shard</a></li>
+  <li><a href="/blog/2009/12/16/building-super-scalable-systems-blade-runner-meets-autonomic.html">Building Super Scalable Systems: Blade Runner Meets Autonomic Computing in the Ambient&nbsp;Cloud</a></li>
+  <li><a href="http://highscalability.com/blog/2009/3/16/are-cloud-based-memory-architectures-the-next-big-thing.html">Are Cloud Based Memory Architectures the Next Big Thing?</a></li>
+  <li><a href="http://highscalability.com/blog/2009/7/25/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html">Latency is Everywhere and it Costs You Sales - How to Crush it</a></li>
+  <li><a href="http://highscalability.com/blog/2010/5/5/how-will-memristors-change-everything.html">How will memristors change everything?</a>&nbsp;</li>
+  <li><a href="http://highscalability.com/blog/2011/11/29/datasift-architecture-realtime-datamining-at-120000-tweets-p.html">DataSift Architecture: Realtime Datamining At 120,000 Tweets Per Second</a></li>
+  <li><a href="http://highscalability.com/blog/category/blog">Useful Scalability Blogs</a></li>
+  <li><a href="http://highscalability.com/blog/category/blog"></a><a class="journal-entry-navigation-current" href="http://highscalability.com/blog/2009/7/16/scaling-traffic-people-pod-pool-of-on-demand-self-driving-ro.html">Scaling Traffic: People Pod Pool of On Demand Self Driving Robotic Cars who Automatically Refuel from Cheap&nbsp;Solar</a></li>
+  <li><a href="http://highscalability.com/blog/2010/6/28/voltdb-decapitates-six-sql-urban-myths-and-delivers-internet.html">VoltDB Decapitates Six SQL Urban Myths And Delivers Internet Scale OLTP In The Process</a></li>
+  <li><a href="/blog/2009/8/7/the-canonical-cloud-architecture.html">The Canonical Cloud Architecture&nbsp;</a></li>
+  <li><a href="http://highscalability.com/blog/2010/3/16/justintvs-live-video-broadcasting-architecture.html">Justin.Tv's Live Video Broadcasting Architecture</a></li>
+  <li><a href="http://highscalability.com/blog/2009/10/13/why-are-facebook-digg-and-twitter-so-hard-to-scale.html">Why Are Facebook, Digg, And Twitter So Hard To Scale?</a></li>
+  <li><a href="http://highscalability.com/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html">What The Heck Are You Actually Using NoSQL For?</a></li>
+  <li><a href="http://highscalability.com/blog/2010/9/21/playfishs-social-gaming-architecture-50-million-monthly-user.html">Playfish's Social Gaming Architecture - 50 Million Monthly Users And Growing</a> </li>
+  <li><a href="http://highscalability.com/blog/2011/5/2/the-updated-big-list-of-articles-on-the-amazon-outage.html">The Updated Big List Of Articles On The Amazon Outage</a> </li>
+  <li><a href="http://highscalability.com/all-time-favorites/">More Favorites...</a></li>
+  </ul>
+</div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+  
+
+</div></div></div></div></div></div>
+  <div id="sidebar2Wrapper" class="verticalNavigationBarWrapper"><div class="iw-vnb1"><div class="iw-vnb2"><div class="iw-vnb3"><div class="iw-vnb4"><div id="sidebar2" class="verticalNavigationBar">
+
+  
+
+    <div id="sectionContent2249261" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+      
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper4869210" class="widget-wrapper  widget-type-page"><div id="moduleContent4869210">
+
+
+
+
+
+  <CENTER>
+  <!-- SS_HS_Ad1 -->
+  <div id='div-gpt-ad-1325175098795-0' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-0'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad10 -->
+  <div id='div-gpt-ad-1325175098795-1' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-1'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad11 -->
+  <div id='div-gpt-ad-1325175098795-2' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-2'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad12 -->
+  <div id='div-gpt-ad-1325175098795-3' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-3'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad13 -->
+  <div id='div-gpt-ad-1325175098795-4' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-4'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad14 -->
+  <div id='div-gpt-ad-1325175098795-5' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-5'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad15 -->
+  <div id='div-gpt-ad-1325175098795-6' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-6'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad16 -->
+  <div id='div-gpt-ad-1325175098795-7' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-7'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad17 -->
+  <div id='div-gpt-ad-1325175098795-8' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-8'); });
+  </script>
+  </div>
+   
+  <!-- SS_HS_Ad2 -->
+  <div id='div-gpt-ad-1325175098795-9' style='width:125px; height:125px; margin: 3px;'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1325175098795-9'); });
+  </script>
+  </div>
+  
+  
+  
+  
+  
+  </CENTER>
+  
+  <center><a href="/advertising">advertise</A></center>
+</div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent2191793" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+      
+
+      
+        
+          <ul class="content-navigation">
+  <li class="module   " id="moduleContentWrapper4708561">
+
+    <div id="moduleContent4708561">
+
+              <a id="moduleLink4708561" class=" " href="/login/?returnUrl=%2Fblog%2F2012%2F10%2F22%2Fspanner-its-about-programmers-building-apps-using-sql-semant.html%3Futm_source%3Dfeedburner%26utm_medium%3Dfeed%26utm_campaign%3DFeed%3A%20HighScalability%20%28High%20Scalability%29%26utm_content%3DFeedBurner" ><span>Login</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4869034">
+
+    <div id="moduleContent4869034">
+
+              <a id="moduleLink4869034" class=" " href="/register/" ><span>Register</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper15178453">
+
+    <div id="moduleContent15178453">
+
+              <a id="moduleLink15178453" class=" " href="http://highscalability.com/all-time-favorites/" ><span>All Time Favorites</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4870172">
+
+    <div id="moduleContent4870172">
+
+              <a id="moduleLink4870172" class=" " href="http://highscalability.squarespace.com/blog/category/product" ><span>Useful Products</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4870194">
+
+    <div id="moduleContent4870194">
+
+              <a id="moduleLink4870194" class=" " href="http://highscalability.squarespace.com/blog/category/paper" ><span>Useful Papers</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4870201">
+
+    <div id="moduleContent4870201">
+
+              <a id="moduleLink4870201" class=" " href="http://highscalability.squarespace.com/blog/category/strategy" ><span>Useful Strategies</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4885586">
+
+    <div id="moduleContent4885586">
+
+              <a id="moduleLink4885586" class=" " href="/blog/category/blog" ><span>Useful Blogs</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4920227">
+
+    <div id="moduleContent4920227">
+
+              <a id="moduleLink4920227" class=" " href="http://highscalability.com/blog/category/book" ><span>Useful Books</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper12001611">
+
+    <div id="moduleContent12001611">
+
+              <a id="moduleLink12001611" class=" " href="http://highscalability.com/blog/2011/9/14/big-list-of-scalabilty-conferences.html" ><span>Useful Conferences</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4878991">
+
+    <div id="moduleContent4878991">
+
+              <a id="moduleLink4878991" class="offsite-link " href="http://astore.amazon.com/possiboutpos-20" onclick="this.target='new';"><span>Book Store</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+</ul>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent2248734" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+      
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper4867711" class="widget-wrapper  widget-type-rss-syndicate"><div id="moduleContent4867711">
+
+
+
+  <ul class="feed-list-inline">
+    
+          <li><a href="http://feeds.feedburner.com/HighScalability" class="feed-link">High Scalability RSS</a></li>
+        
+          <li><a href="http://highscalability.com/blog/rss-comments.xml" class="feed-link">High Scalability Comments RSS</a></li>
+        
+  </ul>
+
+</div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+  
+
+</div></div></div></div></div></div>
+  
+  
+
+  <div id="contentWrapper"><div id="content">
+    
+          
+    
+
+
+  
+
+  
+  
+      
+  <div class="journal-entry-navigation">
+
+    
+       <a class="journal-entry-navigation-prev" href="/blog/2012/10/24/saving-cash-using-less-cache-90-savings-in-the-caching-tier.html">&laquo; Saving Cash Using Less Cache -  90% Savings in the Caching Tier</a> | 
+      <a class="journal-entry-navigation-main" href="/blog/">Main</a>
+       | <a class="journal-entry-navigation-next" href="/blog/2012/10/19/stuff-the-internet-says-on-scalability-for-october-19-2012.html">Stuff The Internet Says On Scalability For October 19, 2012 &raquo;</a> 
+
+    
+
+  </div>
+
+
+  
+  
+  <div class="single-journal-entry-wrapper">
+    
+
+
+<div class="journal-entry-wrapper post-text authored-by-highscalability category-example category-google">
+<div id="item29989888" class="journal-entry">
+
+  <div class="journal-entry-float-day"><span class="name">Monday</span></div><div class="journal-entry-float-date"><span class="month">Oct</span><span class="date">22</span><span class="year">2012</span></div>
+  
+  
+  
+  <div class="journal-entry-text">
+  
+      
+      <h2 class="title">
+    
+        
+    
+        <a class="journal-entry-navigation-current" href="/blog/2012/10/22/spanner-its-about-programmers-building-apps-using-sql-semant.html">Spanner - It's About Programmers Building Apps Using SQL Semantics at NoSQL&nbsp;Scale</a>  
+     
+         
+    
+      </h2>
+      
+       <div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">   <img title="Date" alt="Date" class="inline-icon date-icon" rel="smalllight" src="/universal/images/transparent.png" />Monday, October 22, 2012 at 9:15AM</span> </div> 
+
+    
+  
+      
+      <div class="body">
+  
+        
+        
+        
+          <p><img src="http://farm2.static.flickr.com/1278/5179816576_2b186d41b3.jpg" alt="" width="225" align="RIGHT" /> A lot of people seem to passionately dislike the term <a href="http://blogs.the451group.com/information_management/2011/04/06/what-we-talk-about-when-we-talk-about-newsql/"><span>NewSQL</span></a><span>, or pretty much any newly coined term for that matter, but after watching Alex Lloyd, Senior Staff Software Engineer Google, give a great talk </span><a href="http://vimeo.com/43759726"><span>on Building Spanner</span></a><span>, that&rsquo;s the term that fits Spanner best. </span></p>
+<p><span>Spanner wraps the SQL + transaction model of OldSQL around the reworked bones of a globally distributed NoSQL system. That seems NewSQL to me.</span><br /><br /><span>As Spanner is a not so distant cousin of BigTable, the NoSQL component should be no surprise. Spanner is charged with spanning millions of machines inside any number of geographically distributed datacenters. What is surprising is how OldSQL has been embraced. In an </span><a href="http://static.usenix.org/event/hotstorage11/tech/slides/lloyd.pdf"><span>earlier 2011 talk</span></a><span> given by Alex at the HotStorage conference, the reason for embracing OldSQL was the desire to make it easier and faster for programmers to build applications. The main ideas will seem quite familiar:</span></p>
+<ul>
+<li><span>There&rsquo;s a false dichotomy between little complicated databases and huge, scalable, simple ones. We can have features and scale them too.</span></li>
+<li>Complexity is conserved, it goes somewhere, so if it&rsquo;s not in the database it's pushed to developers.</li>
+<li><span>Push complexity down the stack so developers can concentrate on building features, not databases, not infrastructure.</span></li>
+<li><span>Keys for creating a fast-moving app team: ACID transactions; global Serializability; code a 1-step transaction, not 10-step workflows; write queries instead of code loops; joins; no user defined conflict resolution functions; standardized sync; pay as you go, get what you pay for predictable performance.</span></li>
+</ul>
+<p><span>Spanner did not start out with the goal of becoming a NewSQL star. Spanner started as a BigTable clone, with a distributed file system metaphor. Then Spanner evolved into a global ProtocolBuf container. Eventually Spanner was pushed by internal Google customers to become more relational and application programmer friendly. </span></p>
+<p>Apparently the use of <a href="http://highscalability.com/blog/2010/8/4/dremel-interactive-analysis-of-web-scale-datasets-data-as-a.html">Dremel</a> inside Google had shown developers it was possible to have OLAP with SQL at scale and they wanted that&nbsp;same ease of use and time to market for their OLTP apps. It seems Google has a lot of applications to get out the door and programmers didn&rsquo;t like dealing with real-world complexities of producing reliable products on top of an eventually consistent system.&nbsp;</p>
+<p><span>The trick was in figuring out how to make SQL work at truly huge scales. As an indicator of how deep we are still in the empirical phase of programming, that process has taken even Google over five years of development effort. Alex said the real work has actually been in building a complex reliable distributed systems. That&rsquo;s the hard part to get correct. &nbsp;</span></p>
+<p>With all the talk about atomic clocks, etc., you might get the impression that there&rsquo;s magic in the system. That you can make huge cross table, cross datacenter transactions on millions of records with no penalty. That is not true. Spanner is an OLTP system. It uses a two phase commit, so long and large updates will still lock and block, programmers are still on the hook to get in and get out. The idea is these restrictions are worth the programmer productivity and any bottlenecks that do arise can be dealt with on case by case basis. From the talk I get the feeling over time, specialized application domains like pub-sub, will be brought within Spanner's domain. While the transaction side may be conventional, except for all the global repartitioning magic happening transparently under the covers, their timestamp approach to transactions does have a lot of cool capabilities on the read path.<br /><br /><span>As an illustration of the difficulties of scaling to a large number of replicas per Paxos group, Alex turned to a hydrology metaphor:</span></p>
+<blockquote>
+<p dir="ltr"><span>You could use a Spanner partition as a strongly ordered pub-sub scheme where you have read-only replicas all over the place of some partition and you are trying to use it to distribute some data in an ordered way to a lot of different datacenters. This creates different challenges. What if you are out of bandwidth to some subset of those datacenters? You don&rsquo;t want data buffered in the leader too long. If you spill it to disk you don&rsquo;t want to incur the seek penalty when bandwidth becomes available. It becomes like hydrology. You have all this data going to different places at different times and you want to keep all the flows moving smoothly under changing conditions. Smoothly means fewer server restarts, means better latency tail, means better programming model.</span></p>
+</blockquote>
+<p>This was perhaps my favorite part of the talk. I just love the image of data flowing like water drops through&nbsp;millions of machines and networks, temporarily pooling in caverns of memory and disk, always splitting, always recombining, always in flux, always making progress, part of a great always flowing&nbsp;<a href="http://en.wikipedia.org/wiki/Water_cycle">data cycle</a>&nbsp;that never loses a drop. Just wonderful.</p>
+<p><span>If you have an opportunity to watch the video I highly recommend that you do, it is really good, there&rsquo;s very little fluff at all. The section on the use of clocks in distributed transactions is particularly well done. But, in case you are short on time, here&rsquo;s a gloss of the talk:</span></p>
+<ul>
+<li><span>5 years of effort.</span></li>
+<li><span>SQL semantics at NoSQL scale. </span></li>
+<li><span>Trying to get an abstraction that looks like a single giant MySQL. </span></li>
+<li><span>Relational databases a very familiar and productive environment to build apps in. </span></li>
+<li><span>Spanner is an existence proof that is possible to scale a relational database to a global distributed storage system. </span></li>
+<li><span>Write your app without thinking about transaction semantics. Just get it right. Then you go back and optimize a few high transaction writes, where the optimization will really pay off. </span></li>
+<li><span>Wanted to offer really straightforward semantics to app developers. App developers should be thinking about business logic and not concurrency.</span></li>
+<li><span>They way they did this was by building clocks with bounded absolute error. Then integrated them with timestamp assignment in concurrency control:</span> 
+<ul>
+<li><span>Total order of timestamps respects the partial order of transactions. If transaction A happens before transaction B we know transaction A&rsquo;s timestamp is smaller than transaction B&rsquo;s timestamp. </span></li>
+<li><span>This implies efficient serializable queries over everything. You can add up to the penny your petabyte database that spans dozens of datacenters. It might take awhile to fetch all the data. But you can expect your answer to be correct. </span></li>
+</ul>
+</li>
+<li><span>BigTable early NoSQL database. Paper came out in 2006.</span></li>
+<li><span>MegaStore was built on top of BigTable. It added a Paxos synchronization layer and a richer data model. Paper came out in 2011.</span></li>
+<li><span>Spanner in its low level architecture looks alot like BigTable. Updates are appended to logs that live in a datacenter local distributed file system. Periodically they are compacted into immutable b-trees (SSTables) and periodically those SSTables are merged together. Leveldb is an Open Source version.</span></li>
+<li><span>Developers must still think about how to partition data for efficiency, but as much as possible developers should concentrate on business logic. </span></li>
+<li>Goal was no down time for data repartitioning. <strong>Everything Google does is racing with data movement because moving users between datacenters and resharding is a continuous background activity. </strong><strong>Because it is a continuous process all kinds of concurrency bugs kept arising</strong>. Transactions helped get their constant repartition stream logic right. Before they had transactions they had a lot of bugs, which is part of why it took 5 years. </li>
+<li><span>Wanted programmers to be less bound by partitioning decisions they made early in the design process. </span></li>
+<li><span>Wanted to capture the most successful part of Megastore:</span> 
+<ul>
+<li><span>Handle large scale datacenter outages without user visible impact.</span></li>
+<li><span>Handle smaller outages, little micro outages internal to a cell. Examples: outage of underlying tablet because it was overloaded or corrupted, power went out on just one rack, etc. </span></li>
+<li><span>Users might see a latency bump as a timer fires and they move over to a different datacenter, but they see no impact on the semantics of the transaction. </span></li>
+</ul>
+</li>
+<li><span>But Megastore had some problems:</span> 
+<ul>
+<li><span>The database is partitioned into a bunch of entity groups. Entity groups are their own transaction domain, you can&rsquo;t do transaction across entity groups.</span></li>
+<li><span>It uses optimistic concurrency. When replicas are spread 50 msecs apart and you are doing synchronous replication the writes will take at least 50 msecs which creates a large vulnerability window for optimistic concurrency failures. </span></li>
+<li><span>Benefits to consolidating layered system into a single integrated system. The interface between Spanner and the physical storage is much richer and more optimized than the interface between Megastore and Bigtable.</span></li>
+</ul>
+</li>
+<li><span>Cultural shift to SQL</span> 
+<ul>
+<li><span>SQL based analytics system Dremel made a lot of SQL converts at Google because of it&rsquo;s power to push the semantics of your query down into the storage system and let it figure out what to do.</span></li>
+<li><span>The culture is so ingrained that you can have scale or you can have SQL. Dremel showed that for analytics you can have both. Spanner shows you can have both for OLTP.</span></li>
+</ul>
+</li>
+<li><span>Business concerns drove the requirement for easier geographic partitioning. For example, moving user data from one region to another.</span> 
+<ul>
+<li><span>Legal concerns</span></li>
+<li><span>Product growth means you want to be as efficient as possible how many people you want to put where</span></li>
+</ul>
+</li>
+<li><span>Spanner&rsquo;s Data Model</span> 
+<ul>
+<li><span>Did not always have a relational model. Quite different than what Jeff Dean presented in 2009.</span></li>
+<li><span>Example with a single relational table of Users, each user has a name and home region. </span></li>
+<li><span>The User database can be divided into a couple partitions. One read-only partition in the US and another partition in Europe. A large database will have millions of partitions. Partition 1 will have three replicas in the US. The other partition has three replicas in Europe. There&rsquo;s a read-only replica in the US. This is useful so you can have a write quorum in Europe which means you are never blocking on transatlantic RPC calls yet you can still query all the data, though it might be a bit old, in the US.</span></li>
+<li><span>Master detail hierarchy is physically clustered together. More important on a distributed system where the odds would be the records would be stored on some other server. </span></li>
+<li><span>Underneath the relational abstraction is how programmers might hand encode the keys into Bigtable. Each table cell just an entry like:</span> 
+<ul>
+<li>&nbsp;                       
+<ul>
+<li><span>Customer.ID.1.Name@11 -&gt; Alice</span></li>
+<li><span>Customer.ID.1.Name@10 -&gt; Alize</span></li>
+<li><span>Customer.ID.1.Order.ID.100.Product@20 -&gt; Camera</span></li>
+<li><span>Customer.ID.2.Name@5 -&gt; Bob</span></li>
+</ul>
+</li>
+<li><span>The @10 part is the time stamp. </span></li>
+<li><span>Orders for Alice will be stored with Alice before the Bob record begins.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>Concurrency</span> 
+<ul>
+<li><span>At a high level Spanner uses a combination two-phase locking and snapshot isolation.</span></li>
+<li><span>Didn&rsquo;t try to create a crazy new model. Goal with to figure out how to scale proven models.</span></li>
+<li><span>This model is best for read dominated workloads. You spend most of your time in cheap snapshot isolation reads and not a lot of time with pessimist transaction writes.</span></li>
+<li><span>Blogger example of worrying about correctness first, optimization later.</span> 
+<ul>
+<li><span>Blogger has 280 servlets. Low frequency high complexity operations, like user creates a blog by sending a text message, then they want to merge that blog into an existing blog. </span></li>
+<li><span>It took an embarrassing amount of time to create this as a series of idempotent operations orchestrated by an elaborate work flow. </span></li>
+<li><span>With ACID transactions Blogger would have been faster. Time spent on these complicated programming tasks with no performance benefit could have gone into shaving 50msecs of some high frequency page with a much bigger overall impact.</span></li>
+</ul>
+</li>
+<li><span>Same process as programming on a single machine. You start with mutexes and only then do you try atomic operations. </span></li>
+<li><span>NoSQL databases that only enforce weak consistency are enforcing a broadly applied premature optimization on the entire system. It should be opt-in for the pages where it is worth it.</span></li>
+</ul>
+</li>
+<li><span>Preserving commit order on a pattern Google sees a lot</span> 
+<ul>
+<li><span>Rule of thumb they think about during the design:</span> 
+<ul>
+<li><span>If T1 finishes before T2 then they want preserve that fact. There&rsquo;s a commit order dependency between T2 on T1. </span></li>
+<li><span>Say T3 wrote something T4 reads, so there&rsquo;s a traditional data dependency, so T3 must always happen before T4. </span></li>
+<li><span>T1 and T2 have no relationship between T3 and T4. </span></li>
+<li><span><strong>System performance comes from running transactions concurrently that don&rsquo;t have dependencies. </strong></span></li>
+<li><span><strong>Goal is to preserve the same dependency order as the original history. </strong></span></li>
+<li><span>Serializability is an overloaded term with a large number of variations.</span></li>
+<li><span>Linearizability is an idea borrowed from concurrent programming and applies well to programming a distributed system on top of a distributed database. </span> 
+<ul>
+<li><span>Includes serializability and can&rsquo;t commute commit order. </span></li>
+<li><span>Even when there&rsquo;s no detectable dependency, if a transaction happens before another that order must be preserved, even when it happens across different machines.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>Example schema:</span> 
+<ul>
+<li><span>One partition is table of purchased ads. Write quorum in the US and a read-only replica in Europe.</span></li>
+<li><span>One partition in the US of impressions of these ads. At 2:00 and 2:01 someone viewed a puppies ad, for example.</span></li>
+<li><span>One partition in Europe for the impression of ads.</span></li>
+<li><span><strong>There&rsquo;s a read-only replica of data from Europe in the US and vice versa. This allows both sides to have stale reads and fast writes without crossing the pond. You could still to a MapReduce efficiently on either side.</strong></span></li>
+</ul>
+</li>
+<li><span>Example transactions:</span> 
+<ul>
+<li><span>Transaction 1: a user buys an ad.</span></li>
+<li><span>In the background the ad serving system is continually scanning the partition for ads to show, sending a retrieve ads query. </span></li>
+<li><span>The ad serving system accumulates over time a batch of impressions that it wants to save in the database. </span></li>
+<li><span>Transaction 2: as server writes to impressions partition to record the impressions.</span></li>
+<li><span>These are two different partitions, different replicas, different datacenters, potentially different continents. </span></li>
+</ul>
+</li>
+<li><span>Now you want write a SQL query to audit the impressions at the hour level. Pick a timestamp. </span> 
+<ul>
+<li><span>There are only three legal outcomes depending on the timestamp:</span> 
+<ul>
+<li><span>Sees neither the ad or the impressions.</span></li>
+<li><span>Sees the ad but no impressions.</span></li>
+<li><span>See both the add and all impressions. </span></li>
+</ul>
+</li>
+<li><span>In all the systems they are replacing the MapReduce or the Query has to tolerate an infinite variation of results. </span> 
+<ul>
+<li><span>It might see the impressions but not the ad. </span></li>
+<li><span><strong>Writing a query against such weak semantics means it&rsquo;s difficult to tell the difference between corruption or a bug or concurrency anomaly. </strong></span></li>
+</ul>
+</li>
+<li><span>The way around this was to serialize every update through a single central server. Works if updates are located together, but does not work in a decentralized model where partitions are all over the world.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>Options for scaling Spanner&rsquo;s desired semantics in a global distributed database:</span> 
+<ul>
+<li><span><strong>One partition model</strong></span><span>. Lots of WAN communication. Involve all partitions in every transaction. </span></li>
+<li><span><strong>Centralized timestamp oracle</strong></span><span>. Doesn&rsquo;t work well if you have updates happening on two different continents at the same time. </span></li>
+<li><span><strong>Lamport clocks</strong></span><span>. Propagate the timestamp through every external system and protocol. This works if you have few enough systems and few enough protocols, doesn&rsquo;t work so well when you have a huge legacy of different distributed systems or protocols that you don&rsquo;t control, like with trading partners or they are just protocols you would rather not touch. Tried several times at Google but were never successful at threading timestamps all the way through a complicated system.</span></li>
+<li><span><strong>Build a distributed timestamp oracle</strong></span><span>. Had one of these already, TrueTime, produced from a general time cleanup at Google. Time has a time an epsilon so you know the real-time of when you made that now call is somewhere within that interval. Derived from GPS receivers in a bunch of different datacenters, which are backed up by atomic clocks. The GSP system does sometimes have bugs. One code push took down a bunch of satellites so the backup is useful.</span></li>
+</ul>
+</li>
+<li><span>TrueTime</span> 
+<ul>
+<li><span>The target invariant: with write A and B, if A happens before B, meaning A finishes before B starts, then A should have a smaller timestamp than B. Finishes means anyone could see the effects. Not just a client, but of a Paxos slave too.</span> 
+<ul>
+<li><span>With this invariant it means you can say that snapshot reads at a particular timestamp are serializable. </span></li>
+</ul>
+</li>
+<li><span>TrueTime works analogously to celestial navigation, except that is hard error bounds instead of just guessing.</span></li>
+<li><span>A time daemon in every Google server, every server has a crystal, every datacenter has a few time masters with GPSs from different manufacturers for bug diversity, some of them have atomic clocks to crosscheck the GPSs.</span></li>
+<li><span>Every 30 seconds the daemon talks to the time masters and gets a time fix. in between it dead recons based on its own crystal. The server error margin widens over time, they picked 200 parts-per-million. </span></li>
+<li><span>What time is it? Read time on local machine. Send GetTime to the time master. Return time is T. Read local server time again. You get some delta. Then you dilate that delta for whatever error margin you think is necessary. Back comes an epsilon. Now you can say time is in [t t+e)]. Time is not early than t because there&rsquo;s a causal relationship from the time master reporting t from your receiving his response. But there&rsquo;s a lot of slop because it&rsquo;s possible that message was sent epsilon ago. You don&rsquo;t know where in the round trip t was generated. The dominant error before it starts drifting is the round trip time to the masters.</span></li>
+<li><span>You can build other systems for distributing time other than GPS. For example, have a blinking LED and pulse a clock to all systems. Use a heartbeating system that periodically talks to a central server and inbetween those heartbeats all of your servers think time is stationary. GPS is there and it works. Atomic clocks are a convenient cross check. And none of the hardware is that expensive.</span></li>
+</ul>
+</li>
+<li><span>Flow of a Paxos leader for a partition when it receives a commit request from a client</span> 
+<ul>
+<li><span>Receives a start commit.</span></li>
+<li><span>Acquires transaction locks. Typical of any two phase commit system. Grab read and write locks to make sure conflicting transactions are not executed simultaneously. </span></li>
+<li><span>Pick a time stamp so that the true now.max is greater than the current time.</span></li>
+<li><span>In parallel do two things: run Paxos to get consensus on whatever the write was, wait until the true time is definitely past that write timestamp. </span></li>
+<li><span>Typically Paxos will take longer than the wait so it adds no extra overhead. </span></li>
+<li><span>Notify Paxos slaves to unlock.</span></li>
+<li><span>Ack back to the client.</span></li>
+</ul>
+</li>
+<li><span>Why does this work? By waiting until the commit timestamp is in the past we are pushing all future transactions into the future into bigger timestamps. The next transaction is guaranteed to have a timestamp bigger than the previous transaction. </span><span><strong>Every transaction agrees to pick a timestamp that&rsquo;s bigger than it&rsquo;s start point and every transaction agrees to defer its commit until its own commit timestamp is in the past.</strong></span> 
+<ul>
+<li><span>When Paxos goes too quickly or just one replica and you are just committing to local disk the TrueTime epsilon can be large compared to what it would take to commit the write otherwise. </span></li>
+<li><span>Happens when TrueTime epsilon has spiked, as in the case when TrueTime masters have gone down and you have to go to a more remote TrueTime master. Or when Paxos replicas are unusually close.</span></li>
+<li><span>Real world epsilon bounces between 1-7ms. </span></li>
+<li><span>Tail latency went down when networking was improved by having time packets at a higher QoS. &lt; An argument for SDN, having control packets like time and Paxos at a higher QoS through the system.</span></li>
+<li><span>Reduce epsilon by polling time masters more often, poll at a high QoS, improve kernel handling, record timestamps in NIC driver, buy better oscillators, watch out for kernel bugs (power savings mode, which clock you are using).</span></li>
+</ul>
+</li>
+</ul>
+<h2 dir="ltr"><span>Read Path</span></h2>
+<ul>
+<li><span>Kinds of reads:</span> 
+<ul>
+<li><span>Within read-modify transaction looks like it does with standard two phase locking except that it is happening at the Paxos leader. Acquire a read lock.</span></li>
+<li><span>Strong reads that are not part of a transaction, where a client will not write based on the reads. Spanner will pick a bigger timestamp and read at that timestamp.</span></li>
+<li><span>Boundedly-stale reads for when you just want to know your data is 5 or 10 seconds old. Spanner will pick the largest committed timestamp that falls within your staleness bounds.</span></li>
+<li><span>MapReduce / batch read - don&rsquo;t care if data is fresh. Let the client pick a timestamp and say I want to know everything as of noon, for example.</span></li>
+</ul>
+</li>
+<li><span>Picking timestamps for strong reads:</span> 
+<ul>
+<li><span>Ask TrueTime what is a time bigger than now. You know that is also bigger than the commit timestamp of all previously committed transactions. Not always the best timestamp to pick because you want to maximize the replicas that are capable of serving the read at that timestamp.</span></li>
+<li><span>Look at commit history. Pick a timestamp from recent writes.</span></li>
+<li><span>Forced to declare the scope of the read up front. For example, these 5 users and this range of products. The idea of scope is above the idea of partitions. </span></li>
+<li><span>Prepared distributed transactions. Because a distributed transaction has to commit at the same timestamp on every partition there is an uncertainty window where you don&rsquo;t what data is going to commit a timestamp for certain objects.</span></li>
+</ul>
+</li>
+<li><span>Principle for effective use:</span> 
+<ul>
+<li><span>Data locality is still important. Reading a bunch of stuff from one machine is better than reading from a bunch of machines. Put customers and orders in the same partition.</span></li>
+<li><span>Big users will span partitions, but there&rsquo;s no semantic impact at the transaction level when crossing partitions.</span></li>
+<li><span>Design app for correctness. Deal with the hundreds of nitty gritty corner cases that just need to work, that don&rsquo;t need to be that fast. &nbsp;For example, how many times a day do you change your gmail filters?</span></li>
+<li><span>Relax the semantics for carefully audited high-traffic queries. Maybe there are cases where a boundedly-stale read will do. The further you can read in the past the more replicas will be able to serve that read. </span></li>
+<li><span>Default semantics in Spanner is that they are linearizable. </span></li>
+<li><span>Using flash backing would allow for millisecond writes.</span></li>
+</ul>
+</li>
+<li><span>First big user: F1</span> 
+<ul>
+<li><span>Migrated revenue-critical shared MySQL instances to Spanner. Big impact on Spanner data model. F1 needed a giant MySQL. </span></li>
+<li><span>Spanner started out as Son of BigTable</span> 
+<ul>
+<li><span>Included a lot of forked BigTable code, with a distributed file system metaphor. You had a tree of directories and each directory was a unit of geographic placement. That doesn&rsquo;t relate to someone building a database. </span></li>
+<li><span>They added structured keys but in the end they were just building the next Megastore. </span></li>
+<li><span>They decided Spanner needed a richer data model, deciding Spanner was a store for protocol buffers. Spanner would be a giant protocol buffer. This seemed reasonable, but again, it was not how users modeled data.</span></li>
+<li><span>They decided F1 was a better model so they moved in the end to a relational data model.</span>&nbsp;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 dir="ltr"><span>What are they doing now?</span></h2>
+<ul>
+<li><strong>Polishing SQL engine</strong>. Timestamps plus iterator position is enough information to restart a cross partition query. If a query will take a minute and in that minute a load balancer moves a tablet you depend on to a different server, or that server is preempted because you are running in a shared cell and the preemption forces those tablets to move, the query does not have to be aborted and the work doesn&rsquo;t have to be tossed. Moving servers like this is hard to make work, but it&rsquo;s really valuable to users.</li>
+<li><strong>Fine grained control over memory usage</strong> so you don&rsquo;t create a distributed deadlock where when a bunch of servers are all depending on each they all need memory to make progress and they all need to make progress to free that memory.</li>
+<li><strong>Fine grained CPU scheduling</strong>. Keep fast queries fast even when a big query that is hoplessly slow comes in. The hopelessly slow query should be timesliced to make the fast queries stay fast. Keep latency tails in.</li>
+<li><strong>Strong reads based on snapshot isolation are still pretty green</strong>. Those are entering production in incrementally more use cases.&nbsp;</li>
+<li><strong>Scaling to large numbers of replicas per Paxos group</strong>. You could use a Spanner partition as a strongly ordered pub-sub scheme where you have read-only replicas all over the place of some partition and you are trying to use it to distribute some data in an ordered way to a lot of different datacenters. This creates different challenges. What if you are out of bandwidth to some subset of those datacenters? You don&rsquo;t want data buffered in the leader too long. If you spill it to disk you don&rsquo;t want to incur the seek penalty when bandwidth becomes available. It becomes like hydrology. You have all this data going to different places at different times and you want to keep all the flows moving smoothly under changing conditions. Smoothly means fewer server restarts, means better latency tail, means better programming model.</li>
+</ul>
+<h2 dir="ltr"><span>Q&amp;A</span></h2>
+<ul>
+<li><span>How do you prove there are no dependencies between transactions? Say someone emails some data to a person and that person clicks on a link based that data that causes a write in another datacenter. It&rsquo;s very hard to say there is no causal dependency between transactions in two different centers. And they want you to be able relate the ordering of transactions across the whole system on the assumption that there could be causal dependencies between them. </span></li>
+<li><span>Room for eventual consistency and transaction models.</span> 
+<ul>
+<li><span>Mobile is a case where users are updating local caches and the data makes it&rsquo;s way back to the servers so you can&rsquo;t depend on transactions, you have to have some sort eventual consistency mechanism to merge changes and handle conflicts. </span></li>
+<li><span>Google docs allowing concurrent editing is another case. You have five windows open and they are each making local updates. Those updates are asynchronously bubble back to the server. An operational transforms algebra for merging the updates is applied and only then are those updates applied to the canonical copy of the database. </span></li>
+</ul>
+</li>
+</ul>
+<h2 dir="ltr"><span>Related Articles</span></h2>
+<ul>
+<li><a href="http://vimeo.com/43759726"><span>Alex Lloyd - Building Spanner</span></a><span> Video (</span><a href="http://berlinbuzzwords.de/sites/berlinbuzzwords.de/files/slides/alex_lloyd_keynote_bbuzz_2012.pdf"><span>slides</span></a><span>)</span></li>
+<li><a href="http://highscalability.com/blog/2012/9/24/google-spanners-most-surprising-revelation-nosql-is-out-and.html"><span>Google Spanner's Most Surprising Revelation: NoSQL Is Out And NewSQL Is In</span></a></li>
+<li><a href="http://static.usenix.org/multimedia/hotstorage11seltzer"><span>Panel: Big Data, No SQL, Big Problems, No Worries</span></a><span> (</span><a href="http://static.usenix.org/event/hotstorage11/tech/slides/lloyd.pdf"><span>slides</span></a><span>)(</span><a href="https://www.usenix.org/conference/hotstorage11/panel-big-data-no-sql-big-problems-no-worries"><span>video</span></a><span>)</span></li>
+<li><span><a href="http://static.usenix.org/event/hotstorage11/tech/slides/lloyd.pdf">Enterprise Problems at Internet Scale</a></span></li>
+</ul>
+
+        
+  
+          
+  
+         
+  
+      </div>
+
+    
+
+  </div>
+
+      <div class="journal-entry-tag journal-entry-tag-post-body">
+      <div class="journal-entry-tag-post-body-line1"><span class="posted-by">  <a href="/blog/author/highscalability"> <img title="Author" alt="Author" class="inline-icon user-registered-icon" rel="smalllight" src="/universal/images/transparent.png" />Todd Hoff</a></span> |  <span class="post-comments"><a href="/blog/2012/10/22/spanner-its-about-programmers-building-apps-using-sql-semant.html#comments"> <img title="Comment" alt="Comment" class="inline-icon comment-icon" rel="smalllight" src="/universal/images/transparent.png" />1 Comment</a></span> |  <span class="permalink-item"><a class="permalink" href="/blog/2012/10/22/spanner-its-about-programmers-building-apps-using-sql-semant.html"> <img title="Permalink" alt="Permalink" class="inline-icon permalink-icon" rel="smalllight" src="/universal/images/transparent.png" />Permalink </a></span> |  <span class="share-item"><a href="javascript:noop();" onclick="Squarespace.Interaction.shareLink(this,'%2Fblog%2F2012%2F10%2F22%2Fspanner-its-about-programmers-building-apps-using-sql-semant.html','Spanner%20-%20It%27s%20About%20Programmers%20Building%20Apps%20Using%20SQL%20Semantics%20at%20NoSQL%20Scale');"> <img title="Share Article" alt="Share Article" class="inline-icon share-icon" rel="smalllight" src="/universal/images/transparent.png" />Share Article </a></span> <span class="print-item"><a href="/blog/2012/10/22/spanner-its-about-programmers-building-apps-using-sql-semant.html?printerFriendly=true"> <img title="Print Article" alt="Print Article" class="inline-icon print-icon" rel="smalllight" src="/universal/images/transparent.png" />Print Article </a></span> <span class="email-item"><a href="/blog/recommend/29989888"> <img title="Email Article" alt="Email Article" class="inline-icon email-icon" rel="smalllight" src="/universal/images/transparent.png" />Email Article </a></span> </div>
+      <div class="journal-entry-tag-post-body-line2"><span class="posted-in">in <span class="tag-element"><a rel="tag" href="/blog/category/example"> <img title="Category" alt="Category" class="inline-icon category-icon" rel="smalllight" src="/universal/images/transparent.png" />Example</a></span>, <span class="tag-element"><a rel="tag" href="/blog/category/google"> <img title="Category" alt="Category" class="inline-icon category-icon" rel="smalllight" src="/universal/images/transparent.png" />google</a></span></span>  <span class="post-snippet-1"><iframe src="http://www.facebook.com/plugins/like.php?href=http://highscalability.com/blog/2012/10/22/spanner-its-about-programmers-building-apps-using-sql-semant.html&layout=standard&show_faces=true&width=450&action=like&colorscheme=light&height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe></span> <span class="post-snippet-2"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://highscalability.com/blog/2012/10/22/spanner-its-about-programmers-building-apps-using-sql-semant.html" data-text="Spanner - It's About Programmers Building Apps Using SQL Semantics at NoSQL&nbsp;Scale" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span> </div>
+      <div class="journal-entry-tag-post-body-line3"></div>
+    </div>
+  
+  
+  <div class="clearer"></div>
+
+</div>
+</div>
+
+
+
+
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="journal-comment-area-wrapper">
+    <div id="comments" class="journal-comment-area">
+
+      <h3 class="caption">Reader Comments  (1) </h3>
+
+      
+        
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment19147188">
+
+    <div id="item19147188" class="body">
+
+      <p>Great post Todd. The approaches are merging!</p>
+
+    </div>
+    <div class="signature">
+
+      October 22, 2012 | 
+  <a href="/contributor/20450116" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="/universal/images/transparent.png" style="background:transparent url(/universal/images/core-resources/icons/smalllight/user-unregistered.png) top left no-repeat;"/>Ben Stopford
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+
+        
+
+      
+
+    </div>
+    </div>
+
+    
+      <div class="journal-add-comment-area-wrapper">
+  
+          
+            
+            
+  <script type="text/javascript">
+  // <![CDATA[
+
+    var isAddCommentsVisible = true;
+
+    function toggleReferenceMode() {
+      if (isAddCommentsVisible) {
+        hideObject(document.getElementById("add-comment-area"));
+        showObject(document.getElementById("add-reference-area"));
+      } else {
+        showObject(document.getElementById("add-comment-area"));
+        hideObject(document.getElementById("add-reference-area"));
+      }
+      isAddCommentsVisible = !isAddCommentsVisible;
+    }
+
+    E.addListener("postform", "keydown", Squarespace.SessionAuthorizationKey.acquireAuthKey, '');
+
+  // ]]>
+  </script>
+
+  <form method="post" style="margin: 0; padding: 0;" name="postform" id="postform" action="/process/CreateJournalEntryComment?moduleId=4867632&amp;entryId=29989888"> 
+
+     <input type="hidden" name="currentPage" value="1"/> 
+ 
+    <div class="notice-box" style="margin-top: 2em;" id="add-comment-area">
+
+      
+                              <h3 class="caption"><img title="Post" alt="Post" class="inline-icon" rel="smalllight" src="/universal/images/transparent.png" style="background:transparent url(/universal/images/core-resources/icons/smalllight/comment.png) top left no-repeat;"/>Post a New Comment</h3>
+          
+        
+
+        <div class="caption-text">
+
+          Enter your information below to add a new comment.
+
+          
+
+        </div>
+
+        
+
+        <script type="text/javascript" src="/universal/scripts/storable-fields.js?CE=72"></script>
+
+        
+          <div class="input-field">
+            
+            <div id="authorName_title" class="title">
+               Author: 
+
+              &nbsp;<a id="storedFieldControls" style="display: none; font-size: 9px;" href="javascript:forgetSavedFields();">(forget stored information)</a>
+            </div>
+            <input class="text" type="text" style="width: 200px;" name="authorName" id="authorName" value="" maxlength="50" tabindex="2"/>
+          </div>
+
+          <div class="input-field">
+            
+            <div id="authorEmail_title" class="title"> Author Email (optional): 
+</div>
+            <input class="text" type="text" style="width: 200px;" name="authorEmail" id="authorEmail" value="" maxlength="255" tabindex="3"/>
+          </div>
+
+          <div class="input-field">
+            
+            <div id="authorUrl_title" class="title"> Author URL (optional): 
+</div>
+            <input class="text" type="text" style="width: 200px;" name="authorUrl" id="authorUrl" value="" maxlength="255" tabindex="4"/>
+          </div>
+
+          <script type="text/javascript">
+
+            YAHOO.util.Event.addListener(window, "load", function() {
+
+              document.getElementById("storedFieldControls").style.display = (Squarespace.StorableFields.isDataSaved("authorName", "authorEmail", "authorUrl") ? "inline" : "none");
+              Squarespace.StorableFields.recall("authorName", "authorEmail", "authorUrl");
+
+            });
+
+            function forgetSavedFields() {
+
+              Squarespace.StorableFields.forget("authorName", "authorEmail", "authorUrl");
+              document.getElementById("storedFieldControls").style.display = "none";
+
+            }
+
+          </script>
+
+        
+
+        <script type="text/javascript">
+          function expandBody() { b = document.getElementById("body"); b.style.height = (b.offsetHeight + 40) + "px"; }
+          function shrinkBody() { b = document.getElementById("body"); b.style.height = (b.offsetHeight - 40) + "px"; }
+        </script>
+
+        
+        <div id="body_title" style="padding-bottom: 5px; float: left;"> Post: 
+</div>
+        <div style="padding-bottom: 5px; float: right;"><a title="Increase the size of the comment area." href="javascript:expandBody();">&#8595;</a> | <a title="Decrease the size of the comment area." href="javascript:shrinkBody();">&#8593;</a></div>
+        <div class="clearer">&nbsp;</div>
+        <div style="padding-bottom: 5px;"><textarea rows="15" cols="60" name="body" id="body" tabindex="5"></textarea></div>
+        <div style="padding-bottom: 5px;">Some HTML allowed: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt;</div>
+
+        
+
+        
+
+        <div class="footer">
+
+                      <div class="notice-box-alert">
+              <div class="icon"><img title="Alert" alt="Alert" class="inline-icon" rel="smalllight" src="/universal/images/transparent.png" style="background:transparent url(/universal/images/core-resources/icons/smalllight/alert.png) top left no-repeat;"/></div>
+              <div class="text">
+                <strong>Comment Moderation Enabled</strong><br/>
+                Your comment will not appear until it has been cleared by a website editor.
+              </div>
+            </div>
+          
+
+                    
+            <p style="padding-bottom: 10px;"><input class="checkbox" type="checkbox" name="followOptIn" id="followOptIn" value="true"  tabindex="6"/>
+              <span onclick="toggleNotify()" style="cursor: pointer; cursor: hand">Notify me of follow-up comments via email.</span>
+            </p>
+            <br/>
+
+          
+
+          <input type="hidden" id="authKey" name="authKey" value=""/>
+          <input style="width: 150px;" tabindex="6" class="button" type="button" name="createPostButton"  id="createPostButton"  value="Create Post"  onclick="submitContent(true);"/> &nbsp;&nbsp;
+          <input style="width: 150px;" tabindex="7" class="button" type="button" name="previewPostButton" id="previewPostButton" value="Preview Post" onclick="submitContent(false);"/>
+
+        </div>
+
+      
+
+    </div>
+
+  </form>
+
+  <script type="text/javascript">
+  // <![CDATA[
+
+    function toggleNotify() {
+      document.getElementById("followOptIn").click();
+    }
+              
+    function submitContent(isFinal) {
+      if (isFinal) {
+        document.getElementById("postform").action += "&finalize=true";
+        Squarespace.StorableFields.save("authorName", "authorEmail", "authorUrl");
+      }
+      Squarespace.Form.smartSubmit("postform");
+    }
+
+  // ]]>
+  </script>
+
+  
+
+
+  
+            
+  
+          
+  
+        
+  
+      </div>
+        
+    
+  
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+  
+
+</div></div> <!-- Content -->
+  
+    
+  
+    </div></div> <!-- Page Body -->
+
+    
+    
+    <div id="pageFooterWrapper"><div id="pageFooter">
+  
+              Copyright &copy; 2011, Possibility Outpost.  All rights reserved.
+      
+  
+      
+  
+    </div></div>
+  
+  </div></div> <!-- Canvas -->
+  
+   
+
+
+  <div class="clearer" id="bodyClearer"></div>
+
+  
+
+
+
+</body>
+</html>

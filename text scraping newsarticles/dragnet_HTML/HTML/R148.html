@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta content='' name='description' />
+    <meta content='' name='keywords' />
+    <title>Commanding Your Text Editor | Free PeepCode Blog</title>
+    <script type='text/javascript'></script>
+    <script type='text/javascript'>
+        //<![CDATA[
+          try{Typekit.load();}catch(e){}
+          TypekitConfig = {
+            kitId: 'quv0ugx'
+          };
+          (function() {
+            var tk = document.createElement('script');
+            tk.src = '//use.typekit.com/' + TypekitConfig.kitId + '.js';
+            tk.type = 'text/javascript';
+            tk.async = 'true';
+            tk.onload = tk.onreadystatechange = function() {
+              var rs = this.readyState;
+              if (rs && rs != 'complete' && rs != 'loaded') return;
+              try { Typekit.load(TypekitConfig); } catch (e) {}
+            };
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(tk, s);
+          })();
+        //]]>
+      </script>
+    <link href='/blog/stylesheets/application.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='/blog/2012/commanding-your-text-editor/commanding-your-text-editor.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='http://feeds.feedburner.com/nubyonrails' rel='alternate' type='application/atom+xml' />
+    <script type='text/javascript'></script>
+      <script type='text/javascript'>
+        //<![CDATA[
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-70855-8']);
+          _gaq.push(['_trackPageview']);
+          
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        //]]>
+      </script>
+  </head>
+  <body class='commanding-your-text-editor page'>
+    <!-- Body by Haml http://haml-lang.com/ -->
+    <div id='masthead'>
+      <div class='row'>
+        <div class='column logo'>
+          <a href='http://peepcode.com/'>
+            <img alt='PeepCode' id='logo' src='/blog/images/sprites/24b-sprite-60.png' />
+          </a>
+        </div>
+        <div class='column menu'>
+  <ul>
+    <li>
+      <a href='/blog/2012/birthday'>Older</a>
+    </li>
+    <li>
+      <a class='icon-twitter' href='https://twitter.com/peepcode' title='Follow us on Twitter!'>
+        <span>
+          Twitter
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class='archives' href='/blog' title='Archives'>
+        Archives
+      </a>
+    </li>
+    <li>
+      <a class='atom' href='http://feeds.feedburner.com/nubyonrails' title='ATOM feed of articles'>
+        ATOM
+      </a>
+    </li>
+  </ul>
+</div>
+      </div>
+    </div>
+    <article>
+      <div class='row top'>
+  <div class='column heading'>
+    <div class='page-date'>
+      18 October 2012
+    </div>
+    <h1>
+      Commanding Your Text Editor
+    </h1>
+    <div class='subheading'>
+      Editing actions you’ll use daily
+    </div>
+  </div>
+</div>
+<div id='essay'>
+  <div class='row'>
+    <div class='column author'>
+      <p>
+        words
+        <span>
+          <a href='http://twitter.com/topfunky'>Geoffrey Grosenbach</a>
+        </span>
+      </p>
+      <p>
+        design
+        <span>
+          <a href='http://twitter.com/lalavalse'>Paula Lavalle</a>
+        </span>
+      </p>
+    </div>
+    <div class='column article toc'>
+      <div class='column commands'>
+        <a href='#manipulate-words'>
+          <div class='toc words'></div>
+          <br />
+          Words
+        </a>
+      </div>
+      <div class='column commands'>
+        <a href='#add-lines'>
+          <div class='toc lines'></div>
+          <br />
+          Lines
+        </a>
+      </div>
+      <div class='column commands'>
+        <a href='#infile-search'>
+          <div class='toc search'></div>
+          <br />
+          Search
+        </a>
+      </div>
+      <div class='column commands'>
+        <a href='#fuzzy-search'>
+          <div class='toc switch'></div>
+          <br />
+          Switch
+        </a>
+      </div>
+      <div class='column commands'>
+        <a href='#auto-indent'>
+          <div class='toc format'></div>
+          <br />
+          Format
+        </a>
+      </div>
+      <div class='column commands'>
+        <a href='#auto-complete'>
+          <div class='toc complete'></div>
+          <br />
+          Complete
+        </a>
+      </div>
+    </div>
+    <div class='column article'>
+      <p>The process of writing code is much different from the process of editing code. It&#8217;s easy to confuse the two since they both involve mashing buttons on a keyboard while staring at a computer screen.</p>
+      <p><a href="https://peepcode.com/products/smash-into-vim-i">Vim</a> users know this already. Their editor works in two completely different ways depending on whether they are adding new words to a document or changing existing words.</p>
+      <p>They also know that there&#8217;s more to text editing than moving around with the arrow keys and selecting one letter at a time. But you don&#8217;t have to memorize hundreds of commands. I think only these six will handle most of the editing that you&#8217;ll do every day.</p>
+      <ul>
+      	<li><strong>Delete</strong> whole <strong>words</strong> (before and after the cursor)</li>
+      	<li><strong>Create</strong> a <strong>newline</strong> and put the cursor there (above or below)</li>
+      	<li><strong>Search</strong> in a file</li>
+      	<li><strong>Switch</strong> files</li>
+      	<li><strong>Indent</strong> code automatically</li>
+      	<li>Use <strong>completion</strong></li>
+      </ul>
+    </div>
+    <div class='column grid_12'>
+      <h3 id="manipulate-words">1. Delete Whole Words</h3>
+    </div>
+    <div class='column article'>
+      <p>Steve Yegge writes that it&#8217;s much faster to delete an entire word and retype it than it is to navigate to and correct a single letter (see his post on <a href="https://sites.google.com/site/steveyegge2/effective-emacs">Effective Emacs</a>).</p>
+      <p>There&#8217;s not much else to say here: learn to delete the word before the cursor and the word after the cursor. You&#8217;ll immediately find yourself using it constantly throughout the day.</p>
+      <p>This one is even built in to Mac OS X, so it works in any text editing application (Sublime Text, Pages, TextMate).</p>
+    </div>
+    <div class='column editor short'>
+      <h4>Mac OS X</h4>
+      <p>Delete next word:</p>
+      <p><img src="commanding-your-text-editor/control-keys/fn.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/option.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/delete.png" class="shortcut" alt="" /></p>
+      <p>Delete previous word:</p>
+      <p><img src="commanding-your-text-editor/control-keys/option.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/delete.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Vim</h4>
+      <p>Delete next word:</p>
+      <p><img src="commanding-your-text-editor/control-keys/d.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/w.png" class="shortcut" alt="" /></p>
+      <p>Delete previous word:</p>
+      <p><img src="commanding-your-text-editor/control-keys/d.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/b.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Emacs (and Terminal)</h4>
+      <p>Delete next word:</p>
+      <p><img src="commanding-your-text-editor/control-keys/esc.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/d.png" class="shortcut" alt="" /></p>
+      <p>Delete previous word:</p>
+      <p><img src="commanding-your-text-editor/control-keys/esc.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/delete.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column grid_12'>
+      <h3 id="add-lines">2. Add Lines</h3>
+    </div>
+    <div class='column article'>
+      <p>The novice learns to make a newline by moving the cursor to the end of the line and hitting the <span class="caps">ENTER</span> key. Or a newline above by moving the cursor up one line, to the end of that line, hitting <span class="caps">ENTER</span>, then indent&#8230;shouldn&#8217;t this be easier?</p>
+      <p>The Pro can add a newline above or below from any point in the line. You don&#8217;t have to move your cursor at all.</p>
+    </div>
+    <div class='column editor'>
+      <h4>Textmate</h4>
+      <p>Newline below</p>
+      <p><img src="commanding-your-text-editor/control-keys/command.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/enter.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Vim</h4>
+      <p>Newline below</p>
+      <p><img src="commanding-your-text-editor/control-keys/o.png" class="shortcut" alt="" /></p>
+      <p>Newline above</p>
+      <p><img src="commanding-your-text-editor/control-keys/shift.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/o.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Emacs</h4>
+      <p><a href="commanding-your-text-editor/emacs-newline.el">Newline up/down snippet</a></p>
+    </div>
+    <div class='column editor'>
+      <h4>Sublime Text</h4>
+      <p>Newline below</p>
+      <p><img src="commanding-your-text-editor/control-keys/command.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/enter.png" class="shortcut" alt="" /></p>
+      <p>Newline above</p>
+      <p><img src="commanding-your-text-editor/control-keys/command.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/shift-short.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/enter.png" class="shortcut" alt="" /></p>
+      <p><a href="https://twitter.com/joaquinvicente/status/259050831045857280">Thanks to Joaquin Vicente</a></p>
+    </div>
+    <div class='column grid_12'>
+      <h3 id="infile-search">3. In-file Search</h3>
+    </div>
+    <div class='column article'>
+      <p>Search isn&#8217;t just for finding words. It&#8217;s an efficient way to navigate.</p>
+      <p>And live search is much faster than using a search dialog. Hit the hotkey and start typing the word. <span class="caps">BAM</span>! You&#8217;re there. It&#8217;s great for navigation instead of using the arrow keys to navigate within a file.</p>
+      <p>Emacs-style <code>Ctrl-s</code> is also available in TextMate.</p>
+    </div>
+    <div class='column editor'>
+      <h4>Textmate</h4>
+      <p>Live search</p>
+      <p><img src="commanding-your-text-editor/control-keys/control.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/s.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Vim</h4>
+      <p>Live search</p>
+      <p><img src="commanding-your-text-editor/control-keys/questionmark.png" class="shortcut" alt="" /></p>
+      <p>Hit <code>n</code> to repeat search.</p>
+    </div>
+    <div class='column editor'>
+      <h4>Emacs</h4>
+      <p>Search foward:</p>
+      <p><img src="commanding-your-text-editor/control-keys/control.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/s.png" class="shortcut" alt="" /></p>
+      <p>Search backward:</p>
+      <p><img src="commanding-your-text-editor/control-keys/control.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/r.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Sublime Text</h4>
+      <p>Search forward:</p>
+      <p><img src="commanding-your-text-editor/control-keys/command.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/i.png" class="shortcut" alt="" /></p>
+      <p>Hit Cmd-i again to repeat search.</p>
+    </div>
+    <div class='column grid_12'>
+      <h3 id="fuzzy-search">4. Fuzzy File Search</h3>
+    </div>
+    <div class='column article'>
+      <p>Programming happens in files, usually several. TextMate&#8217;s fuzzy file search revolutionized my use of my text editor. But it only searches filenames, not directory paths.</p>
+      <p>This is why I wrote <a href="https://peepcode.com/products/peepopen">PeepOpen</a>, and I still use it every day.</p>
+      <p><img src="commanding-your-text-editor/img/peepopen.png" alt="" /></p>
+      <p>I think Sublime Text has the best built-in fuzzy file finder of any current text editor. It&#8217;s not initially clear that it does this, but it searches on paths as well as filenames. The search score on the left is completely useless to me, but the file and path are a huge improvement over TextMate.</p>
+      <p><img src="commanding-your-text-editor/img/sublime.png" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>TextMate</h4>
+      <p>Search by filename</p>
+      <p><img src="commanding-your-text-editor/control-keys/command.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/t.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Vim</h4>
+      <p>Search open buffers by filename</p>
+      <p><code>:b filename</code></p>
+    </div>
+    <div class='column editor'>
+      <h4>Emacs</h4>
+      <p>Search filenames (using <a href="https://peepcode.com/products/peepopen">PeepOpen</a> or <a href="https://github.com/defunkt/textmate.el">textmate.el</a>)</p>
+      <p><img src="commanding-your-text-editor/control-keys/command.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/t.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Sublime Text</h4>
+      <p>Built-in fuzzy file search</p>
+      <p><img src="commanding-your-text-editor/control-keys/command.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/t.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column grid_12'>
+      <h3 id="auto-indent">5. Automatic Indentation</h3>
+    </div>
+    <div class='column article'>
+      <p>Now we&#8217;re getting into more advanced features, but still ones that I use constantly.</p>
+      <p>When using languages without syntactically significant whitespace (e.g. CoffeeScript), I let the editor do the formatting for me. It works 90% of the time, and for the other 10% I&#8217;d rather modify my code to work with the built-in formatting than do it manually.</p>
+      <p>Most developers would refuse to use a text editor without syntax highlighting. To me, auto-indentation is a show stopping feature.</p>
+    </div>
+    <div class='column editor'>
+      <h4>Textmate</h4>
+      <p>For some languages only</p>
+      <p><img src="commanding-your-text-editor/control-keys/command.png" class="shortcut-tall" alt="" />
+      <img src="commanding-your-text-editor/control-keys/shift-short.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/h.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Vim</h4>
+      <p>Select a range with <code>V</code></p>
+      <p><img src="commanding-your-text-editor/control-keys/equal.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Emacs</h4>
+      <p><code>cleanup-buffer</code></p>
+      <p>Bound to <code>C-c n</code></p>
+    </div>
+    <div class='column editor'>
+      <h4>Sublime Text</h4>
+      <p>Only available with language-specific plugins</p>
+    </div>
+    <div class='column grid_12'>
+      <h3 id="auto-complete">6. Completion</h3>
+    </div>
+    <div class='column article'>
+      <p>Let&#8217;s admit it: the simple text-based auto-completion in open source text editors doesn&#8217;t come close to matching Microsoft Visual Studio from a decade ago.</p>
+      <p>I hope that a decade from now, I can use a text editor that understands not only the words I&#8217;m typing, but their meaning within the application. Without bogging down the rest of the editor or toasting my battery, of course!</p>
+      <p>In the meantime, I like the way Emacs completes words from all open buffers. TextMate and Sublime Text are limited to only words in the current file, which rarely includes the keywords or methods I&#8217;m looking for.</p>
+    </div>
+    <div class='column editor'>
+      <h4>Textmate</h4>
+      <p>For current file only</p>
+      <p><img src="commanding-your-text-editor/control-keys/esc.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Vim</h4>
+      <p>Next completion</p>
+      <p><img src="commanding-your-text-editor/control-keys/control.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/n.png" class="shortcut" alt="" /></p>
+      <p>Previous completion</p>
+      <p><img src="commanding-your-text-editor/control-keys/control.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/p.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Emacs</h4>
+      <p>Using <code>dabbrev-expand</code></p>
+      <p><img src="commanding-your-text-editor/control-keys/esc.png" class="shortcut" alt="" />
+      <img src="commanding-your-text-editor/control-keys/questionmark.png" class="shortcut" alt="" /></p>
+    </div>
+    <div class='column editor'>
+      <h4>Sublime Text</h4>
+      <p>Current file only</p>
+      <p><img src="commanding-your-text-editor/control-keys/control.png" class="shortcut" alt="" />
+      <code>SPACE</code></p>
+    </div>
+    <div class='column article'>
+      <h2>Conclusion</h2>
+      <p>Learning these basic text manipulations has improved my editing speed. More importantly, I spend less time thinking about my text editor and more time thinking about the content of the text itself.</p>
+      <p>Try it! I bet you&#8217;ll use each of these multiple times in the first day you learn to do them.</p>
+    </div>
+    <div class='column footer'>
+      <p>Learn your editors at PeepCode! Videos on <a href="https://peepcode.com/products/smash-into-vim-i">Vim</a>, <a href="https://peepcode.com/products/smash-into-vim-ii">Advanced Vim</a>, <a href="https://peepcode.com/products/meet-emacs">Emacs</a>, and <a href="https://peepcode.com/products/textmate-for-rails-2">TextMate</a>.</p>
+      <p>See also: <a href="http://ionrails.com/2009/09/23/textmate-shortcuts-cheatsheet/">TextMate Shortcuts Cheatsheet</a></p>
+    </div>
+  </div>
+</div>
+    </article>
+    <div id='menu-bottom'>
+      <div class='row'>
+        <div class='column menu'>
+  <ul>
+    <li>
+      <a href='/blog/2012/birthday'>Older</a>
+    </li>
+    <li>
+      <a class='icon-twitter' href='https://twitter.com/peepcode' title='Follow us on Twitter!'>
+        <span>
+          Twitter
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class='archives' href='/blog' title='Archives'>
+        Archives
+      </a>
+    </li>
+    <li>
+      <a class='atom' href='http://feeds.feedburner.com/nubyonrails' title='ATOM feed of articles'>
+        ATOM
+      </a>
+    </li>
+  </ul>
+</div>
+      </div>
+    </div>
+    <div id='screencast_columns'>
+      <div class='row'>
+  <div class='column grid_2'>
+    <ul>
+      <li>
+        <h3>Most Popular</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/ryan-singer-ux">Ryan Singer</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/backbone-js">Backbone.js: Basics</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/advanced-git">Advanced Git</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/coffeescript">Meet CoffeeScript</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/play-by-play-zed-shaw">Play by Play: Zed Shaw</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/meet-rails-3-i">Meet Rails 3</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/nodejs-i">Meet Node.js</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/jquery">Meet jQuery</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/smash-into-vim-i">Smash Into Vim I</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/git">Git Source Code Control</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/git-internals-pdf">Git Internals PDF</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>Subscribe Now!</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/plans#bidnez">Business Plans</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/plans">Unlimited Subscription</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/plans">Pack of 5 Credits</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/plans">Pack of 10 Credits</a>
+      </li>
+    </ul>
+  </div>
+  <div class='column grid_2'>
+    <ul>
+      <li>
+        <h3>Git</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/advanced-git">Advanced Git</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/git">Git Source Code Control</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/git-internals-pdf">Git Internals PDF</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>Unix</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/smash-into-vim-i">Smash Into Vim I</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/smash-into-vim-ii">Smash Into Vim II</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/meet-the-command-line">Meet the Command Line</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/advanced-command-line">Advanced Command Line</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/meet-emacs">Meet Emacs</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/meet-mercurial">Meet Mercurial</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>Clojure</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/functional-programming-with-clojure">Functional Programming with Clojure</a>
+      </li>
+    </ul>
+  </div>
+  <div class='column grid_2'>
+    <ul>
+      <li>
+        <h3>Ruby on Rails</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/rails-3-upgrade-handbook-pdf">Rails 3 Handbook PDF</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/meet-rails-3-i">Meet Rails 3</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/meet-rails-3-ii">Meet Rails 3 ii</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/advanced-activerecord">Advanced ActiveRecord</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/haml-and-sass">Haml <span class="amp">&amp;</span> Sass</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/rest-for-rails-2">REST for Rails 2</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/textmate-for-rails-2">TextMate for Rails 2</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/xmpp">XMPP/Jabber with Ruby</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/rails-code-review-pdf">Rails Code Review PDF</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/rails-2-plugin-patterns">Rails 2 Plugins PDF</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/mms2r-pdf">Receiving Email with Ruby</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/rails-security-audit-pdf">Rails Security Audit PDF</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/page-action-and-fragment-caching">Page, Action <span class="amp">&amp;</span> Fragment Caching</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/test-first-development">Test-First Development</a>
+      </li>
+    </ul>
+  </div>
+  <div class='column grid_2'>
+    <ul>
+      <li>
+        <h3>RSpec</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/cucumber">Use the Cucumber</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/rspec-basics">RSpec Basics</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/rspec-controllers-and-tools">RSpec Controllers <span class="amp">&amp;</span> Tools</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/rspec-mocks-and-models">RSpec Mocks <span class="amp">&amp;</span> Models</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>Ruby</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/sinatra">Meet Sinatra</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/ruby19-i">Ruby 1.9 Part I</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/ruby19-ii">Ruby 1.9 Part II</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/scaling-ruby">Scaling Ruby</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>Deployment</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/capistrano-2">Capistrano 2</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/phusion-passenger">Phusion Passenger</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/benchmarking-with-httperf">Benchmarking with httperf</a>
+      </li>
+    </ul>
+  </div>
+  <div class='column grid_2'>
+    <ul>
+      <li>
+        <h3>
+          iPhone <span class="amp">&amp;</span> OS X
+        </h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/peepopen">PeepOpen Application</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/objective-c-for-rubyists">Objective-C for Rubyists</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/iphone-view-controllers-part-i">iPhone View Controllers I</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/iphone-view-controllers-part-ii">iPhone View Controllers II</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/iphone-views-i">iPhone Views I</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/meet-macruby">MacRuby</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>
+          Productivity
+        </h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/productivity-for-programmers">Programmer Productivity</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/email">Control Your Email Inbox</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>Play by Play</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/ryan-singer-ux">Ryan Singer</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/ryan-singer-ii">Ryan Singer Part 2</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/play-by-play-zed-shaw">Zed Shaw</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/play-by-play-bernhardt">Gary Bernhardt</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/play-by-play-jbarnette">John Barnette</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/play-by-play-fhwang">Francis Hwang</a>
+      </li>
+    </ul>
+  </div>
+  <div class='column grid_2'>
+    <ul>
+      <li>
+        <h3>
+          JavaScript
+        </h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/backbone-js">Backbone.js: Basics</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/backbone-ii">Backbone.js: Interactivity</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/backbone-iii">Backbone.js: Persistence</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/coffeescript">Meet CoffeeScript</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/jquery">Meet jQuery</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/nodejs-i">Meet Node.js</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/jquery-ajax">jQuery Ajax</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/jqtouch">Meet jQTouch</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/raphaeljs">Meet Raphael.js</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>Prototype</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/javascript-with-prototypejs">Javascript with Prototype.js</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/ajax-with-prototypejs">Ajax with Prototype.js</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/unobtrusive-prototype-js">Unobtrusive Prototype.js</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>Databases</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/postgresql">Meet Postgres</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/couchdb-with-rails">CouchDB for Rails</a>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/thinking-sphinx-pdf">Thinking Sphinx PDF</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>E-Commerce</h3>
+      </li>
+      <li>
+        <a href="https://peepcode.com/products/activemerchant-pdf">ActiveMerchant PDF</a>
+      </li>
+    </ul>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+      <div class='row'>
+        <div class='column'>
+          <p id='railsmachine'>
+            Sweet hosting provided by
+            <a href='http://railsmachine.com/'>RailsMachine</a>
+          </p>
+        </div>
+        <div class='column'>
+          <p id='twitter'>
+            You should follow PeepCode on Twitter
+            <a href='http://twitter.com/peepcode'>here.</a>
+          </p>
+        </div>
+        <div class='column'>
+          <p>
+            Evolved from the
+            <a href='http://www.sinatrarb.com/'>Sinatra</a>
+            based
+            <a href='http://effectif.com/nesta'>nesta</a>
+            blog engine.
+          </p>
+          <p class='small'>
+            Code <span class="amp">&amp;</span>  Design by
+            <a href='http://peepcode.com'>PeepCode</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

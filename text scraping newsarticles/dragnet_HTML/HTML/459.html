@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>53 bits ought to be enough for anybody &#8212; The Endeavour</title>
+
+<link rel="alternate" type="application/rss+xml" title="The Endeavour &raquo; 53 bits ought to be enough for anybody Comments Feed" href="http://www.johndcook.com/blog/2012/07/19/53-bits-ought-to-be-enough-for-anybody/feed/" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.johndcook.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.johndcook.com/blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='The Endeavour' href='http://www.johndcook.com/blog' />
+<link rel='start' title='Randomized trials of parachute use' href='http://www.johndcook.com/blog/2008/04/01/randomized-trials-of-parachute-use/' />
+<link rel='prev' title='Keyboard hack' href='http://www.johndcook.com/blog/2012/07/18/keyboard-hack/' />
+<link rel='next' title='Oldest series for pi' href='http://www.johndcook.com/blog/2012/07/20/oldest-series-for-pi/' />
+<style type="text/css">.addtoany_subscribe img{border:0;}</style>
+<script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.e8da64de-1879-4f5b-8d02-4b0bbad5e829'});var st_type='wordpress2.8.4';</script><meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/style.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/custom/custom.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/fonts/content.php?font=georgia&size=12&m=1" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/fonts/nav.php?size=11" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/fonts/header.php?size=36" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/fonts/headlines.php?size=22" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/fonts/bylines.php?size=10" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/fonts/multimedia.php?size=14" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/fonts/sidebars.php?size=13" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/fonts/footer.php?size=12" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/widths.php?c=3&w=480" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/deprecated.css" type="text/css" media="screen, projection" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/ie7.css" type="text/css" media="screen, projection" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="http://www.johndcook.com/blog/wp-content/themes/thesis/lib/stylesheets/ie6.css" type="text/css" media="screen, projection" />
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="The Endeavour RSS Feed" href="http://www.johndcook.com/blog/feed/" />
+<link rel="pingback" href="http://www.johndcook.com/blog/xmlrpc.php" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+
+</head>
+
+<body class="custom">
+
+<div id="container">
+<div id="page">
+
+<ul id="tabs">
+<li><a href="http://www.johndcook.com/blog" title="Home" rel="nofollow">Home</a></li>
+<li><a href="http://www.johndcook.com/blog/about/">About</a></li>
+<li><a href="http://www.johndcook.com/blog/books/" title="Books referenced on this blog">Books</a></li>
+<li><a href="http://www.johndcook.com/blog/most-popular/" title="Most popular blog posts by category">Most popular</a></li>
+		<li class="rss"><a href="http://www.johndcook.com/blog/feed/" title="The Endeavour RSS Feed" rel="nofollow">Subscribe</a></li>
+</ul>
+
+	<div id="header">
+		<p id="logo"><a href="http://www.johndcook.com/blog">The Endeavour</a></p>
+		<p id="tagline">The blog of John D. Cook</p>
+	</div>
+	
+	<div id="content_box">
+	
+		<div id="content" class="hfeed">
+
+			<div class="post_box hentry top">
+				<div class="headline_area">
+					<h1 class="entry-title">53 bits ought to be enough for anybody</h1>
+					<p class="author_and_date">by <span class="author">John</span> on <abbr class="published" title="2012-07-19">July 19, 2012</abbr></p>
+				</div>
+				<div class="format_text entry-content">
+<p>When I first heard of software that could do extended precision calculation, I thought it would be very useful. Years later, I haven&#8217;t had much use for it. When I&#8217;ve though I needed extended precision, I&#8217;ve usually found a better way to solve my problem using ordinary precision and a little pencil-and-paper math. Avoiding extended precision calculation has caused me to understand my problems better. (Here&#8217;s a recent <a href="http://www.johndcook.com/blog/2012/07/14/log-gamma-differences/">example</a>.)</p>
+<p>I&#8217;m not saying that extended precision isn&#8217;t sometimes necessary, or that I would go to great lengths to avoid using it. I&#8217;m only saying that I&#8217;ve had little use for it, much less than I expected, and that I&#8217;ve learned a few things by not immediately resorting to brute force.</p>
+<p>(Why 53 bits? That&#8217;s the precision of a <a href="http://www.johndcook.com/blog/2009/04/06/anatomy-of-a-floating-point-number/">standard floating point number</a>, regrettably called a &#8220;double.&#8221; It&#8217;s no longer &#8220;double,&#8221; it&#8217;s typical.)</p>
+<p>Software cannot offer infinite precision, so you have to carry out your calculations to some finite precision. If the roughly 15 decimal places of standard precision is not enough, how much do you need? How about 50? Or 100? How do you know what to choose? If you hope more precision will eliminate the need to understand what&#8217;s going on numerically, good luck with that. Maybe it will. Or maybe you&#8217;ll still see the same kinds of problems you had with standard precision.</p>
+<p>A good use of extended precision might be as follows. You&#8217;re trying to compute the difference between two numbers that agree to 30 decimal places, so 40 decimal places of precision in your calculation will give you 10 decimal places in your result. But suppose you think &#8220;This isn&#8217;t what I expect. I&#8217;ll try a little more precision.&#8221; The computer may be trying to tell you that you&#8217;re going about something the wrong way, and the extra precision could mask your problem and give you confidence in a wrong answer.</p>
+<p><strong>Related posts</strong>:</p>
+<p><a href="http://www.johndcook.com/blog/2009/04/06/numbers-are-a-leaky-abstraction/">Floating point numbers are a leaky abstraction</a><br />
+<a href="http://www.johndcook.com/blog/2011/11/01/floating-point-worries/">Floating point error is the least of my worries</a></p>
+<p><span class='st_twitter' st_title='53 bits ought to be enough for anybody' st_url='http://www.johndcook.com/blog/2012/07/19/53-bits-ought-to-be-enough-for-anybody/' ></span><span class='st_email' st_title='53 bits ought to be enough for anybody' st_url='http://www.johndcook.com/blog/2012/07/19/53-bits-ought-to-be-enough-for-anybody/' ></span><span class='st_facebook' st_title='53 bits ought to be enough for anybody' st_url='http://www.johndcook.com/blog/2012/07/19/53-bits-ought-to-be-enough-for-anybody/' ></span><span class='st_reddit' st_title='53 bits ought to be enough for anybody' st_url='http://www.johndcook.com/blog/2012/07/19/53-bits-ought-to-be-enough-for-anybody/' ></span><span class='st_ slashdot' st_title='53 bits ought to be enough for anybody' st_url='http://www.johndcook.com/blog/2012/07/19/53-bits-ought-to-be-enough-for-anybody/' ></span><span class='st_plusone' st_title='53 bits ought to be enough for anybody' st_url='http://www.johndcook.com/blog/2012/07/19/53-bits-ought-to-be-enough-for-anybody/' ></span></p>
+				</div>
+				<p class="post_tags">Tagged as:
+					<a href="http://www.johndcook.com/blog/tag/math/" rel="tag nofollow">Math</a>
+				</p>
+			</div>
+
+			<div id="comments">
+
+				<div class="comments_intro">
+					<p><span class="bracket">{</span> <span>2</span> trackbacks <span class="bracket">}</span></p>
+				</div>
+
+				<dl id="trackback_list">
+
+					<dt><a href='http://okpanico.wordpress.com/2012/07/22/visto-nel-web-36/' rel='external nofollow' class='url'>Visto nel Web &#8211; 36 &laquo; Ok, panico</a></dt>
+					<dd>07.22.12 at 02:12</dd>
+
+					<dt><a href='http://www.johndcook.com/blog/2012/07/26/avoiding-underflow-in-bayesian-computations/' rel='external nofollow' class='url'>Avoiding underflow in Bayesian computations &#8212; The Endeavour</a></dt>
+					<dd>07.26.12 at 06:01</dd>
+
+				</dl>
+
+				<div class="comments_intro">
+					<p><span class="bracket">{</span> <span>12</span> comments&#8230; read them below or <a href="#respond" rel="nofollow">add one</a> <span class="bracket">}</span></p>
+				</div>
+
+				<dl id="comment_list">
+
+					<dt class="comment" id="comment-202540">
+						<span class="comment_num"><a href="#comment-202540" title="Permalink to this comment" rel="nofollow">1</a></span>
+						<p><span class="comment_author">Andrew Moylan</span> <span class="comment_time">07.19.12 at 07:57</span></p>
+					</dt>
+					<dd class="comment">
+						<div class="format_text">
+<p>Extended precision is something I explicitly use only occasionally.</p>
+<p>But roundoff error tracking that is part of extended precision in systems like Mathematica is something I use often.</p>
+<p>For example if you have a complicated expression involving x, will the result be accurate if you substitute in an approximate floating point value for x, or will roundoff errors spoil the result?</p>
+						</div>
+					</dd>
+		
+					<dt class="comment alt author_comment" id="comment-202544">
+						<span class="comment_num"><a href="#comment-202544" title="Permalink to this comment" rel="nofollow">2</a></span>
+						<p><span class="comment_author">John</span> <span class="comment_time">07.19.12 at 08:00</span></p>
+					</dt>
+					<dd class="comment alt author_comment">
+						<div class="format_text">
+<p>A system that estimates its own error is much better than just a finger-in-the-wind estimate of &#8220;Oh, I think I&#8217;ll use 30 decimal places.&#8221;</p>
+						</div>
+					</dd>
+		
+					<dt class="comment" id="comment-202549">
+						<span class="comment_num"><a href="#comment-202549" title="Permalink to this comment" rel="nofollow">3</a></span>
+						<p><span class="comment_author">rdm</span> <span class="comment_time">07.19.12 at 08:29</span></p>
+					</dt>
+					<dd class="comment">
+						<div class="format_text">
+<p>This is domain specific.</p>
+<p>On the flip side, you can have more than 53 bits of precision when using the IEEE-754&#8217;s binary64 standard.</p>
+<p>For example, you can use two floating point values.  Or, you know, you can even use 3 or 4 floating point numbers.  It&#8217;s ok.</p>
+<p>To make this slightly relevant, when I have a number like 1234, I can say that I am dealing with the polynomial (x^3)+(2*x^2)+(3^x)+4 where x=10.  And, polynomials can be re-expressed in a variety of ways&#8230;</p>
+<p>Of course, it&#8217;s not always the case that when I am dealing with a loop that the underlying abstraction is really a large number (or large numbers).   Most of the numbers I deal with are small, most of the time.  And I totally agree that using a fixed sized representation has huge advantages.</p>
+<p>But I think it&#8217;s also fair to point out that one of the reasons we can get away with this is that we have other options (besides directly representing higher precision) to deal with the cases where our fixed precision causes problems.</p>
+						</div>
+					</dd>
+		
+					<dt class="comment alt" id="comment-202571">
+						<span class="comment_num"><a href="#comment-202571" title="Permalink to this comment" rel="nofollow">4</a></span>
+						<p><span class="comment_author">Stan</span> <span class="comment_time">07.19.12 at 09:39</span></p>
+					</dt>
+					<dd class="comment alt">
+						<div class="format_text">
+<p>Interestingly, I found that starting to do GPU computing back when CUDA first came out really forced me to ask the same question about single vs. double precision.  Once I started thinking about about how error propagated in my calculation, I discovered that 24 bits was often enough. </p>
+<p>Single precision arithmetic is way, way faster on most GPUs, so there is a big benefit to being able to rely on it for calculations.  Tricks like Kahan summation help you deal with the cases (like accumulators) where single precision is likely to be insufficient, and mixed precision techniques are also becoming more popular now with algorithms that can iterate with single precision and then refine the final answer with a double precision pass.</p>
+						</div>
+					</dd>
+		
+					<dt class="comment" id="comment-202577">
+						<span class="comment_num"><a href="#comment-202577" title="Permalink to this comment" rel="nofollow">5</a></span>
+						<p><span class="comment_author"><a href='http://lemire.me/' rel='external nofollow' class='url'>Daniel Lemire</a></span> <span class="comment_time">07.19.12 at 09:51</span></p>
+					</dt>
+					<dd class="comment">
+						<div class="format_text">
+<p>53 bits is a lot compared to the accuracy and precision of most of our sensors. Fancy sensors have 32-bit capabilities, but the real output is less due to noise.</p>
+						</div>
+					</dd>
+		
+					<dt class="comment alt" id="comment-202590">
+						<span class="comment_num"><a href="#comment-202590" title="Permalink to this comment" rel="nofollow">6</a></span>
+						<p><span class="comment_author"><a href='http://richardminerich.com' rel='external nofollow' class='url'>Rick Minerich</a></span> <span class="comment_time">07.19.12 at 10:32</span></p>
+					</dt>
+					<dd class="comment alt">
+						<div class="format_text">
+<p>I&#8217;m surprised you didn&#8217;t mention quads (binary128) because that&#8217;s what I was figuring this article would be about.  That&#8217;s 113 delicious bits of precision.</p>
+						</div>
+					</dd>
+		
+					<dt class="comment" id="comment-202618">
+						<span class="comment_num"><a href="#comment-202618" title="Permalink to this comment" rel="nofollow">7</a></span>
+						<p><span class="comment_author">Christopher Felton</span> <span class="comment_time">07.19.12 at 12:32</span></p>
+					</dt>
+					<dd class="comment">
+						<div class="format_text">
+<p>As other mentioned the error is the important part.<br />
+As for representing absolute values (such as sensors,<br />
+what&#8217;s your ENOB) a small number of bits could be ok.<br />
+When doing the arithmetic on the values error can creep<br />
+in.  With the example below what is the precision used?<br />
+What should be used?  Where do I round off my answer?<br />
+Using the Python decimal (arbitrary precision) removes<br />
+the error.</p>
+<p>In [63]: from decimal import Decimal<br />
+In [77]: 850*77.1<br />
+Out[77]: 65534.99999999999<br />
+In [78]: Decimal(&#8217;850&#8242;) * Decimal(&#8217;77.1&#8242;)<br />
+Out[78]: Decimal(&#8217;65535.0&#8242;)</p>
+<p>(example from <a href="http://bit.ly/NAJXDF)" rel="nofollow">http://bit.ly/NAJXDF)</a></p>
+<p>What&#8217;s interesting with the above, I can reduce the<br />
+precision down to 6 decimal points (not talking bits)<br />
+and still get the correct answer (above was prec=28).</p>
+<p>In [87]: decimal.setcontext(decimal.Context(prec=6))<br />
+In [88]: Decimal(&#8217;850&#8242;) * Decimal(&#8217;77.1&#8242;)<br />
+Out[88]: Decimal(&#8217;65535.0&#8242;)</p>
+						</div>
+					</dd>
+		
+					<dt class="comment alt" id="comment-202675">
+						<span class="comment_num"><a href="#comment-202675" title="Permalink to this comment" rel="nofollow">8</a></span>
+						<p><span class="comment_author"><a href='http://about.me/paul.a.rubin' rel='external nofollow' class='url'>Paul A. Rubin</a></span> <span class="comment_time">07.19.12 at 15:27</span></p>
+					</dt>
+					<dd class="comment alt">
+						<div class="format_text">
+<p>Arbitrary precision <i>integer</i> arithmetic is probably useful for number theorists. Extra precision floating point arithmetic may induce people to try to milk ducks.</p>
+<p>There may also be a more subtle and (to me) somewhat pernicious effect. I date back to when double precision was a luxury. My first grad course was numerical analysis, and it seemed rather important at the time for those of us who would be crunching numbers (rather than counting finite groups or dreaming about Klein bottles). Now, with double precision the default (as you note) and lots of numerical libraries easily available, I think people are less likely to study numerical analysis at all. More than once I&#8217;ve seen users of integer programming solvers moaning about the solver &#8220;mistakenly&#8221; telling them a binary variable came out 0.999999999999923.</p>
+						</div>
+					</dd>
+		
+					<dt class="comment" id="comment-203047">
+						<span class="comment_num"><a href="#comment-203047" title="Permalink to this comment" rel="nofollow">9</a></span>
+						<p><span class="comment_author"><a href='https://www.ibm.com/developerworks/mydeveloperworks/blogs/jfp/?lang=en' rel='external nofollow' class='url'>Jean Francois Puget</a></span> <span class="comment_time">07.20.12 at 06:55</span></p>
+					</dt>
+					<dd class="comment">
+						<div class="format_text">
+<p>There are domains where you need more than 54 bit precision.  In some financial applications you must represent 18 digit integers and they speak of moving towards 22 digit integers.  Don&#8217;t ask me what these represent!</p>
+<p>I agree it is orthogonal to your post, but I thought it was worth mentioning.  It is relevant given we have to solve optimization problems that use 18 digit integers as input/output.</p>
+						</div>
+					</dd>
+		
+					<dt class="comment alt author_comment" id="comment-203055">
+						<span class="comment_num"><a href="#comment-203055" title="Permalink to this comment" rel="nofollow">10</a></span>
+						<p><span class="comment_author">John</span> <span class="comment_time">07.20.12 at 07:12</span></p>
+					</dt>
+					<dd class="comment alt author_comment">
+						<div class="format_text">
+<p>Long integers are often useful, more so than extended floating point in my experience. Cryptography, for example, uses extremely long integers.</p>
+						</div>
+					</dd>
+		
+					<dt class="comment" id="comment-203059">
+						<span class="comment_num"><a href="#comment-203059" title="Permalink to this comment" rel="nofollow">11</a></span>
+						<p><span class="comment_author"><a href='https://www.ibm.com/developerworks/mydeveloperworks/blogs/jfp/?lang=en' rel='external nofollow' class='url'>Jean Francois Puget</a></span> <span class="comment_time">07.20.12 at 07:26</span></p>
+					</dt>
+					<dd class="comment">
+						<div class="format_text">
+<p>Right, but we use floating point computation to solve the optimization problem (mixed integer programming).  Maybe there is room for good rational implementation of LP algorithms.</p>
+						</div>
+					</dd>
+		
+					<dt class="comment alt" id="comment-203158">
+						<span class="comment_num"><a href="#comment-203158" title="Permalink to this comment" rel="nofollow">12</a></span>
+						<p><span class="comment_author"><a href='http://blogs.sas.com/content/iml' rel='external nofollow' class='url'>Rick Wicklin</a></span> <span class="comment_time">07.20.12 at 12:32</span></p>
+					</dt>
+					<dd class="comment alt">
+						<div class="format_text">
+<p>Years ago, in the days of FORTRAN, some programmers would use the &#8220;quad&#8221; variable type to get extended precision. Most of the time the extended precision  was completely unnecessary. However, I was talking to someone who did contract work for NASA and he told me that it was standard practice in &#8220;rocket science&#8221; to use quad precision to solve the ODEs that arise in computing the trajectories of planets, moons, comets, sattelites, and space vehicles. Since errors in ODEs accumulate, and since the n-body problem is know to exhibit sensitive dependence on initial conditions, the hope was that quad precision would enable them to  integrate the equations of motion long enough to get the spacecraft to its destination accurately.</p>
+						</div>
+					</dd>
+		
+				</dl>
+
+				<div id="respond">
+					<p>Leave a Comment</p>
+				</div>
+
+				<form action="http://www.johndcook.com/blog/wp-comments-post.php" method="post" id="comment_form">
+					<p><input class="text_input" type="text" name="author" id="author" value="" tabindex="1" /><label for="author">Name</label></p>
+					<p><input class="text_input" type="text" name="email" id="email" value="" tabindex="2" /><label for="email">E-mail</label></p>
+					<p><input class="text_input" type="text" name="url" id="url" value="" tabindex="3" /><label for="url">Website</label></p>
+					<p class="comment_box"><textarea name="comment" id="comment" tabindex="4"></textarea></p>
+					<p class="allowed">
+						<span>
+<em>You can use these <acronym title="HyperText Markup Language">HTML</acronym> tags and attributes:</em> &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; 
+						</span>
+					</p>
+
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+					<p>
+						<input name="submit" class="form_submit" type="submit" id="submit" tabindex="5" value="Submit" />
+						<input type="hidden" name="comment_post_ID" value="11719" />
+					</p>
+					
+				</form>
+
+			</div>
+
+		</div>
+
+		<div id="sidebars">
+
+			<div id="multimedia_box">
+				<div id="custom_box">
+<img src="http://www.johndcook.com/endeavour.jpg" width="420" height="315" alt="HM Bark Endeavour">
+				</div>
+			</div>
+			<div id="sidebar_1" class="sidebar">
+				<ul class="sidebar_list">
+<!-- Start About Me widget -->
+<li class="widget widget_about_me_widget"><div id="aboutmewidget3"><h3><a href="http://www.johndcook.com/">John D. Cook</a></h3><p><img src="http://www.johndcook.com/John2small.jpg" mce_src="http://www.johndcook.com/John2small.jpg" height="125" width="100"></p>   </div></li>	<!-- Stop About Me widget -->
+<li class="widget widget_add_to_any_subscribe_widget">
+        <a class="a2a_dd addtoany_subscribe" href="http://www.addtoany.com/subscribe?linkname=The%20Endeavour&amp;linkurl=http%3A%2F%2Fwww.johndcook.com%2Fblog%2Ffeed%2F"><img src="http://www.johndcook.com/blog/wp-content/plugins/add-to-any-subscribe/subscribe_120_16.png" width="120" height="16" alt="Subscribe"/></a>
+        
+<script type="text/javascript">//<![CDATA[
+var a2a_config = a2a_config || {};
+a2a_config.linkname="The Endeavour";
+a2a_config.linkurl="http://www.johndcook.com/blog/feed/";
+//]]></script><script type="text/javascript" src="http://static.addtoany.com/menu/feed.js"></script>
+
+</li><li class="widget widget_text">			<div class="textwidget"><p><a href="http://www.johndcook.com/twitter/"><img src="http://www.johndcook.com/twitter.png" alt="" /></a>&nbsp;<a href="http://www.johndcook.com/twitter/">Twitter</a></p></div>
+		</li><li class="widget widget_text">			<div class="textwidget"><form style="border:1px solid #ccc;padding:3px;text-align:center;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=TheEndeavour', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Enter your email address to receive new posts by email.</p><p><input type="text" style="width:140px" name="email"/></p><input type="hidden" value="TheEndeavour" name="uri"/><input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe" /></form></div>
+		</li>		<li class="widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul>
+				<li><a href="http://www.johndcook.com/blog/2012/07/31/why-computers-were-invented/" title="Why computers were invented">Why computers were invented </a></li>
+				<li><a href="http://www.johndcook.com/blog/2012/07/30/email-rss-problem-resolved/" title="Email, RSS problem resolved">Email, RSS problem resolved </a></li>
+				<li><a href="http://www.johndcook.com/blog/2012/07/30/interview-michael-hammel/" title="Interview with Michael Hammel, author of The Artist&#8217;s Guide to GIMP">Interview with Michael Hammel, author of The Artist&#8217;s Guide to GIMP </a></li>
+				<li><a href="http://www.johndcook.com/blog/2012/07/28/ubuntu-made-easy/" title="Ubuntu Made Easy">Ubuntu Made Easy </a></li>
+				<li><a href="http://www.johndcook.com/blog/2012/07/27/multiple-programming-languages/" title="Keeping multiple programming languages straight">Keeping multiple programming languages straight </a></li>
+				<li><a href="http://www.johndcook.com/blog/2012/07/26/epics-in-99-seconds/" title="Epics in 99 seconds">Epics in 99 seconds </a></li>
+				<li><a href="http://www.johndcook.com/blog/2012/07/26/avoiding-underflow-in-bayesian-computations/" title="Avoiding underflow in Bayesian computations">Avoiding underflow in Bayesian computations </a></li>
+				<li><a href="http://www.johndcook.com/blog/2012/07/25/editing-by-semantic-units/" title="Editing by semantic units">Editing by semantic units </a></li>
+				<li><a href="http://www.johndcook.com/blog/2012/07/25/trick-for-computing-log1x/" title="Trick for computing log(1+x)">Trick for computing log(1+x) </a></li>
+				<li><a href="http://www.johndcook.com/blog/2012/07/24/giveaway-powershell-in-depth/" title="Giveaway: PowerShell in Depth">Giveaway: PowerShell in Depth </a></li>
+				</ul>
+		</li><li class="widget widget_archive"><h3>Archives</h3>		<ul>
+			<li><a href='http://www.johndcook.com/blog/2012/07/' title='July 2012'>July 2012</a></li>
+	<li><a href='http://www.johndcook.com/blog/2012/06/' title='June 2012'>June 2012</a></li>
+	<li><a href='http://www.johndcook.com/blog/2012/05/' title='May 2012'>May 2012</a></li>
+	<li><a href='http://www.johndcook.com/blog/2012/04/' title='April 2012'>April 2012</a></li>
+	<li><a href='http://www.johndcook.com/blog/2012/03/' title='March 2012'>March 2012</a></li>
+	<li><a href='http://www.johndcook.com/blog/2012/02/' title='February 2012'>February 2012</a></li>
+	<li><a href='http://www.johndcook.com/blog/2012/01/' title='January 2012'>January 2012</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/12/' title='December 2011'>December 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/11/' title='November 2011'>November 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/10/' title='October 2011'>October 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/09/' title='September 2011'>September 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/08/' title='August 2011'>August 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/07/' title='July 2011'>July 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/06/' title='June 2011'>June 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/05/' title='May 2011'>May 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/04/' title='April 2011'>April 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/03/' title='March 2011'>March 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/02/' title='February 2011'>February 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2011/01/' title='January 2011'>January 2011</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/12/' title='December 2010'>December 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/11/' title='November 2010'>November 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/10/' title='October 2010'>October 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/09/' title='September 2010'>September 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/08/' title='August 2010'>August 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/07/' title='July 2010'>July 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/06/' title='June 2010'>June 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/05/' title='May 2010'>May 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/04/' title='April 2010'>April 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/03/' title='March 2010'>March 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/02/' title='February 2010'>February 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2010/01/' title='January 2010'>January 2010</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/12/' title='December 2009'>December 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/11/' title='November 2009'>November 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/10/' title='October 2009'>October 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/09/' title='September 2009'>September 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/08/' title='August 2009'>August 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/07/' title='July 2009'>July 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/06/' title='June 2009'>June 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/05/' title='May 2009'>May 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/04/' title='April 2009'>April 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/03/' title='March 2009'>March 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/02/' title='February 2009'>February 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2009/01/' title='January 2009'>January 2009</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/12/' title='December 2008'>December 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/11/' title='November 2008'>November 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/10/' title='October 2008'>October 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/09/' title='September 2008'>September 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/08/' title='August 2008'>August 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/07/' title='July 2008'>July 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/06/' title='June 2008'>June 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/05/' title='May 2008'>May 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/04/' title='April 2008'>April 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/03/' title='March 2008'>March 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/02/' title='February 2008'>February 2008</a></li>
+	<li><a href='http://www.johndcook.com/blog/2008/01/' title='January 2008'>January 2008</a></li>
+		</ul>
+</li>				</ul>
+			</div>			<div id="sidebar_2" class="sidebar">
+				<ul class="sidebar_list">
+<li class="widget thesis_widget_search">
+<h3></h3>
+<form method="get" class="search_form" action="http://www.johndcook.com/blog/">
+	<p>
+		<input class="text_input" type="text" value="To search, type and hit enter" name="s" id="s" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" />
+		<input type="hidden" id="searchsubmit" value="Search" />
+	</p>
+</form>
+</li>
+<li class="widget widget_categories"><h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-9"><a href="http://www.johndcook.com/blog/category/business/" title="View all posts filed under Business">Business</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://www.johndcook.com/blog/category/clinical-trials/" title="View all posts filed under Clinical trials">Clinical trials</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.johndcook.com/blog/category/computing/" title="View all posts filed under Computing">Computing</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.johndcook.com/blog/category/creativity/" title="View all posts filed under Creativity">Creativity</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://www.johndcook.com/blog/category/graphics/" title="View all posts filed under Graphics">Graphics</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.johndcook.com/blog/category/math/" title="View all posts filed under Math">Math</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="http://www.johndcook.com/blog/category/music/" title="View all posts filed under Music">Music</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="http://www.johndcook.com/blog/category/powershell/" title="View all posts filed under PowerShell">PowerShell</a>
+</li>
+	<li class="cat-item cat-item-51"><a href="http://www.johndcook.com/blog/category/python/" title="View all posts filed under Python">Python</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.johndcook.com/blog/category/science/" title="View all posts filed under Science">Science</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://www.johndcook.com/blog/category/software-development/" title="View all posts filed under Software development">Software development</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.johndcook.com/blog/category/statistics/" title="View all posts filed under Statistics">Statistics</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://www.johndcook.com/blog/category/typography/" title="View all posts filed under Typography">Typography</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.johndcook.com/blog/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a>
+</li>
+		</ul>
+</li><li class="widget widget_tag_cloud"><h3>Tags</h3><div><a href='http://www.johndcook.com/blog/tag/apple/' class='tag-link-115' title='10 topics' rel="tag" style='font-size: 8.0564516129032pt;'>Apple</a>
+<a href='http://www.johndcook.com/blog/tag/bayesian/' class='tag-link-37' title='53 topics' rel="tag" style='font-size: 10.483870967742pt;'>Bayesian</a>
+<a href='http://www.johndcook.com/blog/tag/biostatistics/' class='tag-link-29' title='20 topics' rel="tag" style='font-size: 8.6209677419355pt;'>Biostatistics</a>
+<a href='http://www.johndcook.com/blog/tag/books/' class='tag-link-88' title='106 topics' rel="tag" style='font-size: 13.475806451613pt;'>Books</a>
+<a href='http://www.johndcook.com/blog/tag/business/' class='tag-link-9' title='15 topics' rel="tag" style='font-size: 8.3387096774194pt;'>Business</a>
+<a href='http://www.johndcook.com/blog/tag/c/' class='tag-link-42' title='33 topics' rel="tag" style='font-size: 9.3548387096774pt;'>C++</a>
+<a href='http://www.johndcook.com/blog/tag/cancer/' class='tag-link-60' title='18 topics' rel="tag" style='font-size: 8.508064516129pt;'>Cancer</a>
+<a href='http://www.johndcook.com/blog/tag/creativity/' class='tag-link-10' title='100 topics' rel="tag" style='font-size: 13.137096774194pt;'>Creativity</a>
+<a href='http://www.johndcook.com/blog/tag/csharp/' class='tag-link-119' title='10 topics' rel="tag" style='font-size: 8.0564516129032pt;'>CSharp</a>
+<a href='http://www.johndcook.com/blog/tag/differential-equations/' class='tag-link-101' title='11 topics' rel="tag" style='font-size: 8.1129032258065pt;'>Differential equations</a>
+<a href='http://www.johndcook.com/blog/tag/economics/' class='tag-link-113' title='33 topics' rel="tag" style='font-size: 9.3548387096774pt;'>Economics</a>
+<a href='http://www.johndcook.com/blog/tag/education/' class='tag-link-99' title='31 topics' rel="tag" style='font-size: 9.241935483871pt;'>Education</a>
+<a href='http://www.johndcook.com/blog/tag/emacs/' class='tag-link-25' title='21 topics' rel="tag" style='font-size: 8.6774193548387pt;'>Emacs</a>
+<a href='http://www.johndcook.com/blog/tag/geodesy/' class='tag-link-102' title='11 topics' rel="tag" style='font-size: 8.1129032258065pt;'>Geodesy</a>
+<a href='http://www.johndcook.com/blog/tag/graphics/' class='tag-link-13' title='17 topics' rel="tag" style='font-size: 8.4516129032258pt;'>Graphics</a>
+<a href='http://www.johndcook.com/blog/tag/history/' class='tag-link-97' title='32 topics' rel="tag" style='font-size: 9.2983870967742pt;'>History</a>
+<a href='http://www.johndcook.com/blog/tag/html/' class='tag-link-68' title='21 topics' rel="tag" style='font-size: 8.6774193548387pt;'>HTML</a>
+<a href='http://www.johndcook.com/blog/tag/integration/' class='tag-link-28' title='17 topics' rel="tag" style='font-size: 8.4516129032258pt;'>Integration</a>
+<a href='http://www.johndcook.com/blog/tag/interview/' class='tag-link-100' title='12 topics' rel="tag" style='font-size: 8.1693548387097pt;'>Interview</a>
+<a href='http://www.johndcook.com/blog/tag/latex/' class='tag-link-39' title='26 topics' rel="tag" style='font-size: 8.9596774193548pt;'>LaTeX</a>
+<a href='http://www.johndcook.com/blog/tag/linux/' class='tag-link-58' title='9 topics' rel="tag" style='font-size: 8pt;'>Linux</a>
+<a href='http://www.johndcook.com/blog/tag/math/' class='tag-link-4' title='204 topics' rel="tag" style='font-size: 19.008064516129pt;'>Math</a>
+<a href='http://www.johndcook.com/blog/tag/ms-office/' class='tag-link-106' title='13 topics' rel="tag" style='font-size: 8.2258064516129pt;'>MS Office</a>
+<a href='http://www.johndcook.com/blog/tag/music/' class='tag-link-16' title='35 topics' rel="tag" style='font-size: 9.4677419354839pt;'>Music</a>
+<a href='http://www.johndcook.com/blog/tag/number-theory/' class='tag-link-87' title='34 topics' rel="tag" style='font-size: 9.4112903225806pt;'>Number theory</a>
+<a href='http://www.johndcook.com/blog/tag/optimization/' class='tag-link-89' title='11 topics' rel="tag" style='font-size: 8.1129032258065pt;'>Optimization</a>
+<a href='http://www.johndcook.com/blog/tag/perl/' class='tag-link-43' title='9 topics' rel="tag" style='font-size: 8pt;'>Perl</a>
+<a href='http://www.johndcook.com/blog/tag/powershell/' class='tag-link-19' title='48 topics' rel="tag" style='font-size: 10.201612903226pt;'>PowerShell</a>
+<a href='http://www.johndcook.com/blog/tag/probability-and-statistics/' class='tag-link-49' title='197 topics' rel="tag" style='font-size: 18.612903225806pt;'>Probability and Statistics</a>
+<a href='http://www.johndcook.com/blog/tag/productivity/' class='tag-link-41' title='76 topics' rel="tag" style='font-size: 11.782258064516pt;'>Productivity</a>
+<a href='http://www.johndcook.com/blog/tag/programming/' class='tag-link-50' title='257 topics' rel="tag" style='font-size: 22pt;'>Programming</a>
+<a href='http://www.johndcook.com/blog/tag/python/' class='tag-link-51' title='71 topics' rel="tag" style='font-size: 11.5pt;'>Python</a>
+<a href='http://www.johndcook.com/blog/tag/quality/' class='tag-link-40' title='44 topics' rel="tag" style='font-size: 9.9758064516129pt;'>Quality</a>
+<a href='http://www.johndcook.com/blog/tag/quotes/' class='tag-link-53' title='38 topics' rel="tag" style='font-size: 9.6370967741935pt;'>Quotes</a>
+<a href='http://www.johndcook.com/blog/tag/regular-expressions/' class='tag-link-46' title='18 topics' rel="tag" style='font-size: 8.508064516129pt;'>Regular expressions</a>
+<a href='http://www.johndcook.com/blog/tag/reproducibility/' class='tag-link-22' title='23 topics' rel="tag" style='font-size: 8.7903225806452pt;'>Reproducibility</a>
+<a href='http://www.johndcook.com/blog/tag/rstats/' class='tag-link-129' title='24 topics' rel="tag" style='font-size: 8.8467741935484pt;'>Rstats</a>
+<a href='http://www.johndcook.com/blog/tag/science/' class='tag-link-6' title='91 topics' rel="tag" style='font-size: 12.629032258065pt;'>Science</a>
+<a href='http://www.johndcook.com/blog/tag/scipy/' class='tag-link-110' title='24 topics' rel="tag" style='font-size: 8.8467741935484pt;'>SciPy</a>
+<a href='http://www.johndcook.com/blog/tag/simplicity/' class='tag-link-34' title='28 topics' rel="tag" style='font-size: 9.0725806451613pt;'>Simplicity</a>
+<a href='http://www.johndcook.com/blog/tag/special-functions/' class='tag-link-121' title='17 topics' rel="tag" style='font-size: 8.4516129032258pt;'>Special functions</a>
+<a href='http://www.johndcook.com/blog/tag/twitter/' class='tag-link-91' title='30 topics' rel="tag" style='font-size: 9.1854838709677pt;'>Twitter</a>
+<a href='http://www.johndcook.com/blog/tag/typography/' class='tag-link-17' title='18 topics' rel="tag" style='font-size: 8.508064516129pt;'>Typography</a>
+<a href='http://www.johndcook.com/blog/tag/unicode/' class='tag-link-35' title='11 topics' rel="tag" style='font-size: 8.1129032258065pt;'>Unicode</a>
+<a href='http://www.johndcook.com/blog/tag/windows/' class='tag-link-105' title='23 topics' rel="tag" style='font-size: 8.7903225806452pt;'>Windows</a></div>
+</li><li class="widget widget_text">			<div class="textwidget"><a rel="author" href="https://plus.google.com/107357401349156916755/about">Google profile</a></div>
+		</li>				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="footer">
+		<p>Get smart with the <a href="http://diythemes.com/thesis/">Thesis WordPress Theme</a> from DIY Themes.</p>
+	</div>
+</div>
+</div>
+
+<!--[if lte IE 7]>
+<div id="ie_clear"></div>
+<![endif]-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3581291-6");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+<!-- Dynamic Page Served (once) in 0.373 seconds -->

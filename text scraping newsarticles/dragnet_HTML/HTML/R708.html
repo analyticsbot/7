@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en-us" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if IE 9]>    <html lang="en-us" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us"> <!--<![endif]-->
+<head>
+<!-- Chartbeat timestamp -->
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<title>Best of both worlds: Setting up Wi-Fi for iOS on 2.4 and 5GHz | Ars Technica</title>
+  <script type="text/javascript">
+    ars = {"ASSETS":"http:\/\/cdn.arstechnica.net\/wp-content\/themes\/arstechnica\/assets","HOME":"http:\/\/arstechnica.com","CIVIS":"\/civis","THEME":"light","MOBILE":false,"AD":{"kw":"kw=gadgets;kw=consumer;","kw_arr":["gadgets","consumer"],"zone":"consumer","empty":"\/public\/shared\/scripts\/empty.html","loader":"\/public\/shared\/scripts\/ad-loader-frame.html"},"TOTAL":54226,"UNREAD":0,"RECENT":[165694,165701,165654,165678,165631,165166,165565,165592,165536,165530,165465,165506,165531,165496,165439,165391,165456,165405,165396,165403,165390,165276,165352,165284,165335],"LOGINS":true,"COMMENTS":false};
+  </script>
+  <!--[if lte IE 8]><script type="text/javascript" src="http://cdn.arstechnica.net/wp-content/themes/arstechnica/assets/js/modernizr/modernizr.js"></script><![endif]-->
+
+    <link rel="stylesheet" type="text/css" media="all" href="http://cdn.arstechnica.net/wp-content/themes/arstechnica/assets/css/ars.min.448ea9141c94f90d023e5af2bc8cfd3d0842a2e0.css" />
+  
+  <script type="text/javascript" src="http://cdn.arstechnica.net/wp-content/themes/arstechnica/assets/js/ads.js?v=5"></script>
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.arstechnica.com/arstechnica/index/" />
+  
+  <!-- Favicons, etc -->
+  <link rel="apple-touch-icon" href="http://static.arstechnica.net/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="http://static.arstechnica.net/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="http://static.arstechnica.net/favicon.ico" />
+  
+  <!-- C-razy IE9 stuff -->
+  <meta name="application-name" content="Ars Technica"/>
+  <meta name="msapplication-starturl" content="http://arstechnica.com/"/>
+  <meta name="msapplication-tooltip" content="Ars Technica: Serving the technologist for 1.2 decades"/>
+  <meta name="msapplication-task" content="name=News;action-uri=http://arstechnica.com/;icon-uri=http://arstechnica.com/favicon.ico"/>
+  <meta name="msapplication-task" content="name=Features;action-uri=http://arstechnica.com/features/;icon-uri=http://static.arstechnica.net/ie-jump-menu/jump-features.ico"/>
+  <meta name="msapplication-task" content="name=OpenForum;action-uri=http://arstechnica.com/civis/;icon-uri=http://static.arstechnica.net/ie-jump-menu/jump-forum.ico"/>
+  <meta name="msapplication-task" content="name=Subscribe;action-uri=http://arstechnica.com/subscriptions/;icon-uri=http://static.arstechnica.net/ie-jump-menu/jump-subscribe.ico"/>
+
+  <!-- Begin Metadata -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="advertising" content="ask" />
+  <meta property="fb:admins" content="13703630" />
+  <!-- End Metadata -->
+
+    <meta name="viewport" content="width=1020" />
+  
+    <!-- cache hit -->
+<meta name='parsely-page' content='{"title":"Best of both worlds: Setting up Wi-Fi for iOS on 2.4 <em>and<\/em> 5GHz","link":"http:\/\/arstechnica.com\/apple\/2012\/11\/best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz\/","type":"post","author":"Iljitsch van Beijnum","post_id":"165654","pub_date":"2012-11-09T17:05:28Z","section":"Infinite Loop","image_url":"http:\/\/cdn.arstechnica.net\/wp-content\/uploads\/2012\/11\/IMG_0738-150x150.png"}'>
+<meta name='parsely-metadata' content='{"type":"report","title":"Best of both worlds: Setting up Wi-Fi for iOS on 2.4 <em>and<\/em> 5GHz","image_url":"http:\/\/cdn.arstechnica.net\/wp-content\/uploads\/2012\/11\/IMG_0738-150x150.png"}'>
+
+<link rel="canonical" href="http://arstechnica.com/apple/2012/11/best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz/" />
+
+<meta name="description" content="Each band has pros and cons, so here&#39;s how to use them together." />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@arstechnica">
+<meta name="twitter:image" content="http://cdn.arstechnica.net/wp-content/uploads/2012/11/IMG_0738.png">
+<meta name="twitter:creator" content="@iljitsch">
+
+<meta property="og:url" content="http://arstechnica.com/apple/2012/11/best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz/" />
+<meta property="og:title" content="Best of both worlds: Setting up Wi-Fi for iOS on 2.4 and 5GHz" />
+<meta property="og:image" content="http://cdn.arstechnica.net/wp-content/uploads/2012/11/IMG_0738.png" />
+<meta property="og:description" content="Each band has pros and cons, so here&#39;s how to use them together." />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Ars Technica" />
+  <!--
+	generated 69 seconds ago
+	generated in 0.186 seconds
+	served from batcache in 0.008 seconds
+	expires in 231 seconds
+-->
+</head>
+<body class="single single-post postid-165654 single-format-standard grid-view light">
+  <div id="container">
+    <header id="masthead">
+            <aside id="ad-top">
+        <script type="text/javascript">ars.masthead_ad()</script>
+      </aside>
+                  <h1><a href="http://arstechnica.com"><em>Ars</em>Technica</a></h1>
+    </header>
+    <nav id="primary">
+      <ul>
+                <li id="home-icon">
+          <a href="/"><span>Home</span></a>
+        </li>
+        <li class="has-children">
+          <a href="#">Main Menu</a>
+           <div id="main-menu" class="dropdown">
+  <div id="sections">
+    <ul class="cat-list">
+      <li class="top-row even">
+        <a class="cat-link" href="/information-technology">
+          <span class="cat-name">Information Technology</span>
+          <span class="subheading cat-desc">Technology Lab</span>
+        </a>
+      </li>
+      <li class="top-row odd">
+        <a class="cat-link" href="/gadgets">
+          <span class="cat-name">Product News &amp; Reviews</span>
+          <span class="subheading cat-desc">Gear &amp; Gadgets</span>
+        </a>
+      </li>
+      <li class="even">
+        <a class="cat-link" href="/business">
+          <span class="cat-name">Business of Technology</span>
+          <span class="subheading cat-desc">Ministry of Innovation</span>
+        </a>
+      </li>
+      <li class="odd">
+        <a class="cat-link" href="/security">
+          <span class="cat-name">Security &amp; Hacktivism</span>
+          <span class="subheading cat-desc">Risk Assessment</span>
+        </a>
+      </li>
+      <li class="even">
+        <a class="cat-link" href="/tech-policy">
+          <span class="cat-name">Civilization &amp; Discontents</span>
+          <span class="subheading cat-desc">Law &amp; Disorder</span>
+        </a>
+      </li>
+      <li class="odd">
+        <a class="cat-link" href="/apple">
+          <span class="cat-name">The Apple Ecosystem</span>
+          <span class="subheading cat-desc">Infinite Loop</span>
+        </a>
+      </li>
+      <li class="even">
+        <a class="cat-link" href="/gaming">
+          <span class="cat-name">Gaming &amp; Entertainment</span>
+          <span class="subheading cat-desc">Opposable Thumbs</span>
+        </a>
+      </li>
+      <li class="odd">
+        <a class="cat-link" href="/science">
+          <span class="cat-name">Science &amp; Exploration</span>
+          <span class="subheading cat-desc">The Scientific Method</span>
+        </a>
+      </li>
+    </ul>
+    <div class="cat-feature">
+      <a class="cat-link" href="/feature-series/future-of-fuel">
+        <img src="http://cdn.arstechnica.net/wp-content/themes/arstechnica/assets/images/feature-thumbs/future-of-fuel.jpeg" />
+        <span class="cat-name">Feature Series</span>
+        <span class="cat-desc subheading">The Future of Fuel Efficiency</span>
+        <span class="cat-full-desc">The car tech that will stretch our remaining petroleum stores.</span>
+      </a>
+        </div>
+  </div>
+  <aside class="drop-extras">
+    <h2 class="subheading notched">Site Theme</h2>
+    <ul id="theme-switch">
+            <li class="light active"><a href="?theme=light"><span class="subheading">Dark on light</span></a></li>
+      <li class="dark "><a href="?theme=dark"><span class="subheading">Light on dark</span></a></li>
+    </ul>
+    <div id="explore-ars">
+      <h2 class="subheading notched">Explore Ars</h2>
+      <ul>
+        <li><a href="/staff/">Staff Blogs</a></li>
+        <li><a href="/features/">Feature Archive</a></li>
+        <li><a href="http://jobs.arstechnica.com">Ars Jobs</a></li>
+        <li><a href="/staff-directory/">Staff Directory</a></li>
+        <li><a href="http://arstechnica.com/contact-us/">Contact Us</a></li>
+      </ul>
+    </div>
+    <div id="featured-disciplines">
+      <h2 class="subheading notched">Featured Disciplines</h2>
+      <ul>
+        <li><a href="/discipline/productivity/">Productivity</a></li>
+        <li><a href="/discipline/cloud-2/">Cloud</a></li>
+        <li><a href="/discipline/gadgets-3/">Gadgets</a></li>
+        <li><a href="/discipline/tablets-2/">Tablets</a></li>
+        <li><a href="/discipline/space-2/">Space</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+        </li>
+        <li class="has-children" id="my-stories">
+          <a href="#">My Stories: <span class="unread-count">0</span></a>
+          <div class="dropdown">
+            <nav class="my-stories-nav first">
+              <h2 class="subheading notched">New Since Last Visit <span class="unread-count"></span></h2>
+              <ol class="new-stories with-numbers"></ol>
+              <footer><a class="subheading" href="#" id="more-unread-stories">See more news stories</a></footer>
+            </nav>
+            <nav class="my-stories-nav middle">
+              <h2 class="subheading notched">We Recommend</h2>
+              <ol class="recommendations"></ol>
+            </nav>
+            <nav class="my-stories-nav">
+              <h2 class="subheading notched">My Discussions</h2>
+                            <p class="discussions disabled">Log in to track your discussions.</p>
+                          </nav>
+          </div>
+        </li>
+                <li class="no-children"><a href="/jobs/">Jobs</a></li>
+        <li class="no-children"><a href="/civis">Forums</a></li>
+            <li class="no-children subscribe">
+          <a href="/subscriptions/">Subscribe Now</a>
+        </li>
+                        <li class="right">
+          <a id="login" href="/civis/ucp.php?mode=login&return_to=http%3A%2F%2Farstechnica.com%2Fapple%2F2012%2F11%2Fbest-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz%2F%3Futm_source%3Dfeedburner%26utm_medium%3Dfeed%26utm_campaign%3DFeed%253A%2Barstechnica%252Findex%2B%2528Ars%2BTechnica%2B-%2BAll%2Bcontent%2529" rel="nofollow">Log In</a>
+        </li>
+                        <li id="search-container" class="right inactive">
+          <a id="search-switch" href="/search/">Search</a>
+          <form action="/search/" method="GET">
+            <input type="text" name="query" id="hdr_search_input" value="">
+            <input type="submit" value="Search">
+          </form>
+        </li>
+              </ul>
+    </nav>
+    <section id="content" class="clearfix">
+
+<script type="text/javascript">
+  ars.ARTICLE = {"url":"http:\/\/arstechnica.com\/apple\/2012\/11\/best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz\/","short_url":"http:\/\/arstechnica.com\/?p=165654","title":"Best of both worlds: Setting up Wi-Fi for iOS on 2.4 <em>and<\/em> 5GHz","author":46707,"id":165654,"promoted":[],"single_page":false};
+</script>
+
+<h1 id="archive-head" class="subheading thick-divide-bottom">
+	<a href="/apple">	<span class="archive-name">Infinite Loop</span>
+		<span class="divider"> / </span>
+	<span class="archive-desc">The Apple Ecosystem</span>
+		</a></h1>
+
+<article class="standalone">
+	<header>
+		<h1 class="heading">Best of both worlds: Setting up Wi-Fi for iOS on 2.4 <em>and</em> 5GHz</h1>
+		<h2 class="standalone-deck">Each band has pros and cons, so here's how to use them together.</h2>
+		<div class="post-meta">
+			  <p class="byline">
+  by <a href="http://arstechnica.com/author/iljitsch-van-beijnum/" rel="author">Iljitsch van Beijnum</a>
+  -  <span class="date" data-time="1352480728">Nov 9, 2012 5:05 pm UTC</span>
+  </p>
+
+			<div class="corner-info">
+				<ul class="tags subheading">
+									<li><a href="/discipline/ios-idevices">iOS &amp; iDevices</a></li>
+								</ul>
+					<a class="comment-count" href="http://arstechnica.com/apple/2012/11/best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz/?comments=1#comments-bar"><span>12</span></a>
+			</div>
+		</div>
+	</header>
+
+	<section id="article-guts">
+		<div class="article-content clearfix">
+			
+<figure class="intro-image image center full-width" style="width:640px">
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2012/11/IMG_0738-640x360.png" width="640" height="360">
+  
+  </figure>
+ <p>For a while, it seemed that Wi-Fi was becoming a victim of its own success. In many cities, there are numerous active Wi-Fi networks on those preciously few non-overlapping channels—that's in addition to microwaves, bluetooth, cordless phones, and baby monitors, which all share the 2.4GHz band.</p>
+<p>But since about 2007, Apple has also built support for 802.11n <a href="http://arstechnica.com/gadgets/2011/10/cutting-the-cord-how-the-worlds-engineers-built-wi-fi/">Wi-Fi</a> on the 5GHz band into its computers and Airport line of Wi-Fi base stations. Now, the iPhone 5, the latest iPod touch, the fourth-generation iPad, and the iPad mini also have that support. So, how do you set up a Wi-Fi network that makes the most of this confluence of Wi-Fi bands?</p>
+<h3>Not created equal</h3>
+<p>First of all, it's important to realize that the two bands are created very differently. The 2.4GHz band suffers from lack of non-overlapping channels and interference from other devices. But the lower frequencies pass through walls and floors reasonably well. The 5GHz band on the other hand, has a much larger number of channels—and they don't overlap—but the higher frequencies have reduced range, even in open air. In addition to this, Apple only supports using two channels as a single, double-speed wide channel in the 5GHz band. If all else is equal, 5GHz is twice as fast as 2.4GHz.</p>
+<p>Older base stations, such as the first and second generations of Apple's Airport Extreme (released in 2007), support either 2.4GHz or 5GHz operation, but not both at the same time. If you have one of those, you have to choose. In a small apartment with thin walls, 5GHz has enough reach, and you'll benefit from the extra speed and reduced interference. Especially when you let the base station select the channel, because <a href="http://en.wikipedia.org/wiki/List_of_WLAN_channels#5.C2.A0GHz_.28802.11a.2Fh.2Fj.2Fn.29.5B13.5D"> that way, more channels are available</a>. But in a big house away from interfering neighbors, 2.4GHz gives you better coverage further away from the base station. You may also need 2.4GHz for compatibility with older devices that don't support 5GHz operation.</p>
+<p>But fortunately, with newer Wi-Fi base stations, it's no longer necessary to make that choice: they support simultaneous dual band, operating in both the 2.4 and 5GHz bands at the same time. There are two ways to do this: having a separate 2.4 and 5GHz networks, or having one network that spans both bands. In the first case, you tell the base station you want a different name (aka SSID) for the 5GHz band. This means you can manually select the 2.4GHz network or the 5GHz network as needed. The downside is that if you join the 5GHz network, and then move away from the base station, you'll remain connected to the 5GHz network and get spotty performance at distances that 2.4GHz handles just fine.</p>
+<figure class="image center full-width" style="width:640px"><a href="http://cdn.arstechnica.net/wp-content/uploads/2012/11/airportutil5ghz.png" class="enlarge" data-height="781" data-width="810"><img src="http://cdn.arstechnica.net/wp-content/uploads/2012/11/airportutil5ghz.png" width="640" height="617"></a><figcaption class="caption"><div class="caption-text"><a href="http://cdn.arstechnica.net/wp-content/uploads/2012/11/airportutil5ghz.png" class="enlarge" data-height="781" data-width="810">Enlarge</a> / Setting up a separate 5GHz network in the OS X Airport Utility</div> </figcaption></figure>
+<p>For most people, the best choice is to set up a network that does both 2.4GHz and 5GHz as a single network. This is what Apple's Airport Utility sets up for you if you don't tell it to use a separate 5GHz name. The benefit to this is that a single dual band network allows wireless devices that support both bands to switch to the band that has the best signal dynamically.</p>
+<p>The iPhone 5 supports 72Mbps at 2.4 GHz, but 150Mbps at 5GHz. Most of Apple's computers have two antennas, so they can do 144Mbps at 2.4GHz and 300Mbps at 5GHz. My iPhone 5 quickly jumps from 5GHz to 2.4GHz when I walk down the stairs, but when I return to the living room, it typically takes a few minutes for it to switch back to 5GHz. And sometimes devices or computers get stuck on the 2.4GHz band just when you want to transfer some big files.</p>
+<h3>Adding to the family</h3>
+<p>Things get more interesting if you have multiple base stations. If you give each of these their own settings, wireless devices will try to hang on as long as they can before switching to a different one, and when they switch, all ongoing communication gets interrupted. But it doesn't have to be that way. You can have your own multi-base-station Wi-Fi network with seamless roaming, just like a campus or enterprise network, but using regular base stations such as Apple's Airport Extremes or Airport Expresses. (I didn't test with non-Apple equipment, but it <em>should</em> work the same way.)</p>
+<figure class="image right" style="width:256px"><img src="http://cdn.arstechnica.net/wp-content/uploads/2012/11/speedtest24ghz.jpg" width="256" height="307"><figcaption class="caption"><div class="caption-text">iPhone 5 Speedtest results at 2.4GHz</div> </figcaption></figure>
+<p>Seamless roaming between base stations happens when four things are the same between those base stations: the network name (SSID), the security settings, the DHCP server, and the router. This is easily accomplished by hooking up the second base station to a LAN port of the first base station and setting the second one up with the same network name and the same WPA2 password. Then, tell the second base station that it should operate in "bridge mode," rather than perform NAT or DHCP.</p>
+<p>It's also possible to set up a second base station as a wireless network extender to get more reach without putting in additional Ethernet wiring, but that requires extra wireless hops for each packet, so it reduces speed. In the wireless extender configuration, the second base station needs to be on the same channel as the first one. But if the second base station has a wired connection, it should have its own channel for best performance.</p>
+<p>Don't forget that you can install the <a href="https://itunes.apple.com/us/app/airport-utility/id427276530">Airport Utility for iOS</a> on your iPhone, iPod touch, or iPad, which lets you reconfigure your Airport base stations as well as monitor signal strength, connection speed, and the use of 2.4 vs 5GHz for all of their wireless clients, including iOS devices. Don't select a base station too fast, though, because then the list of wireless clients may not be shown.</p>
+<p>Bonus tip: if you want to see what other Wi-Fi networks are active in your area, use the following command on your Mac:</p>
+<pre>/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s</pre>
+<figure class="image right" style="width:256px"><img src="http://cdn.arstechnica.net/wp-content/uploads/2012/11/speedtest5ghz1.jpg" width="256" height="307"><figcaption class="caption"><div class="caption-text">iPhone 5 Speedtest results at 5GHz</div> </figcaption></figure>
+<p>I did some speed testing with an iPhone 5 and a fourth generation Airport Extreme base station. In normal Web browsing or e-mailing, there didn't seem to be a speed difference. On 2.4GHz, iTunes Wi-Fi sync topped out at 2.8 megabytes per second, while on 5GHz, this was about 50 percent faster at 4.3MB/s. However, I was able to transfer a file from the <a href="https://itunes.apple.com/us/app/air-sharing/id312686749">Air Sharing app</a> using the Finder at no less than 10MB/s at 5GHz. The <a href="https://itunes.apple.com/us/app/speedtest.net-mobile-speed/id300704847">Speedtest app</a> showed that the iPhone was able to saturate my 60Mbps Internet connection at 5GHz, but barely more than half that at 2.4GHz.</p>
+<p>On the other hand, I find that when using a 5GHz-only network, dropping Wi-Fi connections and problems reestablishing a connection are much more common. In the dual band configuration, issues with 5GHz aren't an issue, because the wireless device simply falls back to 2.4GHz. Life is good with dual Wi-Fi bands.</p>
+<script type="text/javascript" src=""></script>		</div>
+			</section>
+
+	<section id="comments-area" class="clearfix">
+
+		
+		<a name="comments-bar"></a>
+		<div class="comments-bar">
+      <a class="subheading comments-read-link" href="http://arstechnica.com/apple/2012/11/best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz/?comments=1#comments-bar"><span class="text">Reader comments</span> <span class="comment-count"><span>12</span></span></a>
+		</div>
+					</section>
+	
+		<aside id="share-buttons" class="thin-divide-bottom "><ul></ul></aside>
+	
+    <!-- cache hit -->  	<section class="article-author clearfix">
+    				<a href="/author/iljitsch-van-beijnum"><img width="47" height="47" src="http://cdn.arstechnica.net/wp-content//uploads/authors/iljitsch-sq.jpg"></a>
+    		    
+		<p><a href="/author/iljitsch-van-beijnum" class="author-name">Iljitsch van Beijnum</a>  / Iljitsch is a contributing writer at Ars Technica, where he contributes articles about network protocols as well as Apple topics. He is currently finishing his Ph.D work at the telematics department at Universidad Carlos III de Madrid (UC3M) in Spain.</p>
+				<a href="https://twitter.com/iljitsch" class="twitter-follow-button" data-show-count="false">@iljitsch</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</section>
+  
+  
+	<nav class="post-links thick-divide-top thin-divide-bottom clearfix">
+		<div class="subheading older"><a href="http://arstechnica.com/tech-policy/2012/11/apple-sued-again-by-company-that-won-368m-judgment-over-facetime/" rel="prev"><span class="arrow">&larr;</span> Older Story</a></div>
+		<div class="subheading newer"><a href="http://arstechnica.com/apple/2012/11/att-pushing-100-discount-on-ipads-android-tablets/" rel="next">Newer Story <span class="arrow">&rarr;</span></a></div>	
+	</nav>
+
+		<footer id="article-footer">
+		<h2 class="subheading notched">You May Also Like</h2>
+		<ul id="recommendations" class="clearfix"></ul>
+	</footer>
+	</article>
+
+        <!-- cache hit -->
+<section id="article-sidebar" class="column-1 right">
+  
+  
+    <aside class="side-ad thick-divide-bottom">
+    <script type="text/javascript">ars.sidebar_ad("top")</script>
+  </aside>
+  
+  <h2 id="recent-featured-title" class="subheading notched">Top Feature Story</h2>
+  <ul class="column">
+
+
+<li class="post" id="165654">
+	<article class="in-column">
+		<a href="http://arstechnica.com/gadgets/2012/11/nexus-4-two-thirds-of-a-great-phone/" class="headline-image">
+						<img src="http://cdn.arstechnica.net/wp-content/uploads/2012/11/IMG_17532-300x100.jpg" width="300" height="100">
+						<h2 class="page-count subheading">Feature Story (2 pages)</h2>
+			<h1 class="heading">Nexus 4—two-thirds of a great phone</h1>
+		</a>
+		<p class="excerpt">How much would you overlook to get Android 4.2 and timely updates?</p>
+    			<aside class="comments-hotness ">
+		<a class="comment-count" href="http://arstechnica.com/gadgets/2012/11/nexus-4-two-thirds-of-a-great-phone/?comments=1#comments-bar"><span>115</span></a>
+	</aside>
+	</article>
+</li>
+<li id="in-the-know">
+	<h2 class="subheading notched">Stay in the know with</h2>
+	<ul class="social clearfix">
+		<li class="fb">
+			<a href="#"></a>
+			<div class="social-pop">
+				<div class="social-pop-content">
+					<h2 class="subheading">Follow Ars on Facebook</h2>
+									</div>
+			</div>
+		</li>
+		<li class="twit">
+			<a href="#"></a>
+			<div class="social-pop">
+				<div class="social-pop-content">
+					<h2 class="subheading">Follow Ars on Twitter</h2>
+									</div>
+			</div>
+		</li>
+		<li class="gplus">
+			<a href="#"></a>
+			<div class="social-pop">
+				<div class="social-pop-content">
+					<h2 class="subheading">Follow Ars on Google Plus</h2>
+									</div>
+			</div>
+		</li>
+		<li class="email">
+			<a href="#"></a>
+			<div class="social-pop">
+				<div class="social-pop-content">
+					<h2 class="subheading">Sign Up for the Ars Newsletter</h2>
+					<p>Sign up for the Ars Technica Dispatch, which delivers links to the most popular articles, journals, and multimedia features via e-mail to your inbox every week.</p>
+					<form action="http://arstechnica.us1.list-manage.com/subscribe/post?u=af7f013bad7e785d15aab736f&amp;id=105121" method="post" target="_blank">
+						<label for="mce-EMAIL">Your email address:</label>
+						<input placeholder="Email address" type="text" value="" name="EMAIL" id="mce-EMAIL" />
+						<input type="submit" value="Subscribe" name="subscribe">
+					</form>
+					<footer>I understand and agree that registration on or use of this site constitutes agreement to its <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>.</footer>
+				</div>
+			</div>					
+		</li>
+		<li class="rss">
+			<a href="#"></a>
+			<div class="social-pop">
+				<div class="social-pop-content">
+					<h2 class="subheading">Follow Ars with RSS</h2>
+					<ul>
+						<li><a href="http://feeds.arstechnica.com/arstechnica/index/">&gt; Main site RSS feed</a> (all content)</li>
+						<li><a href="http://arstechnica.com/rss-feeds/">&gt; View a list</a> of all our RSS feeds</li>
+					</ul>
+				</div>
+			</div>					
+		</li>
+		<li class="pod last">
+			<a href="#"></a>
+			<div class="social-pop">
+				<div class="social-pop-content">
+					<h2 class="subheading">The Ars Podcast</h2>
+					<p>It's the Ars Technicast! Listen to our staff discuss the issues of the day.</p>
+					<ul>
+						<li><a href="http://arstechnica.com/podcast/">&gt; View podcast archive</a></li>
+					</ul>
+				</div>
+			</div>					
+		</li>
+	</ul>
+</li>
+<h2 class="subheading notched">Latest News</h2>
+<ol class="rail latest-stories">
+    <li>
+    <a href="http://arstechnica.com/gadgets/2012/11/the-dealmaster-some-storage-and-a-camera-to-fill-it-with/">
+              <h2>se agere solivagus periculosus est—hunc cape</h2>
+        <h1 class="heading">The Dealmaster: Some storage and a camera to fill it with</h1>
+          </a>
+  </li>
+    <li>
+    <a href="http://arstechnica.com/apple/2012/11/att-pushing-100-discount-on-ipads-android-tablets/">
+              <h2>Carrier wars</h2>
+        <h1 class="heading">AT&T pushing $100 discount on iPads, Android tablets</h1>
+          </a>
+  </li>
+    <li>
+    <a href="http://arstechnica.com/tech-policy/2012/11/apple-sued-again-by-company-that-won-368m-judgment-over-facetime/">
+              <h2>Tim Cook won't like this</h2>
+        <h1 class="heading">Company wins $368M from Apple, immediately files brand-new lawsuit</h1>
+          </a>
+  </li>
+    <li>
+    <a href="http://arstechnica.com/business/2012/11/sonys-financial-rating-falls-to-just-above-junk/">
+              <h2>Sayonara, Sony?</h2>
+        <h1 class="heading">Sony's credit rating heads toward junk pile</h1>
+          </a>
+  </li>
+  </ol>
+
+<li>
+  <aside class="jobs-feed">
+    <h2 class="subheading notched" id="ars-job-board-title">Ars Jobs</h2><dl><dt><a href="http://clk.atdmt.com/MON/go/395287198/direct/01/?href=http%3A%2F%2Fjobview.monster.com%2FGrails-Developer-Job-Waltham-MA-US-116050612.aspx">Grails Developer</a></dt><dd>MA-Waltham, GRAILS DEVELOPER About the Job: Mobiquity works with Fortune 1000 enterprises to design &hellip;</dd><dt><a href="http://clk.atdmt.com/MON/go/395287198/direct/01/?href=http%3A%2F%2Fjobview.monster.com%2FSenior-Product-Applications-Engineer-LVA-Job-Arden-NC-US-116050411.aspx">Senior Product Applications Engineer (LVA)</a></dt><dd>NC-Arden, Eaton Corporation located in Asheville, NC has an opening for a Senior Product Application&hellip;</dd><dt><a href="http://clk.atdmt.com/MON/go/395287198/direct/01/?href=http%3A%2F%2Fjobview.monster.com%2FBusiness-Objects-BI-Administrator-Systems-Programmer-II-Job-Needham-MA-US-116050903.aspx">Business Objects/BI Administrator (Systems Programmer II)</a></dt><dd>MA-Needham, Responsibilities The BI Administrator is responsible for the installation, maintenance, &hellip;</dd></dl><a href="http://clk.atdmt.com/MON/go/406948352/direct/01/">See more job listings</a>  </aside>
+</li>
+
+<li id="bottom-side-ad" class="thick-divide-top">
+  <aside class="side-ad">
+    <script type="text/javascript">ars.sidebar_ad("bottom")</script>
+  </aside>
+</li>
+
+</ul>
+</section>
+
+  		</section>
+		<footer id="page-footer">
+			<nav id="footer-nav" class="clearfix">
+				<div class="nav-section">
+					<h2 class="subheading">Site Links</h2>
+					<ul>
+						<li><a href="/about-us/">About Us</a></li>
+						<li><a href="/advertise-with-us/">Advertise with us</a></li>
+						<li><a href="/contact-us/">Contact Us</a></li>
+						<li><a href="/reprints/">Reprints</a></li>
+					</ul>
+					
+					<h2 class="subheading">Subscriptions</h2>
+					<ul>
+						<li><a href="/subscriptions/">Subscribe to Ars</a></li>
+					</ul>
+				</div>
+				<div class="nav-section">
+					<h2 class="subheading">More Reading</h2>
+					<ul>
+						<li><a href="/rss-feeds/">RSS Feeds</a></li>
+						<li><a href="/newsletters/">Newsletters</a></li>
+					</ul>
+				</div>
+				<div class="nav-section">
+					<h2 class="subheading">Conde Nast Sites</h2>
+					<ul class="conde-nast-sites">
+						<li><a href="http://www.reddit.com/">Reddit</a></li>
+						<li><a href="http://www.wired.com/">Wired</a></li>
+						<li><a href="http://www.vanityfair.com/">Vanity Fair</a></li>
+						<li><a href="http://www.style.com/">Style</a></li>
+						<li><a href="http://www.details.com/">Details</a></li>
+					</ul>
+					<form method="get" action="#">
+						<select id="mag_list" name="mag_list" onchange="(this.options[this.selectedIndex].value) ? (window.location = this.options[this.selectedIndex].value) : null">
+							<option value="" selected="selected">Visit our sister sites</option>
+							<option value="">- - - - - - - - - - - - - -</option>
+							<option value="http://www.gq.com">GQ</option>
+							<option value="http://www.concierge.com">Concierge</option>
+							<option value="http://www.epicurious.com">Epicurious</option>
+							<option value="http://men.style.com">Men.Style.com</option>
+							<option value="http://www.style.com">Style.com</option>
+							<option value="http://www.wired.com">Wired.com</option>
+							<option value="http://www.lipstick.com">Lipstick.com</option>
+							<option value="http://www.nutritiondata.com">NutritionData</option>
+							<option value="http://www.allure.com">Allure</option>
+							<option value="http://www.architecturaldigest.com">Architectural Digest</option>
+							<option value="http://www.bonappetit.com">Bon App&eacute;tit</option>
+							<option value="http://www.brides.com">Brides</option>
+							<option value="http://www.portfolio.com">Cond&eacute; Nast Portfolio</option>
+							<option value="http://www.glamour.com">Glamour</option>
+							<option value="http://www.golfdigest.com">Golf Digest</option>
+							<option value="http://www.golfworld.com">Golf World</option>
+							<option value="http://www.luckymag.com">Lucky</option>
+							<option value="http://www.self.com">Self</option>
+							<option value="http://www.teenvogue.com">Teen Vogue</option>
+							<option value="http://www.newyorker.com">The New Yorker</option>
+							<option value="http://www.vanityfair.com">Vanity Fair</option>
+							<option value="http://www.wmagazine.com">W</option>
+						</select>
+					</form>
+					<form method="get" action="#">
+						<select size="1" id="sub_list" name="sub_list" onchange="(this.options[this.selectedIndex].value) ? (window.location = this.options[this.selectedIndex].value) : null">
+							<option value="" selected="selected">Subscribe to a magazine</option>
+							<option value="http://www.magazinestoresubscriptions.com?source=univdropdown">View All Titles</option>
+							<option value="">- - - - - - - - - - - - - -</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Allure?source=SITEFOOTER">Allure</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_ArchitecturalDigest">Architectural Digest</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_BonAppetite?source=SITEFOOTER">Bon App&eacute;tit</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Brides?source=SITEFOOTER">Brides</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_CondeNastPortfolio?source=SITEFOOTER">Cond&eacute; Nast Portfolio</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_CondeNastTraveler?source=SITEFOOTER">Cond&eacute; Nast Traveler</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Details?source=SITEFOOTER">Details</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_ElegantBride?source=SITEFOOTER">Elegant Bride</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Glamour?source=SITEFOOTER">Glamour</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_GolfDigest?source=SITEFOOTER">Golf Digest</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_GolfWorld?source=SITEFOOTER">Golf World</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_GQ?source=SITEFOOTER">GQ</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Lucky?source=SITEFOOTER">Lucky</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_ModernBride?source=SITEFOOTER">Modern Bride</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Self?source=SITEFOOTER">Self</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_TeenVogue?source=SITEFOOTER">Teen Vogue</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_NewYorker?source=SITEFOOTER">The New Yorker</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_VanityFair?source=SITEFOOTER">Vanity Fair</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Vogue?source=SITEFOOTER">Vogue</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_W?source=SITEFOOTER">W</option>
+							<option value="https://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Wired?source=SITEFOOTER">Wired</option>
+						</select>
+					</form>
+				</div>
+				<div class="nav-section" id="mobile-site">
+          <h2 class="subheading"><a href="http://arstechnica.com/apple/2012/11/best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz/?view=mobile&amp;utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed: arstechnica/index (Ars Technica - All content)">View Mobile Site</a></h2>
+				</div>
+			</nav>
+			
+	    			<div id="copyright-terms">
+			© 2012 Condé Nast. All rights reserved<br>
+			Use of this Site constitutes acceptance of our <a href="http://www.condenast.com/privacy-policy" target="_blank">User Agreement</a> (effective 3/21/12) and <a href="http://www.condenast.com/privacy-policy#privacypolicy" target="_blank">Privacy Policy</a> (effective 3/21/12), and <a href="/amendment-to-conde-nast-user-agreement-privacy-policy/">Ars Technica Addendum (effective 5/17/2012)</a><br>
+			<a href="http://www.condenast.com/privacy-policy#privacypolicy-california" target="_blank">Your California Privacy Rights</a><br>
+			The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.<br><br>
+			<a href="http://www.condenast.com/privacy-policy#privacypolicy-optout" target="_blank">Ad Choices</a><img width="10" height="10" border="0" src="http://static.arstechnica.net/public/v6/styles/light/images/footer/ad_choices_arrow.png">
+			</div> 
+
+		</footer>
+	</div>
+		<script type="text/javascript" src="http://cdn.arstechnica.net/wp-content/themes/arstechnica/assets/js/ars.min.448ea9141c94f90d023e5af2bc8cfd3d0842a2e0.js"></script>
+	  
+  
+  <!-- Google Analytics start -->
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+  _gaq.push(
+    ['_setAccount', 'UA-31997-1'],
+    ['_setCustomVar', 1, 'view', "grid"],
+    ['_setCustomVar', 2, 'theme', "light"],
+    ['_setCustomVar', 3, 'logged_in', "false"],
+    ['_setCustomVar', 4, 'show_comments', "false"],
+    ['_trackPageview']
+  );
+	(function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+  <!-- Google Analytics end -->
+
+  <!-- Parse.ly start -->
+	<script type="text/javascript">
+  (function(d) {
+    var site = "arstechnica.com",
+    b = d.body,
+    e = d.createElement("div");
+    e.innerHTML = '<span id="parsely-cfg" data-parsely-site="'+site+'"></span>';
+    e.id = "parsely-root";
+    e.style.display = "none";
+    b.appendChild(e);
+  })(document);
+
+  (function(s, p, d) {
+    var h=d.location.protocol, i=p+"-"+s,
+    e=d.getElementById(i), r=d.getElementById(p+"-root"),
+    u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+      :"static."+p+".com";
+    if (e) return;
+    e = d.createElement(s); e.id = i; e.async = true;
+    e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+  })("script", "parsely", document);
+	</script>
+  <!-- Parse.ly end -->
+
+  <!-- Chartbeat start -->
+  <script type="text/javascript">
+    var _sf_async_config={};
+    /** CONFIGURATION START **/
+    _sf_async_config.uid = 27113;
+    _sf_async_config.domain = "arstechnica.com";
+    /** CONFIGURATION END **/
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement("script");
+        e.setAttribute("language", "javascript");
+        e.setAttribute("type", "text/javascript");
+        e.setAttribute("src",
+           (("https:" == document.location.protocol) ?
+             "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" :
+             "http://static.chartbeat.com/") +
+           "js/chartbeat.js");
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != "function") ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+  </script>
+  <!-- Chartbeat end -->
+
+  <!-- Omniture start -->
+  <script type="text/javascript">
+    var s_account = 'conde-arstechnica';
+    var s_linkInternalFilters = 'javascript:,arstechnica.com';
+    var s_trackingServer = 'stats2.arstechnica.com';
+    var s_trackingServerSecure = 'sstats.arstechnica.com';
+  </script>
+  <script type="text/javascript" src="http://static.arstechnica.net/public/shared/omniture/s_code.js"></script>
+    <script type="text/javascript">
+    s.pageName = "http://arstechnica.com/apple/2012/11/best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+arstechnica%2Findex+%28Ars+Technica+-+All+content%29";
+    s.prop1 = "";
+    s.prop2 = "";
+    s.prop5 = "blog";
+    s.events = "";
+    s.prop6 = "apple"
+s.prop7 = "apple/2012"
+s.prop8 = "apple/2012/11"
+s.prop9 = "apple/2012/11/best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz"
+s.prop3 = "Apple";
+s.hier1 = "apple,2012,11,best-of-both-worlds-setting-up-wi-fi-for-ios-on-2-4-and-5ghz";
+    var s_code=s.t();
+    if(s_code) document.write(s_code);
+  </script>
+	  <script type="text/javascript"> if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')</script>
+  <noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://condenast.112.2o7.net/b/ss/condenet-dev/1/H.15.1--NS/0" height="1" width="1" border="0" alt="" /></a></noscript>
+<!-- Omniture end -->
+
+<!-- Lotame/Crwdcntrl -->
+<script src="http://tags.crwdcntrl.net/c/313/cc_af.js"></script>
+
+
+</body>
+</html>

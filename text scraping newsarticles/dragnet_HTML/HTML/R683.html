@@ -1,0 +1,658 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Schneier on Security: Micromorts</title>
+	<!-- robots content="noindex" -->
+	<link rel="STYLESHEET" type="text/css" href="/schneier-safe.css">
+	<link rel="STYLESHEET" type="text/css" href="/blog.css">
+	<link rel="alternate" type="application/rss+xml" title="RSS 1.0 (full-text)" href="http://www.schneier.com/blog/rss.xml">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 (excerpts)" href="http://www.schneier.com/blog/index.xml">
+    <link rel="alternate" type="application/atom+xml" title="Comments on Micromorts (Atom)" href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.xml" >
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.schneier.com/blog/rsd.xml">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="start" href="http://www.schneier.com/blog/" title="Home">
+	
+		<link rel="prev" href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html" title="New SSL Vulnerability">
+	
+	
+		<link rel="next" href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html" title="Gary McGraw on National Cybersecurity">
+	
+	<!-- /robots -->
+<script type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'www.schneier.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+</head>
+<body>	  
+
+<table class="main" cellspacing=0>
+<tr><td class="bodycolor"></td><td class="kludge">&nbsp;</td><td class="masthead"><p class="mastname"><!-- robots content="noindex" -->Bruce Schneier<!-- /robots --></td><td class="kludge">&nbsp;</td><td class="bodycolor"></td></tr>
+
+<tr><td class="menua">
+<!-- robots content="noindex" -->
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/">Blog</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/crypto-gram.html">Crypto-Gram Newsletter</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/books.html">Books</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/essays.html">Essays and Op Eds</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/news.html">News and Interviews</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/av.html">Audio and Video</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/schedule.html">Speaking Schedule</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/passsafe.html">Password Safe</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/cryptography.html">Cryptography</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/about.html">About Bruce Schneier</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/contact.html">Contact Information</a>
+<!-- /robots -->
+</td>
+<td class="kludge">&nbsp;</td>
+<td class="contentcell">
+
+<!-- begin page content -->
+
+<div class="indivbody">
+
+
+<!-- robots content="noindex" -->
+<h1>Schneier on Security</h1>
+<p>A blog covering security and security technology.</p>
+
+
+<p align="right">
+
+<a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html">&laquo; New SSL Vulnerability</a> |
+
+<a href="http://www.schneier.com/blog/">Main</a>
+
+| <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html">Gary McGraw on National Cybersecurity &raquo;</a>
+
+</p>
+<!-- /robots -->
+
+<h2>November  8, 2012</h2>
+
+<h3>Micromorts</h3>
+
+<p><a href="http://www.stubbornmule.net/2010/12/micromorts/">Here's</a> a great concept: a micromort:</p>
+
+<blockquote>Shopping for coffee you would not ask for 0.00025 tons  (unless you were naturally irritating), you would ask for 250 grams. In the same way, talking about a 1/125,000 or 0.000008 risk of death associated with a hang-gliding flight is rather awkward. With that in mind. Howard coined the term "microprobability" (&#956;p) to refer to an event with a chance of 1 in 1 million and a 1 in 1 million chance of death he calls a "micromort" (&#956;mt). We can now describe the risk of hang-gliding as 8 micromorts and you would have to drive around 3,000km in a car before accumulating a risk of 8 mt, which helps compare these two remote risks.</blockquote>
+
+<p>There's a <a href="http://plus.maths.org/content/understanding-uncertainty-microlives">related term</a>, microlife, for things that reduce your lifespan.  A microlife is 30 minutes off your life expectancy.  So smoking two cigarettes has a cost of one microlife.</p>
+
+<div id="a004573more"><div id="more">
+
+</div></div>
+
+<p class="posted"><a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html">Posted on November  8, 2012 at  6:57 AM</a>
+&#8226; <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#comments">25 Comments</a>
+</p>
+
+<p class="posted"><i>To receive these entries once a month by e-mail, <a href="http://www.schneier.com/crypto-gram-sub.html">sign up</a> for the <a href="http://www.schneier.com/crypto-gram.html">Crypto-Gram Newsletter</a>.</i>
+</div>
+
+
+<div class="commentform">
+<h2 id="comments">Comments</h2>
+</div>
+
+
+<div class="commentbody by-snarki-child-of-loki">
+<a name="c970981"></a>
+
+<div id="c970981">
+<p>Not to be confused with a "micro-ort", which is a barely visible scrap of food left on your plate. <br />
+</p>
+</div>
+<p class="posted">Posted by: Snarki, child of Loki at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c970981">November  8, 2012  7:12 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-kingsnake">
+<a name="c970997"></a>
+
+<div id="c970997">
+<p>Sitting in traffic costs me 8 macromorts every day ...</p>
+</div>
+<p class="posted">Posted by: kingsnake at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c970997">November  8, 2012  7:22 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-andy">
+<a name="c971011"></a>
+
+<div id="c971011">
+<p>Excellent idea. I wonder though whether it should also be per unit of time. </p>
+</div>
+<p class="posted">Posted by: Andy at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971011">November  8, 2012  7:30 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-paul-crowley">
+<a name="c971046"></a>
+
+<div id="c971046">
+<p>For the most precision it would be best to measure QALYs lost, rather than either years lost or proportion of life lost. For small measures QALH might be more appropriate - so if you have 50 quality years of life ahead of you and you go handgliding, that 8 micromort risk is equivalent to the lost of around 3.5 QALHs</p>
+</div>
+<p class="posted">Posted by: <a title="http://www.ciphergoth.org/" href="http://www.ciphergoth.org/" rel="nofollow">Paul Crowley</a> at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971046">November  8, 2012  7:50 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-lowdefinition">
+<a name="c971047"></a>
+
+<div id="c971047">
+<p>There is a missing μ in the risk of driving 3000km.</p>
+</div>
+<p class="posted">Posted by: lowdefinition at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971047">November  8, 2012  7:51 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-bickerdyke">
+<a name="c971048"></a>
+
+<div id="c971048">
+<p>So.. if 1 µp is a chance of 1 to a million, please keep in mind that things that have a 1 to 1 million chance to succeed, but might happen, will work in one out of three cases...</p>
+</div>
+<p class="posted">Posted by: bickerdyke at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971048">November  8, 2012  7:51 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-sadbutmadlad">
+<a name="c971051"></a>
+
+<div id="c971051">
+<p>There can't be a microlife because of micromorts. It's impossible to say how much you life has been shortened by carrying out a task. You could die tomorrow from a hang gliding accident. What should be happen is that smoking should be quantified in terms of micromorts. So smoking ten a day increases your chance of dying by say 0.01mt. You can then compare hang gliding to smoking and decide which is worth while to perform taking into account the benefits you get from them. Both are drug delivery forms, adrenaline vs. nicotine.</p>
+</div>
+<p class="posted">Posted by: <a title="http://sadbutmadlad.com" href="http://sadbutmadlad.com" rel="nofollow">SadButMadLad</a> at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971051">November  8, 2012  7:55 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-alan-porter">
+<a name="c971078"></a>
+
+<div id="c971078">
+<p>Ah, "naturally irritating".  That's the term I've been looking for.  Time to update my résumé!</p>
+</div>
+<p class="posted">Posted by: Alan Porter at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971078">November  8, 2012  8:19 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-craig">
+<a name="c971079"></a>
+
+<div id="c971079">
+<p>I really doubt that you could calculate how much longer George Burns would have lived by multiplying 15 minutes times the monumental number of cigars he smoked in his lifetime.</p>
+</div>
+<p class="posted">Posted by: Craig at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971079">November  8, 2012  8:20 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-paul">
+<a name="c971092"></a>
+
+<div id="c971092">
+<p>In this week's "what if?" by Randall Munroe (www.what-if.xkcd.com), he calculates that "a Florida resident suffers an average of 0.64 femtodeaths per second from meteorite impacts."  </p>
+</div>
+<p class="posted">Posted by: Paul at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971092">November  8, 2012  8:27 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-bcs">
+<a name="c971146"></a>
+
+<div id="c971146">
+<p>I'd argue that smoking a cigarette has a cost of about 0.25-0.5 microlife just from the time the smoker expends finding some place to smoke and then standing around puffing.</p>
+</div>
+<p class="posted">Posted by: bcs at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971146">November  8, 2012  8:58 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-clive-robinson">
+<a name="c971175"></a>
+
+<div id="c971175">
+<p>It is interesting to know that your daily micromorts figure changes with age irrespective of what othe risks are in your life.</p>
+
+<p>For instance (IIRC) an average healthy male aged 20 has a daily 500micromort figure, however IF the same average person makes it to 60 it has risen to 5000micromorts.</p>
+
+<p>Now this gives an interesting consideration. If as a 20year old I go sky diving with say a 10micromort risk it represents a considerably higher % risk than if I was sixty...</p>
+
+<p>Oh and people over say 80years of age is into serious daily micromorts of 100,000micromorts so almost anything they chose to do will have a negligable effect on their life expectancy...</p>
+
+<p>@ Alan Porter</p>
+
+<p><i>Ah, "naturally irritating". That's the term I've been looking for. Time to update my résumé</i></p>
+
+<p>Where are you expectations?</p>
+
+<p>Me I can be "super-naturally irritating" as part of the generalised theory of "one-upmanship". If some doppy g1t trying to be a smart Alex asked me for 0.00025 of a ton of coffee I would say "Is that a metric or imperial ton as it makes a difference of around 2240:2200 but I know where to look it up if you want the exact figure to the nearest mass of a silicon atom in a standard gravity if you wish?"[1]. However if you can quote the difference in actual numbers of silicon atoms that makes you "un-naturaly Iritating" :-)</p>
+
+<p>[1] For those with a curiosity in "International Standards" (SI) and the units of measure and metrolology (not meteorology it makes a difference in wether you are talking about the weather or how you would standardise measuring the weather) you could do worse than start at, <a href="http://en.wikipedia.org/wiki/Metrology" rel="nofollow">http://en.wikipedia.org/wiki/Metrology</a> </p>
+</div>
+<p class="posted">Posted by: Clive Robinson at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971175">November  8, 2012  9:19 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-paul-johnson">
+<a name="c971211"></a>
+
+<div id="c971211">
+<p>As Stalin might have put it: a single death is a tragedy, but a millionth of a death is a statistic.</p>
+</div>
+<p class="posted">Posted by: Paul Johnson at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971211">November  8, 2012  9:37 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dirk-praet">
+<a name="c971252"></a>
+
+<div id="c971252">
+<div class="wideload">
+<p>Duplicate of February 8th 2011 on this blog, i.e. <a href="https://www.schneier.com/blog/archives/2011/02/micromorts.html" rel="nofollow">https://www.schneier.com/blog/archives/2011/02/micromorts.html</a> .</p>
+</div>
+</div>
+<p class="posted">Posted by: Dirk Praet at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971252">November  8, 2012 10:01 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-conrad-clark">
+<a name="c971296"></a>
+
+<div id="c971296">
+<p>See also <a href="http://esr.ibiblio.org/?p=4683" rel="nofollow">http://esr.ibiblio.org/?p=4683</a> , a  proposal for the microzen, a unit of enlightenment.</p>
+</div>
+<p class="posted">Posted by: conrad clark at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971296">November  8, 2012 10:29 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-echowit">
+<a name="c971489"></a>
+
+<div id="c971489">
+<p>So many μstats!</p>
+</div>
+<p class="posted">Posted by: echowit at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971489">November  8, 2012 12:14 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-john-bachir">
+<a name="c971571"></a>
+
+<div id="c971571">
+<p>The microlife idea reminds me of the movie <a href="http://en.wikipedia.org/wiki/In_time" rel="nofollow">In Time</a>.</p>
+
+<blockquote>
+"Living time", which can be transferred among individuals on body contact, is displayed on a clock implanted in people's forearms. When this clock reaches zero, one dies instantly... The poor...must work each day to earn a few more hours of life, which they must also use to pay for everyday necessities, since time has replaced money as currency.
+</blockquote>
+</div>
+<p class="posted">Posted by: <a title="http://jjb.cc" href="http://jjb.cc" rel="nofollow">John Bachir</a> at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971571">November  8, 2012  1:16 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dr-i-needtob-athe">
+<a name="c971678"></a>
+
+<div id="c971678">
+<p>It surprised me that general anesthetic is as risky as scuba diving. I wonder how that compares to the risk of not getting a colonoscopy, which includes general anesthetic. A more complete list of various activities and their associated risks could be very useful for making rational decisions like this.</p>
+
+<p> </p>
+</div>
+<p class="posted">Posted by: Dr. I. Needtob Athe at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971678">November  8, 2012  2:14 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-bob-roberts">
+<a name="c971801"></a>
+
+<div id="c971801">
+<p>“Scientists have calculated that the chances of something so patently absurd actually existing are millions to one.</p>
+
+<p>But magicians have calculated that million-to-one chances crop up nine times out of ten.” <br />
+― Terry Pratchett, Mort </p>
+</div>
+<p class="posted">Posted by: Bob Roberts at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971801">November  8, 2012  3:51 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-terry-cloth">
+<a name="c971803"></a>
+
+<div id="c971803">
+<p>@Clive Robinson:</p>
+
+<p>   At which time the Alex will reply ``Why do you say mass?  It's constant (if Einstein is right) regardless of gravity.  Surely you mean weight?''</p>
+</div>
+<p class="posted">Posted by: Terry Cloth at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971803">November  8, 2012  3:51 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-mark">
+<a name="c971923"></a>
+
+<div id="c971923">
+<p>@paul<br />
+You forgot to link!</p>
+
+<p><a href="http://what-if.xkcd.com/19/" rel="nofollow">http://what-if.xkcd.com/19/</a></p>
+</div>
+<p class="posted">Posted by: Mark at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c971923">November  8, 2012  5:24 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-adam">
+<a name="c972032"></a>
+
+<div id="c972032">
+<p>In UK (in my experience), colonoscopies are performed under (optional) sedation, not general anaesthetic.</p>
+</div>
+<p class="posted">Posted by: Adam at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c972032">November  8, 2012  7:06 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-clive-robinson">
+<a name="c972493"></a>
+
+<div id="c972493">
+<p>@ Terry Cloth,</p>
+
+<p>If the Smart Alex said,</p>
+
+<p><i>`Why do you say mass? It's constant (if Einstein is right say mass? Surely you mean weight?'</i></p>
+
+<p>He would be right about Einstein but wrong about the way we measure things...</p>
+
+<p>The idea behind our current thinking on standards is to come up with just one or two fundementaly agreed methods such as counting and measuring a length. These are derived from logic via mathmatics for the likes of counting. However you end up with a problem of ratios and what your agreed standard is for "1 unit of measure" so you need primary standards that can converted to others by what are currently belived to be universal constants such as the speed of light.</p>
+
+<p>But there is an issue of scale with the primary method of counting... You have to be able to have things being "singular" and "visable" to count them both of which generaly don't apply to atoms (even though the origins of the word from Greek would haave you thinking otherwise).</p>
+
+<p>So with an agreement on time for which natural (almost) Universaly visable objects are good to 1 part in 10^14 stability wise, you can measure frequency (so many cycles per second) as this is related to Wavelength in a vacuum and relatavistic effects of gravity we can calculate a length by time.</p>
+
+<p>Now how do we take length to mass? when you cannot count atoms, well we do it via volume and density but all substances are compressable (even the stuff in black holes) it depends on gravity...</p>
+
+<p>As the irritating advert (in the UK for insurance) with the meercat says "Simpeellss". </p>
+</div>
+<p class="posted">Posted by: Clive Robinson at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c972493">November  9, 2012 12:46 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-jon-eliot">
+<a name="c972610"></a>
+
+<div id="c972610">
+<p>@Craig "I really doubt that you could calculate how much longer George Burns would have lived by multiplying 15 minutes times the monumental number of cigars he smoked in his lifetime."</p>
+
+<p>Given the relation between probabilities in a large population and outcomes for a single individual, this might be your most well-founded doubt ever.</p>
+</div>
+<p class="posted">Posted by: Jon Eliot at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c972610">November  9, 2012  1:56 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dave-marcus">
+<a name="c973168"></a>
+
+<div id="c973168">
+<p>You would ask for 227 or 254 grams of coffee, actually.  (I would ask for a short Americano, though.)</p>
+</div>
+<p class="posted">Posted by: Dave Marcus at <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html#c973168">November  9, 2012  8:50 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+
+<p><a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.xml">Subscribe to comments on this entry</a></p>
+
+
+<div class="postcomment">
+
+
+
+<h2>Post a comment</h2>
+
+ 
+
+
+
+<form method="post" action="https://www.schneier.com/cgi-bin/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<!-- <input type="hidden" name="static" value="1"> -->
+<input type="hidden" name="static" value="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html?nc=25">
+<input type="hidden" name="entry_id" value="4573">
+
+<div id="name_email">
+<p><label for="author">Name:</label><br>
+<input tabindex="1" id="author" name="author">
+</p>
+<p><label for="email">Email Address:</label><br>
+<input tabindex="2" id="email" name="email">
+<br>E-mail is optional and will not be displayed on the site.</p>
+</div>
+
+
+
+<p><label for="url">URL:</label><br>
+<input tabindex="3" type="text" name="url" id="url">
+Remember Me?
+<input type="radio" id="remember" onclick="rememberMe(this.form)" name="bakecookie"><label for="remember">Yes</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><label for="forget">No</label><br style="clear: both;">
+</p>
+
+<p><label for="text">Comments:</label> <br>
+<textarea tabindex="4" id="text" name="text" rows="10" cols="40"></textarea></p>
+<p><strong>Allowed HTML:</strong> &lt;a href="URL"&gt; &bull; &lt;em&gt; &lt;cite&gt; &lt;i&gt; &bull; &lt;strong&gt; &lt;b&gt; &bull; &lt;sub&gt; &lt;sup&gt; &bull; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &bull; &lt;blockquote&gt; &lt;pre&gt;</p>
+<!-- $MTCommentChallenge$ -->
+
+<div align="center">
+<input type="submit" name="preview" tabindex="5" 
+    value="&nbsp;Preview&nbsp;">
+<input style="font-weight: bold;" type="submit" name="post" 
+    tabindex="6" value="&nbsp;Post&nbsp;">
+</div>
+</form>
+
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+
+
+
+
+
+</div>
+
+
+
+<div id="powered">
+Powered by <a href="http://www.movabletype.org">Movable Type</a>.  Photo at top by Geoffrey Stone.
+
+</div>
+
+<!-- end page content -->
+
+<!-- robots content="noindex" -->
+
+<p class="disclaim">Schneier.com is a personal website.  Opinions expressed are not necessarily those of <a href="http://www.bt.com/">BT</a>.
+</td>
+<td class="kludge">&nbsp;</td>
+<td class="rightcol">
+
+<table class="sidephoto" cellspacing=0><tr>
+<td><img id="authorphoto" src="/images/bruce-blog2.jpg" width="150" height="194" alt="Bruce Schneier">
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Blog Menu</td></tr>
+<tr><td class="sidebody">
+
+<h3 class="first">Search</h3>
+<form method="get" action="http://www.google.com/search">
+<input type="hidden" name="domains" value="www.schneier.com">
+<input type="hidden" name="sitesearch" value="www.schneier.com">
+<input id="search" name="q" size="15" maxlength="255"><br>
+<input type="radio" name="hq" value="inurl:www.schneier.com/blog" checked>blog only<br>
+<input type="radio" name="hq" value="inurl:www.schneier.com/essay">essays and op eds only<br>
+<input type="radio" name="hq" value="inurl:www.schneier.com">whole site<br>
+<input type="submit" value="Search">
+</form>
+
+
+<p><a href="http://www.schneier.com/blog/">Blog Home Page</a>
+<br><a href="http://www.schneier.com/blog/newcomments.html">100 Latest Comments</a>
+
+<h3 id="archives">Archives by Date</h3>
+<div id="calendar">
+<p><b>2012</b> <a href="http://www.schneier.com/blog/archives/2012/01/">J</a> <a href="http://www.schneier.com/blog/archives/2012/02/">F</a> <a href="http://www.schneier.com/blog/archives/2012/03/">M</a> <a href="http://www.schneier.com/blog/archives/2012/04/">A</a> <a href="http://www.schneier.com/blog/archives/2012/05/">M</a> <a href="http://www.schneier.com/blog/archives/2012/06/">J</a> <a href="http://www.schneier.com/blog/archives/2012/07/">J</a> <a href="http://www.schneier.com/blog/archives/2012/08/">A</a> <a href="http://www.schneier.com/blog/archives/2012/09/">S</a> <a href="http://www.schneier.com/blog/archives/2012/10/">O</a> <a href="http://www.schneier.com/blog/archives/2012/11/">N</a>
+<br><b>2011</b> <a href="http://www.schneier.com/blog/archives/2011/01/">J</a> <a href="http://www.schneier.com/blog/archives/2011/02/">F</a> <a href="http://www.schneier.com/blog/archives/2011/03/">M</a> <a href="http://www.schneier.com/blog/archives/2011/04/">A</a> <a href="http://www.schneier.com/blog/archives/2011/05/">M</a> <a href="http://www.schneier.com/blog/archives/2011/06/">J</a> <a href="http://www.schneier.com/blog/archives/2011/07/">J</a> <a href="http://www.schneier.com/blog/archives/2011/08/">A</a> <a href="http://www.schneier.com/blog/archives/2011/09/">S</a> <a href="http://www.schneier.com/blog/archives/2011/10/">O</a> <a href="http://www.schneier.com/blog/archives/2011/11/">N</a> <a href="http://www.schneier.com/blog/archives/2011/12/">D</a>
+<br><b>2010</b> <a href="http://www.schneier.com/blog/archives/2010/01/">J</a> <a href="http://www.schneier.com/blog/archives/2010/02/">F</a> <a href="http://www.schneier.com/blog/archives/2010/03/">M</a> <a href="http://www.schneier.com/blog/archives/2010/04/">A</a> <a href="http://www.schneier.com/blog/archives/2010/05/">M</a> <a href="http://www.schneier.com/blog/archives/2010/06/">J</a> <a href="http://www.schneier.com/blog/archives/2010/07/">J</a> <a href="http://www.schneier.com/blog/archives/2010/08/">A</a> <a href="http://www.schneier.com/blog/archives/2010/09/">S</a> <a href="http://www.schneier.com/blog/archives/2010/10/">O</a> <a href="http://www.schneier.com/blog/archives/2010/11/">N</a> <a href="http://www.schneier.com/blog/archives/2010/12/">D</a>
+<br><b>2009</b> <a href="http://www.schneier.com/blog/archives/2009/01/">J</a> <a href="http://www.schneier.com/blog/archives/2009/02/">F</a> <a href="http://www.schneier.com/blog/archives/2009/03/">M</a> <a href="http://www.schneier.com/blog/archives/2009/04/">A</a> <a href="http://www.schneier.com/blog/archives/2009/05/">M</a> <a href="http://www.schneier.com/blog/archives/2009/06/">J</a> <a href="http://www.schneier.com/blog/archives/2009/07/">J</a> <a href="http://www.schneier.com/blog/archives/2009/08/">A</a> <a href="http://www.schneier.com/blog/archives/2009/09/">S</a> <a href="http://www.schneier.com/blog/archives/2009/10/">O</a> <a href="http://www.schneier.com/blog/archives/2009/11/">N</a> <a href="http://www.schneier.com/blog/archives/2009/12/">D</a>
+<br><b>2008</b> <a href="http://www.schneier.com/blog/archives/2008/01/">J</a> <a href="http://www.schneier.com/blog/archives/2008/02/">F</a> <a href="http://www.schneier.com/blog/archives/2008/03/">M</a> <a href="http://www.schneier.com/blog/archives/2008/04/">A</a> <a href="http://www.schneier.com/blog/archives/2008/05/">M</a> <a href="http://www.schneier.com/blog/archives/2008/06/">J</a> <a href="http://www.schneier.com/blog/archives/2008/07/">J</a> <a href="http://www.schneier.com/blog/archives/2008/08/">A</a> <a href="http://www.schneier.com/blog/archives/2008/09/">S</a> <a href="http://www.schneier.com/blog/archives/2008/10/">O</a> <a href="http://www.schneier.com/blog/archives/2008/11/">N</a> <a href="http://www.schneier.com/blog/archives/2008/12/">D</a>
+<br><b>2007</b> <a href="http://www.schneier.com/blog/archives/2007/01/">J</a> <a href="http://www.schneier.com/blog/archives/2007/02/">F</a> <a href="http://www.schneier.com/blog/archives/2007/03/">M</a> <a href="http://www.schneier.com/blog/archives/2007/04/">A</a> <a href="http://www.schneier.com/blog/archives/2007/05/">M</a> <a href="http://www.schneier.com/blog/archives/2007/06/">J</a> <a href="http://www.schneier.com/blog/archives/2007/07/">J</a> <a href="http://www.schneier.com/blog/archives/2007/08/">A</a> <a href="http://www.schneier.com/blog/archives/2007/09/">S</a> <a href="http://www.schneier.com/blog/archives/2007/10/">O</a> <a href="http://www.schneier.com/blog/archives/2007/11/">N</a> <a href="http://www.schneier.com/blog/archives/2007/12/">D</a>
+<br><b>2006</b> <a href="http://www.schneier.com/blog/archives/2006/01/">J</a> <a href="http://www.schneier.com/blog/archives/2006/02/">F</a> <a href="http://www.schneier.com/blog/archives/2006/03/">M</a> <a href="http://www.schneier.com/blog/archives/2006/04/">A</a> <a href="http://www.schneier.com/blog/archives/2006/05/">M</a> <a href="http://www.schneier.com/blog/archives/2006/06/">J</a> <a href="http://www.schneier.com/blog/archives/2006/07/">J</a> <a href="http://www.schneier.com/blog/archives/2006/08/">A</a> <a href="http://www.schneier.com/blog/archives/2006/09/">S</a> <a href="http://www.schneier.com/blog/archives/2006/10/">O</a> <a href="http://www.schneier.com/blog/archives/2006/11/">N</a> <a href="http://www.schneier.com/blog/archives/2006/12/">D</a>
+<br><b>2005</b> <a href="http://www.schneier.com/blog/archives/2005/01/">J</a> <a href="http://www.schneier.com/blog/archives/2005/02/">F</a> <a href="http://www.schneier.com/blog/archives/2005/03/">M</a> <a href="http://www.schneier.com/blog/archives/2005/04/">A</a> <a href="http://www.schneier.com/blog/archives/2005/05/">M</a> <a href="http://www.schneier.com/blog/archives/2005/06/">J</a> <a href="http://www.schneier.com/blog/archives/2005/07/">J</a> <a href="http://www.schneier.com/blog/archives/2005/08/">A</a> <a href="http://www.schneier.com/blog/archives/2005/09/">S</a> <a href="http://www.schneier.com/blog/archives/2005/10/">O</a> <a href="http://www.schneier.com/blog/archives/2005/11/">N</a> <a href="http://www.schneier.com/blog/archives/2005/12/">D</a>
+<br><b>2004</b> <span class="empty">J</span> <span class="empty">F</span> <span class="empty">M</span> <span class="empty">A</span> <span class="empty">M</span> <span class="empty">J</span> <span class="empty">J</span> <span class="empty">A</span> <span class="empty">S</span> <a href="http://www.schneier.com/blog/archives/2004/10/">O</a> <a href="http://www.schneier.com/blog/archives/2004/11/">N</a> <a href="http://www.schneier.com/blog/archives/2004/12/">D</a>
+
+</div>
+
+<!-- begin EFF Blogger's Rights campaign code -->
+<DIV id="eff" ALIGN="CENTER"><A HREF="https://www.eff.org/issues/bloggers/legal/join"><IMG id="effbutton" SRC="https://w2.eff.org/bloggers/badges/blog_150x40.gif" ALT="Support Bloggers' Rights!" WIDTH="150" HEIGHT="40" BORDER="0" ALIGN="MIDDLE"></A></DIV>
+<!-- end EFF Blogger's Rights campaign code -->
+
+<div class="sidebtn"><a href="https://npo.networkforgood.org/Donate/Donate.aspx?npoSubscriptionId=8252"><img src="/images/epic-150w.png" ALIGN="MIDDLE" width="150" height="54" alt="Defend Privacy--Support Epic"></a></div>
+
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Latest Book</td></tr>
+<tr><td class="sidebody"><a href="http://www.schneier.com/book-lo.html"><img class="sidepic" WIDTH="175" HEIGHT="263" alt="Liars &amp; Outliers" border=0 src="/images/book-lo-175w.jpg"></a>
+<br><a href="http://www.schneier.com/books.html">more books by Bruce Schneier</a>
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Syndication</td></tr>
+<tr><td class="sidebody">
+<a href="http://www.schneier.com/blog/rss.xml">Full Text Feed</a>
+<br><a href="http://www.schneier.com/blog/index.xml">Excerpts Feed</a>
+
+<p><a href="http://twitter.com/schneierblog/">Follow on Twitter</a>
+<br><a href="http://www.amazon.com/Schneier-on-Security/dp/B0053HDDWW/">Subscribe via Kindle</a>
+</td></tr></table>
+
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Crypto-Gram Newsletter</td></tr>
+<tr><td class="sidebody">
+If you prefer to receive Bruce Schneier's comments on security as a monthly e-mail digest, subscribe to Schneier on Security's sister publication, Crypto-Gram.  
+<br><a href="http://www.schneier.com/crypto-gram.html">read more</a>
+
+</td></tr></table>
+
+<!-- /robots -->
+
+</td></tr>
+</table>
+</body>
+</html>

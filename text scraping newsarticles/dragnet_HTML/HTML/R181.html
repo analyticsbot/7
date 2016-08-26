@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
+	<head>
+		<script type="text/javascript" src="http://img.weburbanist.com/wp-content/themes/weburbanist-4/js/modernizr.js"></script>
+	
+		<script type="text/javascript">
+            if(document.referrer.search(/google\.*/i)!=-1&&top!=self){top.location.replace(self.location.href+'?ref=search&utm_campaign=googimages&utm_source=images&utm_medium=other')}
+        </script>
+	
+		<script type="text/javascript">
+            var evilbothit = "nohit!";
+            if (document.location.pathname == "/") { 
+                evilbothit = "fronthit!"; 
+                if(
+                    (document.referrer == "") &&
+                    (navigator.userAgent.search('MSIE 9.0') != -1) &&
+                    (screen.height == 768)){ 
+                    evilbothit = "front:direct:MSIE";
+                    top.location.replace("http://weburbanist.com/hole/bots/main/"); }
+            }
+		</script>
+		
+        
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script src="http://img.weburbanist.com/wp-content/themes/weburbanist-4/js/bootstrap.min.js"></script>
+		<script src="http://img.weburbanist.com/wp-content/themes/weburbanist-4/js/main.js"></script>
+		<script type="text/javascript" src="http://64.38.23.86/geo"></script>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="http://img.weburbanist.com/wp-content/themes/weburbanist-4/images/urbapple114.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://img.weburbanist.com/wp-content/themes/weburbanist-4/images/urbapple114.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://img.weburbanist.com/wp-content/themes/weburbanist-4/images/urbapple144.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://img.weburbanist.com/wp-content/themes/weburbanist-4/images/urbapple144.png" />
+
+		<link rel="pingback" href="http://weburbanist.com/xmlrpc.php" />
+		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://weburbanist.com/feed/" />
+		<link rel="alternate" type="text/xml" title="RSS .92" href="http://weburbanist.com/feed/rss/" />
+		<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://weburbanist.com/feed/atom/" />
+	
+		<link href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
+		<link href="http://img.weburbanist.com/wp-content/themes/weburbanist-4/style.css?a=1.028" rel="stylesheet">
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		
+		<!--[if IE 7]>
+		<style>
+		.sidebar-thumbs a{margin-right:6px;}
+		.input-prepend .add-on{margin-top:1px;}
+		</style>
+		<![endif]-->
+	
+		<!--blogads-->
+
+		<title>
+          Urban LEGOs: Conceptual Cure for Civic Blight Blindness | WebUrbanist        </title>
+
+				
+    <script type="text/javascript" id="jswsaDate">
+        var googAge = "noage";
+        var googType = "notype";
+        var googCat = "nocat";
+        var googAuthor = "noauthor";
+        var googPosttime = "notime";
+        var googRef = "noref";
+        var googImg = "noimg";
+		var googTest = "notest";
+        var googOzh = "noozh";
+        var googASKill = false;
+
+        googImg = 'feedburner';
+
+		googTest = 'nokey';
+
+	    // set googAge to age of page
+	    postDate = new Date('October 30, 2012');
+        tday = new Date();
+        msPerDay = 24*60*60*1000;
+
+        googAge = new Array();
+        googAge.push("year" + postDate.getFullYear() );
+        if ((tday-postDate) > (msPerDay*30)) { googAge.push("month"); }
+        if ((tday-postDate) > (msPerDay*10)) { googAge.push("ten"); }
+        else { googAge.push("zero"); }
+
+        //var ozhDate = new Date(2011,10,13); // 2011Nov13 (not Oct)
+        if ((tday-postDate) > (msPerDay*30)) { googOzh = 1; }
+        else { googOzh = 0; }
+
+        // set googType to type of page
+        googType =
+        "single";
+
+		// set googCat
+				googCat = ["architecture","urbanism"];
+
+        googAuthor = "Steph";
+        
+        googPosttime = "1200";
+
+		googTag =
+		["concept-architecture","conceptual-architecture","design-concepts","lego","lego-art","legos","urban","urban-landscape"];
+        
+        //set googRef
+        testsearch = RegExp("search|google|bing|yahoo|ask.com");
+        testnetwork = RegExp("http://gajitz.com|http://webecoist.com|http://dornob.com");
+        testself= RegExp("http://weburbanist.com");
+        testmisc = RegExp("darkroastedblend.com|leenks.com|i-am-bored.com|neatorama.com|asylum.com|2leep.com|huffingtonpost.com");
+        testsocial = RegExp("pinterest.com|reddit.com|stumbleupon.com|twitter.com|facebook.com|pinterest.com");
+        if (testsearch.test(document.referrer)) {googRef = "search"; }
+        else if (googImg == "images") {googRef = "search"; }
+        else if (testnetwork.test(document.referrer.substring(0, 32))) { googRef = "network"; }
+        else if (testself.test(document.referrer.substring(0, 32))) { googRef = "self"; }
+        else if (testmisc.test(document.referrer)) { googRef = "misc"; }
+        else if (testsocial.test(document.referrer)) { googRef = "social"; }
+        else { googRef = "nomatch"; }
+
+    // set googASKill true to disable adsense
+    if (googType == "single") {
+		var apk = new Array(0, 14979, 22182, 19203, 43280, 39238, 40921);
+		googASKill = apk.indexOf(43898)>=1;
+	}
+
+    </script>
+    <!-- end jswsa header code -->
+	
+    <script type='text/javascript'>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+    </script>
+     
+     <script type='text/javascript'>
+     googletag.cmd.push(function() {
+         googletag.defineSlot('/1018129/WebUrbanist-160x600', [160, 600], 'WebUrbanist-160x600').addService(googletag.pubads());
+         googletag.defineSlot('/1018129/WebUrbanist-300x250', [300, 250], 'WebUrbanist-300x250').addService(googletag.pubads());
+         googletag.defineSlot('/1018129/WebUrbanist-728x90', [728, 90], 'WebUrbanist-728x90').addService(googletag.pubads());
+         googletag.defineSlot('/1018129/WebUrbanist-Image-Script', [1, 1], 'WebUrbanist-Image-Script').addService(googletag.pubads());
+         googletag.pubads().setTargeting("age", googAge);
+         googletag.pubads().setTargeting("type", googType);
+         googletag.pubads().setTargeting("cat", googCat);
+         googletag.pubads().setTargeting("tag", googTag);
+         googletag.pubads().setTargeting("ref", googRef);
+         googletag.pubads().setTargeting("test", googTest);
+         googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+     });
+     </script>
+        
+	<!-- google analytics async -->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-1472145-15']);
+	  _gaq.push(['_setCustomVar',1,'pagetype',googType,3]); // page level
+	  _gaq.push(['_setCustomVar',2,'maincat','architecture',3]); // page level
+	  _gaq.push(['_setCustomVar',3,'subcat','urbanism',3]); // page level
+	  _gaq.push(['_setCustomVar',4,'posttime',googPosttime,3]); // page level
+	  _gaq.push(['_setCustomVar',5,'age',(googType == 'single') ? postDate.getFullYear().toString() : 'notsingle',3]); // page level
+	  _gaq.push(['_trackPageview']); // sends pathname without querystrings, etc
+
+	if (window.history && history.replaceState && location.search.match(/utm_|ref=/)) {
+		_gaq.push(function(){
+				history.replaceState({}, "", location.pathname); //drop query string in location bar and history
+		});
+	}
+	//Evil Robot Detection
+		var category = 'trafficQuality';
+		var dimension = 'botDetection';
+		var human_events = ['onkeydown','onmousemove'];
+
+		if ( navigator.appName == 'Microsoft Internet Explorer' && !document.referrer) {
+			for(var i = 0; i < human_events.length; i++){
+				document.attachEvent(human_events[i], ourEventPushOnce);
+			}
+		}else{
+			_gaq.push( [ '_trackEvent', category, dimension, 'botExcluded', 1, true ] );
+		}
+
+		function ourEventPushOnce(ev) {
+
+			_gaq.push( [ '_trackEvent', category, dimension, 'on' + ev.type, 1, true ] );
+
+			for(var i = 0; i < human_events.length; i++){
+				document.detachEvent(human_events[i], ourEventPushOnce);
+			}
+
+		} // end ourEventPushOnce()
+		//End Evil Robot Detection
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+	<!-- end google analytics -->	
+	
+	<!-- guardian tracking for GB only -->
+	<script type='text/javascript'>
+	var guardAd = '%3C%21--%20START%20GUARDIAN%20ONLINE%20BEHAVIOURAL%20TARGETING%20CODE%20--%3E%20%0A%3C%21--%20START%20QUANTCAST%20AD%20TAG%20--%3E%0A%3Cscript%20type%3D%22text/javascript%22%3E%0Avar%20quantSegs%3D%22%22%3B%0Avar%20quant_segs_beg%20%3D%20document.cookie.indexOf%28%27quant_segs%27%29%3B%0Aif%20%28quant_segs_beg%20%3E%3D%200%29%20%7B%0Aquant_segs_beg%20%3D%20document.cookie.indexOf%28%27%3D%27%2C%20quant_segs_beg%29%20+%201%3B%0Aif%20%28quant_segs_beg%20%3E%200%29%20%7B%0Avar%20quant_segs_end%20%3D%20document.cookie.indexOf%28%27%3B%27%2C%20quant_segs_beg%29%3B%0Aif%20%28quant_segs_end%20%3D%3D%20-1%29%20quant_segs_end%20%3D%20document.cookie.length%3B%0AquantSegs%20%3D%20unescape%28document.cookie.substring%28quant_segs_beg%2C%20quant_segs_end%29%29%3B%0A%7D%0A%7D%0A%0Afunction%20qc_results%28result%29%20%7B%0Avar%20qc%20%3D%20%22%22%3B%0Afor%20%28var%20i%20%3D%200%3B%20i%20%3C%20result.segments.length%3B%20i++%29%20%7B%0A%20%20%20%20%20qc%20+%3D%20%22qc%3D%22%20+%20result.segments%5Bi%5D.id%20+%20%22%26%22%3B%20//customizable%20per%20your%20ad%20server%0A%20%20%7D%0A%0A%20%20document.cookie%20%3D%20%22quant_segs%3D%22%20+%20escape%28qc%29%3B%0A%7D%0A%0A%3C/script%3E%0A%3C%21--%20END%20QUANTCAST%20AD%20TAG%20--%3E%0A%3C%21--%20AUDIENCESCIENCE%20AD%20TAG%20CODE%20--%3E%0A%3Cscript%20type%3D%22text/javascript%22%3E%0A%3C%21--%0Avar%20rsi_segs%20%3D%20%5B%5D%3B%0Avar%20segs_beg%3Ddocument.cookie.indexOf%28%27rsi_segs%3D%27%29%3B%0Aif%20%28segs_beg%3E%3D0%29%7B%0Asegs_beg%3Ddocument.cookie.indexOf%28%27%3D%27%2Csegs_beg%29+1%3B%0Aif%28segs_beg%3E0%29%7B%0Avar%20segs_end%3Ddocument.cookie.indexOf%28%27%3B%27%2Csegs_beg%29%3B%0Aif%28segs_end%3D%3D-1%29%20segs_end%3Ddocument.cookie.length%3B%0Arsi_segs%3Ddocument.cookie.substring%28segs_beg%2Csegs_end%29.split%28%27%7C%27%29%3B%0A%0A%7D%0A%7D%0Avar%20segLen%3D100%3B%0AsegQS%3D%22%22%3B%0Aif%20%28rsi_segs.length%3CsegLen%29%7BsegLen%3Drsi_segs.length%7D%0Afor%20%28var%20i%3D0%3Bi%3CsegLen%3Bi++%29%7B%0AsegQS+%3D%28%22a%22+%22%3D%22+rsi_segs%5Bi%5D%29%0A%7D%0A//--%3E%0A%3C/script%3E%0A%0A%3Cscript%20type%3D%22text/javascript%22%3E%0A%0Avar%20gsegQS%20%3D%20%22%22%3B%0AgsegQS%3DsegQS.replace%28/E0/g%2C%27%26a%3DE0%27%29.replace%28%22a%3D%26%22%2C%22%22%29+%27%26%27%3B%0A%0A%3C/script%3E%0A%3C%21--%20END%20AUDIENCESCIENCE%20AD%20TAG%20CODE%20--%3E%0A%3C%21--%20END%20GUARDIAN%20ONLINE%20BEHAVIOURAL%20TARGETING%20CODE%20--%3E';
+	if (googTest == 'guard') { document.write(unescape(guardAd)); }
+	else if (geoplugin_countryCode() == 'GB') { document.write(unescape(guardAd)); }
+	</script>
+	
+	<!-- Begin comScore Tag -->
+	<script>
+	  var _comscore = _comscore || [];
+	  _comscore.push({ c1: "2", c2: "9766352" });
+	  (function() {
+		var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+	  })();
+	</script>
+	<noscript>
+	  <img src="http://b.scorecardresearch.com/p?c1=2&c2=9766352&cv=2.0&cj=1" />
+	</noscript>
+	<!-- End comScore Tag -->
+	
+	<link rel="alternate" type="application/rss+xml" title="WebUrbanist &raquo; Urban LEGOs: Conceptual Cure for Civic Blight Blindness Comments Feed" href="http://weburbanist.com/2012/10/30/urban-legos-conceptual-cure-for-civic-blight-blindness/feed/" />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://weburbanist.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://weburbanist.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://weburbanist.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Wallpaper Paint Rollers: Cool &amp; Classic Patterns, DIY Style' href='http://weburbanist.com/2012/10/29/wallpaper-paint-rollers-cool-classic-patterns-diy-style/' />
+<meta name="generator" content="WordPress 3.4.2" />
+<link rel='canonical' href='http://weburbanist.com/2012/10/30/urban-legos-conceptual-cure-for-civic-blight-blindness/' />
+<link rel='shortlink' href='http://weburbanist.com/?p=43898' />
+
+<!-- All in One SEO Pack 1.6.12.1 by Michael Torbert of Semper Fi Web Design[-1,-1] -->
+<meta name="description" content="Fantasy structures made of colorful LEGO blocks call attention to disused, blighted urban spaces in a conceptual architecture project by Espai MGR in Valencia." />
+<meta name="keywords" content="concept architecture, conceptual architecture, design concepts, lego, legos, lego art, urban everything, urban landscape,conceptual architecture,design concepts,lego,lego art,legos,urban everything,urban landscape,architecture,cities &amp; urbanism" />
+<!-- /all in one seo pack -->
+<meta name="tweetmeme-title" content="Urban LEGOs: Conceptual Cure for Civic Blight Blindness" />	</head>
+	
+	<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	
+	<body>
+		<div class="container" id="maincontainer">
+			<div class="row" id="row-logo">
+				<div class="span3" id="logo-span">
+					<a href="http://weburbanist.com/"><img id="logo" src="http://img.weburbanist.com/wp-content/themes/weburbanist-4/images/urblogo.png"></a>
+				</div>
+				
+				<div class="span8" id="ta-span">
+                    <!-- WebUrbanist-728x90 -->
+                    <div id='WebUrbanist-728x90' style='width:728px; height:90px;'>
+                        <script type='text/javascript'>
+                            googletag.cmd.push(function() { googletag.display('WebUrbanist-728x90'); });
+                        </script>
+                    </div>
+				</div>
+			</div>
+		
+			<div class="navbar" id="top-navbar">
+				<div class="navbar-inner">
+					<div id="header-intro">Daily New Articles Featuring <a href="http://weburbanist.com/category/architecture/">Architecture</a>, <a href="http://weburbanist.com/category/urban-art/">Art</a>, <a href="http://weburbanist.com/category/design/">Design</a>, <a href="http://weburbanist.com/category/global/">Travel</a>, & <a href="http://weburbanist.com/category/technology/">Technology</a></div>
+
+					<ul class="nav pull-right" id="nav-search">
+						<form method="get" action="http://weburbanist.com/">
+							<div class="input-prepend">
+								<span class="add-on"><em class="icon icon-search"></em></span>
+								<input type="text" class="input input-medium" name="s" placeholder="Search the Site...">
+							
+							<button type="submit" class="btn">search</button>
+							</div>
+						</form>
+					</ul>
+				</div>
+			</div>
+			
+			<script type='text/javascript'>
+			var guardAd = '%3C%21--%20Guardian%20Select%3A%20Culture%20Tag%20Begins%20--%20Superheader%20--%3E%20%0A%3Cscript%20src%3D%22http%3A//resource.guim.co.uk/global/adcode/generate%3Fpartner%3Dweburbanist.com%26n%3Dculture%26s%3Dart%26slot%3Dx26%22%3E%3C/script%3E%0A%3C%21--%20Guardian%20Select%3A%20Culture%20Tag%20Ends%20--%20Superheader%20--%3E%20';
+
+			if (googTest == 'guard') { document.write(unescape(guardAd)); }
+			else if ((geoplugin_countryCode() == 'GB')) {
+					document.write(unescape(guardAd));
+			}
+			</script>
+			
+			<div class="row">
+	<div class="span6" id="maincontent">
+
+		<div class="post" id="post">
+			<h5 id="post-title">Urban LEGOs: Conceptual Cure for Civic Blight Blindness</h5>
+			<div id="post-author">Article by <a href="http://weburbanist.com/Steph">Steph,</a> filed under <a href='http://weburbanist.com/category/architecture/urbanism/'>Cities &amp; Urbanism</a> in the <a href='http://weburbanist.com/category/architecture/'>Architecture</a> category.</div>
+			
+			
+			<script type='text/javascript'>
+
+                var googAd = '%3Cscript%20type%3D%22text%2Fjavascript%22%3E%3C!--%0Agoogle_ad_client%20%3D%20%22ca-pub-1402902500256002%22%3B%0A%2F*%20WU%20Top%20468x60%20*%2F%0Agoogle_ad_slot%20%3D%20%223217133134%22%3B%0Agoogle_ad_width%20%3D%20468%3B%0Agoogle_ad_height%20%3D%2060%3B%0A%2F%2F--%3E%0A%3C%2Fscript%3E%0A%3Cscript%20type%3D%22text%2Fjavascript%22%0Asrc%3D%22http%3A%2F%2Fpagead2.googlesyndication.com%2Fpagead%2Fshow_ads.js%22%3E%0A%3C%2Fscript%3E';
+				if (googASKill) {}
+				else if (googTest == 'singletop') { document.write(unescape(googAd)); }
+				else if (googRef == 'search') { document.write(unescape(googAd)); }
+				else {}
+
+			</script>
+			
+			
+<p><img class="alignnone size-full wp-image-43899" title="lego-architecture-1" src="http://weburbanist.com/wp-content/uploads/2012/10/lego-architecture-1.jpg" alt="" width="468" height="420" />
+			<!-- old ozh unit 3xx 2xx after 1st image -->
+			<p id="ozhmpu" style="display:none;float:left;margin:0px 8px 0px 0px;padding:0px 8px 12px 0px;border-right:dashed 1px #a4a4a4;height:266px;">
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-1402902500256002";
+			/* WU 336x280 TOC */
+			google_ad_slot = "8119745742";
+			google_ad_width = 336;
+			google_ad_height = 280;
+			//-->
+			</script>
+			<script type="text/javascript">
+			// IE8,9 chokes on this and renders outside expected div containers if the 
+			// above defined google_ad variables are escaped with the show_ads.js call below
+			var googShowAds = '%3Cscript%20type%3D%22text/javascript%22%0Asrc%3D%22http%3A//pagead2.googlesyndication.com/pagead/show_ads.js%22%3E%0A%3C/script%3E';
+			if (googASKill) {}
+			else if (googRef == 'social') {}
+			else if ((googTest == 'argh') || googOzh) { 
+				document.write(unescape(googShowAds)); 
+				document.getElementById("ozhmpu").style.display = "inline";
+                jQuery('#ozhmpu').prev().css('margin-bottom','10px');
+			}
+			else {}
+			</script>
+			</p>
+
+</p>
+<p>Chances are, you&#8217;d notice all of the vacant lots in your city if massive LEGO structures were used to call attention to the wasted space. <a href="http://www.dezeen.com/2011/05/06/habit-makes-us-blind-by-espai-mgr/">&#8216;Habit Makes Us Blind&#8217; is a concept by Spanish studio Espai MGR</a>, digitally filling in unused areas of Valencia with colorful fantasy buildings suggesting how the space could be used.</p>
+<p><img class="alignnone size-full wp-image-43900" title="lego-architecture-2" src="http://weburbanist.com/wp-content/uploads/2012/10/lego-architecture-2.jpg" alt="" width="468" height="703" /></p>
+<p>As years go by, vacant lots &#8211; often walled off with ugly temporary fences that are soon covered in spray-painted tags &#8211; can almost become invisible to those who pass them on a regular basis.</p>
+<p><img class="alignnone size-full wp-image-43901" title="lego-architecture-3" src="http://weburbanist.com/wp-content/uploads/2012/10/lego-architecture-3.jpg" alt="" width="468" height="680" /></p>
+<p>With urban populations continuing to grow, space is at a premium. While the LEGO structures by Espai MGR aren&#8217;t practical in a real-world sense, they do illustrate just how much vertical space is still available, leading one to wonder what it could potentially become.</p>
+<p><img class="alignnone size-full wp-image-43902" title="lego-architecture-4" src="http://weburbanist.com/wp-content/uploads/2012/10/lego-architecture-4.jpg" alt="" width="468" height="574" /></p>
+<p><img class="alignnone size-full wp-image-43903" title="lego-architecture-5" src="http://weburbanist.com/wp-content/uploads/2012/10/lego-architecture-5.jpg" alt="" width="468" height="494" /></p>
+<p>&#8220;This photographic work aims at calling people’s attention, just like painting those isolated walls yellow would. It demands the recreational use of those vacant lots through the eyes of a child, by filling them with impossible constructions, surrealistic installations in line with the problem. A children’s game as a neighbour’s shout, demanding the right to take part in their city.&#8221;</p>
+				<a id="post-fb-comment" href="https://www.facebook.com/weburbanist/posts/167005993438932" class="btn">Comment on Facebook</a>
+		
+		</div>
+		
+		<div id="post-social">
+			<div class="post-social-div" id="post-social-pin"><a href="javascript:javascript:void((function(){var e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)})());" title="Pin It!"><img src="http://passets-cdn.pinterest.com/images/pinit_preview_none.png" height="21" width="41"></a></div>
+			
+			<div class="post-social-div" id="post-social-fb"><iframe src="http://www.facebook.com/plugins/like.php?app_id=181272351937835&amp;href=http://weburbanist.com/2012/10/30/urban-legos-conceptual-cure-for-civic-blight-blindness/&amp;send=false&amp;layout=button_count&amp;width=78&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:78px; height:21px;" allowTransparency="true"></iframe></div>
+			
+			<div class="post-social-div" id="post-social-twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="webist" data-related="dornobdesign:Dynamic designs & new ideas daily.">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
+			
+			<div class="post-social-div" id="post-social-reddit"><script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script></div>
+			
+			<div class="post-social-div" id="post-social-su"><script src="http://www.stumbleupon.com/hostedbadge.php?s=1&r=http://weburbanist.com/2012/10/30/urban-legos-conceptual-cure-for-civic-blight-blindness/"></script></div>
+		</div>
+
+		<div id="related-posts" class="well">
+			
+        <!-- 1border-top:none; -->
+		<div class="post-listing-item">
+			<a href="http://weburbanist.com/2009/11/14/legos-bring-historical-figures-to-miniature-toy-life/" title="LEGOs Bring Historical Figures to (Miniature Toy) Life" class="post-listing-img pull-left">
+				<img src="http://weburbanist.com/wp-content/uploads/2009/11/LEGO-minifig-thumb.jpg" width="100" height="100">
+			</a>
+			<a href="http://weburbanist.com/2009/11/14/legos-bring-historical-figures-to-miniature-toy-life/" title="LEGOs Bring Historical Figures to (Miniature Toy) Life">
+				<h3>LEGOs Bring Historical Figures to (Miniature Toy) Life</h3>
+			</a>
+			<p>LEGO artist Jamie Spencer created over 90 historical figures, from Charlemagne to Elvis, using only official LEGO parts.</p>
+		</div>
+        <!-- 2 -->
+		<div class="post-listing-item">
+			<a href="http://weburbanist.com/2009/09/05/bricks-and-scones-british-house-built-entirely-of-legos/" title="Bricks and Scones: British House Built Entirely of Legos" class="post-listing-img pull-left">
+				<img src="http://weburbanist.com/wp-content/uploads/2009/09/Lego-house-thumb.jpg" width="100" height="100">
+			</a>
+			<a href="http://weburbanist.com/2009/09/05/bricks-and-scones-british-house-built-entirely-of-legos/" title="Bricks and Scones: British House Built Entirely of Legos">
+				<h3>Bricks and Scones: British House Built Entirely of Legos</h3>
+			</a>
+			<p>Have you ever wished you could build a Lego house big enough to walk into? UK TV presenter James May and a team of volunteers and builders are doing just that.</p>
+		</div>		</div>
+
+
+
+		<div class="row well" id="post-bottom-links">
+			<div class="span1" id="post-bottom-linksgroup">
+				<a href="http://weburbanist.com/galleries/">12 Image Galleries</a>
+				<a href="http://weburbanist.com/2008/10/19/ghost-town-abandoned-city-examples-images/">24 Ghost Cities</a>
+				<a href="http://weburbanist.com/2008/09/09/70-amazing-houses-from-around-the-world/">70 Amazing Houses</a>
+				<a href="http://weburbanist.com/abandoned-buildings-towns-and-cities/">100 Abandonments</a>
+				<a href="http://weburbanist.com/themed-castle-and-art-hotels/">70 Unique Hotels</a>
+				<a href="http://weburbanist.com/underwater-and-oceanic-oddities/">50 Ocean Oddities</a>
+				<a href="http://weburbanist.com/2008/07/01/what-is-guerrilla-marketing/">8 Guerrilla Guides</a>
+				<a href="http://weburbanist.com/urban-exploration-tips-tricks-and-guides/">12 Urbex Resources</a>
+				<a href="http://weburbanist.com/3d-light-geek-and-other-graffiti/">100 Geek Artworks</a>
+				<a href="http://weburbanist.com/archives/">Complete Archives</a>
+			</div>
+			<div class="span3" id="post-bottom-linksbox">
+				<script type="text/javascript"><!--
+				google_ad_client = "ca-pub-1402902500256002";
+				/* WU 300x250 MPU */
+				google_ad_slot = "9565891263";
+				google_ad_width = 300;
+				google_ad_height = 250;
+				//-->
+				</script>
+				<script type="text/javascript">
+					// IE8,9 chokes on this and renders outside expected div containers if the
+					// above defined google_ad variables are escaped with the show_ads.js call below
+					var googShowAds = '%3Cscript%20type%3D%22text/javascript%22%0Asrc%3D%22http%3A//pagead2.googlesyndication.com/pagead/show_ads.js%22%3E%0A%3C/script%3E';
+					if (googASKill) {}
+					else { document.write(unescape(googShowAds)); }
+				</script>
+			</div>
+		</div>
+		
+		
+		
+	</div>
+
+<!-- begin sidebar categories -->
+
+<div class="span3" id="smallsidebar">
+
+    <ul class="sidebar-splay">
+        <li><a href="http://weburbanist.com/galleries/"><b>Galleries</b></a></li>
+<li class='cat-architecture sidebar-splay-parent'>
+
+                <a>Architecture</a>
+
+                <ul class='sidebar-splay-inside cat-architecture'>
+<li class='cat-abandonments'><a href='http://weburbanist.com/category/architecture/abandonments'>Abandoned Places</a></li>
+<li class='cat-urbanism'><a href='http://weburbanist.com/category/architecture/urbanism'>Cities &amp; Urbanism</a></li>
+<li class='cat-houses-residential'><a href='http://weburbanist.com/category/architecture/houses-residential'>Houses &amp; Residential</a></li>
+<li class='cat-offices-commercial'><a href='http://weburbanist.com/category/architecture/offices-commercial'>Offices &amp; Commercial</a></li>
+<li class='cat-public-instatutional'><a href='http://weburbanist.com/category/architecture/public-instatutional'>Public &amp; Institutional</a></li>
+</ul></li><li class='cat-urban-art sidebar-splay-parent'>
+
+                <a>Art</a>
+
+                <ul class='sidebar-splay-inside cat-urban-art'>
+<li class='cat-drawing-digital'><a href='http://weburbanist.com/category/urban-art/drawing-digital'>Drawing &amp; Digital</a></li>
+<li class='cat-installation-sound'><a href='http://weburbanist.com/category/urban-art/installation-sound'>Installation &amp; Sound</a></li>
+<li class='cat-photography-video'><a href='http://weburbanist.com/category/urban-art/photography-video'>Photography &amp; Video</a></li>
+<li class='cat-sculpture-craft'><a href='http://weburbanist.com/category/urban-art/sculpture-craft'>Sculpture &amp; Craft</a></li>
+<li class='cat-street-art-graffiti'><a href='http://weburbanist.com/category/urban-art/street-art-graffiti'>Street Art &amp; Graffiti</a></li>
+</ul></li><li class='cat-design sidebar-splay-parent'>
+
+                <a>Design</a>
+
+                <ul class='sidebar-splay-inside cat-design'>
+<li class='cat-fixtures-interiors'><a href='http://weburbanist.com/category/design/fixtures-interiors'>Fixtures &amp; Interiors</a></li>
+<li class='cat-urban-furniture'><a href='http://weburbanist.com/category/design/urban-furniture'>Furniture &amp; Decor</a></li>
+<li class='cat-graphics-branding'><a href='http://weburbanist.com/category/design/graphics-branding'>Graphics &amp; Branding</a></li>
+<li class='cat-guerilla-marketing'><a href='http://weburbanist.com/category/design/guerilla-marketing'>Guerilla Ads &amp; Marketing</a></li>
+<li class='cat-products-packaging'><a href='http://weburbanist.com/category/design/products-packaging'>Products &amp; Packaging</a></li>
+</ul></li><li class='cat-global sidebar-splay-parent'>
+
+                <a>Global</a>
+
+                <ul class='sidebar-splay-inside cat-global'>
+<li class='cat-7-wonders'><a href='http://weburbanist.com/category/global/7-wonders'>7 Wonders Series</a></li>
+<li class='cat-boutique-art-hotels'><a href='http://weburbanist.com/category/global/boutique-art-hotels'>Boutique &amp; Art Hotels</a></li>
+<li class='cat-culture-cuisine'><a href='http://weburbanist.com/category/global/culture-cuisine'>Culture &amp; Cuisine</a></li>
+<li class='cat-travel'><a href='http://weburbanist.com/category/global/travel'>Travel &amp; Places</a></li>
+<li class='cat-urban-exploration'><a href='http://weburbanist.com/category/global/urban-exploration'>Urbex &amp; Parkour</a></li>
+</ul></li><li class='cat-technology sidebar-splay-parent'>
+
+                <a>Technology</a>
+
+                <ul class='sidebar-splay-inside cat-technology'>
+<li class='cat-conceptual-futuristic'><a href='http://weburbanist.com/category/technology/conceptual-futuristic'>Conceptual &amp; Futuristic</a></li>
+<li class='cat-gadgets-geekery'><a href='http://weburbanist.com/category/technology/gadgets-geekery'>Gadgets &amp; Geekery</a></li>
+<li class='cat-gaming-computing'><a href='http://weburbanist.com/category/technology/gaming-computing'>Gaming &amp; Computing</a></li>
+<li class='cat-vehicles-mods'><a href='http://weburbanist.com/category/technology/vehicles-mods'>Vehicles &amp; Mods</a></li>
+<li class='cat-retro-vintage'><a href='http://weburbanist.com/category/technology/retro-vintage'>Vintage &amp; Retro</a></li>
+</ul></li>        </ul>
+
+        <script>
+            // splays open the sidebar for p=parent and c=child
+            // sets child li > a class to .cat-current
+            function splayOpenSidebar(p,c){
+                if (typeof p !== 'undefined') jQuery('.cat-'+p).children('ul').slideDown('fast');
+                if (typeof c !== 'undefined') {jQuery('.cat-'+c+' a').addClass('cat-current');}
+                return p+':'+c;
+            }
+
+           // setup accordian menus for sidebar categories
+            jQuery(function() {
+                jQuery('.sidebar-splay-parent > a').click(function(e){
+                    // if already open navigate to parent category
+                    if ( jQuery(e.target).siblings('ul').is(":visible") ) {
+                        var targetCat = e.target.innerHTML.toLowerCase();
+                        if (targetCat == "art") targetCat = "urban-art";
+                        location.replace("http://"+location.host+"/category/"+targetCat+"/"); 
+                        return true; 
+                    }
+                    // slide up all children for all categories
+                    jQuery(".sidebar-splay-inside").slideUp('fast');
+                    // slide target children down
+                    jQuery(e.target).siblings('ul').slideDown('fast');
+                });
+                if ((googType == "single") || (googType == "category")) splayOpenSidebar('architecture', 'urbanism');
+            });
+        </script>
+
+<!-- end sidebar categories -->
+
+	<ul class="sidebar-splay sidebar-splay-40">
+		<li><a href="http://weburbanist.com/archives/"><b>Archives</b></a></li>
+
+	<li><a href='http://weburbanist.com/2012/09/' title='September 2012'>September</a>
+	<li><a href='http://weburbanist.com/2012/08/' title='August 2012'>August</a>
+	<li><a href='http://weburbanist.com/2012/07/' title='July 2012'>July</a>
+	<li><a href='http://weburbanist.com/2012/06/' title='June 2012'>June</a>
+	<li><a href='http://weburbanist.com/2012/05/' title='May 2012'>May</a>
+	<li><a href='http://weburbanist.com/2012/04/' title='April 2012'>April</a>
+	</ul>
+	
+	<div class="smallsidebar-ad" style="width:160px;overflow:hidden;">
+<link rel="stylesheet" type="text/css" href="http://cache.blogads.com/837528385/feed.css" />
+<script language="javascript" src="http://cache.blogads.com/837528385/feed.js"></script>
+	</div>
+	
+	<div class="smallsidebar-ad" style="padding-top:3px;">
+        <!-- WebUrbanist-160x600 -->
+        <div id='WebUrbanist-160x600' style='width:160px;height:600px;'>
+        <script type='text/javascript'>
+        googletag.cmd.push(function() { googletag.display('WebUrbanist-160x600'); });
+        </script>
+        </div>
+	</div>
+	
+	<div class="smallsidebar-ad">
+<br/><link rel="stylesheet" type="text/css" href="http://cache.blogads.com/600381495/feed.css" />
+<script language="javascript" src="http://cache.blogads.com/600381495/feed.js"></script>
+	</div>
+	
+	<div class="smallsidebar-ad spacing-bottom">
+		<!-- Site Meter -->
+		<script type="text/javascript" rel="nofollow" src="http://s48.sitemeter.com/js/counter.js?site=s48urbanist"></script>
+		<noscript><a href="http://s48.sitemeter.com/stats.asp?site=s48urbanist" rel="nofollow" target="_top"><img src="http://s48.sitemeter.com/meter.asp?site=s48urbanist" alt="Site Meter" border="0"/></a></noscript>
+		<!-- Copyright (c)2006 Site Meter -->
+	</div>
+	
+	<div class="smallsidebar-ad spacing-bottom">
+		<a href="http://feeds.feedburner.com/WebUrbanist" rel="nofollow"><img src="http://feeds.feedburner.com/~fc/WebUrbanist?bg=78a2cc&amp;fg=000000&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a> 
+	</div>
+	
+	<div class="smallsidebar-ad spacing-bottom">
+		<script type="text/javascript" src="http://widgets.amung.us/small.js"></script> 
+		<script type="text/javascript">WAU_small('0mgczmqa')</script> 
+	</div>
+</div> <!-- end div#smallsidebar -->
+
+
+<div class="span4" id="bigsidebar">
+
+	<div class="well" id="social-buttons">
+		<a id="feedburner-chicklet" href="http://feeds.feedburner.com/WebUrbanist" rel="nofollow"><img src="http://feeds.feedburner.com/~fc/WebUrbanist?bg=78a2cc&amp;fg=000000&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a> 
+		
+		<a href="http://weburbanist.com/feed" rel="nofollow" title="Subscribe to the RSS Feed!" class="social-icon social-rss"></a>
+		<a href="http://www.facebook.com/weburbanist" rel="nofollow" title="Become a Fan on Facebook!" class="social-icon social-facebook"></a>
+		<a href="http://twitter.com/webist" rel="nofollow" title="Follow Us on Twitter!" class="social-icon social-twitter"></a>
+		<a href="http://pinterest.com/weburbanist/" rel="nofollow" title="Check Out Posts on Pinterest!" class="social-icon social-pinterest"></a>
+		
+		<a id="social-email">Hover Here for Free Email Subscription Options</a>
+		
+		<div id="social-signup">
+			<div class="row">
+				<div class="span2" id="social-signup-email">
+					<a href="http://feedburner.google.com/fb/a/mailverify?uri=WebUrbanist&loc=en_US">
+						<h5>Daily Email</h5>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subscribe for one email per day containing all new articles</p>
+					</a>
+				</div>
+				
+				<div class="span2" id="social-signup-newsletter">
+					<a href="http://app.streamsend.com/public/Y4v7/RFP/subscribe">
+						<h5>Mailing List</h5>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subscribe to periodic WebUrbanist updates and special features</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="social-buttons-spacing">&nbsp;</div>
+
+	<div id="sidebar-more">
+		<div class="sidebar-title">More Articles from WebUrbanist</div>
+		
+		<div class="sidebar-thumbs" id="sidebar-thumbs">
+			<a href="http://weburbanist.com/2012/08/30/rustic-ruins-to-modern-residences-3-barn-renovations/" title="Rustic Ruins to Modern Residences: 3 Barn Renovations"><img src="http://weburbanist.com/wp-content/uploads/2012/08/renovated-barns-thumb.jpg" width=84 height=84></a><a href="http://weburbanist.com/2011/03/29/bigger-and-better-the-worlds-largest/" title="Bigger and Better: The World&#8217;s Largest [Blank]"><img src="http://weburbanist.com/wp-content/uploads/2011/03/Thumbnail4.gif" width=84 height=84></a><a href="http://weburbanist.com/2011/05/11/paint-sound-sculpture-wild-photos-videos-included/" title="Paint + Sound = Sculpture? [Wild Photos &#038; Videos Included]"><img src="http://weburbanist.com/wp-content/uploads/2011/05/bringing-color-to-life.jpg" width=84 height=84></a>		</div>
+		<div class="sidebar-thumbs" id="sidebar-thumbs">
+			<a href="http://weburbanist.com/2010/09/20/heroic-urbanism-13-cool-comic-book-cities/" title="Heroic Urbanism: 13 Cool Comic Book Cities"><img src="http://weburbanist.com/wp-content/uploads/2010/09/comic-cities-thumb.jpg" width=84 height=84></a><a href="http://weburbanist.com/2011/10/02/stored-potential-the-art-of-omahas-grain-elevators/" title="Stored Potential: The Art Of Omaha&#8217;s Grain Elevators"><img src="http://weburbanist.com/wp-content/uploads/2011/10/silo-art-thumb.jpg" width=84 height=84></a><a href="http://weburbanist.com/2010/12/21/true-transformers-normal-cars-turned-monstrous/" title="True Transformers: Normal Cars Turned Monstrous"><img src="http://weburbanist.com/wp-content/uploads/2010/12/Thumbnail21.gif" width=84 height=84></a>		</div>
+	</div>
+
+	<div class="bigsidebar-ad">
+        <!-- WebUrbanist-300x250 -->
+        <div id='WebUrbanist-300x250' style='width:300px; height:250px;'>
+        <script type='text/javascript'>
+        googletag.cmd.push(function() { googletag.display('WebUrbanist-300x250'); });
+        </script>
+        </div>
+	</div>
+	
+	<div class="well bigsidebar-well">	
+		<div class="btn-toolbar" id="bigsidebar-drops">
+			<div class="btn-group">
+				<button class="btn dropdown-toggle" data-toggle="dropdown">Articles by Month <span class="caret"></span></button>
+				<ul class="dropdown-menu bigsidebar-drop bigsidebar-months">
+					<li><a href="http://weburbanist.com/2012/10/" title="October 2012">October 2012 (45)</a></li><li><a href="http://weburbanist.com/2012/09/" title="September 2012">September 2012 (45)</a></li><li><a href="http://weburbanist.com/2012/08/" title="August 2012">August 2012 (48)</a></li><li><a href="http://weburbanist.com/2012/07/" title="July 2012">July 2012 (42)</a></li><li><a href="http://weburbanist.com/2012/06/" title="June 2012">June 2012 (38)</a></li><li><a href="http://weburbanist.com/2012/05/" title="May 2012">May 2012 (49)</a></li><li><a href="http://weburbanist.com/2012/04/" title="April 2012">April 2012 (44)</a></li><li><a href="http://weburbanist.com/2012/03/" title="March 2012">March 2012 (40)</a></li><li><a href="http://weburbanist.com/2012/02/" title="February 2012">February 2012 (33)</a></li><li><a href="http://weburbanist.com/2012/01/" title="January 2012">January 2012 (30)</a></li><li><a href="http://weburbanist.com/2011/12/" title="December 2011">December 2011 (28)</a></li><li><a href="http://weburbanist.com/2011/11/" title="November 2011">November 2011 (27)</a></li><li><a href="http://weburbanist.com/2011/10/" title="October 2011">October 2011 (20)</a></li><li><a href="http://weburbanist.com/2011/09/" title="September 2011">September 2011 (21)</a></li><li><a href="http://weburbanist.com/2011/08/" title="August 2011">August 2011 (25)</a></li><li><a href="http://weburbanist.com/2011/07/" title="July 2011">July 2011 (25)</a></li><li><a href="http://weburbanist.com/2011/06/" title="June 2011">June 2011 (25)</a></li><li><a href="http://weburbanist.com/2011/05/" title="May 2011">May 2011 (26)</a></li><li><a href="http://weburbanist.com/2011/04/" title="April 2011">April 2011 (23)</a></li><li><a href="http://weburbanist.com/2011/03/" title="March 2011">March 2011 (24)</a></li><li><a href="http://weburbanist.com/2011/02/" title="February 2011">February 2011 (25)</a></li><li><a href="http://weburbanist.com/2011/01/" title="January 2011">January 2011 (32)</a></li><li><a href="http://weburbanist.com/2010/12/" title="December 2010">December 2010 (30)</a></li><li><a href="http://weburbanist.com/2010/11/" title="November 2010">November 2010 (28)</a></li><li><a href="http://weburbanist.com/2010/10/" title="October 2010">October 2010 (30)</a></li><li><a href="http://weburbanist.com/2010/09/" title="September 2010">September 2010 (27)</a></li><li><a href="http://weburbanist.com/2010/08/" title="August 2010">August 2010 (32)</a></li><li><a href="http://weburbanist.com/2010/07/" title="July 2010">July 2010 (26)</a></li><li><a href="http://weburbanist.com/2010/06/" title="June 2010">June 2010 (27)</a></li><li><a href="http://weburbanist.com/2010/05/" title="May 2010">May 2010 (29)</a></li><li><a href="http://weburbanist.com/2010/04/" title="April 2010">April 2010 (30)</a></li><li><a href="http://weburbanist.com/2010/03/" title="March 2010">March 2010 (30)</a></li><li><a href="http://weburbanist.com/2010/02/" title="February 2010">February 2010 (27)</a></li><li><a href="http://weburbanist.com/2010/01/" title="January 2010">January 2010 (28)</a></li><li><a href="http://weburbanist.com/2009/12/" title="December 2009">December 2009 (33)</a></li><li><a href="http://weburbanist.com/2009/11/" title="November 2009">November 2009 (36)</a></li><li><a href="http://weburbanist.com/2009/10/" title="October 2009">October 2009 (31)</a></li><li><a href="http://weburbanist.com/2009/09/" title="September 2009">September 2009 (31)</a></li><li><a href="http://weburbanist.com/2009/08/" title="August 2009">August 2009 (19)</a></li><li><a href="http://weburbanist.com/2009/07/" title="July 2009">July 2009 (20)</a></li><li><a href="http://weburbanist.com/2009/06/" title="June 2009">June 2009 (20)</a></li><li><a href="http://weburbanist.com/2009/05/" title="May 2009">May 2009 (20)</a></li><li><a href="http://weburbanist.com/2009/04/" title="April 2009">April 2009 (23)</a></li><li><a href="http://weburbanist.com/2009/03/" title="March 2009">March 2009 (21)</a></li><li><a href="http://weburbanist.com/2009/02/" title="February 2009">February 2009 (18)</a></li><li><a href="http://weburbanist.com/2009/01/" title="January 2009">January 2009 (25)</a></li><li><a href="http://weburbanist.com/2008/12/" title="December 2008">December 2008 (32)</a></li><li><a href="http://weburbanist.com/2008/11/" title="November 2008">November 2008 (30)</a></li><li><a href="http://weburbanist.com/2008/10/" title="October 2008">October 2008 (24)</a></li><li><a href="http://weburbanist.com/2008/09/" title="September 2008">September 2008 (20)</a></li><li><a href="http://weburbanist.com/2008/08/" title="August 2008">August 2008 (24)</a></li><li><a href="http://weburbanist.com/2008/07/" title="July 2008">July 2008 (25)</a></li><li><a href="http://weburbanist.com/2008/06/" title="June 2008">June 2008 (23)</a></li><li><a href="http://weburbanist.com/2008/05/" title="May 2008">May 2008 (11)</a></li><li><a href="http://weburbanist.com/2008/04/" title="April 2008">April 2008 (10)</a></li><li><a href="http://weburbanist.com/2008/03/" title="March 2008">March 2008 (10)</a></li><li><a href="http://weburbanist.com/2008/02/" title="February 2008">February 2008 (11)</a></li><li><a href="http://weburbanist.com/2008/01/" title="January 2008">January 2008 (11)</a></li><li><a href="http://weburbanist.com/2007/12/" title="December 2007">December 2007 (13)</a></li><li><a href="http://weburbanist.com/2007/11/" title="November 2007">November 2007 (11)</a></li><li><a href="http://weburbanist.com/2007/10/" title="October 2007">October 2007 (12)</a></li><li><a href="http://weburbanist.com/2007/09/" title="September 2007">September 2007 (14)</a></li><li><a href="http://weburbanist.com/2007/08/" title="August 2007">August 2007 (15)</a></li><li><a href="http://weburbanist.com/2007/07/" title="July 2007">July 2007 (11)</a></li><li><a href="http://weburbanist.com/2007/06/" title="June 2007">June 2007 (11)</a></li>				</ul>
+			</div>
+			<div class="btn-group">
+				<button class="btn dropdown-toggle" data-toggle="dropdown">List by Author <span class="caret"></span></button>
+				<ul class="dropdown-menu bigsidebar-drop bigsidebar-authors">
+					<li><a href="http://weburbanist.com/delana/">Delana</a></li>
+                    <li><a href="http://weburbanist.com/marc/">Marc</a></li>
+                    <li><a href="http://weburbanist.com/mike/">Mike</a></li>
+                    <li><a href="http://weburbanist.com/steph/">Stephanie</a></li>
+                    <li><a href="http://weburbanist.com/steve/">Steve</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<ul class="nav nav-tabs" id="front-tabs">
+			<li class="active"><a href="#topics" data-toggle="tab">Topics</a></li>
+			<li><a href="#intro" data-toggle="tab">Urbanist Intro</a></li>
+			<li><a href="#faves" data-toggle="tab">Other Faves</a></li>
+			<li><a href="#roundups" data-toggle="tab">Roundups</a></li>
+		</ul>
+		
+		<div class="tab-content" id="front-tabs-div">
+			<div class="tab-pane active" id="topics"><a href="http://weburbanist.com/tags/green/" class="tags-medium">Green</a> <a href="http://weburbanist.com/tags/design-tag/" class="tags-dark">Design</a> <a href="http://weburbanist.com/tags/furniture/" class="tags-dark">Furniture</a> <a href="http://weburbanist.com/tags/abandoned/" class="tags-medium">Abandoned</a> <a href="http://weburbanist.com/tags/sculpture/" class="tags-dark">Sculpture</a> <a href="http://weburbanist.com/tags/hotels/" class="tags-medium">Hotels</a> <a href="http://weburbanist.com/tags/gadgets/" class="tags-medium">Gadgets</a> <a href="http://weburbanist.com/tags/culture/" class="tags-medium">Culture</a> <a href="http://weburbanist.com/tags/geek/" class="tags-dark">Geek</a> <a href="http://weburbanist.com/tags/nature/" class="tags-medium">Nature</a> <a href="http://weburbanist.com/tags/arts/" class="tags-dark">Arts</a> <a href="http://weburbanist.com/tags/photography/" class="tags-dark">Photography</a> <a href="http://weburbanist.com/tags/buildings/" class="tags-medium">Buildings</a> <a href="http://weburbanist.com/tags/architecture/" class="tags-dark">Architecture</a> <a href="http://weburbanist.com/tags/modern/" class="tags-dark">Modern</a> <a href="http://weburbanist.com/tags/food/" class="tags-medium">Food</a> <a href="http://weburbanist.com/tags/bizarre/" class="tags-dark">Bizarre</a> <a href="http://weburbanist.com/tags/cities/" class="tags-medium">Cities</a> <a href="http://weburbanist.com/tags/art/" class="tags-dark">Art</a> <a href="http://weburbanist.com/tags/photoshop/" class="tags-medium">Photoshop</a> <a href="http://weburbanist.com/tags/concepts/" class="tags-medium">Concepts</a> <a href="http://weburbanist.com/tags/artists/" class="tags-medium">Artists</a> <a href="http://weburbanist.com/tags/home/" class="tags-medium">Home</a> <a href="http://weburbanist.com/tags/creative/" class="tags-dark">Creative</a> <a href="http://weburbanist.com/tags/advertising/" class="tags-dark">Advertising</a> </div>
+			
+			<div class="tab-pane" id="intro"><li><a href="http://weburbanist.com/2008/12/05/abandoned-deserted-building-town-city/" title="Abandoned Places and Urban Exploration Information">33-Part Guide: Abandoned Towns &amp; Ghost Cities</a></li>
+<li><a href="http://weburbanist.com/2009/01/04/modern-furniture-furnishing-fixture-designs/" title="Modern Furniture, Furnishings and Fixture Designs">445 Inspired Interiors &amp; Fun Furniture Designs</a></li>
+<li><a href="http://weburbanist.com/2008/09/09/70-amazing-houses-from-around-the-world/" title="Architecture, Urban Design and More">70+ Amazing Houses &amp; Urban Home Designs</a></li>
+<li><a href="http://weburbanist.com/2009/01/11/urban-street-art-graffiti-guide/" title="Alternative Street Art and Urban Graffiti">Alternative Arts: From Parkour to Reverse Graffiti</a></li>
+<li><a href="http://weburbanist.com/2008/10/24/elemental-natural-phenomena-formations-disasters-photos-images-videos/" title="Natural Earth, Water, Wind and Fire Phenomena and Disasters">Architecture of Nature: 82 Fantastic Phenomena</a></li>
+</div>
+			
+			<div class="tab-pane" id="faves"><li><a href="http://weburbanist.com/2008/02/10/10-amazing-tree-houses-from-around-the-world-sustainable-unique-and-creative-designs/">10 Amazing Tree Houses, Designs &amp; Plans</a></li>
+<li><a href="http://weburbanist.com/2008/05/26/cargo-container-homes-and-offices/">10 Clever Converted Cargo Container Homes &amp; Offices</a></li>
+<li><a href="http://weburbanist.com/2008/04/28/20-brilliant-bookcase-and-bookshelf-designs-creative-modular-and-unique-urban-furniture/">20 Brilliant Bookcases &amp; Shelving System Designs</a></li>
+<li><a href="http://weburbanist.com/2008/10/19/ghost-town-abandoned-city-examples-images/">24 Ghost Towns &amp; Abandoned Cities</a></li>
+<li><a href="http://weburbanist.com/2007/09/21/3-amazing-3d-street-artists-urban-graffiti-from-around-the-world/">3 Amazing 3D Graffiti Artists Paint Massive Murals</a></li>
+<li><a href="http://weburbanist.com/2008/05/11/5-modern-secret-room-dreams-and-nightmares-from-creative-hideouts-to-dreadful-spaces/">5 Scary Secret Rooms, Hidden Passages &amp; Spaces</a></li>
+<li><a href="http://weburbanist.com/2007/12/18/7-more-abandoned-wonders-of-the-world-amazing-american-abandonments/">7 (More!) Abandoned Wonders of America</a></li>
+<li><a href="http://weburbanist.com/2008/01/27/7-abandoned-wonders-of-the-former-soviet-union-from-submarine-stations-to-unfinished-structures/">7 Abandoned Wonders of the Former Soviet Union</a></li>
+</div>
+			
+			<div class="tab-pane" id="roundups"><li><a href="http://weburbanist.com/abandoned-buildings-towns-and-cities/" title="Abandoned Buildings, Towns, Cities and Other Places">Abandoned Buildings, Towns &amp; Cities</a></li>
+<li><a href="http://weburbanist.com/2008/09/09/70-amazing-houses-from-around-the-world/" title="Amazing Cliff, Lake, Mountain Houses and More">Amazing Houses Around the World</a></li>
+<li><a href="http://weburbanist.com/2008/09/07/banksy-art-and-graffiti-the-ultimate-guide/" title="Banksy Art, Graffiti, Stencils, History and More">Banksy Urban Art and Graffiti Guide</a></li>
+<li><a href="http://weburbanist.com/3d-light-geek-and-other-graffiti/" title="3D, Light, Geek and More Graffiti, Street and Urban Art">Creative Geek Art and Graffiti</a></li>
+<li><a href="http://weburbanist.com/subversive-marketing-and-other-culture-jamming/" title="Subvertising, Shopdropping and Other Subversive Arts">Culture Jamming and Guerrilla Action</a></li>
+<li><a href="http://weburbanist.com/extraodinary-art-from-ordinary-objects/" title="Extraodinary Art from Ordinary Objects">Extraodinary Art from Ordinary Objects</a></li>
+<li><a href="http://weburbanist.com/green-art-design-and-technology/" title="Green Art, Environmental Design and Sustainable Technology">Green Art, Design and Technology</a></li>
+<li><a href="http://weburbanist.com/2008/07/01/what-is-guerrilla-marketing/" title="Guerrilla Marketing History, Images and Resources">Guerrilla Marketing History and Guide</a></li>
+<li><a href="http://weburbanist.com/2008/09/14/90-unusually-awesome-urban-furniture-designs/" title="Creative Urban Furniture Designs by Room">Modern Furniture Designs by Room</a></li>
+<li><a href="http://weburbanist.com/creative-recycled-art-architecture-and-design/" title="Recycled and Trash Art and Design">Recycled Art, Architecture &amp; Design</a></li>
+<li><a href="http://weburbanist.com/themed-castle-and-art-hotels/" title="Theme Hotels, Art Hotel Rooms and More">Themed, Castle and Art Hotels</a></li>
+<li><a href="http://weburbanist.com/underwater-and-oceanic-oddities/" title="Underwater Wonders and Oceanic Oddities">Underwater and Oceanic Oddities</a></li>
+<li><a href="http://weburbanist.com/unusual-creative-and-transforming-furniture/" title="Unusual, Transforming, Collapsible and Creative Furniture">Unusually Creative Urban Furniture</a></li>
+<li><a href="http://weburbanist.com/urban-exploration-tips-tricks-and-guides/" title="Urban Exploration and Building Infiltration Resources">Urban Exploration Tips and Guides</a></li>
+<li><a href="http://weburbanist.com/2008/11/24/strange-amazing-rare-plants-animals-species/" title="Strange, Rare and Exotic Plant and Animal Species">Weirdest Plants &amp; Strangest Animals in the World</a></li>
+</div>
+		</div>
+	</div>
+
+	<div class="well bigsidebar-well">
+		<div class="sidebar-title">More Designs on <a href="http://dornob.com">Dornob</a> &amp; <a href="http://gajitz.com">Gajitz</a></div>
+		<div class="sidebar-moreother-div">
+			<a href="http://gajitz.com/meta/gadgets/" target="_blank" title="Great Gadgets"><img src="http://img.weburbanist.com/wp-content/uploads/2011/02/gadgetsa.png" width=65></a>
+			<a href="http://gajitz.com/meta/science/" target="_blank" title="Strange Science"><img src="http://img.weburbanist.com/wp-content/uploads/2011/02/sciencea.png" width=65></a>
+			<a href="http://gajitz.com/meta/vintage-retro/" target="_blank" title="Vintage Tech"><img src="http://img.weburbanist.com/wp-content/uploads/2011/02/vintagea.png" width=65></a>
+			<a href="http://gajitz.com/meta/technology/" target="_blank" title="Totally Technology"><img src="http://img.weburbanist.com/wp-content/uploads/2011/02/techa.png" width=65></a>
+		</div>
+		<div class="sidebar-moreother-div">
+			<a href="http://dornob.com/design/architecture/" target="_blank" title="Amazing Architecture"><img src="http://img.weburbanist.com/wp-content/uploads/2011/02/housesa.png" width=65></a>
+			<a href="http://dornob.com/design/interiors/" target="_blank" title="Incredible Interiors"><img src="http://img.weburbanist.com/wp-content/uploads/2011/02/furnitureb.png" width=65></a>
+			<a href="http://dornob.com/design/furniture/" target="_blank" title="Fantastic Furniture"><img src="http://img.weburbanist.com/wp-content/uploads/2011/02/furnitureaa.png" width=65></a>
+			<a href="http://dornob.com/design/more/" target="_blank" title="Even More Awesome Designs"><img src="http://img.weburbanist.com/wp-content/uploads/2011/02/designz.png" width=65></a>
+		</div>
+	</div>
+
+	<div id="sidebar-moreother" class="well">
+		<div class="sidebar-title">Become a Fan on Facebook</div>
+		<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fweburbanist&amp;width=282&amp;colorscheme=light&amp;connections=10&amp;stream=0&amp;header=0&amp;height=255" scrolling="no" frameborder="0" style="background-color:#fff;border:none;overflow:hidden;width:282px;height:255px;" allowTransparency="false"></iframe>
+	</div>
+</div>
+			</div>
+
+			<footer>
+
+				<div class="well row" id="footer-categories">
+
+					<div class="span2" id="footer-categories-p">
+						<ul>
+							<li><a href="http://weburbanist.com/category/architecture/"><b>Architecture</b> (419):</a></li>
+							<li><a href="http://weburbanist.com/category/urban-art/"><b>Art</b> (541):</a></li>
+							<li><a href="http://weburbanist.com/category/design/"><b>Design</b> (332):</a></li>
+							<li><a href="http://weburbanist.com/category/global/"><b>Global</b> (150):</a></li>
+							<li><a href="http://weburbanist.com/category/technology/"><b>Technology</b> (246):</a></li>
+						</ul>
+					</div>
+
+					<div class="span8" id="footer-categories-c">
+						<ul>
+							<li><a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/architecture/abandonments/">Abandoned Places</a> <span>(84)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/architecture/urbanism/">Cities &amp; Urbanism</a> <span>(78)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/architecture/houses-residential/">Houses &amp; Residential</a> <span>(84)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/architecture/offices-commercial/">Offices &amp; Commercial</a> <span>(85)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/architecture/public-instatutional/">Public &amp; Institutional</a> <span>(80)</span></li>
+							<li><a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/urban-art/drawing-digital/">Drawing &amp; Digital</a> <span>(96)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/urban-art/installation-sound/">Installation &amp; Sound</a> <span>(96)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/urban-art/photography-video/">Photography &amp; Video</a> <span>(102)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/urban-art/sculpture-craft/">Sculpture &amp; Craft</a> <span>(130)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/urban-art/street-art-graffiti/">Street Art &amp; Graffiti</a> <span>(111)</span></li>
+							<li><a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/design/fixtures-interiors/">Fixtures &amp; Interiors</a> <span>(56)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/design/urban-furniture/">Furniture &amp; Decor</a> <span>(85)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/design/graphics-branding/">Graphics &amp; Branding</a> <span>(65)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/design/guerilla-marketing/">Guerilla Ads &amp; Marketing</a> <span>(56)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/design/products-packaging/">Products &amp; Packaging</a> <span>(70)</span></li>
+							<li><a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/global/7-wonders/">7 Wonders Series</a> <span>(26)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/global/boutique-art-hotels/">Boutique &amp; Art Hotels</a> <span>(32)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/global/culture-cuisine/">Culture &amp; Cuisine</a> <span>(26)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/global/travel/">Travel &amp; Places</a> <span>(43)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/global/urban-exploration/">Urbex &amp; Parkour</a> <span>(20)</span></li>
+							<li><a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/technology/conceptual-futuristic/">Conceptual &amp; Futuristic</a> <span>(43)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/technology/gadgets-geekery/">Gadgets &amp; Geekery</a> <span>(69)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/technology/gaming-computing/">Gaming &amp; Computing</a> <span>(33)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/technology/vehicles-mods/">Vehicles &amp; Mods</a> <span>(45)</span>, <a rel="nofollow" class="urbCatsTitles" href="http://weburbanist.com/category/technology/retro-vintage/">Vintage &amp; Retro</a> <span>(55)</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="well" id="footer-links">
+					<p><a href="http://weburbanist.com" title="Homepage">WebUrbanist dot com</a> &copy; 2006-2012 <a href="http://webistmedia.com" title="Webist Media | WebUrbanist &amp; WebEcoist">Webist Media</a> - <a href="http://feeds.feedburner.com/weburbanist" rel="nofollow">Feed (RSS)</a> - <a href="http://weburbanist.com/about-weburbanist/" rel="nofollow">About</a> - <a href="http://weburbanist.com/advertise/" rel="nofollow">Advertise</a> - <a href="http://weburbanist.com/archives">Archives</a> - <a href="http://weburbanist.com/galleries">Galleries</a> - <a href="http://weburbanist.com/pics">Pics</a> - <a href="http://weburbanist.com/terms/" rel="nofollow">Terms of Service</a> - <a href="http://weburbanist.com/privacy/" rel="nofollow">Privacy Policy</a></p>
+				</div>
+			</footer>
+		</div>
+
+		<script>
+		var $j = jQuery;
+		$j('.dropdown-toggle').dropdown();
+
+		$j(document).ready(function(){
+			$j('#social-buttons').live('mouseover', function(){
+				$j('#social-email').fadeOut(0).data('f','true');
+				$j('#social-signup').fadeIn(0);
+				$j('#social-buttons').height(108);
+			});
+			
+			$j('#social-buttons').live('mouseout', function(){
+				if($j('#social-email').data('f')=='true'){
+					$j('#social-email').fadeIn(0).data('f','false');
+					$j('#social-signup').fadeOut(0);
+					$j('#social-buttons').height(56);
+				}
+			});
+		});
+		</script>
+
+<script src="http://weburbanist.com/wp-content/plugins/tweetmeme/button.js" type="text/javascript"></script>
+	<!-- BuySellAds Ad Code -->
+	<script type="text/javascript">
+	(function(){
+		var bsa = document.createElement('script');
+		bsa.type = 'text/javascript';
+		bsa.async = true;
+		bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+	})();
+	</script>
+	<!-- End BuySellAds Ad Code -->
+	
+	<!-- START GUARDIAN ONLINE BEHAVIOURAL TARGETING CODE -->
+	<script type='text/javascript'>
+	var guardAd = '%3Cscript%20type%3D%22text/javascript%22%20src%3D%22http%3A//pixel.quantserve.com/api/segments.json%3Fa%3Dp-73ktnlRTKQPTw%26callback%3Dqc_results%22%3E%3C/script%3E%0A%0A%3Cscript%20src%3D%22http%3A//js.revsci.net/gateway/gw.js%3Fcsid%3De05516%26auto%3Dt%22%3E%3C/script%3E%0A';
+
+	if (googTest == 'guard') { document.write(unescape(guardAd)); }
+	if (geoplugin_countryCode() == 'GB') { document.write(unescape(guardAd)); }
+	</script>
+	<!-- see additional quantcast guardian calls for p-73ktnl in main quantcast block below -->
+	<!-- END GUARDIAN ONLINE BEHAVIOURAL TARGETING CODE -->
+
+	<!-- Quantcast Tag -->
+	<script type="text/javascript">
+	var _qevents = _qevents || [];
+
+	(function() {
+	var elem = document.createElement('script');
+	elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+	elem.async = true;
+	elem.type = "text/javascript";
+	var scpt = document.getElementsByTagName('script')[0];
+	scpt.parentNode.insertBefore(elem, scpt);
+	})();
+
+	// unknown mar2012
+	_qevents.push([
+	{qacct:"p-f9VXDmIPwhDZA"},
+	{qacct:"p-8ejNzRUdqGZQg"}
+	]);
+
+	if (geoplugin_countryCode() == 'GB') {
+		// guardian mar2012
+		_qevents.push({ 
+		qacct:"p-73ktnlRTKQPTw", 
+		labels:"select-culture" 
+		});
+	}
+	</script>
+	
+	<noscript>
+	<div style="display:none;">
+	<img src="//pixel.quantserve.com/pixel?a.1=p-f9VXDmIPwhDZA&a.2=p-8ejNzRUdqGZQg" border="0" height="1" width="1" alt="Quantcast"/>
+	<img src="//pixel.quantserve.com/pixel/p-73ktnlRTKQPTw.gif?labels=select-culture" border="0" height="1" width="1" alt="Quantcast"/>
+	<img src="//pixel.quantserve.com/pixel/p-43z6ciBi5Ny12.gif?labels=Health and Wellness,Moms and Family,Eco-Luxury,Personal Development,Business,News and Politics" border="0" height="1" width="1" alt="Quantcast"/></a>
+	<img src="//pixel.quantserve.com/pixel/p-73ktnlRTKQPTw.gif?labels=select-culture" border="0" height="1" width="1" alt="Quantcast"/>
+	</div>
+	</noscript>
+	<!-- End Quantcast tag -->
+	
+	<script type="text/javascript">
+	//<![CDATA[
+	(function() {
+		var links = document.getElementsByTagName('a');
+		var query = '?';
+		for(var i=0;i<links.length;i++){
+		if(links[i].href.indexOf('#disqus_thread')>=0){query+='url'+i+'='+encodeURIComponent(links[i].href)+'&'}}
+		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/weburbanist/get_num_replies.js' + query + '"></' + 'script>');
+	})();
+	//]]>
+	</script>
+	
+	<script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script>
+	
+<script>
+    var ozhimages = "%3Cscript%20type%3D%22text/javascript%22%20src%3D%22http%3A//weburbanist.us.intellitxt.com/intellitxt/front.asp%3Fipid%3D46496%22%3E%3C/script%3E";
+
+    if ( (googTest == "images") || ( (googType == "single") && (googRef != "self") && (googRef != "social") && (googAge.indexOf("ten") >= 0) ) ) {
+        document.write(unescape(ozhimages));
+    }
+</script>
+
+	</body>
+</html>
+	

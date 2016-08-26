@@ -1,0 +1,564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Schneier on Security: Gary McGraw on National Cybersecurity</title>
+	<!-- robots content="noindex" -->
+	<link rel="STYLESHEET" type="text/css" href="/schneier-safe.css">
+	<link rel="STYLESHEET" type="text/css" href="/blog.css">
+	<link rel="alternate" type="application/rss+xml" title="RSS 1.0 (full-text)" href="http://www.schneier.com/blog/rss.xml">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 (excerpts)" href="http://www.schneier.com/blog/index.xml">
+    <link rel="alternate" type="application/atom+xml" title="Comments on Gary McGraw on National Cybersecurity (Atom)" href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.xml" >
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.schneier.com/blog/rsd.xml">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="start" href="http://www.schneier.com/blog/" title="Home">
+	
+		<link rel="prev" href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html" title="Micromorts">
+	
+	
+		<link rel="next" href="http://www.schneier.com/blog/archives/2012/11/how_terrorist_g.html" title="How Terrorist Groups Disband">
+	
+	<!-- /robots -->
+<script type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'www.schneier.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+</head>
+<body>	  
+
+<table class="main" cellspacing=0>
+<tr><td class="bodycolor"></td><td class="kludge">&nbsp;</td><td class="masthead"><p class="mastname"><!-- robots content="noindex" -->Bruce Schneier<!-- /robots --></td><td class="kludge">&nbsp;</td><td class="bodycolor"></td></tr>
+
+<tr><td class="menua">
+<!-- robots content="noindex" -->
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/">Blog</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/crypto-gram.html">Crypto-Gram Newsletter</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/books.html">Books</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/essays.html">Essays and Op Eds</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/news.html">News and Interviews</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/av.html">Audio and Video</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/schedule.html">Speaking Schedule</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/passsafe.html">Password Safe</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/cryptography.html">Cryptography</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/about.html">About Bruce Schneier</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/contact.html">Contact Information</a>
+<!-- /robots -->
+</td>
+<td class="kludge">&nbsp;</td>
+<td class="contentcell">
+
+<!-- begin page content -->
+
+<div class="indivbody">
+
+
+<!-- robots content="noindex" -->
+<h1>Schneier on Security</h1>
+<p>A blog covering security and security technology.</p>
+
+
+<p align="right">
+
+<a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html">&laquo; Micromorts</a> |
+
+<a href="http://www.schneier.com/blog/">Main</a>
+
+| <a href="http://www.schneier.com/blog/archives/2012/11/how_terrorist_g.html">How Terrorist Groups Disband &raquo;</a>
+
+</p>
+<!-- /robots -->
+
+<h2>November  8, 2012</h2>
+
+<h3>Gary McGraw on National Cybersecurity</h3>
+
+<p>Good <a href="http://searchsecurity.techtarget.com/news/2240169976/Gary-McGraw-Proactive-defense-prudent-alternative-to-cyberwarfare">essay</a>, making the point that cyberattack and counterattack aren't very useful -- actual cyberdefense is what's wanted.</p>
+
+<blockquote>Creating a cyber-rock is cheap. Buying a cyber-rock is even cheaper since zero-day attacks exist on the open market for sale to the highest bidder. In fact, if the bad guy is willing to invest time rather than dollars and become an insider, cyber-rocks may in fact be free of charge, but that is a topic for another time.
+
+<p>Given these price tags, it is safe to assume that some nations have already developed a collection of cyber-rocks, and that many other nations will develop a handful of specialized cyber-rocks (e.g., as an extension of many-year-old regional conflicts). If we follow the advice of Hayden and Chabinsky, we may even distribute cyber-rocks to private corporations.</p>
+
+<p>Obviously, active defense is folly if all it means is unleashing the cyber-rocks from inside of our glass houses since everyone can or will have cyber-rocks. Even worse, unlike very high explosives, or nuclear materials, or other easily trackable munitions (part of whose deterrence value lies in others knowing about them), no one will ever know just how many or what kind of cyber-rocks a particular group actually has.</p>
+
+<p>Now that we have established that cyber-offense is relatively easy and can be accomplished on the cheap, we can see why reliance on offense alone is inadvisable. What are we going to do to stop cyberwar from starting in the first place? The good news is that war has both defensive and offensive aspects, and understanding this fundamental dynamic is central to understanding cyberwar and deterrence.</p>
+
+<p>The kind of defense I advocate (called "passive defense" or "protection" above) involves security engineering -- building security in as we create our systems, knowing full well that they will be attacked in the future. One of the problems to overcome is that exploits are sexy and engineering is, well, not so sexy.</blockquote></p>
+
+<div id="a004574more"><div id="more">
+
+</div></div>
+
+<p class="posted"><a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html">Posted on November  8, 2012 at  1:24 PM</a>
+&#8226; <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#comments">14 Comments</a>
+</p>
+
+<p class="posted"><i>To receive these entries once a month by e-mail, <a href="http://www.schneier.com/crypto-gram-sub.html">sign up</a> for the <a href="http://www.schneier.com/crypto-gram.html">Crypto-Gram Newsletter</a>.</i>
+</div>
+
+
+<div class="commentform">
+<h2 id="comments">Comments</h2>
+</div>
+
+
+<div class="commentbody by-geraldanthro">
+<a name="c971646"></a>
+
+<div id="c971646">
+<p>More than Cyber ROCKS, STUXNET, et al,<br />
+5 or 6 yrs in Irans infrastructure & networks suggest everything mapped,<br />
+including counterstrike plans.<br />
+OTHER: CYBER WMD strike leaves enemy with very little left for any counterstrike.</p>
+
+<p><a href="http://warintel.blogspot.com/2010/10/stuxnet-30-most-powerful-weapon-ever.html" rel="nofollow">http://warintel.blogspot.com/2010/10/...</a></p>
+
+<p>Gerald<br />
+War Anthropologist</p>
+</div>
+<p class="posted">Posted by: Geraldanthro at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c971646">November  8, 2012  1:57 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-charjk">
+<a name="c971779"></a>
+
+<div id="c971779">
+<p>Engineering not sexy?  Awwww...</p>
+</div>
+<p class="posted">Posted by: charjk at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c971779">November  8, 2012  3:34 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-boog">
+<a name="c971873"></a>
+
+<div id="c971873">
+<p>You know it's a good essay because it advocates security by design, questions the security industry and existing defenses, and mentions hobbits.</p>
+</div>
+<p class="posted">Posted by: boog at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c971873">November  8, 2012  4:45 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-brandioch-conner">
+<a name="c972115"></a>
+
+<div id="c972115">
+<p>There are 81 instances of the word "cyber" in that article.</p>
+
+<p><i>"Put another way, most modern control systems are so poorly designed from a security perspective that they are vulnerable to attacks devised over fifteen years ago."</i></p>
+
+<p>Not only that but the current state of the "security" industry is such that it is still unable to reliably detect attacks "devised over fifteen years ago".</p>
+
+<p><i>"Unfortunately, neither is getting that payload to an intended target as evidenced by the myriad reports of USB stick misuse, connecting personal devices to corporate and even classified networks, and so on."</i></p>
+
+<p>And that is the core problem.<br />
+Security is easy.<br />
+But being insecure is even easier.<br />
+And there is always someone who thinks that their personal convenience/authority is more important than following proper security protocols.</p>
+
+<p><i>"The NASCAR effect causes shortsighted pundits to focus on offense, which is sexy, to the detriment of defense, which is engineering."</i></p>
+
+<p>Attacks are easy to explain and demonstrate.</p>
+
+<p>Defense is difficult to explain WITHOUT a corresponding attack. And even then the focus will be on patching the smallest amount of the system to defeat that specific attack.</p>
+
+<p><i>"A misunderstanding about different kinds of defense can lead to an incorrect approach and a false sense of security."</i></p>
+
+<p>We really need to use a different word that means "false sense of security". </p>
+</div>
+<p class="posted">Posted by: Brandioch Conner at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c972115">November  8, 2012  8:09 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-michael-lynn">
+<a name="c972169"></a>
+
+<div id="c972169">
+<p>A major difference between so called cyber warfare and more traditional battlefields is that offense and defense are not closely related, and they're definitely not interchangeable.</p>
+
+<p>What I mean to say here is that traditional offensive technology, lets say a tank, can also be used defensively. By contrast an exploit is of pretty much no use in defending off a cyber attack. The issue of attribution is a large part of it (its hard if not impossible to know with certainty who is attacking you), but its larger than that. Even if you could know the source of an attack using exploits for a counter attack does nothing to mitigate or halt attacks already in progress by your enemies. (You can't drive the enemy back with a buffer overflow).</p>
+
+<p>Rather than talking about whether we need cyber-rocks vs real defense I'd argue that we need both. But the so called cyber-rocks would probably be better used more for intelligence than for actual attack.</p>
+
+<p>That said, my experience tells me that we're not going to get defense taken seriously. When you try to discuss this with policy makers you get this strange double think about cyber issues. On the one hand they are sure that hackers can launch nukes with nothing but a touchtone telephone. At the same time when you talk about adding in real defenses they speak as if you're overstating the threat and making a tempest in a tea cup. I think the root of the problem is this...everyone thinks that everyone should be spending more resources on defense...everyone except themselves.</p>
+</div>
+<p class="posted">Posted by: Michael Lynn at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c972169">November  8, 2012  8:48 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-nick-p">
+<a name="c972488"></a>
+
+<div id="c972488">
+<p>He thinks offense is sexy & engineering defense isn't. A guy at a recent Schmoocon said something similar. Let's substitute "fun," "cool", "mentally engaging" and other more applicable phrases for "sexy." Starting there, you see there's quite a few people enjoying coming up with better protocols, languages, libraries, software, & actual systems. So the question is how to spread the word about them & get more people making them.</p>
+
+<p>I think one way is to show more people what it's about. Myself and others have accused the security defense industry of constantly reinventing the wheel: so many problems they face have been solved before & so many they create were preventable. I think it might help to have a collection of all sorts of exemplar work from the past, academic & real-world, that can inspire future security engineers. </p>
+
+<p>I have a recent example. Jack Ganssle, of Embedded Muse, solicited information on dealing with stack overflows. He's been in the industry for a while and is very knowledgeable in embedded software design. I told him 1970's era MULTICS had a stack that flowed in reverse direction to make overflows impossible or hard. I also pointed out some academics did it on x86 Linux. He had never heard of it and thought it was a great idea. He also reminded me stack direction is often dictated by the hardware, yet Linux team worked around that. Here's the question: we've been able to totally defeat the easiest attack on the stack for FOUR DECADES, but why don't people know that?</p>
+
+<p>We also need to gather the security engineering knowledge & structure it in such a way that it can be passed down to that generation. One possibility there is to divide it into common/cross-domain knowledge & knowledge for specific domains. The domains should be matched to the job function: applications, networking, intrusion detection, endpoints, OPSEC, COMSEC. </p>
+
+<p>I'm a decent example of what needs to happen. (I don't mean that in an ego-centric way.) I grew up midway between the older & newer generations of IT guys. I experienced MS-DOS, dialup, Windows, broadband, having a PCI card for everything, etc. Yet, the wisdom of the older crowd contained in their writings, projects & products didn't elude me. I've pulled about every useful Lesson Learned I could out of it, combined it with modern stuff & repeatedly come up with stuff that others took years to figure out (or haven't yet wink). It's just that the knowledge transfer I've been talking about happened, some here on this blog. The wisdom of the ancients, err previous generation, pays off quite well. </p>
+
+<p>I'll also say that anyone who thinks defense research is boring is doing it wrong. It's been an extremely interesting & challenging experience on my way to this level of knowledge/experience. I've learned what works, what doesn't, why in many case, & there's still so many challenges awaiting it's mind-boggling. Honestly, I find the typical offense scenario to be very boring in comparison: dig through a bunch of code, find a common mistake, weaponize it, publish. Wow, that's so easy all kinds of people are doing it, even learning from books at Barnes & Noble. </p>
+
+<p>Try to make a heap overflow impossible (or close) with no observable performance impact & no rewriting loads of software. Create a DNS, PKI or whatever alternative that's both more secure & will work in corporate environments. Create a programming language that's very expressive & efficient, but can almost automatically prevent most implementation flaws (some close contenders there). Actually replace TCP, FTP and HTTP. ;) </p>
+
+<p>Yeah, there's plenty of sexy/clever/brilliant solutions to these problems waiting to be found. There's also plenty of drudgery in engineering these solutions. If anything, you come out of it with the pride that your solution is untouchable compared to others or that you've done what seemed nearly impossible. It's quite a feeling.</p>
+</div>
+<p class="posted">Posted by: Nick P at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c972488">November  9, 2012 12:42 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-max">
+<a name="c972678"></a>
+
+<div id="c972678">
+<p>I want to be an engineer... sex can wait</p>
+</div>
+<p class="posted">Posted by: Max at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c972678">November  9, 2012  2:49 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-ac2">
+<a name="c972698"></a>
+
+<div id="c972698">
+<p>The real problem is that the US hasn't had to consider defence (and I mean real defence against an enemy, not the go-halfway-across-the-world-to-attack-someone kind of defence) in a rational manner since the cold war ended...<br />
+</p>
+</div>
+<p class="posted">Posted by: AC2 at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c972698">November  9, 2012  3:09 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-saint-crusty">
+<a name="c972723"></a>
+
+<div id="c972723">
+<p>@Nick P. : Glad to hear others think alike in a more and more Offensive world. Needless to say i watch MY language.</p>
+
+<p>You also touch on the 'unthinkable', namely why many solutions exist but are not in place. </p>
+
+<p>My guess "no one wants to live in a perfectly secure world" it would render the owner of the model invincible. </p>
+
+<p>Since "absolute power absolutely corrupts" humans tend to rely on mutual trust which suppersedes any technological solution.</p>
+
+<p>In the end we're all social but not all are social engineers, proven daily by non-technical people leading technical departements. </p>
+
+<p>Generalised security is desirable for peace of mind, non-generalised insecurity on the other hand is diserable for peace of mind. And that was not a typo, i try to illustrate very different lines of thinking. Be it tactical or strategic that makes the difference. Or ignorance, but that too is 'unthinkable'.</p>
+</div>
+<p class="posted">Posted by: Saint Crusty at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c972723">November  9, 2012  3:26 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-nz">
+<a name="c972778"></a>
+
+<div id="c972778">
+<p>So... are we finally switching to OpenBSD?</p>
+</div>
+<p class="posted">Posted by: NZ at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c972778">November  9, 2012  4:02 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-danny-moules">
+<a name="c972877"></a>
+
+<div id="c972877">
+<p>"Defense is difficult to explain WITHOUT a corresponding attack. And even then the focus will be on patching the smallest amount of the system to defeat that specific attack."</p>
+
+<p>This is a clincher. So often something is (needs to be) explained in terms of attack, because otherwise it won't be understood, and the audience seizes the initiative to resolve the _attack_ rather than applying an appropriate defense because it is always easier (read: cheaper, faster) to defend against a specific attack than it is against a category of attacks.</p>
+
+<p>"We really need to use a different word that means "false sense of security". "</p>
+
+<p>Ignorance?</p>
+</div>
+<p class="posted">Posted by: Danny Moules at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c972877">November  9, 2012  5:18 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-renox">
+<a name="c973038"></a>
+
+<div id="c973038">
+<p>@Nick P: the thing is that most of the time inertia/cost reduction prevent simple changes which would improve security..</p>
+
+<p>Writing programs in Ada (or any other language which has checks against out-of-bond array access) isn't difficult, yet we are still using C instead.<br />
+The MIPS ISA has instructions to send a trap on integer overflow allowing to prevent silent integer overflow with a *near zero* CPU cost, yet new CPU ISA don't have such instructions..<br />
+</p>
+</div>
+<p class="posted">Posted by: renoX at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c973038">November  9, 2012  6:51 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-onearmedspartan">
+<a name="c973052"></a>
+
+<div id="c973052">
+<p>A good reason building cyber defenses is not 'sexy' is two-fold: we do not know what kinds of cyber rocks the other side has (so we don't have a thorough understanding of what is vulnerable and how) and it seems more opportunistic to attack the other side since we know what they have or what (patches) they don't have. <br />
+Also, we know what would happen to the enemy that we attack. We don't know the consequences of getting attacked until it happens.<br />
+But I agree with the majority: You can't defend what you don't know.</p>
+</div>
+<p class="posted">Posted by: onearmedspartan at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c973052">November  9, 2012  7:11 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-paul">
+<a name="c973263"></a>
+
+<div id="c973263">
+<p>So essentially we're back in a MAD scenario, except that you can't guarantee your counterattack will actually clobber the people launching the initial salvo?</p>
+</div>
+<p class="posted">Posted by: paul at <a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html#c973263">November  9, 2012 10:19 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+
+<p><a href="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.xml">Subscribe to comments on this entry</a></p>
+
+
+<div class="postcomment">
+
+
+
+<h2>Post a comment</h2>
+
+ 
+
+
+
+<form method="post" action="https://www.schneier.com/cgi-bin/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<!-- <input type="hidden" name="static" value="1"> -->
+<input type="hidden" name="static" value="http://www.schneier.com/blog/archives/2012/11/gary_mcgraw_on.html?nc=14">
+<input type="hidden" name="entry_id" value="4574">
+
+<div id="name_email">
+<p><label for="author">Name:</label><br>
+<input tabindex="1" id="author" name="author">
+</p>
+<p><label for="email">Email Address:</label><br>
+<input tabindex="2" id="email" name="email">
+<br>E-mail is optional and will not be displayed on the site.</p>
+</div>
+
+
+
+<p><label for="url">URL:</label><br>
+<input tabindex="3" type="text" name="url" id="url">
+Remember Me?
+<input type="radio" id="remember" onclick="rememberMe(this.form)" name="bakecookie"><label for="remember">Yes</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><label for="forget">No</label><br style="clear: both;">
+</p>
+
+<p><label for="text">Comments:</label> <br>
+<textarea tabindex="4" id="text" name="text" rows="10" cols="40"></textarea></p>
+<p><strong>Allowed HTML:</strong> &lt;a href="URL"&gt; &bull; &lt;em&gt; &lt;cite&gt; &lt;i&gt; &bull; &lt;strong&gt; &lt;b&gt; &bull; &lt;sub&gt; &lt;sup&gt; &bull; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &bull; &lt;blockquote&gt; &lt;pre&gt;</p>
+<!-- $MTCommentChallenge$ -->
+
+<div align="center">
+<input type="submit" name="preview" tabindex="5" 
+    value="&nbsp;Preview&nbsp;">
+<input style="font-weight: bold;" type="submit" name="post" 
+    tabindex="6" value="&nbsp;Post&nbsp;">
+</div>
+</form>
+
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+
+
+
+
+
+</div>
+
+
+
+<div id="powered">
+Powered by <a href="http://www.movabletype.org">Movable Type</a>.  Photo at top by Geoffrey Stone.
+
+</div>
+
+<!-- end page content -->
+
+<!-- robots content="noindex" -->
+
+<p class="disclaim">Schneier.com is a personal website.  Opinions expressed are not necessarily those of <a href="http://www.bt.com/">BT</a>.
+</td>
+<td class="kludge">&nbsp;</td>
+<td class="rightcol">
+
+<table class="sidephoto" cellspacing=0><tr>
+<td><img id="authorphoto" src="/images/bruce-blog2.jpg" width="150" height="194" alt="Bruce Schneier">
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Blog Menu</td></tr>
+<tr><td class="sidebody">
+
+<h3 class="first">Search</h3>
+<form method="get" action="http://www.google.com/search">
+<input type="hidden" name="domains" value="www.schneier.com">
+<input type="hidden" name="sitesearch" value="www.schneier.com">
+<input id="search" name="q" size="15" maxlength="255"><br>
+<input type="radio" name="hq" value="inurl:www.schneier.com/blog" checked>blog only<br>
+<input type="radio" name="hq" value="inurl:www.schneier.com/essay">essays and op eds only<br>
+<input type="radio" name="hq" value="inurl:www.schneier.com">whole site<br>
+<input type="submit" value="Search">
+</form>
+
+
+<p><a href="http://www.schneier.com/blog/">Blog Home Page</a>
+<br><a href="http://www.schneier.com/blog/newcomments.html">100 Latest Comments</a>
+
+<h3 id="archives">Archives by Date</h3>
+<div id="calendar">
+<p><b>2012</b> <a href="http://www.schneier.com/blog/archives/2012/01/">J</a> <a href="http://www.schneier.com/blog/archives/2012/02/">F</a> <a href="http://www.schneier.com/blog/archives/2012/03/">M</a> <a href="http://www.schneier.com/blog/archives/2012/04/">A</a> <a href="http://www.schneier.com/blog/archives/2012/05/">M</a> <a href="http://www.schneier.com/blog/archives/2012/06/">J</a> <a href="http://www.schneier.com/blog/archives/2012/07/">J</a> <a href="http://www.schneier.com/blog/archives/2012/08/">A</a> <a href="http://www.schneier.com/blog/archives/2012/09/">S</a> <a href="http://www.schneier.com/blog/archives/2012/10/">O</a> <a href="http://www.schneier.com/blog/archives/2012/11/">N</a>
+<br><b>2011</b> <a href="http://www.schneier.com/blog/archives/2011/01/">J</a> <a href="http://www.schneier.com/blog/archives/2011/02/">F</a> <a href="http://www.schneier.com/blog/archives/2011/03/">M</a> <a href="http://www.schneier.com/blog/archives/2011/04/">A</a> <a href="http://www.schneier.com/blog/archives/2011/05/">M</a> <a href="http://www.schneier.com/blog/archives/2011/06/">J</a> <a href="http://www.schneier.com/blog/archives/2011/07/">J</a> <a href="http://www.schneier.com/blog/archives/2011/08/">A</a> <a href="http://www.schneier.com/blog/archives/2011/09/">S</a> <a href="http://www.schneier.com/blog/archives/2011/10/">O</a> <a href="http://www.schneier.com/blog/archives/2011/11/">N</a> <a href="http://www.schneier.com/blog/archives/2011/12/">D</a>
+<br><b>2010</b> <a href="http://www.schneier.com/blog/archives/2010/01/">J</a> <a href="http://www.schneier.com/blog/archives/2010/02/">F</a> <a href="http://www.schneier.com/blog/archives/2010/03/">M</a> <a href="http://www.schneier.com/blog/archives/2010/04/">A</a> <a href="http://www.schneier.com/blog/archives/2010/05/">M</a> <a href="http://www.schneier.com/blog/archives/2010/06/">J</a> <a href="http://www.schneier.com/blog/archives/2010/07/">J</a> <a href="http://www.schneier.com/blog/archives/2010/08/">A</a> <a href="http://www.schneier.com/blog/archives/2010/09/">S</a> <a href="http://www.schneier.com/blog/archives/2010/10/">O</a> <a href="http://www.schneier.com/blog/archives/2010/11/">N</a> <a href="http://www.schneier.com/blog/archives/2010/12/">D</a>
+<br><b>2009</b> <a href="http://www.schneier.com/blog/archives/2009/01/">J</a> <a href="http://www.schneier.com/blog/archives/2009/02/">F</a> <a href="http://www.schneier.com/blog/archives/2009/03/">M</a> <a href="http://www.schneier.com/blog/archives/2009/04/">A</a> <a href="http://www.schneier.com/blog/archives/2009/05/">M</a> <a href="http://www.schneier.com/blog/archives/2009/06/">J</a> <a href="http://www.schneier.com/blog/archives/2009/07/">J</a> <a href="http://www.schneier.com/blog/archives/2009/08/">A</a> <a href="http://www.schneier.com/blog/archives/2009/09/">S</a> <a href="http://www.schneier.com/blog/archives/2009/10/">O</a> <a href="http://www.schneier.com/blog/archives/2009/11/">N</a> <a href="http://www.schneier.com/blog/archives/2009/12/">D</a>
+<br><b>2008</b> <a href="http://www.schneier.com/blog/archives/2008/01/">J</a> <a href="http://www.schneier.com/blog/archives/2008/02/">F</a> <a href="http://www.schneier.com/blog/archives/2008/03/">M</a> <a href="http://www.schneier.com/blog/archives/2008/04/">A</a> <a href="http://www.schneier.com/blog/archives/2008/05/">M</a> <a href="http://www.schneier.com/blog/archives/2008/06/">J</a> <a href="http://www.schneier.com/blog/archives/2008/07/">J</a> <a href="http://www.schneier.com/blog/archives/2008/08/">A</a> <a href="http://www.schneier.com/blog/archives/2008/09/">S</a> <a href="http://www.schneier.com/blog/archives/2008/10/">O</a> <a href="http://www.schneier.com/blog/archives/2008/11/">N</a> <a href="http://www.schneier.com/blog/archives/2008/12/">D</a>
+<br><b>2007</b> <a href="http://www.schneier.com/blog/archives/2007/01/">J</a> <a href="http://www.schneier.com/blog/archives/2007/02/">F</a> <a href="http://www.schneier.com/blog/archives/2007/03/">M</a> <a href="http://www.schneier.com/blog/archives/2007/04/">A</a> <a href="http://www.schneier.com/blog/archives/2007/05/">M</a> <a href="http://www.schneier.com/blog/archives/2007/06/">J</a> <a href="http://www.schneier.com/blog/archives/2007/07/">J</a> <a href="http://www.schneier.com/blog/archives/2007/08/">A</a> <a href="http://www.schneier.com/blog/archives/2007/09/">S</a> <a href="http://www.schneier.com/blog/archives/2007/10/">O</a> <a href="http://www.schneier.com/blog/archives/2007/11/">N</a> <a href="http://www.schneier.com/blog/archives/2007/12/">D</a>
+<br><b>2006</b> <a href="http://www.schneier.com/blog/archives/2006/01/">J</a> <a href="http://www.schneier.com/blog/archives/2006/02/">F</a> <a href="http://www.schneier.com/blog/archives/2006/03/">M</a> <a href="http://www.schneier.com/blog/archives/2006/04/">A</a> <a href="http://www.schneier.com/blog/archives/2006/05/">M</a> <a href="http://www.schneier.com/blog/archives/2006/06/">J</a> <a href="http://www.schneier.com/blog/archives/2006/07/">J</a> <a href="http://www.schneier.com/blog/archives/2006/08/">A</a> <a href="http://www.schneier.com/blog/archives/2006/09/">S</a> <a href="http://www.schneier.com/blog/archives/2006/10/">O</a> <a href="http://www.schneier.com/blog/archives/2006/11/">N</a> <a href="http://www.schneier.com/blog/archives/2006/12/">D</a>
+<br><b>2005</b> <a href="http://www.schneier.com/blog/archives/2005/01/">J</a> <a href="http://www.schneier.com/blog/archives/2005/02/">F</a> <a href="http://www.schneier.com/blog/archives/2005/03/">M</a> <a href="http://www.schneier.com/blog/archives/2005/04/">A</a> <a href="http://www.schneier.com/blog/archives/2005/05/">M</a> <a href="http://www.schneier.com/blog/archives/2005/06/">J</a> <a href="http://www.schneier.com/blog/archives/2005/07/">J</a> <a href="http://www.schneier.com/blog/archives/2005/08/">A</a> <a href="http://www.schneier.com/blog/archives/2005/09/">S</a> <a href="http://www.schneier.com/blog/archives/2005/10/">O</a> <a href="http://www.schneier.com/blog/archives/2005/11/">N</a> <a href="http://www.schneier.com/blog/archives/2005/12/">D</a>
+<br><b>2004</b> <span class="empty">J</span> <span class="empty">F</span> <span class="empty">M</span> <span class="empty">A</span> <span class="empty">M</span> <span class="empty">J</span> <span class="empty">J</span> <span class="empty">A</span> <span class="empty">S</span> <a href="http://www.schneier.com/blog/archives/2004/10/">O</a> <a href="http://www.schneier.com/blog/archives/2004/11/">N</a> <a href="http://www.schneier.com/blog/archives/2004/12/">D</a>
+
+</div>
+
+<!-- begin EFF Blogger's Rights campaign code -->
+<DIV id="eff" ALIGN="CENTER"><A HREF="https://www.eff.org/issues/bloggers/legal/join"><IMG id="effbutton" SRC="https://w2.eff.org/bloggers/badges/blog_150x40.gif" ALT="Support Bloggers' Rights!" WIDTH="150" HEIGHT="40" BORDER="0" ALIGN="MIDDLE"></A></DIV>
+<!-- end EFF Blogger's Rights campaign code -->
+
+<div class="sidebtn"><a href="https://npo.networkforgood.org/Donate/Donate.aspx?npoSubscriptionId=8252"><img src="/images/epic-150w.png" ALIGN="MIDDLE" width="150" height="54" alt="Defend Privacy--Support Epic"></a></div>
+
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Latest Book</td></tr>
+<tr><td class="sidebody"><a href="http://www.schneier.com/book-lo.html"><img class="sidepic" WIDTH="175" HEIGHT="263" alt="Liars &amp; Outliers" border=0 src="/images/book-lo-175w.jpg"></a>
+<br><a href="http://www.schneier.com/books.html">more books by Bruce Schneier</a>
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Syndication</td></tr>
+<tr><td class="sidebody">
+<a href="http://www.schneier.com/blog/rss.xml">Full Text Feed</a>
+<br><a href="http://www.schneier.com/blog/index.xml">Excerpts Feed</a>
+
+<p><a href="http://twitter.com/schneierblog/">Follow on Twitter</a>
+<br><a href="http://www.amazon.com/Schneier-on-Security/dp/B0053HDDWW/">Subscribe via Kindle</a>
+</td></tr></table>
+
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Crypto-Gram Newsletter</td></tr>
+<tr><td class="sidebody">
+If you prefer to receive Bruce Schneier's comments on security as a monthly e-mail digest, subscribe to Schneier on Security's sister publication, Crypto-Gram.  
+<br><a href="http://www.schneier.com/crypto-gram.html">read more</a>
+
+</td></tr></table>
+
+<!-- /robots -->
+
+</td></tr>
+</table>
+</body>
+</html>

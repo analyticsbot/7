@@ -1,0 +1,674 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Schneier on Security: Regulation as a Prisoner's Dilemma</title>
+	<!-- robots content="noindex" -->
+	<link rel="STYLESHEET" type="text/css" href="/schneier-safe.css">
+	<link rel="STYLESHEET" type="text/css" href="/blog.css">
+	<link rel="alternate" type="application/rss+xml" title="RSS 1.0 (full-text)" href="http://www.schneier.com/blog/rss.xml">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 (excerpts)" href="http://www.schneier.com/blog/index.xml">
+    <link rel="alternate" type="application/atom+xml" title="Comments on Regulation as a Prisoner's Dilemma (Atom)" href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.xml" >
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.schneier.com/blog/rsd.xml">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="start" href="http://www.schneier.com/blog/" title="Home">
+	
+		<link rel="prev" href="http://www.schneier.com/blog/archives/2012/11/three-rotor_eni.html" title="Three-Rotor Enigma Machine Up for Auction">
+	
+	
+		<link rel="next" href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html" title="New SSL Vulnerability">
+	
+	<!-- /robots -->
+<script type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'www.schneier.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+</head>
+<body>	  
+
+<table class="main" cellspacing=0>
+<tr><td class="bodycolor"></td><td class="kludge">&nbsp;</td><td class="masthead"><p class="mastname"><!-- robots content="noindex" -->Bruce Schneier<!-- /robots --></td><td class="kludge">&nbsp;</td><td class="bodycolor"></td></tr>
+
+<tr><td class="menua">
+<!-- robots content="noindex" -->
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/">Blog</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/crypto-gram.html">Crypto-Gram Newsletter</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/books.html">Books</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/essays.html">Essays and Op Eds</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/news.html">News and Interviews</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/av.html">Audio and Video</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/schedule.html">Speaking Schedule</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/passsafe.html">Password Safe</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/cryptography.html">Cryptography</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/about.html">About Bruce Schneier</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/contact.html">Contact Information</a>
+<!-- /robots -->
+</td>
+<td class="kludge">&nbsp;</td>
+<td class="contentcell">
+
+<!-- begin page content -->
+
+<div class="indivbody">
+
+
+<!-- robots content="noindex" -->
+<h1>Schneier on Security</h1>
+<p>A blog covering security and security technology.</p>
+
+
+<p align="right">
+
+<a href="http://www.schneier.com/blog/archives/2012/11/three-rotor_eni.html">&laquo; Three-Rotor Enigma Machine Up for Auction</a> |
+
+<a href="http://www.schneier.com/blog/">Main</a>
+
+| <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html">New SSL Vulnerability &raquo;</a>
+
+</p>
+<!-- /robots -->
+
+<h2>November  7, 2012</h2>
+
+<h3>Regulation as a Prisoner's Dilemma</h3>
+
+<p><a href="http://www.infologue.com/featured/the-regulatory-system-why-is-it-failing/">This</a> is the sort of thing I wrote about in my latest book.</p>
+
+<blockquote>The Prisoners Dilemma as outlined above can be seen in action in two variants within regulatory activities, and offers a clear insight into why those involved in regulation act as they do. The first relationship is that between the various people and organisations being regulated ­ banks, nuclear power stations, council departments, police agencies, journalists, etc, and the clear lessons from history are that even for those organisations that are theoretically in competition with each other, it is beneficial to both/all sides in the long run to use mutual cooperation in order to maximise their personal benefit. Whether it was Virgin and British Airways forming an illegal cartel to fix the price of fuel surcharges (a benefit to themselves which was paid for in increased prices for passengers); football shirt retailers (and Manchester United) being fined £16m for fixing the price of replica football shirts, or Barclays (and undoubtedly other banks) working together to fix the LIBOR rate, the reason why they do it is simple and unanswerable -- it is in their benefit to do so.
+
+<p>[...]</p>
+
+<p>However, when it comes down to the relationship between the regulators and those being regulated, then a completely different strategic dynamic comes into play. The ability of the regulated organisation to maximise personal benefit is then based on the ability to predict what the other side will do in response to the two options ­ cooperate (play nicely) or betray (screw the customer). Given that in almost all cases the regulatory body has less funds, personnel, resources and expertise than the organisation it is regulating, then it becomes clear that there is little to be gained in the long run by cooperating / playing nicely, and much to be gained by ignoring the regulator and developing a strategy that focuses purely on maximising its own personal benefit. This is not an issue of 'right' or 'wrong,' but purely, in its own terms at least (maximisation of profit, increased market share, annual bonuses, career prospects), of whether it is 'effective' or 'ineffective.'</blockquote></p>
+
+<div id="a004564more"><div id="more">
+
+</div></div>
+
+<p class="posted"><a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html">Posted on November  7, 2012 at  6:16 AM</a>
+&#8226; <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#comments">23 Comments</a>
+</p>
+
+<p class="posted"><i>To receive these entries once a month by e-mail, <a href="http://www.schneier.com/crypto-gram-sub.html">sign up</a> for the <a href="http://www.schneier.com/crypto-gram.html">Crypto-Gram Newsletter</a>.</i>
+</div>
+
+
+<div class="commentform">
+<h2 id="comments">Comments</h2>
+</div>
+
+
+<div class="commentbody by-john-king">
+<a name="c968475"></a>
+
+<div id="c968475">
+<p>Isn't this a restatement of the well-rehearsed idea that corporations are amoral, or even psychopathic, and therefore should not be given rights a moral, non-psychopathic individual would have?</p>
+</div>
+<p class="posted">Posted by: John King at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c968475">November  7, 2012  7:00 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-briansj">
+<a name="c968504"></a>
+
+<div id="c968504">
+<p>PJ O'Rourke: when legislators decide what can be bought and sold the first thing to be bought and sold will be legislators</p>
+</div>
+<p class="posted">Posted by: BrianSJ at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c968504">November  7, 2012  7:21 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-nick">
+<a name="c968536"></a>
+
+<div id="c968536">
+<p>Regulation costs. In the case of banks, big time. </p>
+
+<p>So consider the case of a big or medium size banks. You have the same cost of regulation as a small bank. It's a scaleable operation. You just run the same report over a bigger data set. </p>
+
+<p>So big banks love the regulator, because it stops new competition, and regulations benefits the established but inefficient, driving up costs. </p>
+
+<p>The government doesn't see this. It draws a boundary around its costs, and excludes costs to others. </p>
+
+<p>A good example of this is building a new road. The costs of the delays whilst being built is never part of the equation, because someone else pays the price</p>
+</div>
+<p class="posted">Posted by: Nick at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c968536">November  7, 2012  7:39 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-carlo">
+<a name="c968720"></a>
+
+<div id="c968720">
+<p>If I don't tell my son he can only have two cookies out of the cookie jar, he will eat all of them, get a stomach ache and will not have any cookies to eat tomorrow.</p>
+
+<p>Humans are generally greedy,stupid and don't really care how their actions affect others.</p>
+
+<p>And there lies the need for regulation.  </p>
+
+<p>Since the beginning of time, the many have to suffer for the sins of the few...</p>
+</div>
+<p class="posted">Posted by: Carlo at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c968720">November  7, 2012  9:17 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-ron-helwig">
+<a name="c968780"></a>
+
+<div id="c968780">
+<p>Carlo, yes the market needs regulation, but expecting to get proper regulation from politicians is naive. The incentives for politicians are improper for good regulation.</p>
+
+<p>Proper regulation can only come from the market itself, that is from consumers/buyers acting on their own beliefs and desires. All political regulations actually interfere with the natural regulatory mechanisms and thus make things worse.</p>
+</div>
+<p class="posted">Posted by: <a title="http://shiresilver.com" href="http://shiresilver.com" rel="nofollow">Ron Helwig</a> at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c968780">November  7, 2012  9:38 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-alans">
+<a name="c968794"></a>
+
+<div id="c968794">
+<p>Regulations can cut both ways.</p>
+
+<p>Adam Smith (Wealth of Nations): "People of the same trade seldom meet together, even for merriment and diversion, but the conversation ends in a conspiracy against the publick, or in some contrivance to raise prices." Smith was referring to  monopoly privileges that were granted by government regulation. There was no prisoners dilemma because government and the trades were all in it together.</p>
+
+<p>But in Smith there is a role for regulation in ensuring justice or restraining  self-interested actions that cause systemic risk. For example, Smith on banking regulation in Wealth:<br />
+"To restrain private people, it may be said, from receiving in payment the promissory notes of a banker, for any sum whether great or small, when they themselves are willing to receive them, or to restrain a banker from issuing such notes, when all his neighbours are willing to accept of them, is a manifest violation of that natural liberty which it is the proper business of law not to infringe, but to support. Such regulations may, no doubt, be considered as in some respects a violation of natural liberty. But those exertions of the natural liberty of a few individuals, which might endanger the security of the whole society, are, and ought to be, restrained by the laws of all governments, of the most free as well as of the most despotical. The obligation of building party walls, in order to prevent the communication of fire, is a violation of natural liberty exactly of the same kind with the regulations of the banking trade which are here proposed."</p>
+
+<p>The problem of course, as Smith well-recognized, is that government often isn't very good at the task and often gets bought off. It is ironic, of course, but maybe Smith wouldn't have been surprised, that in our time banking was deregulated in a manner that created systemic risk and justified by the wide-spread mis-representation of Smith by Greenspan and  modern economists.</p>
+</div>
+<p class="posted">Posted by: AlanS at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c968794">November  7, 2012  9:43 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-chuckb">
+<a name="c968868"></a>
+
+<div id="c968868">
+<p>The incentives of regulators and criminal actors are sufficiently non-comparable that invoking the prisoner's dilemma as an analytic model is not particularly useful beyond invoking ideology. </p>
+</div>
+<p class="posted">Posted by: ChuckB at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c968868">November  7, 2012 10:18 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-alans">
+<a name="c968906"></a>
+
+<div id="c968906">
+<p>@Helwig<br />
+The notion of self-regulating markets is nonsense.  </p>
+
+<p>Amartya Sen. "Capitalism Beyond the Crisis". <br />
+<a href="http://www.nybooks.com/articles/archives/2009/mar/26/capitalism-beyond-the-crisis/?pagination=false" rel="nofollow">http://www.nybooks.com/articles/archives/2009/...</a></p>
+
+<p>"And yet the supervisory role of government in the United States in particular has been, over the same period, sharply curtailed, fed by an increasing belief in the self-regulatory nature of the market economy. Precisely as the need for state surveillance grew, the needed supervision shrank. There was, as a result, a disaster waiting to happen, which did eventually happen last year, and this has certainly contributed a great deal to the financial crisis that is plaguing the world today. The insufficient regulation of financial activities has implications not only for illegitimate practices, but also for a tendency toward overspeculation that, as Adam Smith argued, tends to grip many human beings in their breathless search for profits."</p>
+</div>
+<p class="posted">Posted by: AlanS at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c968906">November  7, 2012 10:35 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-vasiliy-pupkin">
+<a name="c969052"></a>
+
+<div id="c969052">
+<p>'The active role for the Government not just regulation, but monitoring and enforcing due process and providing the right incentives and disincentives'<br />
+(Gary McGraw & Ivan Arce on cyber security).<br />
+I guess that statement is applicable not only to cyber security, and have nothing to do with arbitrary selection winners or losers. </p>
+</div>
+<p class="posted">Posted by: vasiliy pupkin at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969052">November  7, 2012 11:45 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-onearmedspartan">
+<a name="c969067"></a>
+
+<div id="c969067">
+<p>Thank you AlanS for bringing some sense into the non-sense we know as self-regulating markets. </p>
+
+<p>Its naive and dangerous to think markets regulate themselves. If that was the case, we wouldn't have a worldwide recession. We need regulation to the point where competition is fierce but legitmate. Not controlling or overbearing. Markets are always trying to beat the system (of government regulation) and the system is too slow or political to do anything about it. As soon as the noose tightens, bad things happen for business and thus consumers. When regulation is too loose, business may boom, but it eventually brings about bigger consequences. And we still suffer.</p>
+</div>
+<p class="posted">Posted by: onearmedspartan at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969067">November  7, 2012 11:49 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-jerry">
+<a name="c969109"></a>
+
+<div id="c969109">
+<p>Another thought about market self-regulation is that if the government never bailed out failed markets or market-players, the concept might be more tenable.  Maybe.  But if the markets are deregulated and, at the same time, the government is expected to bail out failures, then of course the principals of these market entities have no reason to fear failure.</p>
+
+<p>In essence, it's only partially deregulated.</p>
+</div>
+<p class="posted">Posted by: jerry at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969109">November  7, 2012 12:04 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-alans">
+<a name="c969578"></a>
+
+<div id="c969578">
+<p>@Jerry</p>
+
+<p>Financial bubbles have a long history. People have engaged in reckless speculative behavior leading to systemic failure regardless of expectations of government rescue. </p>
+</div>
+<p class="posted">Posted by: AlanS at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969578">November  7, 2012  2:46 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-alan">
+<a name="c969713"></a>
+
+<div id="c969713">
+<p>In the UK our government is reducing the size of the audit function despite continued corruption being found in many of our financial institutions and despite the fact that it pays for itself by increasing the treasury coffers in unpaid tax, fines, etc.</p>
+
+<p>It is so obvious that we should increase the number of financial auditors exponentially until they cease to pay for themselves but this is beyond the wit of politicians - or perhaps there is something rather dark and sinister behind the proposals.<br />
+</p>
+</div>
+<p class="posted">Posted by: alan at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969713">November  7, 2012  4:26 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-roger">
+<a name="c969789"></a>
+
+<div id="c969789">
+<p>I work in an industry that is highly regulated. <br />
+<blockquote>Given that in almost all cases the regulatory body has less funds, personnel, resources and expertise than the organisation it is regulating, then it becomes clear that there is little to be gained in the long run by cooperating / playing nicely, and much to be gained by ignoring the regulator and developing a strategy that focuses purely on maximising its own personal benefit.</blockquote><br />
+From my personal experience, I would say that the above quote is not just an awful run-on sentence; it's also completely wrong. Specifically:<ul><br />
+<li>"... in <b>almost all</b> cases the regulatory body has less ..." (Emphasis added.) This is false. There are only a handful of players in our industry that can call on similar resources to the government auditors. Remember, a company might have hundreds of employees, but most of them are the working joes busy actually making stuff. When we get an audit from one of the three agencies that regulate our industry, we typically have 4 to 10 auditors turn up. We can only spare 2 or 3 guys to respond to them. </li><br />
+<li>"... less funds, personnel, resources and expertise than the organisation it is regulating ..." Again, complete rubbish. The regulator may or may not have less funds overall, but they have far more funds earmarked for regulatory investigation matters. This for the simple reason that it is their core business, whereas for the other guy it is pure overhead. More importantly, they also have lower costs as it is much cheaper to conduct an investigation that to hinder it. As for personnel, the regulators have a marvellous force multiplier: they can call on the company's own personnel as additional resources! (And yes, they are aware of the potential pitfalls. In reality most employees are more than happy to have a legally privileged opportunity to squeal on the boss.)</li><br />
+<li>"...it becomes clear that there is little to be gained in the long run by cooperating..." This is a <i>non sequitur</i>. It simply doesn't follow from the premise. I think what the author meant to say is that because of his preceding claims (which are doubtful in any case), the probability of getting caught is so low that P(caught) x C(fines, reputational damage etc) is less the savings. That may or may not be true on a case-by-case basis, but it is definitely untrue as a general principle, and for much of our business it is wrong by an order of magnitude.</li><br />
+</ul><br />
+As I mentioned, my industry is highly regulated. All of it is pretty effective in the sense that attempts to cheat are quite unusual.</p>
+
+<p>However the real elephant in the room is that large chunks of the regulations are themselves a load of nonsense. Some of them once made sense but are obsolete; some are just Byzantine, Kafkaesque bureaucracy at its finest; some are pure idiocy.</p>
+
+<p>Consider this example. We have a certain wastewater stream that contains traces of certain chemicals. All these chemicals are also found in lawn fertilisers. So it occurred to us that we could water our lawns with this stuff. We would reduce consumption of scarce water resources, we would get a nice healthy lawn, and we eliminate the small risk of our "fertiliser" causing an algal bloom somewhere. The particularly nice part of the idea is that we aren't just pushing this chemical waste under a rug; we found a safe, environmentally sustainable way to <i>permanently</i> convert it to something harmless.</p>
+
+<p>Well, according to our regulators, this would be illegal. The concentration of chemicals in this water is low enough that it is legal to dump it in the nearby river; but we can't put it on the lawn because if there was a storm before the plants had soaked it up, some of it might run off ... into the river.</p>
+
+<p>That's the real problem with regulation: <b>there is no routine feedback mechanism to ensure that it makes sense.</b></p>
+</div>
+<p class="posted">Posted by: Roger at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969789">November  7, 2012  5:33 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dirk-praet">
+<a name="c969854"></a>
+
+<div id="c969854">
+<p>@ ChuckB</p>
+
+<p><i>The incentives of regulators and criminal actors are sufficiently non-comparable that invoking the prisoner's dilemma as an analytic model is not particularly useful beyond invoking ideology.</i></p>
+
+<p>I beg to differ. An angle that is not covered in the article is the relation between regulators themselves. Although financial markets are a global phenomenon, regulators are often restricted to national boundaries. This in fact leads to a standard Prisoner's Dilemma on the local level: if we regulate in "X", will our counterparts in country "Y" do the same or will they do nothing and gain an unfair advantage ?</p>
+
+<p>Even in the case of supra-national regulation where the regulating body has little resources or authority, audit and enforcement will be up to the underwriting member states where a new instance of Prisoner's Dilemma occurs: will we enforce or won't we ?  As an example, a few days ago, the European Court of Auditors published a report stating that about 4% of the 2011 budget (5 bn euro) had not been properly allocated. In quite some cases, this was down to national and local governments failing to properly oversee and control the distribution of funds.</p>
+
+<p>Unfortunately, the problem is much bigger than this with the collusion between legislators and representatives/lobbyists of the entities they are supposed to regulate being the most obvious issue. It is impossible to effectively regulate or enforce when the governing laws/rules are being written by exactly those folks who are the subject of said regulation. And that's just one of the many reasons why intertwinement between politics and corporations is such a bad idea. This has nothing to do with ideology, but everything with common sense.<br />
+</p>
+</div>
+<p class="posted">Posted by: Dirk Praet at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969854">November  7, 2012  6:20 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dirk-praet">
+<a name="c969861"></a>
+
+<div id="c969861">
+<p>@ Roger</p>
+
+<p><i>That's the real problem with regulation: there is no routine feedback mechanism to ensure that it makes sense.</i></p>
+
+<p>You are absolutely right that regulation without a feedback mechanism makes no sense whatsoever. But it would also be wrong to throw away the child with the bathwater. Regulation done the right way does provide for feedback mechanisms which for all practical purposes are (or should be) a quintessential part of any regulatory system.</p>
+</div>
+<p class="posted">Posted by: Dirk Praet at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969861">November  7, 2012  6:27 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-lliamander">
+<a name="c969865"></a>
+
+<div id="c969865">
+<p>@Dirk Praet</p>
+
+<p>Does lobbying count as a feedback mechanism?  If so its the main one in the United States :)</p>
+</div>
+<p class="posted">Posted by: lliamander at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969865">November  7, 2012  6:29 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-godel">
+<a name="c969915"></a>
+
+<div id="c969915">
+<p><i>Does lobbying count as a feedback mechanism? If so its the main one in the United States :)</i></p>
+
+<p>Or feed forward, in the case of the RIAA writing the most of anti-piracy laws like SOPA.</p>
+</div>
+<p class="posted">Posted by: Godel at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969915">November  7, 2012  6:56 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dirk-praet">
+<a name="c969940"></a>
+
+<div id="c969940">
+<p>@ lliamander</p>
+
+<p>A defanging mechanism ?</p>
+</div>
+<p class="posted">Posted by: Dirk Praet at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c969940">November  7, 2012  7:07 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-leon-wolfeson">
+<a name="c970206"></a>
+
+<div id="c970206">
+<p>@alan - </p>
+
+<p>Oh it's worse than that. Many of the remaining staff have been shifted over to working on benefit fraud.</p>
+
+<p>Which has for several decades has a static 0.5% fraud rate. They've managed to drive down the average amount of that fraud by some tens of pounds by throwing billions at it.</p>
+
+<p>The Daily Fail and so on lap it up, though.</p>
+
+<p>@Roger - The issue is that capitalism naturally lends itself to monopolies, regulatory capture and sequester of profits away from workers.</p>
+</div>
+<p class="posted">Posted by: Leon Wolfeson at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c970206">November  7, 2012 10:09 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-autolykos">
+<a name="c970831"></a>
+
+<div id="c970831">
+<p>@Dirk Praet: Not enforcing supra-national regulations introduces a whole new game the (not) regulated corporations should better be aware of: The government could always change its mind for any reason (or no reason whatsoever) and effectively threaten shut down the business. This sort of blackmail is actually quite common in countries that usually don't enforce these regulations. Corruption works both ways.</p>
+</div>
+<p class="posted">Posted by: Autolykos at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c970831">November  8, 2012  5:26 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-vasiliy-pupkin">
+<a name="c971029"></a>
+
+<div id="c971029">
+<p>@Autolykos.<br />
+In the country claimed to be law-guided state regulations should be applied uniformly to all businesses regardless of did those business contribute to election of particular government or not.<br />
+The most terrible thing is selective application of laws/regulations by the principle:'For friends (contributors to the election) everything, for others - law'.  That is (time and again), draconian laws/regulations are not iron ones, but capricious.  </p>
+</div>
+<p class="posted">Posted by: vasiliy pupkin at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c971029">November  8, 2012  7:43 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-paul">
+<a name="c971200"></a>
+
+<div id="c971200">
+<p>What we've seen in a lot of regulated industries is also a personal version of the prisoner's dilemma: regulators who have an uncompromisingly aggressive attitude toward the firms they regulate may find that they are less likely to get job offers from those firms when their stint at the regulatory agency is over. (And where else, with their specialized expertise, would they go to maximize their earnings?) </p>
+
+<p>So cooperation benefits both the individual regulator and the regulated. But not so much the society as a whole.<br />
+</p>
+</div>
+<p class="posted">Posted by: paul at <a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html#c971200">November  8, 2012  9:33 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+
+<p><a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.xml">Subscribe to comments on this entry</a></p>
+
+
+<div class="postcomment">
+
+
+
+<h2>Post a comment</h2>
+
+ 
+
+
+
+<form method="post" action="https://www.schneier.com/cgi-bin/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<!-- <input type="hidden" name="static" value="1"> -->
+<input type="hidden" name="static" value="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html?nc=23">
+<input type="hidden" name="entry_id" value="4564">
+
+<div id="name_email">
+<p><label for="author">Name:</label><br>
+<input tabindex="1" id="author" name="author">
+</p>
+<p><label for="email">Email Address:</label><br>
+<input tabindex="2" id="email" name="email">
+<br>E-mail is optional and will not be displayed on the site.</p>
+</div>
+
+
+
+<p><label for="url">URL:</label><br>
+<input tabindex="3" type="text" name="url" id="url">
+Remember Me?
+<input type="radio" id="remember" onclick="rememberMe(this.form)" name="bakecookie"><label for="remember">Yes</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><label for="forget">No</label><br style="clear: both;">
+</p>
+
+<p><label for="text">Comments:</label> <br>
+<textarea tabindex="4" id="text" name="text" rows="10" cols="40"></textarea></p>
+<p><strong>Allowed HTML:</strong> &lt;a href="URL"&gt; &bull; &lt;em&gt; &lt;cite&gt; &lt;i&gt; &bull; &lt;strong&gt; &lt;b&gt; &bull; &lt;sub&gt; &lt;sup&gt; &bull; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &bull; &lt;blockquote&gt; &lt;pre&gt;</p>
+<!-- $MTCommentChallenge$ -->
+
+<div align="center">
+<input type="submit" name="preview" tabindex="5" 
+    value="&nbsp;Preview&nbsp;">
+<input style="font-weight: bold;" type="submit" name="post" 
+    tabindex="6" value="&nbsp;Post&nbsp;">
+</div>
+</form>
+
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+
+
+
+
+
+</div>
+
+
+
+<div id="powered">
+Powered by <a href="http://www.movabletype.org">Movable Type</a>.  Photo at top by Geoffrey Stone.
+
+</div>
+
+<!-- end page content -->
+
+<!-- robots content="noindex" -->
+
+<p class="disclaim">Schneier.com is a personal website.  Opinions expressed are not necessarily those of <a href="http://www.bt.com/">BT</a>.
+</td>
+<td class="kludge">&nbsp;</td>
+<td class="rightcol">
+
+<table class="sidephoto" cellspacing=0><tr>
+<td><img id="authorphoto" src="/images/bruce-blog2.jpg" width="150" height="194" alt="Bruce Schneier">
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Blog Menu</td></tr>
+<tr><td class="sidebody">
+
+<h3 class="first">Search</h3>
+<form method="get" action="http://www.google.com/search">
+<input type="hidden" name="domains" value="www.schneier.com">
+<input type="hidden" name="sitesearch" value="www.schneier.com">
+<input id="search" name="q" size="15" maxlength="255"><br>
+<input type="radio" name="hq" value="inurl:www.schneier.com/blog" checked>blog only<br>
+<input type="radio" name="hq" value="inurl:www.schneier.com/essay">essays and op eds only<br>
+<input type="radio" name="hq" value="inurl:www.schneier.com">whole site<br>
+<input type="submit" value="Search">
+</form>
+
+
+<p><a href="http://www.schneier.com/blog/">Blog Home Page</a>
+<br><a href="http://www.schneier.com/blog/newcomments.html">100 Latest Comments</a>
+
+<h3 id="archives">Archives by Date</h3>
+<div id="calendar">
+<p><b>2012</b> <a href="http://www.schneier.com/blog/archives/2012/01/">J</a> <a href="http://www.schneier.com/blog/archives/2012/02/">F</a> <a href="http://www.schneier.com/blog/archives/2012/03/">M</a> <a href="http://www.schneier.com/blog/archives/2012/04/">A</a> <a href="http://www.schneier.com/blog/archives/2012/05/">M</a> <a href="http://www.schneier.com/blog/archives/2012/06/">J</a> <a href="http://www.schneier.com/blog/archives/2012/07/">J</a> <a href="http://www.schneier.com/blog/archives/2012/08/">A</a> <a href="http://www.schneier.com/blog/archives/2012/09/">S</a> <a href="http://www.schneier.com/blog/archives/2012/10/">O</a> <a href="http://www.schneier.com/blog/archives/2012/11/">N</a>
+<br><b>2011</b> <a href="http://www.schneier.com/blog/archives/2011/01/">J</a> <a href="http://www.schneier.com/blog/archives/2011/02/">F</a> <a href="http://www.schneier.com/blog/archives/2011/03/">M</a> <a href="http://www.schneier.com/blog/archives/2011/04/">A</a> <a href="http://www.schneier.com/blog/archives/2011/05/">M</a> <a href="http://www.schneier.com/blog/archives/2011/06/">J</a> <a href="http://www.schneier.com/blog/archives/2011/07/">J</a> <a href="http://www.schneier.com/blog/archives/2011/08/">A</a> <a href="http://www.schneier.com/blog/archives/2011/09/">S</a> <a href="http://www.schneier.com/blog/archives/2011/10/">O</a> <a href="http://www.schneier.com/blog/archives/2011/11/">N</a> <a href="http://www.schneier.com/blog/archives/2011/12/">D</a>
+<br><b>2010</b> <a href="http://www.schneier.com/blog/archives/2010/01/">J</a> <a href="http://www.schneier.com/blog/archives/2010/02/">F</a> <a href="http://www.schneier.com/blog/archives/2010/03/">M</a> <a href="http://www.schneier.com/blog/archives/2010/04/">A</a> <a href="http://www.schneier.com/blog/archives/2010/05/">M</a> <a href="http://www.schneier.com/blog/archives/2010/06/">J</a> <a href="http://www.schneier.com/blog/archives/2010/07/">J</a> <a href="http://www.schneier.com/blog/archives/2010/08/">A</a> <a href="http://www.schneier.com/blog/archives/2010/09/">S</a> <a href="http://www.schneier.com/blog/archives/2010/10/">O</a> <a href="http://www.schneier.com/blog/archives/2010/11/">N</a> <a href="http://www.schneier.com/blog/archives/2010/12/">D</a>
+<br><b>2009</b> <a href="http://www.schneier.com/blog/archives/2009/01/">J</a> <a href="http://www.schneier.com/blog/archives/2009/02/">F</a> <a href="http://www.schneier.com/blog/archives/2009/03/">M</a> <a href="http://www.schneier.com/blog/archives/2009/04/">A</a> <a href="http://www.schneier.com/blog/archives/2009/05/">M</a> <a href="http://www.schneier.com/blog/archives/2009/06/">J</a> <a href="http://www.schneier.com/blog/archives/2009/07/">J</a> <a href="http://www.schneier.com/blog/archives/2009/08/">A</a> <a href="http://www.schneier.com/blog/archives/2009/09/">S</a> <a href="http://www.schneier.com/blog/archives/2009/10/">O</a> <a href="http://www.schneier.com/blog/archives/2009/11/">N</a> <a href="http://www.schneier.com/blog/archives/2009/12/">D</a>
+<br><b>2008</b> <a href="http://www.schneier.com/blog/archives/2008/01/">J</a> <a href="http://www.schneier.com/blog/archives/2008/02/">F</a> <a href="http://www.schneier.com/blog/archives/2008/03/">M</a> <a href="http://www.schneier.com/blog/archives/2008/04/">A</a> <a href="http://www.schneier.com/blog/archives/2008/05/">M</a> <a href="http://www.schneier.com/blog/archives/2008/06/">J</a> <a href="http://www.schneier.com/blog/archives/2008/07/">J</a> <a href="http://www.schneier.com/blog/archives/2008/08/">A</a> <a href="http://www.schneier.com/blog/archives/2008/09/">S</a> <a href="http://www.schneier.com/blog/archives/2008/10/">O</a> <a href="http://www.schneier.com/blog/archives/2008/11/">N</a> <a href="http://www.schneier.com/blog/archives/2008/12/">D</a>
+<br><b>2007</b> <a href="http://www.schneier.com/blog/archives/2007/01/">J</a> <a href="http://www.schneier.com/blog/archives/2007/02/">F</a> <a href="http://www.schneier.com/blog/archives/2007/03/">M</a> <a href="http://www.schneier.com/blog/archives/2007/04/">A</a> <a href="http://www.schneier.com/blog/archives/2007/05/">M</a> <a href="http://www.schneier.com/blog/archives/2007/06/">J</a> <a href="http://www.schneier.com/blog/archives/2007/07/">J</a> <a href="http://www.schneier.com/blog/archives/2007/08/">A</a> <a href="http://www.schneier.com/blog/archives/2007/09/">S</a> <a href="http://www.schneier.com/blog/archives/2007/10/">O</a> <a href="http://www.schneier.com/blog/archives/2007/11/">N</a> <a href="http://www.schneier.com/blog/archives/2007/12/">D</a>
+<br><b>2006</b> <a href="http://www.schneier.com/blog/archives/2006/01/">J</a> <a href="http://www.schneier.com/blog/archives/2006/02/">F</a> <a href="http://www.schneier.com/blog/archives/2006/03/">M</a> <a href="http://www.schneier.com/blog/archives/2006/04/">A</a> <a href="http://www.schneier.com/blog/archives/2006/05/">M</a> <a href="http://www.schneier.com/blog/archives/2006/06/">J</a> <a href="http://www.schneier.com/blog/archives/2006/07/">J</a> <a href="http://www.schneier.com/blog/archives/2006/08/">A</a> <a href="http://www.schneier.com/blog/archives/2006/09/">S</a> <a href="http://www.schneier.com/blog/archives/2006/10/">O</a> <a href="http://www.schneier.com/blog/archives/2006/11/">N</a> <a href="http://www.schneier.com/blog/archives/2006/12/">D</a>
+<br><b>2005</b> <a href="http://www.schneier.com/blog/archives/2005/01/">J</a> <a href="http://www.schneier.com/blog/archives/2005/02/">F</a> <a href="http://www.schneier.com/blog/archives/2005/03/">M</a> <a href="http://www.schneier.com/blog/archives/2005/04/">A</a> <a href="http://www.schneier.com/blog/archives/2005/05/">M</a> <a href="http://www.schneier.com/blog/archives/2005/06/">J</a> <a href="http://www.schneier.com/blog/archives/2005/07/">J</a> <a href="http://www.schneier.com/blog/archives/2005/08/">A</a> <a href="http://www.schneier.com/blog/archives/2005/09/">S</a> <a href="http://www.schneier.com/blog/archives/2005/10/">O</a> <a href="http://www.schneier.com/blog/archives/2005/11/">N</a> <a href="http://www.schneier.com/blog/archives/2005/12/">D</a>
+<br><b>2004</b> <span class="empty">J</span> <span class="empty">F</span> <span class="empty">M</span> <span class="empty">A</span> <span class="empty">M</span> <span class="empty">J</span> <span class="empty">J</span> <span class="empty">A</span> <span class="empty">S</span> <a href="http://www.schneier.com/blog/archives/2004/10/">O</a> <a href="http://www.schneier.com/blog/archives/2004/11/">N</a> <a href="http://www.schneier.com/blog/archives/2004/12/">D</a>
+
+</div>
+
+<!-- begin EFF Blogger's Rights campaign code -->
+<DIV id="eff" ALIGN="CENTER"><A HREF="https://www.eff.org/issues/bloggers/legal/join"><IMG id="effbutton" SRC="https://w2.eff.org/bloggers/badges/blog_150x40.gif" ALT="Support Bloggers' Rights!" WIDTH="150" HEIGHT="40" BORDER="0" ALIGN="MIDDLE"></A></DIV>
+<!-- end EFF Blogger's Rights campaign code -->
+
+<div class="sidebtn"><a href="https://npo.networkforgood.org/Donate/Donate.aspx?npoSubscriptionId=8252"><img src="/images/epic-150w.png" ALIGN="MIDDLE" width="150" height="54" alt="Defend Privacy--Support Epic"></a></div>
+
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Latest Book</td></tr>
+<tr><td class="sidebody"><a href="http://www.schneier.com/book-lo.html"><img class="sidepic" WIDTH="175" HEIGHT="263" alt="Liars &amp; Outliers" border=0 src="/images/book-lo-175w.jpg"></a>
+<br><a href="http://www.schneier.com/books.html">more books by Bruce Schneier</a>
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Syndication</td></tr>
+<tr><td class="sidebody">
+<a href="http://www.schneier.com/blog/rss.xml">Full Text Feed</a>
+<br><a href="http://www.schneier.com/blog/index.xml">Excerpts Feed</a>
+
+<p><a href="http://twitter.com/schneierblog/">Follow on Twitter</a>
+<br><a href="http://www.amazon.com/Schneier-on-Security/dp/B0053HDDWW/">Subscribe via Kindle</a>
+</td></tr></table>
+
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Crypto-Gram Newsletter</td></tr>
+<tr><td class="sidebody">
+If you prefer to receive Bruce Schneier's comments on security as a monthly e-mail digest, subscribe to Schneier on Security's sister publication, Crypto-Gram.  
+<br><a href="http://www.schneier.com/crypto-gram.html">read more</a>
+
+</td></tr></table>
+
+<!-- /robots -->
+
+</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,1074 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="http://www.movabletype.org/" />
+
+<meta name="keywords" content="phil windley, phil, enterprise computing, information technology, web services, privacy, identity, security, sibos, swift, innotribe, kynetx, personal+clouds, cloudos, intentcasting " />
+
+<!--
+
+<meta name="description" content="Organizations Get the IT They Deserve" />
+
+-->
+<meta name="description" content="For the last six months Kynetx has been working partnership with several other companies on a project for the Innotribe division of Swift. The project, called the Digital Asset Grid provides a way for banks to become platforms. " />
+
+
+<meta name="author"  content="Phil Windley" />
+
+<title>The Digital Asset Grid Session at SIBOS  | Phil Windley's Technometria</title>
+
+<link rel="stylesheet" href="http://www.windley.com/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://www.windley.com/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.windley.com/rss.xml" />
+
+<link rel="start" href="http://www.windley.com/" title="Home" />
+
+<link rel="prev" href="http://www.windley.com/archives/2012/10/a_general_architecture_for_personal_clouds.shtml" title="A General Architecture for Personal Clouds " />
+
+
+
+
+
+<script type="text/javascript" src="http://www.windley.com/mt.js"></script>
+
+<meta name="microid" 
+            content="mailto+http:sha1:b7c66e8e9529dc3c417538275610ef98f339b4cb" />
+
+
+<link rel="openid.server" href="https://www.signon.com/partner/openid" />
+<link rel="openid2.provider" href="https://www.signon.com/partner/openid" />
+<Link rel="openid.delegate" href="https://windley.signon.com" />
+<link rel="openid2.local_id" href="https://windley.signon.com"/>
+
+<link rel="stylesheet" 
+      href="http://www.windley.com/blogtools/0/9/blogtools.css" 
+      type="text/css" />
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml">
+<dc:title>The Digital Asset Grid Session at SIBOS </dc:title>
+<dc:description>For the last six months Kynetx has been working partnership with several other companies on a project for the Innotribe division of Swift. The project, called the Digital Asset Grid provides a way for banks to become platforms. </dc:description>
+<dc:creator>windley</dc:creator>
+<dc:date>2012-11-01T00:01:47-07:00</dc:date>
+<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/1.0/" />
+</Work>
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/1.0/">
+<requires rdf:resource="http://web.resource.org/cc/Attribution" />
+<requires rdf:resource="http://web.resource.org/cc/Notice" />
+<requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+<permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+<permits rdf:resource="http://web.resource.org/cc/Distribution" />
+<permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+<prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+</License>
+</rdf:RDF>
+-->
+
+
+
+</head>
+
+<body onload="individualArchivesOnLoad(commenter_name)">
+
+<div id="container">
+
+<div id="banner">
+<h1><a href="http://www.windley.com/" accesskey="1">Phil Windley's Technometria</a></h1>
+<h2>Organizations Get the IT They Deserve</h2>
+</div>
+
+
+<div id="left">
+<div class="sidebar">
+
+<h2>
+Technometria
+</h2>
+<div class="link-note">
+<a href="http://www.windley.com/">Home</a><br/>
+<a href="http://www.windley.com/essays/2005/why_technometria">Why Technometria?</a><br/>
+<a href="http://www.windley.com/rss.xml"><img id="rss_logo" src="http://www.windley.com/images/feed.png" border="0" valign="bottom" align="right"/></a>
+<a href="http://www.windley.com/rss.xml">RSS</a> <br/>
+<a href="http://www.windley.com/atom.xml">Atom</a> <br/>
+<a href="http://rss.conversationsnetwork.org/series/technometria.xml">Podcast Feed</a><br/>
+<a rel="author" href="https://plus.google.com/103887646945247867113">
+  <img valign="middle" src="http://www.google.com/images/icons/ui/gprofile_button-16.png" width="16" height="16"> My G+ Profile<br/>
+</a>
+<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//www.windley.com/rss.xml"><img src="http://buttons.googlesyndication.com/fusion/add.gif" border="0" alt="Add to Google"></a><br/>
+<a href="http://add.my.yahoo.com/rss?url=http://www.windley.com/rss.xml">
+ <img border="0" src="http://us.i1.yimg.com/us.yimg.com/i/us/my/addtomyyahoo2.gif"/></a><br/>
+<a href="http://www.windley.com/cgi-bin/recommend.pl?name=technometria&title=Windley's%20Technometria&url=http://www.windley.com">Recommend This Site</a>
+</div>
+
+
+<h2>
+About Phil
+</h2>
+<div class="link-note">
+<a href="http://phil.windley.org">Brief Bio</a><br/>
+<a href="http://phil.windley.org">Contact Info</a><br/>
+<a href="http://twitter.com/windley">Phil on Twitter</a><br/>
+<a href="http://www.windley.com/speaking">Speaking</a><br/>
+<a href="http://www.windley.com/outlines/infoworld.html">InfoWorld</a><br/>
+<a href="http://www.windley.com/gallery/">Photo Albums</a><br/>
+<a href="http://www.windley.com/videos">Video Favorites</a><br/>
+<a href="http://www.windley.com/cto_forum">CTO Breakfast</a>
+</div>
+
+<h2>
+Essays
+</h2>
+<div class="link-note">
+<a href="http://www.windley.com/essays/2006">2006</a><br/>
+<a href="http://www.windley.com/essays/2005">2005</a><br/>
+<a href="http://www.windley.com/essays/2004">2004</a><br/>
+<a href="http://www.windley.com/essays/2003">2003</a><br/>
+<a href="http://www.windley.com/docs/">CIO White Papers</a>
+</div>
+
+<h2>Visit Count</h2>
+<div class="link-note">
+<div id="page_count"></div>
+</div>
+
+<h2>
+Software
+</h2>
+<div class="link-note">
+<a href="http://www.windley.com/packages/">Packages</a>
+</div>
+
+<h2>
+Topic Guides
+</h2>
+
+<div class="link-note">
+<a href="http://www.windley.com/identity-policy/">Digital ID Policies</a><br/>
+<a href="http://www.windley.com/essays/2004/application_performance">Internet Application Performance</a><br/>
+<a href="http://www.windley.com/outlines/linux">Setting Up a Linux Server</a><br/>
+<a href="http://www.windley.com/outlines/public_service_tips">Public Service Tips</a>
+</div>
+
+<div id="categories">
+<h2>Categories</h2>
+<div class="link-note">
+<a href="http://www.windley.com/tagcloud">Blog TagCloud</a><br/>
+</div>
+</div><!--categories-->
+
+
+<h2>
+Archives
+</h2>
+
+<div class="link-note">
+
+<a href="http://www.windley.com/archives/2012/11/">November 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/10/">October 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/09/">September 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/08/">August 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/07/">July 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/06/">June 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/05/">May 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/04/">April 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/03/">March 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/02/">February 2012</a><br />
+
+<a href="http://www.windley.com/archives/2012/01/">January 2012</a><br />
+
+<a href="http://www.windley.com/archives/2011/12/">December 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/11/">November 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/10/">October 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/09/">September 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/08/">August 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/07/">July 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/06/">June 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/05/">May 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/04/">April 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/03/">March 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/02/">February 2011</a><br />
+
+<a href="http://www.windley.com/archives/2011/01/">January 2011</a><br />
+
+<a href="http://www.windley.com/archives/2010/12/">December 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/11/">November 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/10/">October 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/09/">September 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/08/">August 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/07/">July 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/06/">June 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/05/">May 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/04/">April 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/03/">March 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/02/">February 2010</a><br />
+
+<a href="http://www.windley.com/archives/2010/01/">January 2010</a><br />
+
+<a href="http://www.windley.com/archives/2009/12/">December 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/11/">November 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/10/">October 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/09/">September 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/08/">August 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/07/">July 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/06/">June 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/05/">May 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/04/">April 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/03/">March 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/02/">February 2009</a><br />
+
+<a href="http://www.windley.com/archives/2009/01/">January 2009</a><br />
+
+<a href="http://www.windley.com/archives/2008/12/">December 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/11/">November 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/10/">October 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/09/">September 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/08/">August 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/07/">July 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/06/">June 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/05/">May 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/04/">April 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/03/">March 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/02/">February 2008</a><br />
+
+<a href="http://www.windley.com/archives/2008/01/">January 2008</a><br />
+
+<a href="http://www.windley.com/archives/2007/12/">December 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/11/">November 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/10/">October 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/09/">September 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/08/">August 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/07/">July 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/06/">June 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/05/">May 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/04/">April 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/03/">March 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/02/">February 2007</a><br />
+
+<a href="http://www.windley.com/archives/2007/01/">January 2007</a><br />
+
+<a href="http://www.windley.com/archives/2006/12/">December 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/11/">November 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/10/">October 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/09/">September 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/08/">August 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/07/">July 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/06/">June 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/05/">May 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/04/">April 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/03/">March 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/02/">February 2006</a><br />
+
+<a href="http://www.windley.com/archives/2006/01/">January 2006</a><br />
+
+<a href="http://www.windley.com/archives/2005/12/">December 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/11/">November 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/10/">October 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/09/">September 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/08/">August 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/07/">July 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/06/">June 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/05/">May 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/04/">April 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/03/">March 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/02/">February 2005</a><br />
+
+<a href="http://www.windley.com/archives/2005/01/">January 2005</a><br />
+
+<a href="http://www.windley.com/archives/2004/12/">December 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/11/">November 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/10/">October 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/09/">September 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/08/">August 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/07/">July 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/06/">June 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/05/">May 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/04/">April 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/03/">March 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/02/">February 2004</a><br />
+
+<a href="http://www.windley.com/archives/2004/01/">January 2004</a><br />
+
+<a href="http://www.windley.com/archives/2003/12/">December 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/11/">November 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/10/">October 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/09/">September 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/08/">August 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/07/">July 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/06/">June 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/05/">May 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/04/">April 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/03/">March 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/02/">February 2003</a><br />
+
+<a href="http://www.windley.com/archives/2003/01/">January 2003</a><br />
+
+<a href="http://www.windley.com/archives/2002/12/">December 2002</a><br />
+
+<a href="http://www.windley.com/archives/2002/11/">November 2002</a><br />
+
+<a href="http://www.windley.com/archives/2002/10/">October 2002</a><br />
+
+<a href="http://www.windley.com/archives/2002/09/">September 2002</a><br />
+
+<a href="http://www.windley.com/archives/2002/08/">August 2002</a><br />
+
+<a href="http://www.windley.com/archives/2002/07/">July 2002</a><br />
+
+<a href="http://www.windley.com/archives/2002/06/">June 2002</a><br />
+
+<a href="http://www.windley.com/archives/2002/05/">May 2002</a><br />
+
+</div>
+
+<h2>
+Utah Tech Organizations
+</h2>
+<div class="link-note">
+<a href="http://uug.byu.edu/">BYU Unix User's Group</a><br/>
+<a href="http://www.plug.org/">Provo Linux User's Group</a><br/>
+<a href="http://uvlug.org/modules/news/index.php">Utah Valley Linux User's Group</a><br/>
+<a href="http://ubuntu-utah.org">Ubuntu Utah</a><br/>
+<a href="http://www.sllug.org/">Salt Lake LUG</a><br/>
+<a href="http://fslc.usu.edu/">USU Free Software and Linux Club</a><br/>
+<a href="http://gubug.org/">Greater Utah BSD User Group</a><br/>
+<a href="http://uphpu.org/">Utah PHP Users Group</a><br/>
+<a href="http://utahpython.org/">Utah Python User Group</a><br/>
+<a href="http://urug.org/">Utah Ruby Users Group</a><br/>
+<a href="http://oalug.darkpenguin.com/">Ogden Area LUG</a><br/>
+<a href="http://www.su3g.org/">Southern Utah Unix Users Group</a><br/>
+<a href="http://www.utahsaint.org/">UtahSAINT</a><br/>
+</div>
+
+<div id="friends">
+<h2>
+Friends
+</h2>
+<div class="link-note">
+<span id="friend-list"></span>
+<a href="http://jkftech.org/">Kelly Flanagan</a><br/>
+<a href="http://lal.cs.byu.edu/~jones/blog/">Mike Jones</a><br/>
+<a href="http://www.charlesknutson.net/">Chuck Knutson</a><br/>
+<span id="kristen"><a href="http://kristendknight.blogspot.com/">Kristen Knight</a><br/></span>
+<a href="http://www.jessiemorris.com/">Jessie Morris</a><br/>
+<a href="http://whynotbecauseisaidso.blogspot.com/">Sheila Staley</a><br/>
+</div>
+</div>
+
+
+
+<h2>
+Copyright
+</h2>
+
+<div class="link-note">
+Copyright &copy; 2002-2012 PJW LC. <a href="http://creativecommons.org/licenses/by-nc-sa/1.0/">Some rights reserved</a>. Technometria is a trademark of PJW LC in the United States and other countries.
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<div id="center">
+
+<div class="content">
+
+
+
+
+
+<!-- navigation -->
+<p align="right">
+
+<a href="http://www.windley.com/archives/2012/10/a_general_architecture_for_personal_clouds.shtml">&laquo; A General Architecture for Personal Clouds </a> |
+
+<a href="http://www.windley.com/">Main</a>
+
+</p>
+<!-- end navigation -->
+
+
+<div id="kynetx_11"></div>
+<div id="kynetx_12"></div>
+
+<!--bodystart-->
+<div class="microid-mailto+http:sha1:e7712be03b038fb857cb69b4774f47e39f3ed845">
+<h1>The Digital Asset Grid Session at SIBOS </h1>
+
+
+<div style="margin-bottom: 10px"><p><b>Summary:</b> <em>For the last six months Kynetx has been working partnership with several other companies on a project for the Innotribe division of Swift. The project, called the Digital Asset Grid provides a way for banks to become platforms. </em></p></div>
+
+
+<div style="margin-bottom: 0px">
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="windley">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/Share" data-url="http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml" data-counter="right"></script>
+
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml&amp;layout=standard&amp;show_faces=false&amp;width=390&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; height: 25px; width:390px;"></iframe> 
+
+<g:plusone size="medium" annotation="inline"></g:plusone>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</div>
+
+<!--
+<p style="margin: 10px 0pt 0pt 0px; padding: 0px 5px 1px 0px; float: left;">
+<script type="text/javascript">
+//tweetmeme_style = 'compact';
+tweetmeme_service = 'bit.ly';
+tweetmeme_source = 'windley';
+</script>
+<script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+</p>
+-->
+
+
+<img style="margin-top: 10px" src="http://respectnetwork.files.wordpress.com/2012/10/swift-innotribe.jpg" border="0" hspace="3" vspace="3" width="200px" align="right" title="Innotribe"alt="Innotribe" />
+<p>
+For the last six months, Kynetx, in <a href="http://respectnetwork.com/2012/10/29/swift-innotribe-digital-asset-grid-collaboration/">partnership</a> with <a href="http://respectnetwork.com/">Respect Network</a> and <a href="http://ctrl-shift.co.uk/">Ctrl-Shift</a> have been working closely with Swift to create a prototype of the Digital Asset Grid, or DAG. The DAG is a Swift <a href="http://innotribe.com/">Innotribe</a> project to determine how Swift can best provide new services to banks around secure and private sharing and storage of digital assets. 
+</p>
+
+<p>
+The idea is fairly simple: While many of us share digital assets every day and store them on various Web sites, these are, for the most part, assets of low value or low consequence. Few of us would feel safe conducting a complex banking transaction on Twitter or Facebook.  In contrast, the DAG would provide a way of conducting transactions involving any high-consequence digital asset on the open Internet but with Swift-grade security and privacy. The DAG is conceived as a set of services built on top of the open, standards-based Internet. Swift is working on the DAG to position banks as platforms upon which online services can be built. 
+</p>
+
+<p>
+Kynetx has been building a DAG prototype and an intentcasting scenario in preparation for Sibos. There is much to say about that, but that is another blog post. In this post, I want to give an overview of the session and what was said and done. Here&#8217;s the running order:
+</p>
+
+<h3>The Internet is a Wonderful Thing, BUT&#8230;</h3>
+
+<p>
+The session started with Alan Mitchell from Ctrl-Shift.
+</p>
+<blockquote>
+The Internet has brought access to information at any time and place. It gives us the world&#8217;s information at our fingertips. It lets us communicate and share information with virtually anybody, any time . Its scale and scope is already vast. We&#8217;ve moved from a world of information scarcity to information overload.
+</blockquote>
+
+<p>
+You can hear Alan&#8217;s complete talk here:
+</p>
+
+<a href="https://vimeo.com/52369142"><iframe src="http://player.vimeo.com/video/52369142?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> </a>
+
+<h3>Slices of Life</h3>              
+
+<p>
+Innotribe commissioned a video from the magnificent <a href="http://heathervescent.blogs.com/">Heathervescent</a> called &#8220;Slices of Life.&#8221; The video shows how the DAG could affect real people in their daily lives. 
+</p>
+<iframe width="420" height="236" src="http://www.youtube.com/embed/Wzsqtdx40qg" frameborder="0" allowfullscreen></iframe>
+
+<h3>Intentcasting on the Digital Asset Grid</h3>
+
+<p>
+I was up after the video with a short demonstration giving more information about the intentcasting app featured in the Slices of Life video. Our intentcasting scenario involved a constellation of personal clouds running the CloudOS. There were even clouds representing the motorcycle and the bank loan. Most of the interesting bits involve establishing, permissioning, managing, and decommissioning connections between clouds. We&#8217;ve <a href="http://www.windley.com/archives/2012/10/subscriptions_in_the_cloudos.shtml">created CloudOS services</a> to take care of all that so developers can concentrate on what the application does. 
+</p>
+<a href="https://vimeo.com/51827693">
+<iframe src="http://player.vimeo.com/video/51827693?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+
+<p>
+As I mentioned, I&#8217;ll have another blog post detailing the Intentcasting scenario and how we designed and implemented it. 
+</p>
+
+<h3>Green Ski Lodge</h3>
+
+<p>
+<a href="http://xenapto.com/">Xenapto</a> demonstrated their system for connecting investors and entrepreneurs and smoothing the funding process. As Dominic Sayers states, Xenapto doesn&#8217;t do away with the need for face-to-face meetings, but it smooths out the rough spots where workflow can and should be automated. 
+</p>
+
+<a href="https://vimeo.com/52219916">
+<iframe src="http://player.vimeo.com/video/52219916?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+
+<h3>Forever</h3>
+<p>
+Drummond Reed demonstrated the Forever application. Forever is a contact management system based on the principles of the DAG so that contacts are always fresh and address books are permanently synced. 
+</p>
+
+<a href="https://vimeo.com/52242405">
+<iframe src="http://player.vimeo.com/video/52242405?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+
+<p>
+My <a href="http://www.windley.com/archives/2012/10/the_personal_cloud_desktop_in_action.shtml">Personal Cloud Desktop in Action</a> post showed a similar functionality in how personal clouds work. This isn&#8217;t a coincidence. 
+</p>
+
+             
+<h3>FidorSafe</h3>
+
+<p>
+Matthias Kroener of <a href="https://www.fidor.de/">Fidor Bank</a> demonstrated <a href="http://innotribe.com/wp-content/uploads/2012/10/Fidor-Sibos_Final.pptx.pdf">FidorSafe</a> (PDF), the first personal data store offered by a licensed bank. 
+</p>
+
+<h3>Why Banks? Why Now?</h3>
+
+<p>
+Finally, Liz Brandt of Ctrl-Shift offered a business case for banks to be involved in the DAG. 
+</p>
+<blockquote>
+The Digital Asset Grid is a game changer, offering banks an opportunity to transform their businesses and their industry and commerce - strategically positioning banks at the nexus of value exchange in the digital economy. All the banks consulted were convinced of the potential of DAG to have a significant effect on their institution and the banking system overall.
+</blockquote>
+
+<p>
+You can watch her talk here:
+</p>
+
+<a href="https://vimeo.com/52116417">
+<iframe src="http://player.vimeo.com/video/52116417?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+             
+<h3>The Rest of the Story&#8230;</h3>
+<p>
+The session also included a great opening keynote and closing summary from <a href="http://www.crunchbase.com/person/yobie-benjamin">Yobie Benjamin</a>, the Global CTO of Citi who strongly endorsed the DAG project. We had breakouts in order to explain the details of our respective parts of the project in more detail. There&#8217;s lots to show on the intentcasting piece.  We only had 15 minutes in the breakouts. I could have easily talked and demonstrated features of the intentcasting scenario for hours. 
+</p>
+
+
+<p>
+As part of creating the DAG session at Sibos, Heather also created a documentary about the DAG featuring interviews with industry experts on identity, privacy, and personal data:
+</p>
+
+<a href="https://vimeo.com/52362088">
+<iframe src="http://player.vimeo.com/video/52362088?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+
+<p>
+We shot some of these interviews while many of us were together at Cloud Identity Summit this past summer in Vail. This has been a great project and I look forward to what we do in the coming months as we bring the DAG to life. 
+</p>
+
+
+<div id="a013875more"><div id="more">
+
+</div></div>
+
+<p class="posted">Posted by <a href="http://phil.windley.org" rel="author">Phil Windley</a> on November  1, 2012 12:01 AM</p>
+</div>
+<!--bodyend-->
+
+<p class="tags">
+<b>See related posts: </b>
+
+<a href="http://www.windley.com/tags/sibos" rel="tag" rel="nofollow">sibos</a>
+
+<a href="http://www.windley.com/tags/swift" rel="tag" rel="nofollow">swift</a>
+
+<a href="http://www.windley.com/tags/innotribe" rel="tag" rel="nofollow">innotribe</a>
+
+<a href="http://www.windley.com/tags/kynetx" rel="tag" rel="nofollow">kynetx</a>
+
+<a href="http://www.windley.com/tags/personal+clouds" rel="tag" rel="nofollow">personal+clouds</a>
+
+<a href="http://www.windley.com/tags/cloudos" rel="tag" rel="nofollow">cloudos</a>
+
+<a href="http://www.windley.com/tags/intentcasting" rel="tag" rel="nofollow">intentcasting</a>
+
+</p>
+
+
+
+
+
+
+<div class="recommend">
+<img src="/images/ico_email.gif" valign="middle" />&nbsp;<a href="/cgi-bin/recommend.pl?name=technometria&title=The Digital Asset Grid Session at SIBOS &url=http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml">Email this article to a friend</a>
+</div>
+
+<div class="recommend">
+<img src="/images/ico_delicious.jpeg" valign="middle" />&nbsp;
+<a title="Click here to post this story to del.icio.us" href="http://del.icio.us/post?url=http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml&title=The Digital Asset Grid Session at SIBOS &tags=sibos, swift, innotribe, kynetx, personal+clouds, cloudos, intentcasting ">Post  this article to del.icio.us</a>
+</div>
+
+
+<div class="recommend">
+<img src="/images/ico_printer.gif" valign="middle" />&nbsp;<a href="http://www.windley.com/cgi-bin/printthis.pl?url=http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml" onclick="window.open (this.href, 'comments', 'width=600, height=600, location=0, resizable=1, scrollbars=1, status=0, toolbar=0, directories=0'); return(false);" title="Click here to format this story for printing">Format this article for printing</A>
+</div>
+
+<div class="recommend">
+<img src="/images/ico_snurl.gif" valign="middle" />&nbsp;<a href="http://snurl.com/site/snip?link=http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml" target="_blank">Get the SNUrlfor this page</a>
+</div>
+
+
+    <h2 class="comments-header"> Comments</h2>
+    <div class="comments-content">
+            <div id="comments"></div><div id="disqus_thread"></div>
+    <div style="display:none;" id="disqus_post_title">The Digital Asset Grid Session at SIBOS </div>
+    <div style="display:none;" id="disqus_post_message">
+<img style="margin-top: 10px" src="http://respectnetwork.files.wordpress.com/2012/10/swift-innotribe.jpg" border="0" hspace="3" vspace="3" width="200px" align="right" title="Innotribe"alt="Innotribe" />
+<p>
+For the last six months, Kynetx, in <a href="http://respectnetwork.com/2012/10/29/swift-innotribe-digital-asset-grid-collaboration/">partnership</a> with <a href="http://respectnetwork.com/">Respect Network</a> and <a href="http://ctrl-shift.co.uk/">Ctrl-Shift</a> have been working closely with Swift to create a prototype of the Digital Asset Grid, or DAG. The DAG is a Swift <a href="http://innotribe.com/">Innotribe</a> project to determine how Swift can best provide new services to banks around secure and private sharing and storage of digital assets. 
+</p>
+
+<p>
+The idea is fairly simple: While many of us share digital assets every day and store them on various Web sites, these are, for the most part, assets of low value or low consequence. Few of us would feel safe conducting a complex banking transaction on Twitter or Facebook.  In contrast, the DAG would provide a way of conducting transactions involving any high-consequence digital asset on the open Internet but with Swift-grade security and privacy. The DAG is conceived as a set of services built on top of the open, standards-based Internet. Swift is working on the DAG to position banks as platforms upon which online services can be built. 
+</p>
+
+<p>
+Kynetx has been building a DAG prototype and an intentcasting scenario in preparation for Sibos. There is much to say about that, but that is another blog post. In this post, I want to give an overview of the session and what was said and done. Here's the running order:
+</p>
+
+<h3>The Internet is a Wonderful Thing, BUT...</h3>
+
+<p>
+The session started with Alan Mitchell from Ctrl-Shift.
+</p>
+<blockquote>
+The Internet has brought access to information at any time and place. It gives us the world's information at our fingertips. It lets us communicate and share information with virtually anybody, any time . Its scale and scope is already vast. We've moved from a world of information scarcity to information overload.
+</blockquote>
+
+<p>
+You can hear Alan's complete talk here:
+</p>
+
+<a href="https://vimeo.com/52369142"><iframe src="http://player.vimeo.com/video/52369142?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> </a>
+
+<h3>Slices of Life</h3>              
+
+<p>
+Innotribe commissioned a video from the magnificent <a href="http://heathervescent.blogs.com/">Heathervescent</a> called "Slices of Life." The video shows how the DAG could affect real people in their daily lives. 
+</p>
+<iframe width="420" height="236" src="http://www.youtube.com/embed/Wzsqtdx40qg" frameborder="0" allowfullscreen></iframe>
+
+<h3>Intentcasting on the Digital Asset Grid</h3>
+
+<p>
+I was up after the video with a short demonstration giving more information about the intentcasting app featured in the Slices of Life video. Our intentcasting scenario involved a constellation of personal clouds running the CloudOS. There were even clouds representing the motorcycle and the bank loan. Most of the interesting bits involve establishing, permissioning, managing, and decommissioning connections between clouds. We've <a href="http://www.windley.com/archives/2012/10/subscriptions_in_the_cloudos.shtml">created CloudOS services</a> to take care of all that so developers can concentrate on what the application does. 
+</p>
+<a href="https://vimeo.com/51827693">
+<iframe src="http://player.vimeo.com/video/51827693?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+
+<p>
+As I mentioned, I'll have another blog post detailing the Intentcasting scenario and how we designed and implemented it. 
+</p>
+
+<h3>Green Ski Lodge</h3>
+
+<p>
+<a href="http://xenapto.com/">Xenapto</a> demonstrated their system for connecting investors and entrepreneurs and smoothing the funding process. As Dominic Sayers states, Xenapto doesn't do away with the need for face-to-face meetings, but it smooths out the rough spots where workflow can and should be automated. 
+</p>
+
+<a href="https://vimeo.com/52219916">
+<iframe src="http://player.vimeo.com/video/52219916?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+
+<h3>Forever</h3>
+<p>
+Drummond Reed demonstrated the Forever application. Forever is a contact management system based on the principles of the DAG so that contacts are always fresh and address books are permanently synced. 
+</p>
+
+<a href="https://vimeo.com/52242405">
+<iframe src="http://player.vimeo.com/video/52242405?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+
+<p>
+My <a href="http://www.windley.com/archives/2012/10/the_personal_cloud_desktop_in_action.shtml">Personal Cloud Desktop in Action</a> post showed a similar functionality in how personal clouds work. This isn't a coincidence. 
+</p>
+
+             
+<h3>FidorSafe</h3>
+
+<p>
+Matthias Kroener of <a href="https://www.fidor.de/">Fidor Bank</a> demonstrated <a href="http://innotribe.com/wp-content/uploads/2012/10/Fidor-Sibos_Final.pptx.pdf">FidorSafe</a> (PDF), the first personal data store offered by a licensed bank. 
+</p>
+
+<h3>Why Banks? Why Now?</h3>
+
+<p>
+Finally, Liz Brandt of Ctrl-Shift offered a business case for banks to be involved in the DAG. 
+</p>
+<blockquote>
+The Digital Asset Grid is a game changer, offering banks an opportunity to transform their businesses and their industry and commerce - strategically positioning banks at the nexus of value exchange in the digital economy. All the banks consulted were convinced of the potential of DAG to have a significant effect on their institution and the banking system overall.
+</blockquote>
+
+<p>
+You can watch her talk here:
+</p>
+
+<a href="https://vimeo.com/52116417">
+<iframe src="http://player.vimeo.com/video/52116417?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+             
+<h3>The Rest of the Story...</h3>
+<p>
+The session also included a great opening keynote and closing summary from <a href="http://www.crunchbase.com/person/yobie-benjamin">Yobie Benjamin</a>, the Global CTO of Citi who strongly endorsed the DAG project. We had breakouts in order to explain the details of our respective parts of the project in more detail. There's lots to show on the intentcasting piece.  We only had 15 minutes in the breakouts. I could have easily talked and demonstrated features of the intentcasting scenario for hours. 
+</p>
+
+
+<p>
+As part of creating the DAG session at Sibos, Heather also created a documentary about the DAG featuring interviews with industry experts on identity, privacy, and personal data:
+</p>
+
+<a href="https://vimeo.com/52362088">
+<iframe src="http://player.vimeo.com/video/52362088?badge=0" width="420" height="263" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</a>
+
+<p>
+We shot some of these interviews while many of us were together at Cloud Identity Summit this past summer in Vail. This has been a great project and I look forward to what we do in the coming months as we bring the DAG to life. 
+</p>
+</div>
+    <script type="text/javascript">
+        var disqus_url = 'http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml';
+        var disqus_title = document.getElementById('disqus_post_title').innerHTML;
+        var disqus_message = document.getElementById('disqus_post_message').innerHTML;
+    </script>
+    <script type="text/javascript" src="http://disqus.com/forums/windley/embed.js"></script>
+    <noscript><a href="http://windley.disqus.com/?url=http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml">View the entire comment thread.</a></noscript>
+
+    </div>
+        
+
+
+</div><!--content-->
+
+</div><!--center-->
+
+<div id="right">
+<div class="sidebar">
+
+
+<h2>Buy My Book</h2>
+<div class="link-note">
+<a href="http://www.amazon.com/exec/obidos/ASIN/1133686680/windleyofente-20"><img src="http://www.windley.com/liveweb/figures/live_web_cover.jpeg" width="150px" border="1" align="center" hspace="5" vspace="5" /></a>
+</div>
+
+<h2><a href="/liveweb">Live Web Series</a></h2>
+<div class="link-note">Free whitepapers about the Live Web.</div>
+
+<h2>I'm CTO of Kynetx</h2>
+<div class="link-note">
+<a href="http://www.kynetx.com">
+<img src="/images/kynetx_logo.jpg" alt="Kynetx - This Changes Everything" vspace="12">
+</a>
+</div>
+
+<!--
+<h2>Announcing Impact!</h2>
+<div class="link-note">
+<a href="http://kynetximpactspring2010.eventbrite.com/">
+<img src="http://eventbrite-s3.s3.amazonaws.com/eventlogos/1312033/526923041.jpg" alt="Impact Conference Spring 2010" width="150px" border="0" vspace="1">
+</a>
+<p align="center" style="margin:0px;padding:0px">April 27-28, 2010</p>
+<p align="right">
+  <a href="http://kynetximpactspring2010.eventbrite.com/">register now</a>
+</p>
+</div>
+-->
+
+<h2>Dates for IIW</h2>
+<div class="link-note">
+IIW XIV - May 1-3, 2012<br/>
+IIW XV - Oct 23-25, 2012
+</div>
+
+<div class="link-note">
+<a href="http://www.speakergram.com/windley"> <img alt="Book me now on SpeakerGram!"  width="135px" src="http://speakergram.s3.amazonaws.com/speakergram.jpg" /> </a>
+</div>
+
+<div class="link-note">
+<a href="http://www.linkedin.com/in/windley">
+<img src="/images/banner-linkedin.gif" />
+</a>
+</div>
+
+<div>
+<a href="http://twitter.com/windley" class="twitter-follow-button" data-show-count="false">Follow @windley</a>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</div><br/>
+
+<div id="tweets">Loading tweets...</div>
+
+<br/>
+<div id="kynetx_10"></div>
+
+<!--
+<div style="margin:0px;">
+  <embed width="150" height="300" src="http://www.goodreads.com/images/widget/widget2.swf" 
+    quality="high" wmode="transparent" 
+    FlashVars="id=1322273&shelf=read&title=Phil's bookshelf: read&host=www.goodreads.com&sort=date_added&order=d&params=amazon,,dest_site,">
+  </embed>
+</div>
+
+
+<div style="margin:0px;">
+<a href="http://www.goodreads.com/user/show/1322273-phil" target="_blank"><img alt="Phil's  book recommendations, reviews, favorite quotes, book clubs, book trivia, book lists" border="0" height="32" src="http://www.goodreads.com/images/widget/widget_logo.gif" title="Phil's  book recommendations, reviews, favorite quotes, book clubs, book trivia, book lists" width="160" /></a>
+</div>
+-->
+
+<!--
+<div class="link-banner">
+<a href="/support_a_student"><img src="/images/supportStudent.png" border="0"/></a>
+</div>
+-->
+
+<h2>Free Newsletter!</h2>
+<div class="link-note">
+<form action="http://www.windley.com/cgi-bin/mojo/mojo.cgi" method="POST">
+ <input type="hidden" name="flavor" value="subscribe">
+<input type="text" name="email" value="email address" size="16"
+onFocus="if (this.value=='email address') {this.value=''};">
+<!--input type="text" name="email" value="email address" size="16"-->
+<input type="hidden" name="list" value="wecn">
+<input type="submit" value="Sign me up!"><br/>
+</form>
+&nbsp;(<a href="/newsletter_signup.shtml">Find out more...</a>)
+</div>
+
+<h2>
+Search
+</h2>
+ 
+<div class="link-note">
+<form method="get" action="http://www.windley.com/mt4.1/mt-search.cgi">
+<input type="hidden" name="IncludeBlogs" value="11" />
+<input type="hidden" name="Template" value="technometria" />
+<label for="search" accesskey="4">Search this site:</label><br />
+<input id="search" name="search" size="15" />
+<input type="submit" value="GO" />
+</form>
+</div>
+
+<!-- $MTInclude module="ActionStream1"$ -->
+
+
+<div class="widget-elsewhere widget">
+    <h2 style="padding-bottom:3px">Find Me Elsewhere</h2>
+    <div class="widget-content">
+        <ul class="activity-stream-list">
+
+            <li><a href="http://twitter.com/windley" rel="me" class="service-icon service-twitter">Twitter Profile</a></li>
+
+            <li><a href="http://del.icio.us/windley/" rel="me" class="service-icon service-delicious">del.icio.us Profile</a></li>
+
+            <li><a href="http://www.linkedin.com/in/windley" rel="me" class="service-icon service-linkedin">LinkedIn Profile</a></li>
+
+            <li><a href="http://www.google.com/reader/shared/06086536703522803109" rel="me" class="service-icon service-googlereader">Google Reader Profile</a></li>
+
+            <li><a href="http://flickr.com/photos/windley/" rel="me" class="service-icon service-flickr">Flickr Profile</a></li>
+
+            <li><a href="http://www.facebook.com/profile.php?id=510912768" rel="me" class="service-icon service-facebook">Facebook Profile</a></li>
+
+            <li><a href="http://www.conversationsnetwork.org/queue/17082" rel="me" class="service-icon service-ITCQ">IT Converasations Profile</a></li>
+
+            <li><a href="http://www.youtube.com/user/windleyp" rel="me" class="service-icon service-youtube">YouTube Profile</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+
+<h2>Digital Identity</h2>
+<div class="link-note" >
+<a href="http://www.amazon.com/exec/obidos/ASIN/0596008783/windleyofente-20"><img src="http://photos.windley.com/albums/Misc/cover_final_001.thumb.jpg"/></a><br/>
+<a href="http://www.amazon.com/exec/obidos/ASIN/0596008783/windleyofente-20">Buy the book</a>!
+</div>
+
+
+
+<h2>Upcoming Events</h2>
+<div class="link-note">
+
+Staying home
+</div>
+
+
+<h2>
+Recent Entries
+</h2>
+<div class="link-note">
+
+<li><a href="http://www.windley.com/archives/2012/11/the_digital_asset_grid_session_at_sibos.shtml">The Digital Asset Grid Session at SIBOS </a></li>
+
+<li><a href="http://www.windley.com/archives/2012/10/a_general_architecture_for_personal_clouds.shtml">A General Architecture for Personal Clouds </a></li>
+
+<li><a href="http://www.windley.com/archives/2012/10/im_for_howell.shtml">I'm for Howell </a></li>
+
+<li><a href="http://www.windley.com/archives/2012/10/building_a_webfinger_client_for_my_personal_cloud.shtml">Building a Webfinger Client for my Personal Cloud </a></li>
+
+<li><a href="http://www.windley.com/archives/2012/10/freedom_and_violence.shtml">Freedom and Violence </a></li>
+
+<li><a href="http://www.windley.com/archives/2012/10/why_personal_clouds.shtml">Why Personal Clouds </a></li>
+
+<li><a href="http://www.windley.com/archives/2012/10/using_webfinger_to_discover_wellknown_ecis.shtml">Using Webfinger to Discover Well-Known ECIs </a></li>
+
+<li><a href="http://www.windley.com/archives/2012/10/subscriptions_in_the_cloudos.shtml">Subscriptions in the CloudOS </a></li>
+
+<li><a href="http://www.windley.com/archives/2012/10/the_personal_cloud_desktop_in_action.shtml">The Personal Cloud Desktop in Action </a></li>
+
+<li><a href="http://www.windley.com/archives/2012/10/where_does_the_cloudos_run.shtml">Where Does the CloudOS Run? </a></li>
+
+</div>
+
+
+<script type=text/javascript>
+var kvars = {};
+</script>
+
+<script type=text/javascript>
+kvars.foo = 5;
+kvars.bar = 'fizz';
+kvars.bizz = [1,2,3];
+</script>
+
+
+</div>
+</div>
+
+
+
+<div style="clear: both;">&#160;</div>
+</div>
+
+<script type="text/javascript">
+var KOBJ_config ={
+   "rids": ["11"],
+   "blogname": escape("Phil Windley's Technometria"),
+   "blogurl": escape("http://www.windley.com/")
+};
+</script>
+<script type="text/javascript" src="http://init.kobj.net/js/shared/kobj-static.js"></script>
+
+<div class="link-note">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-74440-1");
+pageTracker._trackPageview();
+</script>
+
+
+</div>
+
+
+
+</body>
+</html>

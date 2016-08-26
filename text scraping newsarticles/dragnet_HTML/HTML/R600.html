@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<title>How to: Render Eagle CAD Circuits in 3D using Google Sketchup | Hack N Mod</title>
+<meta name="generator" content="WordPress 3.0.1" >
+<link rel="stylesheet" href="http://hacknmod.com/wp-content/themes/hacknmodfinal2/style.css" type="text/css" media="screen" >
+<link rel="alternate" type="application/rss+xml" title="Hack N Mod &#8211; Amazingly Cool Hacks, Mods, and DIY Projects" href="http://hacknmod.com/feed/" >
+<link rel="pingback" href="http://hacknmod.com/xmlrpc.php" >
+<script src="http://hacknmod.com/wp-content/plugins/pageear/AC_OETags.js" type="text/javascript"></script>
+<script src="http://hacknmod.com/wp-content/plugins/pageear/pageear.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://pshared.5min.com/scripts/PlayerSeed.js"></script> 
+
+<script type="text/javascript">
+function showmonth()
+{
+document.getElementById('month').style.display = 'block';
+document.getElementById('alltime').style.display = 'none'
+document.getElementById('lastthirty').style.textDecoration = 'underline'
+document.getElementById('showalltime').style.textDecoration = 'none'
+}
+
+function showalltime()
+{
+document.getElementById('month').style.display = 'none';
+ document.getElementById('alltime').style.display = 'block'
+ document.getElementById('lastthirty').style.textDecoration = 'none'
+document.getElementById('showalltime').style.textDecoration = 'underline'
+}
+
+function underlinemonth(id)
+{
+document.getElementById(id).style.textDecoration = 'underline'
+}
+
+function nounderlinemonth(id)
+{
+if (id == 'lastthirty' && document.getElementById('month').style.display == 'none')
+document.getElementById(id).style.textDecoration = 'none';
+
+}
+
+
+
+function underlinealltime(id)
+{
+document.getElementById(id).style.textDecoration = 'underline'
+}
+
+function nounderlinealltime(id)
+{
+if (id == 'showalltime' && document.getElementById('alltime').style.display != 'block')
+document.getElementById(id).style.textDecoration = 'none';
+}
+
+function showrecent()
+{
+document.getElementById('recents').style.display = 'block';
+document.getElementById('populars').style.display = 'none'
+document.getElementById('recentsearches').style.textDecoration = 'underline'
+document.getElementById('popularsearches').style.textDecoration = 'none'
+}
+
+function showpopular()
+{
+document.getElementById('recents').style.display = 'none';
+ document.getElementById('populars').style.display = 'block'
+ document.getElementById('recentsearches').style.textDecoration = 'none'
+document.getElementById('popularsearches').style.textDecoration = 'underline'
+}
+
+function underlinerecent(id)
+{
+document.getElementById(id).style.textDecoration = 'underline'
+}
+
+function nounderlinerecent(id)
+{
+if (id == 'recentsearches' && document.getElementById('recents').style.display == 'none')
+document.getElementById(id).style.textDecoration = 'none';
+
+}
+
+function underlinepopular(id)
+{
+document.getElementById(id).style.textDecoration = 'underline'
+}
+
+function nounderlinepopular(id)
+{
+if (id == 'popularsearches' && document.getElementById('populars').style.display != 'block')
+document.getElementById(id).style.textDecoration = 'none';
+}
+
+</script>
+
+<link rel="shortcut icon" href="http://hacknmod.com/wp-content/themes/hacknmodfinal2/favicon.ico" >
+
+<link rel="alternate" type="application/rss+xml" title="Hack N Mod - Amazingly Cool Hacks, Mods, and DIY Projects &raquo; How to: Render Eagle CAD Circuits in 3D using Google Sketchup Comments Feed" href="http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/feed/" />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://hacknmod.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://hacknmod.com/wp-includes/js/jquery/jquery.js?ver=1.4.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://hacknmod.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://hacknmod.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Hack N Mod &#8211; Amazingly Cool Hacks, Mods, and DIY Projects' href='http://hacknmod.com/' />
+<link rel='start' title='Hacking Coke Machines' href='http://hacknmod.com/hack/hacking-coke-machines/' />
+<link rel='prev' title='DIY Automatic High Speed Camera Trigger' href='http://hacknmod.com/hack/diy-automatic-high-speed-camera-trigger/' />
+<link rel='next' title='Incredible Robot Locates Electronic Components on Demand' href='http://hacknmod.com/hack/incredible-robot-locates-electronic-components-on-demand/' />
+<meta name="generator" content="WordPress 3.0.1" />
+<link rel='shortlink' href='http://hacknmod.com/?p=16124' />
+
+<!-- All in One SEO Pack 1.6.13 by Michael Torbert of Semper Fi Web Design[230,394] -->
+<meta name="description" content="We've seen a few methods of rendering Eagle CAD layouts in 3D, but the latest method is the best we've seen yet.  The resulting renders are clear, easy to" />
+<link rel="canonical" href="http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/" />
+<!-- /all in one seo pack -->
+<!-- Pageear js include --><script src="http://hacknmod.com/wp-content/plugins/pageear/AC_OETags.js" type="text/javascript"></script><script src="http://hacknmod.com/wp-content/plugins/pageear/pageear.js" type="text/javascript"></script><!-- Pageear js include -->
+<script type="text/javascript">var AKPC_IDS = "";</script>
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1226087-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="preloader">
+<img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/header_mostpopular_hover.png">
+<img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/header_ledprojects_hover.png">
+<img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/header_hacknmodstore_hover.png">
+<img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/header_video_hover.jpg">
+<img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/bg_hacks_hover.png">
+</div>
+<div id="container_outer">
+
+<div id="header">
+
+<div style="background:#333;">
+
+    <center>
+    <script  src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=509506&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=38159"></script>
+
+<!--
+<div id="lijit_region_145814"></div>
+<script type="text/javascript" src="http://www.lijit.com/delivery/fp?u=hacknmod&z=145814&n=1"></script>
+-->
+
+
+	<!-- begin ad tag (tile=1) -->
+	<!--
+
+	<script language="JavaScript" type="text/javascript">
+	if (typeof ord=='undefined') {ord=Math.random()*10000000000000000;}
+	document.write('<script language="JavaScript" src="http://a.collective-media.net/adj/idgt.hacknmod/article_above;sec=article;fold=above;tile=1;dcopt=ist;sz=728x90;ord=' + ord + '?" type="text/javascript"><\/script>');</script><noscript><a href="http://a.collective-media.net/jump/idgt.hacknmod/article_above;sec=article;fold=above;tile=1;sz=728x90;ord=123456789?" target="_blank"><img src="http://a.collective-media.net/ad/idgt.hacknmod/article_above;sec=article;fold=above;tile=1;sz=728x90;ord=123456789?" width="728" height="90" border="0" alt=""></a></noscript>
+
+	-->
+	<!-- End ad tag -->
+    </center>
+<div class="cl"></div>
+</div>
+<div id="featured_header">
+			<a href="http://hacknmod.com/hack/autonomus-robotic-atv-with-gps/">Featured: Autonomus Robotic ATV with GPS</a>
+			 
+
+	<!--<div style="margin-left:150px">
+	<div>-->
+</div> 
+
+<ul id="top_menu">
+<a id="logo" href="http://hacknmod.com"></a>
+<a id="mostpopular" href="http://hacknmod.com/most-popular-hacks/"></a>
+<a id="ledprojects" href="http://hacknmod.com/topics/leds_lights/"></a>
+<a id="hacknmodstore" href="http://hacknmod.com/store"></a>
+<a id="submit" href="http://hacknmod.com/video/"></a>
+</ul>
+ 	<form method="get" id="search_form" action="http://hacknmod.com/" >
+                <label>Search Hacks: </label>
+				<input type="text" value="" name="s" id="top_search_term" />	
+                <input type="submit" id="search_submit" value="Search!" />
+                </form>
+
+<div id="container_inner">
+
+<div id="content">
+<div id="posttop">
+<a class="gethacks" href="http://feeds.feedburner.com/hacknmod/qjUG">
+<img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/gethacks.png"></a><h1>
+How to: Render Eagle CAD Circuits in 3D using Google Sketchup</h1><br/><br/>
+
+
+<div style=" margin:0 auto; margin-top:10px; margin-left:14px;">
+
+
+<script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-0459061829475753";
+/* Top Hacks 468x60 */
+google_ad_slot = "6468699148";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><div id="posttop_bottomframe"></div><div id="entry"><p><img class="aligncenter size-full wp-image-16173" title="3D_ModelTuT2" src="http://hacknmod.com/wp-content/uploads/2012/03/3D_ModelTuT2.jpg" alt="" width="600" height="293" /></p>
+<p>We&#8217;ve seen a few methods of rendering <a href="http://hacknmod.com/hack/render-your-eagle-cad-circuits-in-3d/">Eagle CAD layouts in 3D</a>, but the latest method is the best we&#8217;ve seen yet.  The resulting renders are clear, easy to read, and they can be viewed from any perspective.  This helps spot physical interferences with components before sending the board to manufacturing (plus, it feels awesome to see your design come to life).   The software comes with thousands of pre-modeled components in a 3D parts library and the rendering process through Google Sketchup is pretty straightforward.  Check out the <a href="http://dangerousprototypes.com/2012/03/20/how-to-build-3d-models-from-eagle-files-wiki-page/">full tutorial</a> to start rendering your circuits!</p>
+<h3>Popular PCB Posts:</h3>
+<ul>
+<li><a href="http://hacknmod.com/hack/eagle-cad-tutorials-make-your-own-pcbs/">Eagle Cad Tutorial: Design your own Circuit Boards</a></li>
+<li><a href="http://hacknmod.com/hack/diy-reflow-surface-mount-soldering-smd-tutorial/">How to: Reflow Surface Mount (SMD) Soldering Tutorial</a></li>
+<li><a href="http://hacknmod.com/hack/render-your-eagle-cad-circuits-in-3d/">Render your Eagle Cad Circuits in 3D</a></li>
+</ul>
+<script type="text/javascript">AKPC_IDS += "16124,";</script></div>	
+
+	 
+<script type="text/javascript"><!--
+google_ad_client = "pub-0459061829475753";
+/* Bottom Hacks 468x60 */
+google_ad_slot = "1126593529";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>	    
+
+					 <div id="related">					<div id="related_container">				<table style="margin-bottom:12px;"><tr><td>	<img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/relatedhacks.jpg"></td><td>&nbsp;<a id="updates" href="http://feeds.feedburner.com/hacknmod/qjUG">Free Hack N Mod Updates &nbsp;</a>	</td><td><a id="updates" href="http://feeds.feedburner.com/hacknmod/qjUG"><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/relatedrssicon.jpg"></a></td></tr></table>			<ul><div onmouseover="document.getElementById('img_feat_13216').style.borderColor = '#FE6B00'; document.getElementById('title_feat_13216').style.color = '#FE6B00'" onmouseout="document.getElementById('img_feat_13216').style.borderColor = '#ccc';document.getElementById('title_feat_13216').style.color = '#000'"  class="featured_horizontal">
+
+		<a class="imagelink" href="http://hacknmod.com/hack/massive-reprap-diy-3d-printer/"><img id="img_feat_13216" src="http://hacknmod.com/wp-content/uploads/2011/09/greng_2001m1-208x150.jpg" width="100" height="77" alt="Massive RepRap DIY 3D Printer" ></a>
+		<h3><a id="title_feat_13216" href="http://hacknmod.com/hack/massive-reprap-diy-3d-printer/">Massive RepRap DIY 3D Printer</a>			</h3>
+					</div>
+
+<div onmouseover="document.getElementById('img_feat_11073').style.borderColor = '#FE6B00'; document.getElementById('title_feat_11073').style.color = '#FE6B00'" onmouseout="document.getElementById('img_feat_11073').style.borderColor = '#ccc';document.getElementById('title_feat_11073').style.color = '#000'"  class="featured_horizontal">
+
+		<a class="imagelink" href="http://hacknmod.com/hack/build-a-wireless-oscilloscope-for-android-phones/"><img id="img_feat_11073" src="http://hacknmod.com/wp-content/uploads/2010/10/zzhye5f0-208x150.jpg" width="100" height="77" alt="Build a Wireless Oscilloscope for Android Phones" ></a>
+		<h3><a id="title_feat_11073" href="http://hacknmod.com/hack/build-a-wireless-oscilloscope-for-android-phones/">Build a Wireless Oscilloscope for Android Phones</a>			</h3>
+					</div>
+
+<div onmouseover="document.getElementById('img_feat_12096').style.borderColor = '#FE6B00'; document.getElementById('title_feat_12096').style.color = '#FE6B00'" onmouseout="document.getElementById('img_feat_12096').style.borderColor = '#ccc';document.getElementById('title_feat_12096').style.color = '#000'"  class="featured_horizontal">
+
+		<a class="imagelink" href="http://hacknmod.com/hack/diy-mini-desktop-laser-engraver/"><img id="img_feat_12096" src="http://hacknmod.com/wp-content/uploads/2011/03/pocket-laser-engraver-208x150.jpg" width="100" height="77" alt="DIY Mini Desktop Laser Engraver" ></a>
+		<h3><a id="title_feat_12096" href="http://hacknmod.com/hack/diy-mini-desktop-laser-engraver/">DIY Mini Desktop Laser Engraver</a>			</h3>
+					</div>
+
+<div onmouseover="document.getElementById('img_feat_11041').style.borderColor = '#FE6B00'; document.getElementById('title_feat_11041').style.color = '#FE6B00'" onmouseout="document.getElementById('img_feat_11041').style.borderColor = '#ccc';document.getElementById('title_feat_11041').style.color = '#000'"  class="featured_horizontal">
+
+		<a class="imagelink" href="http://hacknmod.com/hack/stunning-illuminated-pov-led-clock/"><img id="img_feat_11041" src="http://hacknmod.com/wp-content/uploads/2010/10/Clock-208x150.jpg" width="100" height="77" alt="Stunning Illuminated POV LED Clock" ></a>
+		<h3><a id="title_feat_11041" href="http://hacknmod.com/hack/stunning-illuminated-pov-led-clock/">Stunning Illuminated POV LED Clock</a>			</h3>
+					</div>
+</ul><!-- Similar Posts took 95.395 ms --><div style="clear:both"></div></div>					</div>															
+
+<!--<b>Around the Web:</b><br /><br />
+
+
+<center>
+
+
+<script type="text/javascript" src="http://2leep.com/ticker2/307/custom/4/1/110/bottom/transparent|black|Trebuchet MS,Helvetica,sans-serif|1.2em|0.04em|14px|550|6867|0|0|0|center|middle|square"></script>
+</center>-->
+
+<div class="singlepostbottom">							
+
+
+
+<a title="Subscribe to our RSS Feed!" href="http://feeds.feedburner.com/hacknmod/qjUG"><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/singlerss.png" alt="" /></a>																	</div>											
+<!-- You can start editing here. -->
+
+
+<div id="commentform" align="left" style="padding-left:50px; margin-bottom:20px;">
+
+<table width="500" border="0">
+<form action="http://hacknmod.com/wp-comments-post.php" method="post" id="commentform">
+
+
+  <tr>
+    <td><label for="author">Name</label></td>
+    <td><input type="text" name="author" id="author" value="" size="22" tabindex="1" /></td>
+  </tr>
+  <tr>
+    <td><label for="email">Email</label></td>
+    <td><input type="text" name="email" id="email" value="" size="22" tabindex="2" /></td>
+  </tr>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+
+<tr>
+	<td>Comment:</td>
+    <td><textarea name="comment" id="comment" cols="40" rows="7" tabindex="4"></textarea></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+    <td><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" /></td>
+</tr>
+
+<input type="hidden" name="comment_post_ID" value="16124" />
+
+
+</form>
+</table>
+
+
+</div>
+
+
+
+			<!-- If comments are open, but there are no comments. -->
+
+	 <div id="tags">
+<!-- Generated by Simple Tags 1.8 - http://wordpress.org/extend/plugins/simple-tags -->
+	Tags: <a href="http://hacknmod.com/tag/3d/" title="3d" rel="tag">3d</a>, <a href="http://hacknmod.com/tag/3d-design/" title="3D Design" rel="tag">3D Design</a>, <a href="http://hacknmod.com/tag/cad/" title="CAD" rel="tag">CAD</a>, <a href="http://hacknmod.com/tag/circuit-board-design/" title="circuit board design" rel="tag">circuit board design</a>, <a href="http://hacknmod.com/tag/computer-assisted-design/" title="computer assisted design" rel="tag">computer assisted design</a>, <a href="http://hacknmod.com/tag/electrical-components/" title="electrical components" rel="tag">electrical components</a><br />
+</div>
+</div><!-- content -->
+
+<div id="sidebar">
+
+    <div id="sidebar_top">
+        <table id="subscribe_table"><tr><td colspan="2">
+<h2>Subscribe to HacknMod Updates</h2>
+</td>
+</tr>
+<tr>
+<td><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/rss.gif"></td>
+<td><a target="_blank" href="http://feeds.feedburner.com/hacknmod/qjUG">Subscribe to Hack N Mod via RSS</a></td></tr>
+<tr><td>
+<img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/twitter.gif"></td><td><a  target="_blank" href="http://twitter.com/hacknmod">Follow @HacknMod on Twitter</a></td></tr>
+<tr><td><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/dollar.gif"></td><td><a href="http://hacknmod.com/submit-hacks/">Send us Projects, Earn Cash</a></td></tr>
+<!--<tr><td><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/facebook.gif"></td><td><a href="http://www.facebook.com/pages/Hack-N-Mod-Amazingly-Cool-Hacks-Mods-and-DIY-Projects/182310845098">Become a Fan on Facebook</a></td></tr>-->
+
+</table><div id="optin_top"><table width="100%"><tr><td>Or, subscribe via email:  </td><td style="text-align:right;padding-right:21px;"><a target="_blank" href="http://feeds.feedburner.com/hacknmod/qjUG" onclick="pageTracker._trackPageview('/outgoing/feeds.feedburner.com/hacknmod/qjUG');"><img src="http://feeds.feedburner.com/~fc/hacknmod/qjUG?bg=FF6600&amp;fg=000000&amp;anim=0" alt="" /></a></td></tr>
+
+</table>
+
+<form action="http://feedburner.google.com/fb/a/mailverify?uri=hacknmod/qjUG" method="post" target="popupwindow" onsubmit="window.open('http://www.feedburner.com', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><input value="http://feeds.feedburner.com/~e?ffid=hacknmod/qjUG" name="url" type="hidden"><input value="HacknMod.com - You name it. We hack it." name="title" type="hidden"><input name="loc" value="en_US" type="hidden"><input name="email" class="text_input" type="text" style="display:inline;">					<input id="zoosbmt" style="position:relative; top:6px;display:inline;" src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/subscribe_button.gif" alt="Subscribe" class="subbutton" type="image"></form>
+
+</div>
+<div id="adtop">
+
+<script  src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=509506&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=39157"></script>
+
+
+
+	<!-- begin ad tag (tile=2) -->
+	<!--
+	<script language="JavaScript" type="text/javascript">
+	if (typeof ord=='undefined') {ord=Math.random()*10000000000000000;}
+	document.write('<script language="JavaScript" src="http://a.collective-media.net/adj/idgt.hacknmod/article_above;sec=article;fold=above;tile=2;sz=300x250;ord=' + ord + '?" type="text/javascript"><\/script>');
+	</script><noscript><a href="http://a.collective-media.net/jump/idgt.hacknmod/article_above;sec=article;fold=above;tile=2;sz=300x250;ord=123456789?" target="_blank"><img src="http://a.collective-media.net/ad/idgt.hacknmod/article_above;sec=article;fold=above;tile=2;sz=300x250;ord=123456789?" width="300" height="250" border="0" alt=""></a></noscript>
+	-->
+	<!-- End ad tag -->
+
+
+<!--<a target="_blank" href="http://hacknmod.com/store/index.php?act=viewCat&catId=3"><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/store.jpg"/></a>
+
+<table style="width: 300px;" border="0" align="center">
+<tbody>
+<tr>
+<td style="text-align: center;" colspan="2"><a target="_blank" href="http://www.kqzyfj.com/click-2461082-10356324?url=http%3A%2F%2Fwww.thinkgeek.com%2Ftshirts-apparel%2Finteractive%2F991e%2F%3Fcpg%3Dcj"><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/shirts.jpg"/></a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a target="_blank" href="http://www.kqzyfj.com/click-2461082-10356324?url=http%3A%2F%2Fwww.thinkgeek.com%2Ftshirts-apparel%2Finteractive%2F991e%2F%3Fcpg%3Dcj"><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/wifi.gif"/></a></td>
+<td style="text-align: center;"><a target="_blank" href="http://www.anrdoezrs.net/click-2461082-10356324?url=http%3A%2F%2Fwww.thinkgeek.com%2Ftshirts-apparel%2Finteractive%2F8a5b%2F%3Fcpg%3Dcj"><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/sound.gif"/></a></td>
+</tr>
+</tbody>
+</table>
+
+<a target="_blank" href="http://www.voodoocontrollers.com/?utm_source=Hack-N-Mod&utm_medium=Referral&utm_campaign=xbox360Link"><img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/rapid fire xbox 360.jpg" /></a>
+
+<br /><br />
+
+
+<div id='SmartPlayer'></div>
+<script type='text/javascript'>
+ var playerSeed = new PlayerSeed('SmartPlayer');
+ playerSeed.sid = 328;
+ playerSeed.width = '300';
+ playerSeed.height = '250';
+ playerSeed.videoControlDisplayColor = '#FE6C00';
+ playerSeed.overlay= true;
+ playerSeed.autoStart= true;
+ playerSeed.mute = true;
+ playerSeed.categories = '136';
+ playerSeed.companionPos= 'bottom';
+ playerSeed.hasCompanion=true;
+ playerSeed.topHeader= 'Video of the Day';
+ playerSeed.Load();
+</script>
+
+
+-->
+
+
+</div>    </div><!-- sidebar_top -->
+
+
+    <div id="sidebar_right">
+              <div class="widget">
+            	<img id="catlogo" alt="" src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/hacks.png" />
+                <div id="navcontainer">
+                    <ul id="navlist">
+                        	<li class="cat-item cat-item-3"><a href="http://hacknmod.com/topics/airsoft_guns/" title="View all posts filed under Airsoft &amp; Gun">Airsoft &amp; Gun</a>
+</li>
+	<li class="cat-item cat-item-2671"><a href="http://hacknmod.com/topics/apple_ipad_iphone_mac/" title="View all posts filed under Apple">Apple</a>
+</li>
+	<li class="cat-item cat-item-92"><a href="http://hacknmod.com/topics/arduino/" title="View all posts filed under Arduino">Arduino</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://hacknmod.com/topics/audio/" title="View all posts filed under Audio">Audio</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="http://hacknmod.com/topics/cars/" title="View all posts filed under Car">Car</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://hacknmod.com/topics/case_mods/" title="View all posts filed under Case Mod">Case Mod</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://hacknmod.com/topics/cell_phones/" title="View all posts filed under Cell Phone">Cell Phone</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://hacknmod.com/topics/circuitry/" title="View all posts filed under Circuitry">Circuitry</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="http://hacknmod.com/topics/diy-free-energy/" title="DIY Free Energy">DIY Free Energy</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://hacknmod.com/topics/general/" title="View all posts filed under General">General</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://hacknmod.com/topics/internet/" title="View all posts filed under Internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://hacknmod.com/topics/lasers/" title="View all posts filed under Laser">Laser</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://hacknmod.com/topics/leds_lights/" title="View all posts filed under Leds &amp; Light">Leds &amp; Light</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="http://hacknmod.com/topics/linux/" title="View all posts filed under Linux">Linux</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="http://hacknmod.com/topics/nes_atari/" title="View all posts filed under NES &amp; Atari">NES &amp; Atari</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="http://hacknmod.com/topics/play_station_2_3_portable/" title="View all posts filed under Psp, Ps2, and Ps3">Psp, Ps2, and Ps3</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://hacknmod.com/topics/robots/" title="View all posts filed under Robots">Robots</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://hacknmod.com/topics/usb_projects/" title="View all posts filed under USB Projects">USB Projects</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="http://hacknmod.com/topics/wii/" title="View all posts filed under Wii">Wii</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="http://hacknmod.com/topics/windows/" title="View all posts filed under Windows">Windows</a>
+</li>
+	<li class="cat-item cat-item-2670"><a href="http://hacknmod.com/topics/xbox_360/" title="View all posts filed under Xbox 360">Xbox 360</a>
+</li>
+                        <li><a href="http://hacknmod.com/randomizer">Random</a></li>
+                    </ul>
+                </div>
+		</div>
+		<div id="translator">
+		
+	<strong>Translate</strong><br>
+
+<!--skip translation--><table><tr class='tgTranslatorFirstRow'><td><a class='flag' id='flag_en' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/' title='Translate to English'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_en.gif' alt='Translate to English' /></a></td><td><a class='flag' id='flag_de' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/de/' title='&Uuml;bersetzen Sie zum Deutsch/German'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_de.gif' alt='&Uuml;bersetzen Sie zum Deutsch/German' /></a></td><td><a class='flag' id='flag_es' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/es/' title='Traduzca al Espa&#241;ol/Spanish'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_es.gif' alt='Traduzca al Espa&#241;ol/Spanish' /></a></td><td><a class='flag' id='flag_fr' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/fr/' title='Traduisez au Fran&#231;ais/French'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_fr.gif' alt='Traduisez au Fran&#231;ais/French' /></a></td><td><a class='flag' id='flag_it' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/it/' title='Traduca ad Italiano/Italian'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_it.gif' alt='Traduca ad Italiano/Italian' /></a></td><td><a class='flag' id='flag_pt' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/pt/' title='Traduza ao Portugu&#234;s/Portuguese'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_pt.gif' alt='Traduza ao Portugu&#234;s/Portuguese' /></a></td><td><a class='flag' id='flag_ja' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/ja/' title='&#26085;&#26412;&#35486;&#12395;&#32763;&#35379;&#12375;&#12394;&#12373;&#12356;&#32;/Japanese'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_ja.gif' alt='&#26085;&#26412;&#35486;&#12395;&#32763;&#35379;&#12375;&#12394;&#12373;&#12356;&#32;/Japanese' /></a></td></tr><tr class='tgTranslatorSecondRow'><td><a class='flag' id='flag_ko' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/ko/' title='&#54620;&#44397;&#50612;&#50640;&#44172;&#32;&#48264;&#50669;&#54616;&#49901;&#49884;&#50724;/Korean'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_ko.gif' alt='&#54620;&#44397;&#50612;&#50640;&#44172;&#32;&#48264;&#50669;&#54616;&#49901;&#49884;&#50724;/Korean' /></a></td><td><a class='flag' id='flag_zh' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/zh/' title='&#20013;&#25991;&#32763;&#35793;/Chinese Simplified'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_zh.gif' alt='&#20013;&#25991;&#32763;&#35793;/Chinese Simplified' /></a></td><td><a class='flag' id='flag_zh_TW' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/zh_TW/' title='&#20013;&#25991;&#32763;&#35793;/Chinese Traditional'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_zh_TW.gif' alt='&#20013;&#25991;&#32763;&#35793;/Chinese Traditional' /></a></td><td><a class='flag' id='flag_ar' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/ar/' title='&#1578;&#1585;&#1580;&#1605;&#1577;&#32;&#1575;&#1604;&#1609;&#32;&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;/Arabic'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_ar.gif' alt='&#1578;&#1585;&#1580;&#1605;&#1577;&#32;&#1575;&#1604;&#1609;&#32;&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;/Arabic' /></a></td><td><a class='flag' id='flag_nl' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/nl/' title='Vertaal aan het Nederlands/Dutch'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_nl.gif' alt='Vertaal aan het Nederlands/Dutch' /></a></td><td><a class='flag' id='flag_el' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/el/' title='&#924;&#949;&#964;&#945;&#966;&#961;&#940;&#963;&#964;&#949;&#32;&#963;&#964;&#945;&#32;&#949;&#955;&#955;&#951;&#957;&#953;&#954;&#940;/Greek'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_el.gif' alt='&#924;&#949;&#964;&#945;&#966;&#961;&#940;&#963;&#964;&#949;&#32;&#963;&#964;&#945;&#32;&#949;&#955;&#955;&#951;&#957;&#953;&#954;&#940;/Greek' /></a></td><td><a class='flag' id='flag_ru' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/ru/' title='&#1055;&#1077;&#1088;&#1077;&#1074;&#1077;&#1076;&#1080;&#1090;&#1077;&#32;&#1082;&#32;&#1088;&#1091;&#1089;&#1089;&#1082;&#1086;&#1084;&#1091;/Russian'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_ru.gif' alt='&#1055;&#1077;&#1088;&#1077;&#1074;&#1077;&#1076;&#1080;&#1090;&#1077;&#32;&#1082;&#32;&#1088;&#1091;&#1089;&#1089;&#1082;&#1086;&#1084;&#1091;/Russian' /></a></td></tr><tr class='tgTranslatorThirdRow'><td><a class='flag' id='flag_no' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/no/' title='Oversetter til Norsk/Norwegian'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_no.gif' alt='Oversetter til Norsk/Norwegian' /></a></td><td><a class='flag' id='flag_sv' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/sv/' title='&#214;&#118;&#101;&#114;&#115;&#228;&#116;&#116;&#97;&#32;&#116;&#105;&#108;&#108;&#32;&#83;&#118;&#101;&#110;&#115;&#107;/Swedish'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_sv.gif' alt='&#214;&#118;&#101;&#114;&#115;&#228;&#116;&#116;&#97;&#32;&#116;&#105;&#108;&#108;&#32;&#83;&#118;&#101;&#110;&#115;&#107;/Swedish' /></a></td><td><a class='flag' id='flag_hi' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/hi/' title='हिन्दी अनुवाद करने के लिए/Hindi'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_hi.gif' alt='हिन्दी अनुवाद करने के लिए/Hindi' /></a></td><td><a class='flag' id='flag_ca' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/ca/' title='&#x54;&#x72;&#x61;&#x64;&#x75;&#x65;&#x69;&#x78;&#x20;&#x61;&#x6C;&#x20;&#x63;&#x61;&#x74;&#x61;&#x6C;&#xE0;/Catalan'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_ca.gif' alt='&#x54;&#x72;&#x61;&#x64;&#x75;&#x65;&#x69;&#x78;&#x20;&#x61;&#x6C;&#x20;&#x63;&#x61;&#x74;&#x61;&#x6C;&#xE0;/Catalan' /></a></td><td><a class='flag' id='flag_lv' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/lv/' title='&#x54;&#x75;&#x6C;&#x6B;&#x6F;&#x74;&#x20;&#x75;&#x7A;&#x20;&#x6C;&#x61;&#x74;&#x76;&#x69;&#x65;&#x161;&#x75;/Latvian'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_lv.gif' alt='&#x54;&#x75;&#x6C;&#x6B;&#x6F;&#x74;&#x20;&#x75;&#x7A;&#x20;&#x6C;&#x61;&#x74;&#x76;&#x69;&#x65;&#x161;&#x75;/Latvian' /></a></td><td><a class='flag' id='flag_sk' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/sk/' title='&#x50;&#x72;&#x65;&#x6C;&#x6F;&#x17E;&#x69;&#x165;&#x20;&#x64;&#x6F;&#x20;&#x73;&#x6C;&#x6F;&#x76;&#x65;&#x6E;&#x10D;&#x69;&#x6E;&#x79;/Slovak'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_sk.gif' alt='&#x50;&#x72;&#x65;&#x6C;&#x6F;&#x17E;&#x69;&#x165;&#x20;&#x64;&#x6F;&#x20;&#x73;&#x6C;&#x6F;&#x76;&#x65;&#x6E;&#x10D;&#x69;&#x6E;&#x79;/Slovak' /></a></td><td><a class='flag' id='flag_uk' href='http://hacknmod.com/hack/how-to-render-eagle-cad-circuits-in-3d-using-google-sketchup/uk/' title='&#x41F;&#x435;&#x440;&#x435;&#x43A;&#x43B;&#x430;&#x434;&#x20;&#x43D;&#x430;&#x20;&#x443;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x443;/Ukrainian'><img style='border:0;height:11px;width:16px' src='http://hacknmod.com/wp-content/plugins/translator/images/flag_uk.gif' alt='&#x41F;&#x435;&#x440;&#x435;&#x43A;&#x43B;&#x430;&#x434;&#x20;&#x43D;&#x430;&#x20;&#x443;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x443;/Ukrainian' /></a></td></tr><tr><td colspan='7' class='tgTranslatorAttribution'><a href='http://www.taragana.com/products/translator-plugin-gold'>Plugin</a> by <a href='http://www.taragana.com'>Taragana</a></td></tr></table><!--end skip translation-->
+</div>
+
+					 	
+<div style="margin-left:10px;" >
+
+    <script  src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=120X600&cwpid=509506&cwwidth=120&cwheight=600&cwpnet=1&cwtagid=49570"></script>
+
+
+<style type="text/css">
+<!--
+.style1 {font-size: x-small}
+-->
+</style>
+
+
+</div>
+
+
+<div class="cl">
+
+
+		</div>
+		
+	
+			
+
+    </div><!-- sidebar_right -->
+
+    <div id="sidebar_left">
+        <div class="widget">
+	
+	<img src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/popularhacks_blue.gif">
+	
+	<div id="popchooser"><a id="lastthirty" onmouseover="underlinemonth(this.id)" onmouseout="nounderlinemonth(this.id)" onclick="showmonth()">30 Days</a> <a id="showalltime" onmouseover="underlinealltime(this.id)" onmouseout="nounderlinealltime(this.id)" onclick="showalltime()" >All Time</a>
+	</div>
+	
+	
+	<div id="month">						<div onmouseover="document.getElementById('poptitle_feat_16308').style.color = '#FE6B00' ;document.getElementById('img_feat_16308').style.borderColor = '#FE6B00'" onmouseout="document.getElementById('poptitle_feat_16308').style.color = '#000';document.getElementById('img_feat_16308').style.borderColor = '#ccc'" class="sidebar_featured_post">
+
+			<a style="padding-left:17px;" class="imagelink" href="http://hacknmod.com/hack/how-to-make-giant-illuminated-balloon-art/"><img id="img_feat_16308" width="130" height="100" src="http://hacknmod.com/wp-content/uploads/2012/08/Light-Kites-in-the-Night-Sky-208x150.jpg" alt="How to Make Giant, Illuminated Balloon Art"></a>
+			<h3><a id="poptitle_feat_16308" href="http://hacknmod.com/hack/how-to-make-giant-illuminated-balloon-art/">How to Make Giant, Illuminated Balloon Art</a></h3>
+			
+					</div>
+				  </div>	  	  	  
+	<div id="alltime">						<div onmouseover="document.getElementById('poptitle_feat_876').style.color = '#FE6B00' ;document.getElementById('img_feat_876').style.borderColor = '#FE6B00'" onmouseout="document.getElementById('poptitle_feat_876').style.color = '#000';document.getElementById('img_feat_876').style.borderColor = '#ccc'" class="sidebar_featured_post">
+
+			<a style="padding-left:17px;" class="imagelink" href="http://hacknmod.com/hack/6-fantastic-laser-pointer-projects/"><img id="img_feat_876" width="130" height="100" src="http://hacknmod.com/wp-content/uploads/2008/08/lasers.jpg" alt="6 Fantastic Laser Pointer Projects"></a>
+			<h3><a id="poptitle_feat_876" href="http://hacknmod.com/hack/6-fantastic-laser-pointer-projects/">6 Fantastic Laser Pointer Projects</a></h3>
+			
+					</div>
+									<div onmouseover="document.getElementById('poptitle_feat_516').style.color = '#FE6B00' ;document.getElementById('img_feat_516').style.borderColor = '#FE6B00'" onmouseout="document.getElementById('poptitle_feat_516').style.color = '#000';document.getElementById('img_feat_516').style.borderColor = '#ccc'" class="sidebar_featured_post">
+
+			<a style="padding-left:17px;" class="imagelink" href="http://hacknmod.com/hack/reusing-an-old-pc-as-a-server/"><img id="img_feat_516" width="130" height="100" src="http://hacknmod.com/wp-content/old/pics/1513-1.jpg" alt="Reusing an Old PC as a Server"></a>
+			<h3><a id="poptitle_feat_516" href="http://hacknmod.com/hack/reusing-an-old-pc-as-a-server/">Reusing an Old PC as a Server</a></h3>
+			
+					</div>
+				  </div>	  
+	
+</div>	
+
+
+
+<!--<script  src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=160X600&cwpid=509506&cwwidth=160&cwheight=600&cwpnet=1&cwtagid=39483"></script>-->
+
+<div id="lijit_region_145815"></div>
+<script type="text/javascript" src="http://www.lijit.com/delivery/fp?u=hacknmod&z=145815&n=1"></script>
+
+
+
+	<!-- begin ad tag (tile=3) -->
+	<!--
+	<script language="JavaScript" type="text/javascript">
+	if (typeof ord=='undefined') {ord=Math.random()*10000000000000000;}
+	document.write('<script language="JavaScript" src="http://a.collective-media.net/adj/idgt.hacknmod/article_below;sec=article;fold=below;tile=3;sz=160x600;ord=' + ord + '?" type="text/javascript"><\/script>');
+	</script><noscript><a href="http://a.collective-media.net/jump/idgt.hacknmod/article_below;sec=article;fold=below;tile=3;sz=160x600;ord=123456789?" target="_blank"><img src="http://a.collective-media.net/ad/idgt.hacknmod/article_below;sec=article;fold=below;tile=3;sz=160x600;ord=123456789?" width="160" height="600" border="0" alt=""></a></noscript>
+	-->
+	<!-- End ad tag -->
+
+
+	
+ 	  	      </div><!-- sidebar_left -->
+
+
+</div><!-- sidebar -->
+
+<div id="footer">
+    <table id="footer_table">
+        <tr>
+
+            <td id="aboutus">
+                <h3>About Us</h3>
+                <ul class="arrows">
+                    <li><a href="http://hacknmod.com/about-hacknmod/">About</a></li>
+                    <li><a href="http://hacknmod.com/contact-hacknmod/">Contact Us</a></li>
+                    <li><a href="http://hacknmod.com/advertise-on-hacknmod/">Advertise</a></li>
+                    <li><a href="http://hacknmod.com/submit-hacks/">Send us Hacks</a></li>
+                    <li><a href="http://hacknmod.com/write-for-hacknmod/">Write for Us</a></li>
+                </ul>
+            </td>
+
+            <td id="subscribe">
+                <h3>Get Daily Updates</h3>
+                <table id="subscribe_options">
+                    <tr>
+                        <td rowspan="3">
+                            <a  target="_blank" id="icon" title="Subscribe to our RSS Feed!" href="http://feeds.feedburner.com/hacknmod/qjUG"><img id="subscription_footer" src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/gethacks.png" alt="" /></a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://fusion.google.com/add?feedurl=http://feeds.feedburner.com/hacknmod/qjUG"><img src="http://buttons.googlesyndication.com/fusion/add.gif" width="104" height="17" style="padding-top:10px" alt="Add to Google Reader or Homepage"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a target="_blank" href="http://feeds.feedburner.com/hacknmod/qjUG"><img src="http://feeds.feedburner.com/~fc/hacknmod/qjUG?bg=FF6600&amp;fg=000000&amp;anim=0" alt="" /></a>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </td>
+            <td>
+
+                <h3>Newsletter</h3>
+                <ul class="arrows">
+                    <li>Free HacknMod Gear</li>
+                    <li>Exclusive Discounts</li>
+                    <li>Behind the Scenes</li>
+                    <li><a id="newsletter" href="http://hacknmod.com/store">HacknMod Store Discounts</a></li>
+                    <form action="#wpsbw" method="post">
+<p class="wpsb_form_label">E-mail:<br /> <input type="text" name="wpsb_email" id="wpsb_email" class="wpsb_form_txt" /></p>
+<script type="text/javascript">
+	//<![CDATA[	
+		function wpsb_toggle_custom_fields (state) {
+			for (i=2; i<16; i++) {
+				if (obj = document.getElementById('wpsb_fld_'+i)) {
+					obj.disabled = !state;
+					obj.readOnly = !state;
+				}
+			}
+		}
+	//]]>
+	</script>
+	<p class="wpsb_form_label"><input type="submit" value="Subscribe" class="wpsb_form_btn" /></p>
+</form>
+<!-- Made by www.SendBlaster.com Newsletter Software Opt-in -->
+
+                </ul>
+
+            </td>
+
+
+            </td>
+
+            <td>
+
+                <h3>HacknMod Store</h3>
+                
+                    <a target="_blank" href="http://hacknmod.com/store/index.php?act=viewCat&catId=28"><img alt="" src="http://hacknmod.com/wp-content/themes/hacknmodfinal2/images/store/28.jpg"></a>
+                </td>
+
+
+
+                <td>
+
+                </td>
+            </tr>
+        </table>
+
+        <div id="bottomnav">
+            <a href="http://hacknmod.com/most-popular-hacks/">Most Popular</a> | <a href="http://hacknmod.com/topics/leds_lights/">Led Projects</a> | <a href="http://hacknmod.com/store">Hack N Mod Store</a> | <a href="http://hacknmod.com/submit-hacks/">Submit Hacks</a>
+        <p>
+            HacknMod.com &copy; 2010 </p>
+
+<center><img src="http://hacknmod.com/wp-content/uploads/2008/08/footer_logo_light.gif"/></center>
+    </div>
+</div>
+
+
+</div><!-- container_inner -->
+
+
+</div><!-- container_outer -->
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.536 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2012-11-07 16:53:56 -->

@@ -1,0 +1,651 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Schneier on Security: New SSL Vulnerability</title>
+	<!-- robots content="noindex" -->
+	<link rel="STYLESHEET" type="text/css" href="/schneier-safe.css">
+	<link rel="STYLESHEET" type="text/css" href="/blog.css">
+	<link rel="alternate" type="application/rss+xml" title="RSS 1.0 (full-text)" href="http://www.schneier.com/blog/rss.xml">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 (excerpts)" href="http://www.schneier.com/blog/index.xml">
+    <link rel="alternate" type="application/atom+xml" title="Comments on New SSL Vulnerability (Atom)" href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.xml" >
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.schneier.com/blog/rsd.xml">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="start" href="http://www.schneier.com/blog/" title="Home">
+	
+		<link rel="prev" href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html" title="Regulation as a Prisoner's Dilemma">
+	
+	
+		<link rel="next" href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html" title="Micromorts">
+	
+	<!-- /robots -->
+<script type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'www.schneier.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+</head>
+<body>	  
+
+<table class="main" cellspacing=0>
+<tr><td class="bodycolor"></td><td class="kludge">&nbsp;</td><td class="masthead"><p class="mastname"><!-- robots content="noindex" -->Bruce Schneier<!-- /robots --></td><td class="kludge">&nbsp;</td><td class="bodycolor"></td></tr>
+
+<tr><td class="menua">
+<!-- robots content="noindex" -->
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/">Blog</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/crypto-gram.html">Crypto-Gram Newsletter</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/books.html">Books</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/essays.html">Essays and Op Eds</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/news.html">News and Interviews</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/av.html">Audio and Video</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/schedule.html">Speaking Schedule</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/passsafe.html">Password Safe</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/cryptography.html">Cryptography</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/about.html">About Bruce Schneier</a>
+
+<P class="menusingle"><a class="menulink" href="http://www.schneier.com/contact.html">Contact Information</a>
+<!-- /robots -->
+</td>
+<td class="kludge">&nbsp;</td>
+<td class="contentcell">
+
+<!-- begin page content -->
+
+<div class="indivbody">
+
+
+<!-- robots content="noindex" -->
+<h1>Schneier on Security</h1>
+<p>A blog covering security and security technology.</p>
+
+
+<p align="right">
+
+<a href="http://www.schneier.com/blog/archives/2012/11/regulation_as_a.html">&laquo; Regulation as a Prisoner's Dilemma</a> |
+
+<a href="http://www.schneier.com/blog/">Main</a>
+
+| <a href="http://www.schneier.com/blog/archives/2012/11/micromorts_1.html">Micromorts &raquo;</a>
+
+</p>
+<!-- /robots -->
+
+<h2>November  7, 2012</h2>
+
+<h3>New SSL Vulnerability</h3>
+
+<p>It's hard for me to get too worked up about <a href="https://docs.google.com/document/pub?id=1roBIeSJsYq3Ntpf6N0PIeeAAvu4ddn7mGo6Qb7aL7ew">this</a> <a href="http://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf">vulnerability</a>:</p>
+
+<blockquote>Many popular applications, HTTP(S) and WebSocket transport libraries, and SOAP and REST Web-services middleware use SSL/TLS libraries incorrectly, breaking or disabling certificate validation.  Their SSL and TLS connections are not authenticated, thus they -- and any software using them -- are completely insecure against a man-in-the-middle attacker. </blockquote>
+
+<p>Great research, and -- yes -- the vulnerability should be fixed, but it doesn't feel like a crisis issue.</p>
+
+<p>Another <a href="http://threatpost.com/en_us/blogs/ssl-vulnerabilities-found-critical-non-browser-software-packages-102512">article</a>.</p>
+
+<div id="a004571more"><div id="more">
+
+</div></div>
+
+<p class="posted"><a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html">Posted on November  7, 2012 at  1:39 PM</a>
+&#8226; <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#comments">20 Comments</a>
+</p>
+
+<p class="posted"><i>To receive these entries once a month by e-mail, <a href="http://www.schneier.com/crypto-gram-sub.html">sign up</a> for the <a href="http://www.schneier.com/crypto-gram.html">Crypto-Gram Newsletter</a>.</i>
+</div>
+
+
+<div class="commentform">
+<h2 id="comments">Comments</h2>
+</div>
+
+
+<div class="commentbody by-drno">
+<a name="c969443"></a>
+
+<div id="c969443">
+<p>Yes it's a vulnerability and yes it's SSL-related, but it's as much an SSL/TLS vulnerability as drunk-driving is a defect in the car design.</p>
+</div>
+<p class="posted">Posted by: DrNo at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969443">November  7, 2012  1:56 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-eduardo-ruiz-duarte">
+<a name="c969537"></a>
+
+<div id="c969537">
+<p>Technically is not a SSL vulnerability, is like saying that a sql injection is a vulnerability in ASP</p>
+</div>
+<p class="posted">Posted by: <a title="http://math.co.ro" href="http://math.co.ro" rel="nofollow">eduardo ruiz duarte</a> at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969537">November  7, 2012  2:30 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-henning-makholm">
+<a name="c969614"></a>
+
+<div id="c969614">
+<p>Perhaps I read the article too quickly, but it would be nice to know how many pieces of software the authors had to sift in order to find the vulnerabilities they burn.</p>
+
+<p>Each of them is crisis-worthy enough on the level of THAT PARTICULAR PRODUCT (though ones where the vulnerable client code runs on servers only, such as the payment-gateway PHP module, are going to be out of reach for ordinary opportunistic crook anyway).</p>
+
+<p>But whether the alarmist spin about the internet in general crashing and burning is even slightly warranted depends a lot on whether it is 5% or 95% of all non-browser applications that are vulnerable.</p>
+</div>
+<p class="posted">Posted by: <a title="http://blog.henning.makholm.net/" href="http://blog.henning.makholm.net/" rel="nofollow">Henning Makholm</a> at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969614">November  7, 2012  3:09 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dave">
+<a name="c969621"></a>
+
+<div id="c969621">
+<p>Yes, there's no reason for cryptographers to get worked up, but it's terrible for implementers and users of these systems, and it's endemic of the attitude that creates vulnerable software. MitM is not always a practical attack to perform, but with the widespread ignorance on proper certificate validation I would not be surprised to hear of instances in which MitM attacks on these systems are both easy to perform and devastating. These vulnerabilities would be inexcusable on the web, so IMHO they are inexcusable in other internet applications too.<br />
+</p>
+</div>
+<p class="posted">Posted by: Dave at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969621">November  7, 2012  3:12 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-henning-makholm">
+<a name="c969645"></a>
+
+<div id="c969645">
+<p>The article closes with recommendations targeted at developers of applications and libraries. I think it ought it ought to be  supplemented with:</p>
+
+<blockquote><b>For developers of web-accessible APIs</b>
+
+<p>If your service is available over HTTPS (or another TLS-based protocol), have publicly available test servers that provide a fully functional (at least at the protocol level) mock-up of your service, except that they present self-signed certificates and/or certificates for the wrong domains. In your API documentation, encourage application developers to test their finished code against these servers to verify that the clients properly refuses them.</p></blockquote>
+
+<p>Providing a test server which presents a certificate for the wrong domain would be as simple as making a DNS alias pointing to the production servers from a different name. One with a self-signed certificate would probably need a spare IP (or a non-standard port).</p>
+</div>
+<p class="posted">Posted by: <a title="http://blog.henning.makholm.net/" href="http://blog.henning.makholm.net/" rel="nofollow">Henning Makholm</a> at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969645">November  7, 2012  3:30 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-christian">
+<a name="c969670"></a>
+
+<div id="c969670">
+<p>Its not even a bad use of crypto.</p>
+
+<p>I have done the same. <br />
+Reasoning behind it: The attacker model is to listen only/not change anything in the traffic.</p>
+
+<p>Its only a vulnerability/lack of security if you have  a stronger attacker model.</p>
+</div>
+<p class="posted">Posted by: Christian at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969670">November  7, 2012  3:55 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-adam">
+<a name="c969706"></a>
+
+<div id="c969706">
+<p>It sure seems like most "security issues" that people find in applications recently are a lack of correctly performed certificate validation.  I am not at all surprised by this issue but I don't think it's anything particularly novel.</p>
+</div>
+<p class="posted">Posted by: Adam at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969706">November  7, 2012  4:22 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-henning-makholm">
+<a name="c969819"></a>
+
+<div id="c969819">
+<p>@Christian: Where in the contemporary internet would you find an attacker with a technical opportunity to eavesdrop on TCP conversations, but <i>not</i> to change the traffic? That seems to require very special-case scenarios, much more exotic than subverting a piece of the routing infrastructure or simply joining a shared medium such as a WLAN.</p>
+</div>
+<p class="posted">Posted by: <a title="http://blog.henning.makholm.net/" href="http://blog.henning.makholm.net/" rel="nofollow">Henning Makholm</a> at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969819">November  7, 2012  5:54 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dan-goodin">
+<a name="c969841"></a>
+
+<div id="c969841">
+<p>Bruce, I'm surprised to read you downplaying the severity of the defects these researchers uncovered. These were widely used apps, including Trillian, AIM and a mobile smartphone app from Chase Bank, that established encrypted connections even when presented with fraudulent SSL certificates.</p>
+
+<p>For more, please see the article I wrote for Ars Technica at:</p>
+
+<p><a href="http://arstechnica.com/security/2012/10/faulty-ssl-fooled-by-phony-certificates/" rel="nofollow">http://arstechnica.com/security/2012/10/...</a></p>
+
+<p>Anyone using one of these apps on an open network is wide open to the very types of attacks SSL is designed to prevent.</p>
+
+<p>Why isn't that serious?</p>
+
+<p>Regards,</p>
+
+<p>Dan Goodin</p>
+</div>
+<p class="posted">Posted by: <a title="http://arstechnica.com" href="http://arstechnica.com" rel="nofollow">Dan Goodin</a> at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969841">November  7, 2012  6:08 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-kevin-mcarthur">
+<a name="c969877"></a>
+
+<div id="c969877">
+<p>Seeing as I'm cited in this paper, thought I'd share that this vulnerability affects a number of major credit card processing companies and affects a lot more than is disclosed in the academic paper.</p>
+
+<p>I've been working on this for well over a year with the Canadian Cyber Incident Response Centre.</p>
+
+<p>You can read more about this at <a href="http://www.unrest.ca/peerjacking" rel="nofollow">http://www.unrest.ca/peerjacking</a> and <a href="http://www.unrest.ca/responsible-disclosure-and-the-academy" rel="nofollow">http://www.unrest.ca/...</a> for a little background on this paper.</p>
+</div>
+<p class="posted">Posted by: <a title="http://www.unrest.ca" href="http://www.unrest.ca" rel="nofollow">Kevin McArthur</a> at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969877">November  7, 2012  6:34 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dirk-praet">
+<a name="c969919"></a>
+
+<div id="c969919">
+<p>I read this as just another instance of code writers having insufficient knowledge of a protocol/mechanism to implement it correctly, instead blindly relying on an API that allows them to do stuff the wrong way. A classic case of full-proof vs. fool-proof. Not to mention failure of testing and code review processes for those apps affected.</p>
+</div>
+<p class="posted">Posted by: Dirk Praet at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c969919">November  7, 2012  6:57 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-buck">
+<a name="c970030"></a>
+
+<div id="c970030">
+<p>I think that the defect in OpenSSL usability, at<br />
+least, has been known for a while.  See</p>
+
+<p><a href="http://www.peereboom.us/assl/assl/html/openssl.html" rel="nofollow">http://www.peereboom.us/assl/assl/html/...</a></p>
+
+<p>There's an O'Reilly book on OpenSSL, too, but<br />
+the impression i have of that was that i was left<br />
+thoroughly befuddled by the arcane configuration-<br />
+file mechanism, so i don't remember how well it<br />
+made sense of the APIs or pointed out the pit-<br />
+falls</p>
+</div>
+<p class="posted">Posted by: Buck at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c970030">November  7, 2012  8:13 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-colin">
+<a name="c970109"></a>
+
+<div id="c970109">
+<p>I thought you were talking about the CRIME attack, one of the cooler SSL vulnerabilities in recent years.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/CRIME_(security_exploit)" rel="nofollow">http://en.wikipedia.org/wiki/...</a></p>
+</div>
+<p class="posted">Posted by: Colin at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c970109">November  7, 2012  9:02 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-section9bateau">
+<a name="c970347"></a>
+
+<div id="c970347">
+<p>This vulnerability is far from new, I was marking this as a finding quite regularly in my audits several years ago against applications I tested, even just found another case of it yesterday.  I think this was in one of the first OWASP top-10s.   </p>
+
+<p>Ahh, yes, A9 from 2007, and again, A9 from 2010, etc.</p>
+</div>
+<p class="posted">Posted by: Section9Bateau at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c970347">November  7, 2012 11:58 PM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-no-dummy-but-not-an-ssl-expert">
+<a name="c970434"></a>
+
+<div id="c970434">
+<p>As a very senior programmer recently introduced to programming with OpenSSL, I have to wholeheartedly agree with the paper's complaints about usability.  I expected that a state-of-the-art library would make it easy to do the right thing and hard to do the wrong thing, but the exact opposite is true:  unless you do everything exactly right and write a (relatively) lot of code, you end up with an insecure connection.  I don't *want* to be writing code that is critical to the security of the connection - I want the library to do that, since people who really understand the issues have reviewed it.</p>
+</div>
+<p class="posted">Posted by: No Dummy, But Not An SSL Expert at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c970434">November  8, 2012 12:58 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-clive-robinson">
+<a name="c970968"></a>
+
+<div id="c970968">
+<p>@ Dan Goodin,</p>
+
+<p><i>Bruce, I'm surprised to read you downplaying the severity of the defects these researchers uncovered.</i></p>
+
+<p>I don't think Bruce is within the context of this blog.</p>
+
+<p>It is just one of many hundreds of similar "human errors" that occure with developers just about every day of the week. Which is why Bruce has in all likelihood said,</p>
+
+<p><b>"</b><i>It's hard for me to get too worked up about this vulnerability</i><b>"</b></p>
+
+<p>As others have noted it's not technically even an SSL issue but a more general "user issue" for developers implementing security applications.</p>
+
+<p>To explain the difference,</p>
+
+<p>You go out to your car get in put the key in the ignition and turn it and the car does not start.</p>
+
+<p>If asked you would in all probability say "my car is broken down" which whilst it is true is unhelpful and in all likely hood incorrect technicaly.</p>
+
+<p>What has happened is some small ancillary part of the car which actually does not prevent it being driven has let you down, such as the battery is flat (because you left the lights on) or the lock or switch mechanism has broken or come out of alignment (possibly due of you using excessive force) or a fuse has blown because you have drawn to much current from cold due to say using the cigarette lighter having the radio on loud and a seat warmer whilst trying to turn the engine over. It could also be that the solonoid that switches the high current to the starter motor has worked lose or become broken or the starter motor has stoped in a position it cannot start from so appears seized, neither of which is in use when the engine is running and the car is being driven by you. </p>
+
+<p>Thus the probability is if the engine is turned over in some way (as used to happen with starter handles or when you jump a dead battery, or put a non auto into first gear and push start it) then the car would be quite drivable as long as you did not stop the engine.</p>
+
+<p>So when to you your car won't start you say your car is broken with the incorrect implicit assumption it is not usable for it's primary purpose. A motor technician however knows that the car is in all probability functional for it's primary purpose it just needs either the circuit compleating or the starter motor unjamming or the battery jumping or a push start for you to drive it away.</p>
+
+<p>Thirty years ago push starting, battery jumping and hand cranking were well known and many motorists new about them. These days however due to much additional complexity and increased reliability many drivers do not have any knowledge of such things.</p>
+
+<p>And that's the point from a technical asspect this issue is the user (ie program developer) not knowing what to do when using the code library. And from this asspect it is so common it is very difficult to get worked up about.</p>
+
+<p>However for a limited set of end users it might be a problem now but for most no. In a few days time a month or so or even a year or two it might not be a problem for the majority of end users. But I would expect the problem now it is known to become fixed in the next code release.</p>
+
+<p>And this brings up another "user issue" within the accepted "custom and practice" user model. Unlike PC's with patch Tuesday and Auto Updates smart phones due in the main to the connectivity service providers and their charging models get neither patches or upgrades.</p>
+
+<p>So your view point of it potentialy being a serious concern for end users is valid but misplaced for this blog. Because you have to also accept that from the technical view point it's just one more fairly yawn worthy human error amongst hundreds and from that respect would not normaly even make it onto this technical blog because there are other blogs (Krebs being just one of many) that do cater predominantly for the end user with patch/update alerts. </p>
+
+<p>It is only that it does have some potential security asspects that Bruce has Bloged on it and has said,</p>
+
+<p><i><b>"</b>Great research, and -- yes -- the vulnerability should be fixed, but it doesn't feel like a crisis issue<b>"</b></i></p>
+
+<p>Which from a purely technical perspective is correct.</p>
+
+<p>It should be the job of journalists and blog writers who cater specificaly to application developers who should be giving a heads up to their readers.</p>
+
+<p>And in a little while it will be your job amongst many other more "end user focused" journalists and blog writers  to make the end user aware that they realy should upgrade once each individual vulnerable package has been fixed and chase the developers if you think they are being to slow. </p>
+
+<p>As in humour timing is very important in security,shouting loud now to end users before the developers have fixed an application or have had reasonable time to fix an application is actually going to be counter productive, in that they will hear you, find they cannot do anything and just ignore it in future when the patched application is available....</p>
+</div>
+<p class="posted">Posted by: Clive Robinson at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c970968">November  8, 2012  7:02 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-nathar-leichoz">
+<a name="c971004"></a>
+
+<div id="c971004">
+<p>Not a vulnerability with SSL. Just individual applications not checking whether the certs are valid or not.</p>
+</div>
+<p class="posted">Posted by: Nathar Leichoz at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c971004">November  8, 2012  7:26 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-dan-goodin">
+<a name="c971141"></a>
+
+<div id="c971141">
+<p>@Clive Robinson</p>
+
+<p>It's immaterial whether this is new or old, or caused by an error in SSL or the way sloppy programmers implement SSL.</p>
+
+<p>What matters is that a statistically significant percentage of apps have a gaping security hole that can get dissidents in rogue nations killed and wipe out the bank accounts of people in developed nations.</p>
+
+<p>I still don't understand why that's not worth getting worked up about.</p>
+</div>
+<p class="posted">Posted by: <a title="http://arstechnica.com" href="http://arstechnica.com" rel="nofollow">Dan Goodin</a> at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c971141">November  8, 2012  8:55 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-richard-moore">
+<a name="c971390"></a>
+
+<div id="c971390">
+<p>One of the causes of the poor usage of ssl is that the documentation for openssl is frankly awful. It also doesn't help that openssl doesn't provide any APIs to implement RFC 2818 compliant hostname matching. On the other hand, these papers have been quite useful to me in writing a presentation on <a href="https://qtconference.kdab.com/node/23#Using_SSL" rel="nofollow">how to avoid coding exactly these kind errors</a> when using Qt!</p>
+</div>
+<p class="posted">Posted by: Richard Moore at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c971390">November  8, 2012 11:18 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+<div class="commentbody by-jenny">
+<a name="c973228"></a>
+
+<div id="c973228">
+<p><b>The new SSL vulnerability is CRIME: </b> <a href="http://netifera.com/research/crime/CRIME_ekoparty2012.pdf" rel="nofollow">http://netifera.com/research/crime/...</a><br />
+</p>
+</div>
+<p class="posted">Posted by: <a title="http://netifera.com/research/crime/" href="http://netifera.com/research/crime/" rel="nofollow">jenny</a> at <a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html#c973228">November  9, 2012  9:40 AM</a></p>
+
+<hr class="comment-separator">
+</div>
+
+
+<p><a href="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.xml">Subscribe to comments on this entry</a></p>
+
+
+<div class="postcomment">
+
+
+
+<h2>Post a comment</h2>
+
+ 
+
+
+
+<form method="post" action="https://www.schneier.com/cgi-bin/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<!-- <input type="hidden" name="static" value="1"> -->
+<input type="hidden" name="static" value="http://www.schneier.com/blog/archives/2012/11/new_ssl_vulnera.html?nc=20">
+<input type="hidden" name="entry_id" value="4571">
+
+<div id="name_email">
+<p><label for="author">Name:</label><br>
+<input tabindex="1" id="author" name="author">
+</p>
+<p><label for="email">Email Address:</label><br>
+<input tabindex="2" id="email" name="email">
+<br>E-mail is optional and will not be displayed on the site.</p>
+</div>
+
+
+
+<p><label for="url">URL:</label><br>
+<input tabindex="3" type="text" name="url" id="url">
+Remember Me?
+<input type="radio" id="remember" onclick="rememberMe(this.form)" name="bakecookie"><label for="remember">Yes</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><label for="forget">No</label><br style="clear: both;">
+</p>
+
+<p><label for="text">Comments:</label> <br>
+<textarea tabindex="4" id="text" name="text" rows="10" cols="40"></textarea></p>
+<p><strong>Allowed HTML:</strong> &lt;a href="URL"&gt; &bull; &lt;em&gt; &lt;cite&gt; &lt;i&gt; &bull; &lt;strong&gt; &lt;b&gt; &bull; &lt;sub&gt; &lt;sup&gt; &bull; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &bull; &lt;blockquote&gt; &lt;pre&gt;</p>
+<!-- $MTCommentChallenge$ -->
+
+<div align="center">
+<input type="submit" name="preview" tabindex="5" 
+    value="&nbsp;Preview&nbsp;">
+<input style="font-weight: bold;" type="submit" name="post" 
+    tabindex="6" value="&nbsp;Post&nbsp;">
+</div>
+</form>
+
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+
+
+
+
+
+</div>
+
+
+
+<div id="powered">
+Powered by <a href="http://www.movabletype.org">Movable Type</a>.  Photo at top by Geoffrey Stone.
+
+</div>
+
+<!-- end page content -->
+
+<!-- robots content="noindex" -->
+
+<p class="disclaim">Schneier.com is a personal website.  Opinions expressed are not necessarily those of <a href="http://www.bt.com/">BT</a>.
+</td>
+<td class="kludge">&nbsp;</td>
+<td class="rightcol">
+
+<table class="sidephoto" cellspacing=0><tr>
+<td><img id="authorphoto" src="/images/bruce-blog2.jpg" width="150" height="194" alt="Bruce Schneier">
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Blog Menu</td></tr>
+<tr><td class="sidebody">
+
+<h3 class="first">Search</h3>
+<form method="get" action="http://www.google.com/search">
+<input type="hidden" name="domains" value="www.schneier.com">
+<input type="hidden" name="sitesearch" value="www.schneier.com">
+<input id="search" name="q" size="15" maxlength="255"><br>
+<input type="radio" name="hq" value="inurl:www.schneier.com/blog" checked>blog only<br>
+<input type="radio" name="hq" value="inurl:www.schneier.com/essay">essays and op eds only<br>
+<input type="radio" name="hq" value="inurl:www.schneier.com">whole site<br>
+<input type="submit" value="Search">
+</form>
+
+
+<p><a href="http://www.schneier.com/blog/">Blog Home Page</a>
+<br><a href="http://www.schneier.com/blog/newcomments.html">100 Latest Comments</a>
+
+<h3 id="archives">Archives by Date</h3>
+<div id="calendar">
+<p><b>2012</b> <a href="http://www.schneier.com/blog/archives/2012/01/">J</a> <a href="http://www.schneier.com/blog/archives/2012/02/">F</a> <a href="http://www.schneier.com/blog/archives/2012/03/">M</a> <a href="http://www.schneier.com/blog/archives/2012/04/">A</a> <a href="http://www.schneier.com/blog/archives/2012/05/">M</a> <a href="http://www.schneier.com/blog/archives/2012/06/">J</a> <a href="http://www.schneier.com/blog/archives/2012/07/">J</a> <a href="http://www.schneier.com/blog/archives/2012/08/">A</a> <a href="http://www.schneier.com/blog/archives/2012/09/">S</a> <a href="http://www.schneier.com/blog/archives/2012/10/">O</a> <a href="http://www.schneier.com/blog/archives/2012/11/">N</a>
+<br><b>2011</b> <a href="http://www.schneier.com/blog/archives/2011/01/">J</a> <a href="http://www.schneier.com/blog/archives/2011/02/">F</a> <a href="http://www.schneier.com/blog/archives/2011/03/">M</a> <a href="http://www.schneier.com/blog/archives/2011/04/">A</a> <a href="http://www.schneier.com/blog/archives/2011/05/">M</a> <a href="http://www.schneier.com/blog/archives/2011/06/">J</a> <a href="http://www.schneier.com/blog/archives/2011/07/">J</a> <a href="http://www.schneier.com/blog/archives/2011/08/">A</a> <a href="http://www.schneier.com/blog/archives/2011/09/">S</a> <a href="http://www.schneier.com/blog/archives/2011/10/">O</a> <a href="http://www.schneier.com/blog/archives/2011/11/">N</a> <a href="http://www.schneier.com/blog/archives/2011/12/">D</a>
+<br><b>2010</b> <a href="http://www.schneier.com/blog/archives/2010/01/">J</a> <a href="http://www.schneier.com/blog/archives/2010/02/">F</a> <a href="http://www.schneier.com/blog/archives/2010/03/">M</a> <a href="http://www.schneier.com/blog/archives/2010/04/">A</a> <a href="http://www.schneier.com/blog/archives/2010/05/">M</a> <a href="http://www.schneier.com/blog/archives/2010/06/">J</a> <a href="http://www.schneier.com/blog/archives/2010/07/">J</a> <a href="http://www.schneier.com/blog/archives/2010/08/">A</a> <a href="http://www.schneier.com/blog/archives/2010/09/">S</a> <a href="http://www.schneier.com/blog/archives/2010/10/">O</a> <a href="http://www.schneier.com/blog/archives/2010/11/">N</a> <a href="http://www.schneier.com/blog/archives/2010/12/">D</a>
+<br><b>2009</b> <a href="http://www.schneier.com/blog/archives/2009/01/">J</a> <a href="http://www.schneier.com/blog/archives/2009/02/">F</a> <a href="http://www.schneier.com/blog/archives/2009/03/">M</a> <a href="http://www.schneier.com/blog/archives/2009/04/">A</a> <a href="http://www.schneier.com/blog/archives/2009/05/">M</a> <a href="http://www.schneier.com/blog/archives/2009/06/">J</a> <a href="http://www.schneier.com/blog/archives/2009/07/">J</a> <a href="http://www.schneier.com/blog/archives/2009/08/">A</a> <a href="http://www.schneier.com/blog/archives/2009/09/">S</a> <a href="http://www.schneier.com/blog/archives/2009/10/">O</a> <a href="http://www.schneier.com/blog/archives/2009/11/">N</a> <a href="http://www.schneier.com/blog/archives/2009/12/">D</a>
+<br><b>2008</b> <a href="http://www.schneier.com/blog/archives/2008/01/">J</a> <a href="http://www.schneier.com/blog/archives/2008/02/">F</a> <a href="http://www.schneier.com/blog/archives/2008/03/">M</a> <a href="http://www.schneier.com/blog/archives/2008/04/">A</a> <a href="http://www.schneier.com/blog/archives/2008/05/">M</a> <a href="http://www.schneier.com/blog/archives/2008/06/">J</a> <a href="http://www.schneier.com/blog/archives/2008/07/">J</a> <a href="http://www.schneier.com/blog/archives/2008/08/">A</a> <a href="http://www.schneier.com/blog/archives/2008/09/">S</a> <a href="http://www.schneier.com/blog/archives/2008/10/">O</a> <a href="http://www.schneier.com/blog/archives/2008/11/">N</a> <a href="http://www.schneier.com/blog/archives/2008/12/">D</a>
+<br><b>2007</b> <a href="http://www.schneier.com/blog/archives/2007/01/">J</a> <a href="http://www.schneier.com/blog/archives/2007/02/">F</a> <a href="http://www.schneier.com/blog/archives/2007/03/">M</a> <a href="http://www.schneier.com/blog/archives/2007/04/">A</a> <a href="http://www.schneier.com/blog/archives/2007/05/">M</a> <a href="http://www.schneier.com/blog/archives/2007/06/">J</a> <a href="http://www.schneier.com/blog/archives/2007/07/">J</a> <a href="http://www.schneier.com/blog/archives/2007/08/">A</a> <a href="http://www.schneier.com/blog/archives/2007/09/">S</a> <a href="http://www.schneier.com/blog/archives/2007/10/">O</a> <a href="http://www.schneier.com/blog/archives/2007/11/">N</a> <a href="http://www.schneier.com/blog/archives/2007/12/">D</a>
+<br><b>2006</b> <a href="http://www.schneier.com/blog/archives/2006/01/">J</a> <a href="http://www.schneier.com/blog/archives/2006/02/">F</a> <a href="http://www.schneier.com/blog/archives/2006/03/">M</a> <a href="http://www.schneier.com/blog/archives/2006/04/">A</a> <a href="http://www.schneier.com/blog/archives/2006/05/">M</a> <a href="http://www.schneier.com/blog/archives/2006/06/">J</a> <a href="http://www.schneier.com/blog/archives/2006/07/">J</a> <a href="http://www.schneier.com/blog/archives/2006/08/">A</a> <a href="http://www.schneier.com/blog/archives/2006/09/">S</a> <a href="http://www.schneier.com/blog/archives/2006/10/">O</a> <a href="http://www.schneier.com/blog/archives/2006/11/">N</a> <a href="http://www.schneier.com/blog/archives/2006/12/">D</a>
+<br><b>2005</b> <a href="http://www.schneier.com/blog/archives/2005/01/">J</a> <a href="http://www.schneier.com/blog/archives/2005/02/">F</a> <a href="http://www.schneier.com/blog/archives/2005/03/">M</a> <a href="http://www.schneier.com/blog/archives/2005/04/">A</a> <a href="http://www.schneier.com/blog/archives/2005/05/">M</a> <a href="http://www.schneier.com/blog/archives/2005/06/">J</a> <a href="http://www.schneier.com/blog/archives/2005/07/">J</a> <a href="http://www.schneier.com/blog/archives/2005/08/">A</a> <a href="http://www.schneier.com/blog/archives/2005/09/">S</a> <a href="http://www.schneier.com/blog/archives/2005/10/">O</a> <a href="http://www.schneier.com/blog/archives/2005/11/">N</a> <a href="http://www.schneier.com/blog/archives/2005/12/">D</a>
+<br><b>2004</b> <span class="empty">J</span> <span class="empty">F</span> <span class="empty">M</span> <span class="empty">A</span> <span class="empty">M</span> <span class="empty">J</span> <span class="empty">J</span> <span class="empty">A</span> <span class="empty">S</span> <a href="http://www.schneier.com/blog/archives/2004/10/">O</a> <a href="http://www.schneier.com/blog/archives/2004/11/">N</a> <a href="http://www.schneier.com/blog/archives/2004/12/">D</a>
+
+</div>
+
+<!-- begin EFF Blogger's Rights campaign code -->
+<DIV id="eff" ALIGN="CENTER"><A HREF="https://www.eff.org/issues/bloggers/legal/join"><IMG id="effbutton" SRC="https://w2.eff.org/bloggers/badges/blog_150x40.gif" ALT="Support Bloggers' Rights!" WIDTH="150" HEIGHT="40" BORDER="0" ALIGN="MIDDLE"></A></DIV>
+<!-- end EFF Blogger's Rights campaign code -->
+
+<div class="sidebtn"><a href="https://npo.networkforgood.org/Donate/Donate.aspx?npoSubscriptionId=8252"><img src="/images/epic-150w.png" ALIGN="MIDDLE" width="150" height="54" alt="Defend Privacy--Support Epic"></a></div>
+
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Latest Book</td></tr>
+<tr><td class="sidebody"><a href="http://www.schneier.com/book-lo.html"><img class="sidepic" WIDTH="175" HEIGHT="263" alt="Liars &amp; Outliers" border=0 src="/images/book-lo-175w.jpg"></a>
+<br><a href="http://www.schneier.com/books.html">more books by Bruce Schneier</a>
+</td></tr></table>
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Syndication</td></tr>
+<tr><td class="sidebody">
+<a href="http://www.schneier.com/blog/rss.xml">Full Text Feed</a>
+<br><a href="http://www.schneier.com/blog/index.xml">Excerpts Feed</a>
+
+<p><a href="http://twitter.com/schneierblog/">Follow on Twitter</a>
+<br><a href="http://www.amazon.com/Schneier-on-Security/dp/B0053HDDWW/">Subscribe via Kindle</a>
+</td></tr></table>
+
+
+<table class="sidebox" cellspacing=0><tr><td class="sidemast">Crypto-Gram Newsletter</td></tr>
+<tr><td class="sidebody">
+If you prefer to receive Bruce Schneier's comments on security as a monthly e-mail digest, subscribe to Schneier on Security's sister publication, Crypto-Gram.  
+<br><a href="http://www.schneier.com/crypto-gram.html">read more</a>
+
+</td></tr></table>
+
+<!-- /robots -->
+
+</td></tr>
+</table>
+</body>
+</html>

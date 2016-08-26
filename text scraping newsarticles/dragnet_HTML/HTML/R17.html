@@ -1,0 +1,1512 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Commonly used Broadcom Wi-Fi chipset vulnerable to attack | Electronista</title>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+	<meta name="author" content="author" />
+	<link rel="shortcut icon" href="http://cache.macnn.com/esta/img/electronista_favicon.ico" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.electronista.com/electronista.rss">
+	<meta name="copyright" content="copyright" />
+	<meta name="description" content="Proof-of-concept example code shows a vulnerability in the firmware of two wireless chips sold by Broadcom -- the BCM4325 and the BCM4329. The chips are found in recent devices such as the iPhone 4, iPad, iPad 2, HTC Droid Incredible 2, Motorola Droi" />
+	<meta name="keywords" content="" />
+<link rel="image_src" href="http://cdn.macnn.com/article_images/article_thumbnail/1351301939_ipadiphone-sm.jpg" />
+	<!--  CSS, begin  -->
+	<link rel="stylesheet" href="http://www.electronista.com/_styles/all_styles_screen3.css" type="text/css" media="screen" />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" href="http://www.electronista.com/_styles/ie/ie.css" type="text/css" media="screen" />
+	<![endif]-->
+
+	<!--  CSS, end  -->
+
+	<!--  JS, begin  -->
+	
+
+ 
+ 
+	
+	<script type="text/javascript" src="http://www.electronista.com/_scripts/loadfirst.js"></script>
+	<script type="text/javascript" src="http://www.electronista.com/_scripts/eas_fif.js"></script>
+	<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+	<script type="text/javascript" src="http://www.electronista.com/_scripts/jquery_003.js"></script>
+	<!--<script type="text/javascript" src="http://www.electronista.com/_scripts/allcombinedsource.js"></script>-->
+	
+ <script type="text/javascript">
+ // Add a script element as a child of the body
+ function downloadJSAtOnload() {
+ var element = document.createElement("script");
+ element.src = "http://www.electronista.com/_scripts/allcombinedsource_min.js";
+ document.body.appendChild(element);
+ }
+
+ // Check for browser support of event handling capability
+ if (window.addEventListener)
+ window.addEventListener("load", downloadJSAtOnload, false);
+ else if (window.attachEvent)
+ window.attachEvent("onload", downloadJSAtOnload);
+ else window.onload = downloadJSAtOnload;
+</script>
+
+
+	<!--[if lt IE 8]>
+	<script type="text/javascript" src="http://www.electronista.com/_scripts/ie/DD_roundies_0.0.2a-min.js"></script>
+	
+	<script type="text/javascript">
+		DD_roundies.addRule('.news_flash', '5px');
+		DD_roundies.addRule('.left_column', '5px');
+		DD_roundies.addRule('.right_column', '5px');
+		DD_roundies.addRule('.left_column .top_header', '5px 5px 0px 0px');
+		DD_roundies.addRule('.right_column .top_header', '5px 5px 0px 0px');
+		DD_roundies.addRule('.news_flash .title', '5px 0px 0px 5px');
+		DD_roundies.addRule('.news_flash .item', '5px');
+	</script>
+	<![endif]-->
+
+	<!--[if IE 6]>
+	<style>
+		#nextBtn {right: -1px}
+		#headlines .tabs li a {padding: 3px 8px 0}
+		#headlines .tabs li.settings a {margin: 2px 8px}
+	</style>
+	
+	<script type="text/javascript" src="http://www.electronista.com/_scripts/ie/DD_belatedPNG_0.0.8a-min.js"></script>
+	
+	<script type="text/javascript">
+	      	DD_belatedPNG.fix('#nav-p_home');
+		DD_belatedPNG.fix('#nm-rss a');
+		DD_belatedPNG.fix('#nm-podcasts a');
+		DD_belatedPNG.fix('#nm-tools a');
+		DD_belatedPNG.fix('#nm-search');
+		DD_belatedPNG.fix('.ddy div');
+		DD_belatedPNG.fix('.top_header a');
+		DD_belatedPNG.fix('.mid_header a');
+		DD_belatedPNG.fix('.post a');
+		DD_belatedPNG.fix('.post div');
+		DD_belatedPNG.fix('.close_hot_stories');
+	</script>
+
+	<script language="javascript">
+	$(document).ready(function(){
+		/*menu snav bg*/
+		$('#nav-p').hover(
+			function(){
+			$('.sec_nav').css({'visibility':'visible'})},
+			function(){
+			$('.sec_nav').removeAttr('style');
+			}
+		);
+	});
+	</script>
+	<![endif]-->
+
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280331-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/1006309/ESTA_ArticlePage2', [583, 180], 'div-gpt-ad-1331274874046-0').addService(googletag.pubads());
+googletag.defineSlot('/1006309/ESTA_ArticlePage_1', [574, 100], 'div-gpt-ad-1331274874046-1').addService(googletag.pubads());
+googletag.defineSlot('/1006309/ESTA_LeaderBoard', [728, 90], 'div-gpt-ad-1331274874046-2').addService(googletag.pubads());
+googletag.defineSlot('/1006309/ESTA_MRec', [300, 250], 'div-gpt-ad-1331274874046-3').addService(googletag.pubads());
+googletag.defineSlot('/1006309/ESTA_WSky1', [160, 600], 'div-gpt-ad-1331274874046-4').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+	
+
+
+
+
+
+</head>
+
+<body>
+			
+
+	<!-- FM Tracking Pixel -->
+	<script type='text/javascript' src='http://static.fmpub.net/site/electronista'></script>
+	<!-- FM Tracking Pixel -->
+
+	<!--  header, BEGIN  -->
+	<div id="header" style="position:relative; z-index:9;">
+		<div class="container" style="position:relative; z-index:9;">
+			<div id="leaderboard"><!-- FM Leaderboard 728x90 Zone -->
+				<div id="EAS_fif_1"></div>
+		<script type="text/javascript">
+EAS_load_fif("EAS_fif_1", "/adfile.php?id=EAS_fif_1&rad=1351371131", 
+             "http://static.fmpub.net/zone/1555", 
+              0, 0);
+</script>
+			</div><!-- FM Leaderboard 728x90 Zone -->
+		</div><!--container-->
+		<div id="navigation">
+		<!--  header:primary nav, BEGIN  -->
+			<div id= "nothighlighted" class="container" style="position:relative;">
+				<div id="nav-p_home">
+					<a href="http://www.electronista.com/" title="return to the home page"><img src="http://www.macnn.com/_images/_blank.gif" alt="" width="184" height="88" border="0" /></a></li>
+				</div><!-- nav-p_home-->
+				<div id="nav-m" >
+					<ul>
+						<li id="nm-rss">
+							<a href="javascript:;"><img src="http://cache.macnn.com/macnn/_images/_blank.gif" alt="" width="50" height="57" border="0" id="main_menu_7"/></a>
+
+							<div class="ddy" id= "submenu7">
+								<div class="ddy-top">
+									<ul>
+										<li><a href='http://www.electronista.com/electronista.rss'> all </a></li>
+										<li><a href='http://www.macnn.com/rss/macnn.rss'> mac news </a> </li>
+										<li><a href='http://www.macnn.com/rss/macnn_reviews.rss'> reviews </a> </li>
+										<li><a href='http://www.macnn.com/podcast/macnn.rss'> pod casts </a> </li>
+										<li><a href='http://www.macnn.com/rss/ipodnn.rss'> ipod news </a> </li>
+										<li><a href='http://www.macnn.com/rss/'> by category </a> </li>
+										<li><a href='http://twitter.com/electronista/' target="_blank"> follow us on twitter </a> </li>
+										<li></li>
+									</ul>
+								</div><!--ddy-top-->
+								<div class="ddy-btm"></div>
+							</div><!--submenu7-->
+						</li>
+						<li id="nm-podcasts"><a href="javascript:void(null);"><img src="http://cache.macnn.com/macnn/_images/_blank.gif" alt="" width="46" height="57" border="0" id="main_menu_2" /></a>
+							<div class="ddy" id= "submenu2">
+								<div class="ddy-top">
+									<ul>
+										<li><a href='http://images.macnn.com/macnn/reviews/podcast/owc.m4a'> current podcast (download)</a></li>
+										<li><a href='http://www.macnn.com/podcast/'> podcast </a></li>
+										<li><a href='https://phobos.apple.com/WebObjects/MZFinance.woa/wa/subscribePodcast?id=96959703'> subscribe </a></li>
+										<li></li>
+									</ul>
+								</div><!--ddy-top-->
+								<div class="ddy-btm"></div>
+							</div><!--submenu2-->
+						</li>
+						<li id="nm-tools"><a href="javascript:;"><img src="http://cache.macnn.com/macnn/_images/_blank.gif" alt="" width="46" height="57" border="0" id="main_menu_1" /></a>
+							<div class="ddy" id="submenu1">
+								<div class="ddy-top">
+									<ul>
+										<li><a href='http://www.electronista.com/prefrences.php?type=1'>Portal</a></li>
+										<li><a href="http://www.electronista.com/prefrences.php?type=2">Headlines + News</a></li>
+										<li><a href="http://www.electronista.com/prefrences.php?type=3">Headlines</a></li>
+										<li><a href="http://www.electronista.com/prefrences.php?type=4">Legacy</a></li>
+																				<li><a href="http://www.electronista.com/kontera_links.php">Turn off kontera links</a>
+																														<li><a href="http://www.electronista.com/tynt_code.php">Turn off tynt links</a>
+																														<li><a href="http://www.electronista.com/apture_code.php">Turn off apture links</a>
+																				<!-- <li><a href="http://www.electronista.com/kontera_links.php">Turn off Kontera links</a></li>
+										<li><a href="http://www.electronista.com/tynt_code.php">Turn off Tynt paste feature</a></li>
+										<li><a href="http://www.electronista.com/apture_code.php">Turn off Apture sharing/search bar</a></li> -->
+
+										<!-- commented by nitin on june 8, 2011 -->
+										<!--<li id="hidehotstor"><a href="javascript:;" onclick="closeDiv1();">Hide Hot Stories</a></li>
+										<li id="hideappstock"><a href="javascript:;" onclick="closeDiv();">Hide Apple Stock Quote</a></li>-->
+									</ul>
+								</div><!--ddy-top-->
+								<div class="ddy-btm clear"></div>
+							</div><!--submenu1-->
+						</li>
+						<!--  Search Box, BEGIN  -->
+						<li id="nm-search">
+							<form name="searchform" method="post" action="http://www.electronista.com/search/">
+								<!--<input type="text" id="search" name="search" value=""  autocomplete="off"/> -->
+								<div id="searchext"><img src="http://cache.macnn.com/macnn/_images/_blank.gif" alt="" width="13" height="13" border="0" id="sex" onClick="$('#myspan').is(':visible') ? $('#myspan').hide() : $('#myspan').show()"></div>
+								<input onkeyup="getSuggestedNews(this.parentNode)"  type="text" name="search" id="search" value="Search Electronista" onfocus="if(this.value =='Search Electronista'){this.value = ''}; $('#myspan').show()" onblur="if(this.value==''){this.value= 'Search Electronista'}; " />
+							</form>
+							<div id="myspan" class="ddb">
+								<div class="ddb-top" id="search_content">
+									<ul>
+										<li><img src="http://cache.macnn.com/macnn/_images/loading.gif" width="126" height="22"></li>
+										<li><a href='javascript:void(null);' onClick="$('#myspan').hide()">Close</a><a style="float:right;" href='http://www.electronista.com/search/'>View All Results</a></li>
+									</ul>
+								</div><!--ddb-top-->
+								<div class="ddb-btm"></div>
+							</div><!--myspan-->
+						</li>
+						<!--  Search Box, End  -->
+					</ul>
+				</div><!--nav-m-->
+				<div id="abc">
+					<ul id="nav-p" class="">
+						<li>
+							<a id="main_menu_0" href="http://www.electronista.com/portal/" >news</a>
+							<ul>
+								<li><a href='http://www.electronista.com/portal/'>portal</a></li>
+								<li><a href='http://www.electronista.com/headlines/'>headlines</a></li>
+								<li><a href='http://www.electronista.com/articles/'>archives </a></li>
+								<li><a href='http://www.electronista.com/categories/'>by category</a></li>
+								<li><a href='http://www.electronista.com/top/'>top stories</a></li>
+								<li><a href='http://www.electronista.com/contact/newstips/1'>submit tips</a></li>
+							</ul>
+						</li>
+						<li>
+							<a id="main_menu_1" href="http://www.electronista.com/review/" >reviews</a>
+							<ul>
+								<li><a href='http://www.electronista.com/review/'>review home</a></li>
+								<li><a href='http://www.electronista.com/reviews/categories/'>review by category</a></li>
+								<li><a href='http://www.electronista.com/reviews/sort/'>review sorted alphabetically</a></li>
+							</ul>
+						</li>
+						<li>
+							<a id="main_menu_3" href="http://forums.macnn.com/f/">forums</a>
+							<ul>
+								<li><a href='http://forums.macnn.com/'>community</a></li>
+								<li><a href='http://forums.macnn.com/f/'>main</a></li>
+								<li><a href='http://forums.macnn.com/f/50/hardware-troubleshooting-and-discussion'>hardware</a></li>
+								<li><a href='http://forums.macnn.com/f/49/software-troubleshooting-and-discussion'>software</a></li>
+								<li><a href='http://forums.macnn.com/f/89/macnn-lounge'>lounge</a></li>
+							</ul>
+						</li>
+						<li>
+							<a id="main_menu_4" href="http://www.macnn.com/rss/" >services</a>
+							<ul>
+								<li><a href='http://www.macnn.com/rss/'>rss feeds</a></li>
+								<li><a href='http://www.macnn.com/newsletter/'>newsletter</a></li>
+								<li><a href='http://m.electronista.com/'> esta mobile </a></li>
+								<li><a href='http://www.electronista.com/chat/'> irc chat </a></li>
+								<li><a href='http://forums.macnn.com/profile.php?do=editpassword'>change password </a></li>
+							</ul>
+						</li>
+						<li>
+							<a id="main_menu_5" href="http://www.electronista.com/contact/newstips/1" >contact</a>
+							<ul>
+								<li><a href='http://www.electronista.com/about/'> about esta </a></li>
+								<li><a href='http://www.electronista.com/contact/newstips/1'> news tips </a></li>
+								<li><a href='http://www.electronista.com/contact/feedback/1'> feedback </a></li>
+								<li><a href='http://www.electronista.com/contact/correction/1'> corrections </a></li>
+								<li><a href='http://www.electronista.com/guidelines/'> submission guidelines </a></li>
+							</ul>
+						</li>
+					</ul><!--nap-p-->
+					<div class="sec_nav" ></div>
+				</div><!--abc-->
+
+
+			</div><!--nothighlighted-->
+		<!--  header:primary nav, END  -->
+		</div><!--navigation-->
+	<!--  header:brand&navigation, END  -->
+	</div><!--header-->
+
+		<!-- HP:27-7-2011 New notification HTML  -->
+
+<table align="center" style="display:none" class="main_notify" height="100%">
+	<tr>
+    	<td class="notify" height="100%">
+       
+        </td>
+        <td class="notify-text" valign="middle">
+        
+        </td>
+		<td width="20" valign="top">
+			<a href="javascript:void(null)" class="close_notify" OnClick="$('.main_notify').hide()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+		</td>
+    </tr>
+</table>
+<div><!-- FM Electronista Super Leaderboard Zone -->
+<div id="EAS_fif_12"></div>
+		<script type="text/javascript">
+EAS_load_fif("EAS_fif_12", "/adfile.php?id=EAS_fif_12&rad=1351371131", 
+             "http://static.fmpub.net/zone/3091", 
+              0, 0);
+</script>
+<!-- FM Electronista Super Leaderboard Zone -->
+<!-- FM AD SKIN Zone -->
+<div id="EAS_fif_13"></div>
+		<script type="text/javascript">
+EAS_load_fif("EAS_fif_13", "/adfile.php?id=EAS_fif_13&rad=1351371131", 
+             "http://static.fmpub.net/zone/4003", 
+              0, 0);
+</script>
+
+<!-- FM AD SKIN Zone -->
+</div> <div style="clear:both"></div>
+
+		<!-- <div class="news_flash" style="display:none">
+			<a href="javascript:void(null)" class="close_notify" OnClick="$('.news_flash').hide()">close</a>
+			<div class="title">
+				<span>Notification</span>
+			</div>
+			<div class="item">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="102" class="left_text"></td>
+						<td class="middle_text"></td>
+					</tr>
+				</table>
+			</div>
+			<div class="clear"></div>
+		</div> --><!--news_flash-->
+
+		<div class="content_wrapper">
+			<div class="left_column">
+											<div class="top_header">
+
+			<a class="toggle" id="article_tog" onClick="$('#posts_wrapper').slideToggle('slow', function(){ if($('#posts_wrapper').is(':visible'))
+
+			{
+
+				$('#article_tog').removeClass('closed');
+
+				$('#sidebaradcontainer_hidden').show('fast');
+
+			}
+
+			else
+
+			{
+
+				$('#article_tog').addClass('closed'); 
+
+				$('#sidebaradcontainer_hidden').hide();
+
+			} } );" href="javascript:void(null)">toggle</a>
+
+			<ul><li><a href="">electronista news</a></li></ul>
+
+		</div>	
+
+		
+		<div id="posts_wrapper">
+
+			<div class="post" >
+
+				<div class="post_header">
+
+					
+
+					<span class="articleDetailh1"><h1><a href="">Commonly used Broadcom Wi-Fi chipset vulnerable to attack</a></h1></span>
+
+					<div class="social">
+
+
+						<a class="facebook" title="Facebook" onclick='window.open("http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.electronista.com%2Farticles%2F12%2F10%2F26%2Fproof.of.concept.code.knocks.affected.devices.offline%2F&amp;t=http%3A%2F%2Fwww.electronista.com%2Farticles%2F12%2F10%2F26%2Fproof.of.concept.code.knocks.affected.devices.offline%2F", "facebook", "toolbar=no, width=550, height=550"); return false;' href='http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.electronista.com%2Farticles%2F12%2F10%2F26%2Fproof.of.concept.code.knocks.affected.devices.offline%2F&amp;t=http%3A%2F%2Fwww.electronista.com%2Farticles%2F12%2F10%2F26%2Fproof.of.concept.code.knocks.affected.devices.offline%2F'>2</a>
+
+						<a class="twitter retweet vert self" title="Twitter" href="http://twitter.com/home/?status=RT+%40electronista+Commonly+used+Broadcom+Wi-Fi+chipset+vulnerable+to+attack+http://www.electronista.com/articles/12/10/26/proof.of.concept.code.knocks.affected.devices.offline/">160</a>
+
+						
+
+						<a class="digg" title="Digg" href="http://digg.com/submit?phase=2&url=http://www.electronista.com/articles/12/10/26/proof.of.concept.code.knocks.affected.devices.offline/&title=Commonly+used+Broadcom+Wi-Fi+chipset+vulnerable+to+attack" target="_blank"></a>
+
+						<a class="comments" title="Comments" href="#comment_wrapper">2</a>
+
+					</div>
+
+
+
+					<h2>updated 09:40 pm EDT, Fri October 26, 2012</h2>
+
+
+
+				</div>
+
+				<div class="adPlaceholder" style="float: right; width: 300px; height: auto; margin: 0 0 10px 10px;" id="sidebaradcontainer">
+
+					<div id="EAS_fif_7"></div>
+		<script type="text/javascript">
+EAS_load_fif("EAS_fif_7", "/adfile.php?id=EAS_fif_7&rad=1351371131", 
+             "http://static.fmpub.net/zone/1554", 
+              0, 0);
+</script>			
+
+				</div>
+
+				<h3>Proof-of-concept code knocks affected devices offline</h3>
+
+				<!-- summary field added by nitin on june 8, 2011 -->
+
+				<p style = "font-style:italic"></p>
+
+				<br />
+
+				<p>Proof-of-concept example code shows a vulnerability in the firmware of two wireless chips sold by <a href="http://macnn.com/rd/271609==http://www.electronista.com/tag/Broadcom" rel='nofollow'>Broadcom</a> -- the BCM4325 and the BCM4329. The chips are found in recent devices such as the iPhone 4, iPad, iPad 2, HTC Droid Incredible 2, Motorola Droid X2, and some Edge model cards manufactured by Ford. The flaw makes the devices vulnerable to attacks that render the Wi-Fi connection unusable for the duration of the attack.<p style = "margin-top:20px;">"The only requirement to exploit the vulnerability is to have a wireless card that supports raw inject of 802.11 frames," Andrés Blanco, a researcher from Core Security told <a href="http://macnn.com/rd/271610==http://arstechnica.com/security/2012/10/dos-vulnerability-affects-older-iphones-androids-even-a-ford-car/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+arstechnica/index+(Ars+Technica+-+All+content)" rel='nofollow'>Ars Technica</a>. A complete list of devices affected by this flaws available at the <a href="http://macnn.com/rd/271608==http://www.coresecurity.com/content/broadcom-input-validation-BCM4325-BCM4329" rel='nofollow'>Core Security website</a>.<br />
+<br />
+Once the assault is over, the attacked device works normally. Other features of the device are unaffected by the Wi-Fi disruption. "We are not sure that we could retrieve private user data but we are going to look into this," Blanco said.</p>
+
+				<div align="center">
+
+					
+				</div>
+
+				<br />
+
+				<p class="author">By Electronista Staff</p>
+
+				<div class="tags">
+
+					<div class="post_img">
+
+						<div class="post_tools">
+
+							<div class="pt_print">
+
+								<a href="javascript:;" onclick="javascript:window.open('http://www.electronista.com/print/108779','printwindow','width=660,height=800,scrollbars=yes');" target="_blank">print</a>
+
+							</div>
+
+							<div class="pt_mail">
+
+								<a href="javascript:;" onclick="javascript:window.open('http://www.electronista.com/email/108779','emailwindow','width=660,height=800,scrollbars=yes');">email</a>
+
+							</div>
+
+							<div class="pt_discuss">
+
+								<a href="#comment_frame">(2)</a>
+
+							</div>
+
+						</div><!--post_tools-->
+
+					</div><!--post_img-->
+
+					<p>TAGS : &nbsp;</p> <a href="http://www.electronista.com/categories/iPhone.html">iPhone</a>, <a href="http://www.electronista.com/categories/security.html">security</a>, <a href="http://www.electronista.com/tag/vulnerability">vulnerability</a>, <a href="http://www.electronista.com/tag/Broadcom">Broadcom</a>, <a href="http://www.electronista.com/categories/iPad.html">iPad</a>
+
+					<div class="clear"></div>
+
+				</div><!--tags-->
+
+				<div class="social_bot">
+
+					<p>Share the Article</p>
+
+					<div class="social_bot_other">
+
+						<a class="facebook" onclick='window.open("http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.electronista.com%2Farticles%2F12%2F10%2F26%2Fproof.of.concept.code.knocks.affected.devices.offline%2F&amp;t=http%3A%2F%2Fwww.electronista.com%2Farticles%2F12%2F10%2F26%2Fproof.of.concept.code.knocks.affected.devices.offline%2F", "facebook", "toolbar=no, width=550, height=550"); return false;' href='http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.electronista.com%2Farticles%2F12%2F10%2F26%2Fproof.of.concept.code.knocks.affected.devices.offline%2F&amp;t=http%3A%2F%2Fwww.electronista.com%2Farticles%2F12%2F10%2F26%2Fproof.of.concept.code.knocks.affected.devices.offline%2F'>Facebook</a>
+
+						<a class="twitter" href="http://twitter.com/home/?status=RT+%40electronista+Commonly+used+Broadcom+Wi-Fi+chipset+vulnerable+to+attack+http://www.electronista.com/articles/12/10/26/proof.of.concept.code.knocks.affected.devices.offline/">Twitter</a>
+
+						<a class="delious" href="http://del.icio.us/post?url=http://www.electronista.com/articles/12/10/26/proof.of.concept.code.knocks.affected.devices.offline/">Delious</a>
+
+						<a class="slashdot" href="http://slashdot.org/bookmark.pl?url=http://www.electronista.com/articles/12/10/26/proof.of.concept.code.knocks.affected.devices.offline/">Slash Dot</a>
+
+						<!-- <a class="buzzup" href="http://buzz.yahoo.com/article/macnncom318/http://www.electronista.com/articles/12/10/26/proof.of.concept.code.knocks.affected.devices.offline/" target="_blank">Buzz Up</a> -->
+
+						<a class="digg" href="http://digg.com/submit?phase=2&url=http://www.electronista.com/articles/12/10/26/proof.of.concept.code.knocks.affected.devices.offline/&title=Commonly+used+Broadcom+Wi-Fi+chipset+vulnerable+to+attack">Digg</a>
+
+					</div>
+
+
+
+					<div class="social_bot_google">
+
+						<g:plusone size="standard" count="false"></g:plusone>
+
+					</div>
+
+				<div class="clear"></div>
+
+				</div><!--social_bot-->
+
+				<div class="clearall"></div>
+
+
+
+				<!--  related articles, BEGIN  -->
+
+				
+				
+<div style="margin-top:20px;">
+<div id='taboola-grid-4x2'></div>
+
+        <script type="text/javascript"> 
+        window._taboola = window._taboola || []; 
+        _taboola.push({mode:'grid-4x2', container:'taboola-grid-4x2'});
+       </script> 
+<script type="text/javascript"> 
+        window._taboola = window._taboola || []; 
+        _taboola.push({article:'auto'}); 
+(function() {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "http://cdn.taboolasyndication.com/libtrc/mnmmedia-electronista/loader.js";
+    var x = document.getElementsByTagName("script")[0];
+    x.parentNode.insertBefore(s, x);
+})(); 
+        </script> </div>
+		
+				
+
+				
+
+				<div style="margin-top:10px;">
+
+
+					<!-- ESTA_ArticlePage2 -->
+<div id='div-gpt-ad-1331274874046-0' style='width:583px; height:180px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1331274874046-0'); });
+</script>
+</div>
+</div>
+<div style="margin-top:10px;">
+<!-- FM Convosuite 650x300 Zone -->
+<div id="EAS_fif_20"></div>
+		<script type="text/javascript">
+EAS_load_fif("EAS_fif_20", "/adfile.php?id=EAS_fif_20&rad=1351371131", 
+             "http://static.fmpub.net/zone/7218", 
+              0, 0);
+</script>			
+<!-- FM Convosuite 650x300 Zone -->
+
+
+					
+
+				</div>
+
+
+
+				<div class="art-related">
+
+					<h1 class="gray">Related Articles</h1>
+
+					<ul>
+
+						<li><a href='http://www.electronista.com/articles/12/09/27/insulin.pumps.defibrillators.capable.of.killing.patients/'>Government: wireless medical devices demand more oversight</a></li><li><a href='http://www.electronista.com/articles/12/09/10/domain.name.servers.assailed.by.denial.of.service.attack/'>GoDaddy suffers from mass outages, Anonymous member to blame</a></li><li><a href='http://www.electronista.com/articles/12/09/24/chicago.broadband.challenge.starts.with.free.wi.fi.in.millenium.park/'>Chicago parks, public spaces to get free Wi-FI</a></li><li><a href='http://www.electronista.com/articles/12/09/19/direct.competitor.to.apple.airplay/'>Wi-Fi Alliance sets Miracast cross-device streaming standard</a></li><li><a href='http://www.electronista.com/articles/12/09/26/researchers.find.htc.sony.other.android.phones.are.also.vulnerable/'>Data-wiping security flaw not limited to Samsung phones</a></li><li><a href='http://www.electronista.com/articles/12/10/10/ipad.mini.announcement.anticipated.as.imminent/'>Report tips iPad with UK LTE, says Mini will be Wi-Fi-only</a></li><li><a href='http://www.electronista.com/articles/12/10/11/device.boasts.enhanced.mimo.antenna.low.complexity.configuration/'>Western Digital adds new Wi-Fi Range Extender to My Net line</a></li>
+
+					</ul>
+
+				</div>
+
+				<div class="art-related">
+
+					<h1 class="gray">Recent Articles</h1>
+
+					<ul>
+
+						<li><a href='http://www.electronista.com/articles/12/10/27/ios.smartglass.app.still.unavailable/'>Xbox SmartGlass app released for Android</a></li><li><a href='http://www.electronista.com/articles/12/10/27/nexus.event.delayed.due.to.super.storm/'>Google cancels Android event over Hurricane Sandy</a></li><li><a href='http://www.electronista.com/articles/12/10/26/proof.of.concept.code.knocks.affected.devices.offline/'>Commonly used Broadcom Wi-Fi chipset vulnerable to attack</a></li><li><a href='http://www.electronista.com/articles/12/10/26/scores.eight.of.10.still.has.second.drive.expansion.option/'>New Mac mini gets teardown, still highly repairable</a></li><li><a href='http://www.electronista.com/articles/12/10/26/only.remaining.patents.held.against.the.xbox.360.are.h264/'>Motorola pulls Wi-Fi patents from Microsoft ITC complaint</a></li><li><a href='http://www.electronista.com/articles/12/10/26/higher.res.screen.than.retina.brushed.aluminum.chassis/'>Nexus 10 tablet shown off in new photos</a></li><li><a href='http://www.electronista.com/articles/12/10/26/sinofsky.cites.engineering.in.driving.down.win.8.device.prices/'>Sinofsky: Win 8 PC a better deal, iPad mini 'recreational'</a></li><li><a href='http://www.electronista.com/articles/12/10/26/ios.grabs.4637.percent.of.ad.traffic.share/'>Opera: iOS still tops in ad monetization</a></li><li><a href='http://www.electronista.com/articles/12/10/26/new.york.man.falsified.information.claiming.partial.ownership/'>Facebook lawsuit ends with claimant arrested for fraud</a></li><li><a href='http://www.electronista.com/articles/12/10/26/sources.suggest.missing.first.year.target.to.blame/'>Panasonic may leave European mobile phone market in 6 months</a></li><li><a href='http://www.electronista.com/articles/12/10/26/google.updates.maps.with.natural.geography.overlay/'>Google Maps adds natural geography details</a></li>
+
+					</ul>
+
+				</div>
+
+				<div class="clearall"></div>
+
+				<div style="margin-bottom:10px;"></div>
+
+			</div><!--post-->
+
+		</div><!--posts_wrapper-->
+
+		
+		
+
+		<!-- show image gallery if images are more than 3 -->
+
+		
+		
+
+		<div class="mid_header">
+	<a class="toggle" id="comment_tog" onClick="$('#comment_wrapper').slideToggle('slow', function(){ $('#comment_wrapper').is(':visible') ? $('#comment_tog').removeClass('closed') : $('#comment_tog').addClass('closed'); } );" href="javascript:void(null)">toggle</a>
+	<p>Comments</p>
+</div>
+<div id="commentdoublewrapper">
+	<div id="comment_wrapper">
+		<div id="allcommentscont">
+		
+				<ol class="commentlist" id='comment'>
+			<li class="comment first">
+				<div class="author_data">
+					<a href="http://forums.macnn.com/u/121399/zanziboy" target="_blank"><cite>zanziboy</cite></a>
+					<p>68 posts</p>
+				</div><!--author_data-->
+				<small class="commentmetadata">
+					<a title="" href="#">2012-10-27 11:34:58.</a>
+					<!-- added class by nitin on 7th june 2011 -->
+				</small>
+				<p>I believe this is the tip of the iceberg. There are probably a number of chipsets with potential exploits. I am glad someone is finding these issues before the criminals take advantage of them.</p>
+				<div class="clear"></div>
+			</li><!--comment-->
+		</ol><!--commentlist-->
+				<ol class="commentlist" id='comment'>
+			<li class="comment first">
+				<div class="author_data">
+					<a href="http://forums.macnn.com/u/50733/eriamjh" target="_blank"><cite>eriamjh</cite></a>
+					<p>6278 posts</p>
+				</div><!--author_data-->
+				<small class="commentmetadata">
+					<a title="" href="#">2012-10-27 12:53:01.</a>
+					<!-- added class by nitin on 7th june 2011 -->
+				</small>
+				<p>This is kinda lame.  They don't get any access.  It doesn't cause any crashes or damage.  It's basically WI-Fi blocking.</p>
+				<div class="clear"></div>
+			</li><!--comment-->
+		</ol><!--commentlist-->
+				<span name="myspan" id="myspan"></span>
+		</div>
+		 <div id="commentform" style="float:right">
+		
+		<input type="button" value="Submit Comment" tabindex="5" name="cmt-preview" id="cmt-submit" onclick="javascript:window.location.href='http://forums.macnn.com/t/494073';"></div>
+		<!--comment_form-->
+	
+		<div class="showmorecomment"></div>
+</div><!--comment_wrapper-->
+		
+	 
+</div><!--commentdoublewrapper-->
+
+
+		<div id="overlayContent" style="width="display: none;-moz-background-clip: border;-moz-background-origin: padding; -moz-background-size: auto auto;-moz-border-radius-bottomleft: 4px;-webkit-border-radius: 4px; background: -webkit-gradient(linear,left top,left bottom,from(#323439),to(#2C2E33)); -moz-border-radius-bottomright: 4px;-moz-border-radius-topleft: 4px;-moz-border-radius-topright: 4px;
+
+ -moz-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5); background-attachment: scroll;background-color: transparent;background-image: -moz-linear-gradient(center top , #323439, #2C2E33);background-position: 0 0;background-repeat: repeat;padding-right: 18px;position: absolute;
+
+">
+
+	<div style="padding:5px 0; overflow:hidden;">
+
+		<div style="width:60px; float:left; padding:8px 0 0 10px; color:#fff;">&nbsp</div>
+
+		<div id="closeoverlay" style="float:right; padding:5px 10px 0 0;">
+
+
+
+		<img src="http://cache.leftlanenews.com/lln/si2/large-close-btn.png" title="close" alt="close"/></div>
+
+
+
+		<div style="float:left;">
+
+		<!--div style="background-image: url(http://cache.leftlanenews.com/lln/si5/popup_arrow.png); no-repeat -310px 0; position:absolute; top:10px;">
+
+		</div-->
+
+			<div style="width:80px; margin:2px 0 0 0; float:left;-moz-background-clip: border;-moz-background-origin: padding;-moz-background-size: auto auto;-moz-border-radius-bottomleft: 4px;-moz-border-radius-bottomright: 4px;    -moz-border-radius-topleft: 4px;
+
+    -moz-border-radius-topright: 4px;    -moz-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);    background-attachment: scroll;    background-color:transparent;    background-image: -moz-linear-gradient(center top , #323439, #2C2E33);    background-position: 0 0;   background-repeat: repeat;    padding-right: 18px;    position: absolute;">
+
+
+
+			<!-- <select name="imagesize-select" class="changeMe" id="imagesize-select" style="width:80px;margin-top:1px;" onchange="changeimagesize(this.value,'<?=$imageUrlInUse;?>');">
+
+				<option value="">Size</option>
+
+				<option value="1035" <? if($_COOKIE['sizegalselected']=='1035' || $_COOKIE['sizegalselected']=="") echo "selected";?>>1035px</option>
+
+				<option value="1200" <? if($_COOKIE['sizegalselected']=='1200') echo "selected";?>>1200px</option>
+
+			</select> -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+<!--END*/-->
+
+
+
+		<div style="clear:both;"></div>
+
+
+
+
+
+		<div id="overlayImage" align="center"><img id="overlayimg" style="max-width:982px" alt="Photo" /></div>
+
+
+
+		</div>
+
+					
+
+			</div><!--left_column-->
+
+			
+
+			<div class="right_column">
+
+				<div class="top_header">
+
+					<!-- changed here by nitin on june 9 2011 -->
+
+					<a class="toggle" id="headlines_tog"  onClick="javascript:rightpanel2_hide_headline();"  href="javascript:void(null)">toggle</a>
+
+					<p>Network Headlines</p>
+
+				</div>
+
+				<div id="headlines">
+
+					<!-- changed here by nitin on june 9 2011 -->
+
+					<input type = "hidden" id = "hidden_top_val">
+
+					<input type = "hidden" id = "hidden_top_val3">
+
+					<input type = "hidden" id = "hidden_top_val4">
+
+					<input type = "hidden" id = "hidden_top_val5">
+
+					<input type = "hidden" id = "hidden_top_val6">
+
+					<input type = "hidden" id = "hidden_top_val7">
+
+					<ul class="tabs">
+
+						<li id="macnn_tab" class="first active"><a href="javascript:void(null)" title="MacNN">MacNN</a></li>
+
+						<li id="electronista_tab"><a href="javascript:void(null)" title="Electronista">Electronista</a></li>
+
+						<li id="ipodnn_tab"><a href="javascript:void(null)" title="iPodNN">iPodNN</a></li>
+
+						<li id="dealnn_tab"><a href="javascript:void(null)" title="DealNN">DealNN</a></li>
+
+						<li class="last">&nbsp;</li>
+
+					</ul>
+
+					<div class="gradient"></div>
+
+					<div class="headline_pane" id="macnn" style="display:block">
+
+						<table>
+
+							
+							<tr>
+
+								<td class="date">10/26</td>
+
+								<td><a href="http://www.electronista.com/articles/12/10/26/scores.eight.of.10.still.has.second.drive.expansion.option/">New Mac mini gets teardown, still highly...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/26</td>
+
+								<td><a href="http://www.ipodnn.com/articles/12/10/26/more.regions.now.have.prices.in.local.currencies.as.well/">Apple changes minimum pricing on apps...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/26</td>
+
+								<td><a href="http://www.macnn.com/articles/12/10/26/both.feature.product.as.hero.dont.go.into.specs.or.prices/">Apple debuts TV ad for 13-inch MBP,...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/25</td>
+
+								<td><a href="http://www.electronista.com/articles/12/10/25/we.would.never.make.them.for.a.variety.of.reasons/">Cook: the iPad mini is not a 7-inch...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/25</td>
+
+								<td><a href="http://www.macnn.com/articles/12/10/25/update.for.13.inch.retina.macbook.pro.imac.mac.mini/">Apple updates latest Macs, Logic, Camera...</a></td>
+
+							</tr>
+
+							
+						</table>
+
+						<p class="show_more">
+
+							<a href="http://www.macnn.com/headlines/">Show All</a>
+
+						</p>
+
+						<div class="clear"></div>
+
+					</div><!--macnn-->
+
+					<div class="headline_pane" id="electronista">
+
+						<table>
+
+							
+							<tr>
+
+								<td class="date">10/26</td>
+
+								<td><a href="http://www.electronista.com/articles/12/10/26/scores.eight.of.10.still.has.second.drive.expansion.option/">New Mac mini gets teardown, still highly...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/26</td>
+
+								<td><a href="http://www.electronista.com/articles/12/10/26/htc.continues.downward.slide.while.samsung.gains.more.ground/">HTC Q3 results reveal massive 76 percent...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/26</td>
+
+								<td><a href="http://www.electronista.com/news/108753">LG Ultra HD 84-inch 4K TV hits US market...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/25</td>
+
+								<td><a href="http://www.electronista.com/articles/12/10/25/we.would.never.make.them.for.a.variety.of.reasons/">Cook: the iPad mini is not a 7-inch...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/24</td>
+
+								<td><a href="http://www.electronista.com/articles/12/10/24/surface.rt.tablet.gets.snaps.for.hardware.but.not.overall.experience/">Microsoft Surface RT: early reviews...</a></td>
+
+							</tr>
+
+							
+							
+
+						</table>
+
+						<p class="show_more">
+
+							<a href="http://www.electronista.com/headlines/">Show All</a>
+
+						</p>
+
+						<div class="clear"></div>
+
+					</div><!--electronista-->
+
+					<div class="headline_pane" id="ipodnn">
+
+						<table>
+
+							
+							<tr>
+
+								<td class="date">10/26</td>
+
+								<td><a href="http://www.ipodnn.com/articles/12/10/26/more.regions.now.have.prices.in.local.currencies.as.well/">Apple changes minimum pricing on apps...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/19</td>
+
+								<td><a href="http://www.ipodnn.com/articles/12/10/19/residents.tourists.brave.cold.weather.overnight.stays/">Long lines mark flagship Beijing Apple...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/19</td>
+
+								<td><a href="http://www.ipodnn.com/articles/12/10/19/thinkgeek.now.shipping.8.bitty.wireless.gaming.pad.for.ios.android/">ThinkGeek shipping 8-Bitty retro wireless...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/17</td>
+
+								<td><a href="http://www.ipodnn.com/articles/12/10/17/accessory.makers.summit.held.in.shenzhen.china/">Apple schedules 'Made for i' conference...</a></td>
+
+							</tr>
+
+							
+							<tr>
+
+								<td class="date">10/12</td>
+
+								<td><a href="http://www.ipodnn.com/news/108394">Apple to pay Swiss Federal Railways...</a></td>
+
+							</tr>
+
+							
+						</table>
+
+						<p class="show_more">
+
+							<a href="http://www.ipodnn.com/headlines/">Show All</a>
+
+						</p>
+
+						<div class="clear"></div>
+
+					</div><!--ipodnn-->
+
+					<div class="headline_pane" id="dealnn">
+
+						<table></table>
+
+						<p class="show_more">
+
+							<a href="http://www.dealnn.com/">Show All</a>
+
+						</p>
+
+						<div class="clear"></div>
+
+					</div><!--dealnn-->
+
+				</div><!--headlines-->
+
+				
+
+								<div class="mid_header">		
+
+	<!-- changed by nitin on june 9 2011 -->
+
+		<a class="toggle" id="top10_tog"  onClick="javascript:rightpanel2_hide_popular();"  href="javascript:void(null)">
+
+			toggle
+
+		</a>
+
+		<p>
+
+			Most Popular
+
+		</p>
+
+	</div>				
+
+	<div id="top10">					
+
+		<div class="adPlaceholder" id="sidebartower" style="float: left;margin-left:10px;">
+		<div id="EAS_fif_6"></div>
+		<script type="text/javascript">
+EAS_load_fif("EAS_fif_6", "/adfile.php?id=EAS_fif_6&rad=1351371131", 
+             "http://static.fmpub.net/zone/1556", 
+              0, 0);
+</script>			
+
+		</div>
+
+		<div  style="margin-bottom:10px;display:none;" id="sidebartowersmall"><script type='text/javascript'><!--//<![CDATA[
+
+   var m3_u = (location.protocol=='https:'?'https://gorgias.macnn.com/www/delivery/ajs.php':'http://gorgias.macnn.com/www/delivery/ajs.php');
+
+   var m3_r = Math.floor(Math.random()*99999999999);
+
+   if (!document.MAX_used) document.MAX_used = ',';
+
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+
+   document.write ("?zoneid=5");
+
+   document.write ('&amp;cb=' + m3_r);
+
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+
+   document.write ("&amp;loc=" + escape(window.location));
+
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+
+   if (document.context) document.write ("&context=" + escape(document.context));
+
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+
+   document.write ("'><\/scr"+"ipt>");
+
+//]]>--></script><noscript><a href='http://gorgias.macnn.com/www/delivery/ck.php?n=a78d0908&amp;cb=<?=time();?>' target='_blank'><img src='http://gorgias.macnn.com/www/delivery/avw.php?zoneid=5&amp;cb=<?=time();?>&amp;n=a78d0908' border='0' alt='' /></a></noscript>
+
+</div>
+
+
+		<a href="http://www.electronista.com/rss/macnn_mostpopular.rss" style = "text-decoration:none;display:none;">
+
+			<h1>
+
+				10 Most Read
+
+			</h1>
+
+		</a>
+
+		<ul style="display:none;">
+
+									
+
+			<li><a href='http://www.electronista.com/articles/12/10/18/apple.set.to.close.second.acquisition.in.two.months/'>Rumor: Apple to acquire social video start up, Color Labs</a></li>
+
+									
+
+			<li><a href='http://www.electronista.com/articles/12/10/23/coverage.begins.at.10am.pt/'>Live: Apple's ''iPad mini'' unveiling event</a></li>
+
+									
+
+			<li><a href='http://www.electronista.com/articles/12/10/26/all.products.expected.in.the.first.quarter.of.2013/'>Ableton reveals Live 9 upgrade, Push USB hardware instrument</a></li>
+
+									
+
+			<li><a href='http://www.macnn.com/articles/12/10/21/at.least.one.if.not.both.likely.for.october.23.press.event/'>Reports: iTunes 11, iBooks 3 to also get October release</a></li>
+
+									
+
+			<li><a href='http://www.macnn.com/articles/12/10/18/mix.of.methods.used.to.import.51.games.to.the.library/'>Good Old Games adds OS X support, brings classics back</a></li>
+
+									
+
+			<li><a href='http://www.macnn.com/articles/12/10/26/who.is.the.target.audience.for.the.new.imac/'>Forums: who is the target audience for the new iMac?</a></li>
+
+									
+
+			<li><a href='http://www.macnn.com/articles/12/10/19/replacement.batteries.for.ipad/'>Forum roundup: replacement batteries for iPad?</a></li>
+
+									
+
+			<li><a href='http://www.electronista.com/articles/12/10/24/surface.rt.tablet.gets.snaps.for.hardware.but.not.overall.experience/'>Microsoft Surface RT: early reviews a mixed bag</a></li>
+
+									
+
+			<li><a href='http://www.electronista.com/articles/12/10/20/retina.ipad.to.gain.lightning.connector.global.lte.perhaps.more/'>Rumor: Apple to tweak full-sized iPad alongside 'iPad mini'</a></li>
+
+									
+
+			<li><a href='http://www.electronista.com/articles/12/10/23/mid.80s.film.chronicles.create.of.next/'>Formerly little-seen documentary on Jobs posted to YouTube</a></li>
+
+									
+
+			<li><a href='http://www.ipodnn.com/articles/12/10/23/new.cables.join.existing.lightning.adapter.line/'>Apple offers four Lightning adapters for cameras, displays</a></li>
+
+									
+
+			<li><a href='http://www.electronista.com/articles/12/10/18/if.true.would.steal.thunder.from.microsoft.surface.debut/'>Rumor: iPad mini to debut November 2, pre-orders October 26</a></li>
+
+									
+
+			<li><a href='http://www.electronista.com/articles/12/10/23/apple.to.offer.live.streaming.from.ipad.mini.unveiling/'>Apple iPad mini event streaming live to Apple TV</a></li>
+
+									
+
+			<li><a href='http://www.electronista.com/articles/12/10/26/scores.eight.of.10.still.has.second.drive.expansion.option/'>New Mac mini gets teardown, still highly repairable</a></li>
+
+									
+
+			<li><a href='http://www.macnn.com/articles/12/10/26/ministack.external.ssd.storage/'>Briefly: miniStack storage, Shade 3D for Unity released</a></li>
+
+								
+
+		</ul>
+
+		
+
+		
+
+		<div class="clear">
+
+		</div>
+
+	</div><!--top10-->
+
+	<div class="mid_header">
+
+	<p>Recent Reviews</p></div>
+
+	<div id="recentreviews">	
+
+	
+							<a style="float:right;" href="http://www.electronista.com/reviews/good-call-ig1-bluetooth-handset.html"><img src="http://cdn2.macnn.com/review_images/review_thumbnail/1349538800_goodcallwithcomp.jpg" width="150" height="105" border="0" alt="" /></a><a href="http://www.electronista.com/reviews/good-call-ig1-bluetooth-handset.html" style="font-size:13px;">Good Call iG1 Bluetooth Handset</a>
+
+							
+
+							<p>
+
+								Alternative handsets for the iPhone make a lot of claims. Some boast lower cell phone emissions close to the user\'s skull, convenient ...
+
+							</p>
+
+							<!--<p class="post_more"><a href="http://www.electronista.com/reviews/good-call-ig1-bluetooth-handset.html">more</a></p>-->
+
+							<div class="clearall"></div>
+
+
+
+						
+							<a style="float:right;" href="http://www.electronista.com/reviews/akitio-neutrino-u3-.html"><img src="http://cdn1.macnn.com/review_images/review_thumbnail/1348675762_u3-review-top.jpg" width="150" height="105" border="0" alt="" /></a><a href="http://www.electronista.com/reviews/akitio-neutrino-u3-.html" style="font-size:13px;">Akitio Neutrino U3+</a>
+
+							
+
+							<p>
+
+								As notebook computers continue to grow in popularity, 2.5-inch hard drives have become one of the most popular upgrades. Most of the d ...
+
+							</p>
+
+							<!--<p class="post_more"><a href="http://www.electronista.com/reviews/akitio-neutrino-u3-.html">more</a></p>-->
+
+							<div class="clearall"></div>
+
+
+
+						
+							<a style="float:right;" href="http://www.electronista.com/reviews/iphone-5.html"><img src="http://cdn3.macnn.com/review_images/review_thumbnail/1348463184_iphone5-review-top.jpg" width="150" height="105" border="0" alt="" /></a><a href="http://www.electronista.com/reviews/iphone-5.html" style="font-size:13px;">iPhone 5</a>
+
+							
+
+							<p>
+
+								After months of persistent rumors and Apple\'s high-profile unveiling, the iPhone 5 has finally arrived on the market. The sixth-gener ...
+
+							</p>
+
+							<!--<p class="post_more"><a href="http://www.electronista.com/reviews/iphone-5.html">more</a></p>-->
+
+							<div class="clearall"></div>
+
+
+
+						
+	</div>
+
+	<div style="clear:both;"></div>
+
+<div class="mid_header">		
+
+	<!-- changed by nitin on june 9 2011 -->
+
+		<a class="toggle" id="top102_tog"  onClick="javascript:rightpanel2_hide_commented();"  href="javascript:void(null)">
+
+			toggle
+
+		</a>
+
+		<p>
+
+			Most Commented
+
+		</p>
+
+	</div>				
+
+	<div id="top102">					
+
+		<div class="adPlaceholder" id="sidebartower2" style="width: 160px; float: right;"><script type="text/javascript">
+
+	doclix_pid = 16245;
+
+	doclix_cid = 393;
+
+	doclix_w = 160;
+
+	doclix_h = 200;
+
+</script>
+
+<script type="text/javascript" src="http://ads.doclix.com/adserver/serve/js/doclix_synd_ifrm.js" charset="utf-8"></script></div>
+
+		
+
+		<div  style="margin-bottom:10px;" id="sidebartower2small"><script type='text/javascript'><!--//<![CDATA[
+
+   var m3_u = (location.protocol=='https:'?'https://gorgias.macnn.com/www/delivery/ajs.php':'http://gorgias.macnn.com/www/delivery/ajs.php');
+
+   var m3_r = Math.floor(Math.random()*99999999999);
+
+   if (!document.MAX_used) document.MAX_used = ',';
+
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+
+   document.write ("?zoneid=5");
+
+   document.write ('&amp;cb=' + m3_r);
+
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+
+   document.write ("&amp;loc=" + escape(window.location));
+
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+
+   if (document.context) document.write ("&context=" + escape(document.context));
+
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+
+   document.write ("'><\/scr"+"ipt>");
+
+//]]>--></script><noscript><a href='http://gorgias.macnn.com/www/delivery/ck.php?n=a78d0908&amp;cb=<?=time();?>' target='_blank'><img src='http://gorgias.macnn.com/www/delivery/avw.php?zoneid=5&amp;cb=<?=time();?>&amp;n=a78d0908' border='0' alt='' /></a></noscript>
+
+</div>
+
+
+		
+
+		
+
+			<h1>
+
+				10 Most Discussed
+
+			</h1>
+
+		
+
+		<ul>
+
+			
+			<li><a href='http://forums.macnn.com/t/493218/duh-bates'>Duh Bates  - 268 replies</a></li>
+
+			
+			<li><a href='http://forums.macnn.com/t/494066/schiller-explains-lack-of-optical-drive-in-new-imacs'>Schiller explains lack of optical drive in new iMacs  - 31 replies</a></li>
+
+			
+			<li><a href='http://forums.macnn.com/t/493717/the-100-best-sci-fi-movies-of-all-time'>The 100 Best Sci-Fi Movies of All Time? ...  - 94 replies</a></li>
+
+			
+			<li><a href='http://forums.macnn.com/t/494044/casual-landlord-tennant-legal-advice-needed'>Casual Landlord/Tennant legal advice needed  - 9 replies</a></li>
+
+			
+			<li><a href='http://forums.macnn.com/t/493299/why-are-republican-states-consistently-daisies-and-roses'>Why are Republican states consistently daisies and roses?  - 160 replies</a></li>
+
+			
+			<li><a href='http://forums.macnn.com/t/494014/mac-mini-with-three-displays'>Mac mini With Three Displays?  - 12 replies</a></li>
+
+			
+			<li><a href='http://forums.macnn.com/t/493994/mac-mini-catches-up-to-2010-mac-pro-in-benchmark-tests'>Mac mini catches up to 2010 Mac Pro in benchmark tests   - 22 replies</a></li>
+
+			
+			<li><a href='http://forums.macnn.com/t/493823/a-long-ranty-blog-post-about-apple'>A Long Ranty Blog Post About Apple:  - 23 replies</a></li>
+
+			
+			<li><a href='http://forums.macnn.com/t/493944/who-is-the-target-audience'>who is the target audience?  - 33 replies</a></li>
+
+			
+			<li><a href='http://forums.macnn.com/t/494027/cook-the-ipad-mini-is-not-a-7-inch-tablet-its-better'>Cook: the iPad mini is not a 7-inch tablet ... it's better   - 5 replies</a></li>
+
+			
+		</ul>
+
+		<div class="clear">
+
+		</div>
+
+	</div><!--top10-->
+
+
+
+			</div><!--right_column-->
+				<div class="clear">&nbsp;</div>
+			<div class="pop_crv">
+				<div class="top_header">
+					<a class="toggle" id="top_stories_tog" onClick="$('#top_stories_bt').slideToggle('slow', function(){ $('#top_stories_bt').is(':visible') ? $('#top_stories_tog').removeClass('closed') : $('#top_stories_tog').addClass('closed'); } );" href="javascript:void(null)">toggle</a>
+					<p>Popular News</p>
+				</div>
+				<div id="top_stories_bt">
+					<div id="pop_stories_slider">
+						<ul><li><a href="http://www.electronista.com/articles/12/10/18/apple.set.to.close.second.acquisition.in.two.months/" class="overlay"><span>Rumor: Apple to acquire social video start...</span></a><div></div><img src='http://cache.macnn.com/macnn/img/grey.gif' original='http://cdn2.macnn.com/news/1210/color-labs-sm.jpg' border='0' /></li><li><a href="http://www.electronista.com/articles/12/10/23/coverage.begins.at.10am.pt/" class="overlay"><span>Live: Apple's ''iPad mini'' unveiling event</span></a><div></div><img src='http://cache.macnn.com/macnn/img/grey.gif' original='http://cdn1.macnn.com/article_images/article_thumbnail/1351002631_applesml.jpg' border='0' /></li><li><a href="http://www.electronista.com/articles/12/10/26/all.products.expected.in.the.first.quarter.of.2013/" class="overlay"><span>Ableton reveals Live 9 upgrade, Push USB h...</span></a><div></div><img src='http://cache.macnn.com/macnn/img/grey.gif' original='http://cdn.macnn.com/article_images/article_thumbnail/1351233903_abletonpush-sm.jpg' border='0' /></li><li><a href="http://www.electronista.com/articles/12/10/24/surface.rt.tablet.gets.snaps.for.hardware.but.not.overall.experience/" class="overlay"><span>Microsoft Surface RT: early reviews a mixe...</span></a><div></div><img src='http://cache.macnn.com/macnn/img/grey.gif' original='http://cdn1.macnn.com/news/1210/surface-wrt-sm.jpg' border='0' /></li><li><a href="http://www.electronista.com/articles/12/10/20/retina.ipad.to.gain.lightning.connector.global.lte.perhaps.more/" class="overlay"><span>Rumor: Apple to tweak full-sized iPad alon...</span></a><div></div><img src='http://cache.macnn.com/macnn/img/grey.gif' original='http://cdn3.macnn.com/article_images/article_thumbnail/1350716110_Apple-iPad-tweak-sm.jpg' border='0' /></li><li><a href="http://www.electronista.com/articles/12/10/23/mid.80s.film.chronicles.create.of.next/" class="overlay"><span>Formerly little-seen documentary on Jobs p...</span></a><div></div><img src='http://cache.macnn.com/macnn/img/grey.gif' original='http://cdn3.macnn.com/article_images/article_thumbnail/1350987838_NeXT-Jobs-documentary-sm.jpg' border='0' /></li></ul>
+					</div><!--top_stories_slider-->
+				</div><!--top_stories_bt-->
+			</div><!--pop_crv-->
+			<div class="clear"></div>
+		</div><!--content_wrapper-->
+		
+	</div><!--content-->
+
+	<div id="footer_wrapper">
+		<div class="footer_content_wrapper">
+			<div class="left_footer">
+				<h1>Electronista Marketplace</h1>
+				<ul>
+					<li>	
+						<script type="text/javascript"
+
+src="http://jlinks.industrybrains.com/jsct?sid=85&amp;ct=MACNN_HOMEPAGE_
+
+AND_ROS&amp;tr=ELECTRONISTA&amp;num=7&amp;layt=templatebottom&amp;fmt=si
+
+mp"></script>
+						
+					</li>
+				</ul>
+			</div><!--left_footer-->
+
+			<div class="right_footer">
+				
+				<div class="adPlaceholder_foot" style="width: 300px; height: 250px; margin: 15px auto; background: #ccc;">
+										<script type='text/javascript'><!--//<![CDATA[
+
+   var m3_u = (location.protocol=='https:'?'https://gorgias.macnn.com/www/delivery/ajs.php':'http://gorgias.macnn.com/www/delivery/ajs.php');
+
+   var m3_r = Math.floor(Math.random()*99999999999);
+
+   if (!document.MAX_used) document.MAX_used = ',';
+
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+
+   document.write ("?zoneid=6");
+
+   document.write ('&amp;cb=' + m3_r);
+
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+
+   document.write ("&amp;loc=" + escape(window.location));
+
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+
+   if (document.context) document.write ("&context=" + escape(document.context));
+
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+
+   document.write ("'><\/scr"+"ipt>");
+
+//]]>--></script><noscript><a href='http://gorgias.macnn.com/www/delivery/ck.php?n=a19a92a5&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://gorgias.macnn.com/www/delivery/avw.php?zoneid=6&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a19a92a5' border='0' alt='' /></a></noscript>
+							</div>
+				
+			</div><!--left_footer-->
+			<div class="clear"></div>
+		</div><!--footer_content_wrapper-->
+
+<!--@VA 28-3-2012 Add redirection link to Mobile site Start-->
+
+<!--@VA 28-3-2012 Add redirection link to Mobile site End-->
+
+
+<div align="right" style="margin-top:10px; margin-right:10px;"><a href="http://www.electronista.com/privacy/" style="color:#CCCCCC;">Privacy Policy</a> </div>
+	</div><!--footer_wrapper-->
+	
+		<script language="javascript">
+$("#posts_wrapper_1 img").lazyload({placeholder:"http://cache.macnn.com/macnn/img/grey.gif"});
+$("#yesterday_thumbnail img").lazyload({placeholder:"http://cache.macnn.com/macnn/img/grey.gif"});
+$("#top_stories_bt img").lazyload({placeholder:"http://cache.macnn.com/macnn/img/grey.gif"});
+$("#posts_wrapper img").lazyload({placeholder:"http://cache.macnn.com/macnn/img/grey.gif"});
+</script>
+
+
+
+
+<!-- start Vibrant Media IntelliTXT script section -->
+
+
+<!-- Kontera ContentLink(TM);-->
+<script type='text/javascript'>
+var dc_AdLinkColor = 'blue' ;
+var dc_PublisherID = 11670 ;
+</script>
+<script type='text/javascript' src='http://kona.kontera.com/javascript/lib/KonaLibInline.js'>
+</script>
+<!-- Kontera ContentLink(TM) -->
+
+
+<!-- end Vibrant Media IntelliTXT script section -->
+
+
+
+<!-- Start Tynt js Code-->
+
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> <script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=c4saU6xnGr34EDadbiUt4I&amp;s=101"></script>
+
+
+<!-- End Tynt js Code-->
+
+
+
+
+
+<!-- Start Apture js Code-->
+
+
+<!--<script id="aptureScript" type="text/javascript" src="http://www.apture.com/js/apture.js?siteToken=1ZQ86IG" charset="utf-8"></script>-->
+
+
+<!-- End Apture js Code-->
+
+
+
+
+<!-- Start Quantcast tag --> <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script><script type="text/javascript">_qoptions = { labels:"Spike GadgetsGearheads,MTVN Global Digital Network,MTVN Digital Tribes,Guys Tribe,MTVN Games and Entertainment Global Network,MTVN Games and Entertainment Tribes,Spike plus Guys" }; _qacct="p-94wNw88f65Rhk";quantserve();</script><noscript><a href="http://www.quantcast.com/p-94wNw88f65Rhk" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-94wNw88f65Rhk.gif?labels=Spike%20GadgetsGearheads%2CMTVN%20Global%20Digital%20Network%2CMTVN%20Digital%20Tribes%2CGuys%20Tribe%2CMTVN%20Games%20and%20Entertainment%20Global%20Network%2CMTVN%20Games%20and%20Entertainment%20Tribes%2CSpike%20plus%20Guys" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></a></noscript><!-- End Quantcast tag -->
+<!--Remove old fb js-->
+
+<!--script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US" type="text/javascript"></script><script type="text/javascript">  FB.init("3d004db533591f5e4f35d64f1d7bb75c", "/connect/xd_receiver.htm"); </script-->
+
+<!--End-->
+<!-- Demdex Tag Insertion Manager -->
+<script type="text/javascript">
+var dexBaseURL=(("https:"==document.location.protocol) ? "https://a248.e.akamai.net/demdex.download.akamai.com/ziffdavis/13/" : "http://cdn.demdex.net/ziffdavis/13/");
+document.write(unescape("%3Cscript src='"+ dexBaseURL + "demdex.js' type='text/javascript' %3E%3C/script%3E"));
+</script>
+<!-- End Demdex Tag Insertion Manager -->
+<!-- Begin BlueKai Tag -->
+<iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+<script type="text/javascript" src="http://www.bkrtx.com/js/bk-static.js"></script>
+<script type="text/javascript">
+// INSERT DATA HERE IN THE FORM:
+bk_addPageCtx("Electronics & Computers", "Cell Phones");
+bk_doJSTag(4168, 4);
+<!-- End BlueKai Tag -->
+
+
+<!-- code to change the sidebar elementes on showing 160px ad  -->
+
+	if($('#sidebartower').width() <= 170)
+	{
+		$('#top10 a').show();
+		$('#top10 ul').show();
+		$('#top10 #sidebartowersmall').show();
+		$('#sidebartower').css('float', 'right');			
+		$('#sidebartower').css('margin-left', '0px');
+	}
+
+</script>
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: '86b5a0a85217798d8c6b1256e31bb864' };
+
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+             '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+
+
+	
+</body>
+</html></body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<meta name="description" content="Shaping a Firefox feature - how does it work? - Paul Rouget's Blog"/>
+<meta name="author" content="Paul Rouget"/>
+
+<meta charset="utf8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="alternate" type="application/atom+xml" href="/index.xml"/>
+
+<link rel="stylesheet" href="/css/mop.css">
+
+<title>Shaping a Firefox feature - how does it work? // by Paul Rouget</title>
+
+<body>
+<article>
+    <h2 id='firefox_developers_dont_listen_to_users'>&#8220;Firefox developers don&#8217;t listen to users&#8221;</h2>
+<hr />
+<p>Haaa, how many time did we hear that? Every time we ship a new feature I guess :)</p>
+
+<p>So yes, we do listen to users, but this kind of comment reveals how much some people misunderstand how we build things at Mozilla. In this article, I&#8217;d like to clarify this process. If you work in the Software industry, this won&#8217;t be news to you: it&#8217;s not as simple as <em>&#8220;Developers listen to users, build according to what they hear&#8221;</em>.</p>
+
+<h1 id='shaping_a_firefox_feature__how_does_it_work'>Shaping a Firefox feature - how does it work?</h1>
+
+<p>So first, a little warning: <em>I&#8217;m deliberately simplifying the whole story. Because a lot of people are involved in more than one team, because Mozilla is a mix of employees and volunteers, because not all the teams work the same way, because we have lot of different products…</em></p>
+
+<p>The general idea is:</p>
+
+<ol>
+<li>Gather data (a.k.a &#8220;listen to users&#8221;);</li>
+
+<li>Define requirements;</li>
+
+<li>Design;</li>
+
+<li>Implement;</li>
+
+<li>Ensure it works by gathering more data.</li>
+</ol>
+
+<p>We have several teams, with distinctive roles:</p>
+
+<ul>
+<li>Metrics team: <strong>measure and gather data</strong>;</li>
+
+<li>Market Insights team: <strong>predict the future</strong>;</li>
+
+<li>Product team: <strong>draw conclusions, define requirements</strong>;</li>
+
+<li>UX team: <strong>user studies &amp; design</strong>;</li>
+
+<li>Engineering team: <strong>implement</strong>;</li>
+
+<li>Support/QA: <strong>post-analyse</strong>;</li>
+</ul>
+
+<p>All these teams work all together. Below, I&#8217;m describing a linear process. It is not that linear. All these teams spend their time talking to each other.</p>
+<hr />
+<p>With <a href='https://www.mozilla.org/about/manifesto.html'>Mozilla&#8217;s core principles</a> in mind:</p>
+
+<h2 id='metrics'>Metrics</h2>
+
+<p><strong>The Metrics team</strong> gathers data about how people use our tools and about how our tools perform. For example, they will be able to tell <strong>with actual numbers</strong>, if Firefox tends to be faster or slower over the different releases.</p>
+
+<p><a href='https://blog.mozilla.org/metrics/2011/12/13/comparing-the-bias-in-telemetry-data-vs-the-typical-firefox-user/'><img src='https://farm9.staticflickr.com/8199/8160710134_9c5e94641f_z.jpg' alt='Comparing the Bias in Telemetry Data vs The Typical Firefox User' /></a> <em>Comparing the Bias in Telemetry Data vs The Typical Firefox User</em>, from <a href='https://blog.mozilla.org/metrics/'>Mozilla Metrics Blog</a>.</p>
+
+<h2 id='market_insights'>Market Insights</h2>
+
+<p><strong>The Market Insights</strong> works with numbers too.</p>
+
+<p>Numbers about our products (how many users, which countries have a growing number of users,…). Numbers about our competitors (how Chrome&#8217;s market share is changing). And number from other markets (how the smart-phone market is evolving).</p>
+
+<p>They cross all these data, and compile them into competitive analyses. These analyses are useful to define priorities.</p>
+
+<p>For example, Market Insights will provide recommendations about where and how we should ship Firefox OS first, or if we should care or not about ARMv6 devices (the answer is yes, we should).</p>
+
+<h2 id='product'>Product</h2>
+
+<p>Based on the work of Metrics and Market Insights teams (and as we&#8217;ll see later, also based on the UX-team work), <strong>the Product Team</strong> tries to understand what the user needs today, and what he&#8217;ll need tomorrow. <strong>The Product team takes user needs and express them as &#8220;requirements&#8221;</strong>.</p>
+
+<p>It&#8217;s not only about data. Innovation can emerge from Mozilla Labs or from any team, from any community. Product is also in charge of spotting and including these innovative ideas into the product.</p>
+
+<p>Product also ensures that all the different projects are synced-up (you don&#8217;t ship Firefox OS without the Market Place).</p>
+
+<h2 id='ux'>UX</h2>
+
+<p>The UX Team use their creative mind to design a product, but they also use <strong>numbers</strong> a lot.</p>
+
+<p><a href='https://blog.mozilla.org/ux/2012/06/firefox-heatmap-study-2012-results-are-in/'><img src='https://blog.mozilla.org/ux/files/2012/06/chrome_menus.png' alt='Firefox Heatmap Study' /></a> <em>Firefox Heatmap Study</em>, from <a href='https://blog.mozilla.org/ux/'>Mozilla UX Blog</a>.</p>
+
+<p><strong>The UX Team</strong> works on both sides of the product team:</p>
+
+<p><strong>User Studies</strong>: Bringing UX-related recommendations to the product team. Interviews, surveys and usage-metrics (Test Pilots)… the goal is to understand how people interact with hardwares &amp; softwares. Interviews are pretty amazing. We film participants using a tool, and extract information from that.</p>
+
+<p><a href='https://blog.mozilla.org/ux/2012/04/tablet-remote-usability-testing-at-mozilla/'><img src='https://blog.mozilla.org/ux/files/2012/04/photo-1-11-620x463.jpg' alt='Tablet remote usability testing at Mozilla' /></a> <em>Tablet remote usability testing at Mozilla</em>, from <a href='https://blog.mozilla.org/ux/'>Mozilla UX Blog</a>.</p>
+
+<p><strong>Interaction designs and visual designs</strong>: once the requirements of a features have been outlined, the UX Team transforms these ideas into concrete scenarios. This is not just about pixels. It&#8217;s a lot about making the user happy. Ensuring we won&#8217;t disturb him. Aiming the most effective and enjoyable experience. This is a complex topic (especially when you have half of billion of users).</p>
+
+<p><a href='https://blog.mozilla.org/ux/2012/10/ux-principles-behind-firefox-for-windows-8-preview/'><img src='https://blog.mozilla.org/ux/files/2012/10/mozilla-mozcamp-firefox-os.010-600x353.jpg' alt='UX Principles Behind Firefox for Windows 8' /></a> <em>Content Layering</em>, <a href='https://blog.mozilla.org/ux/'>Mozilla UX Blog</a>.</p>
+
+<h2 id='engineering'>Engineering</h2>
+
+<p><strong>The Engineering Team</strong> will execute. Iterating with the other teams, they write code that will answer the requirements defined by the product team. They make sure it matches UX&#8217; recommendations, doesn&#8217;t regress the performance (thanks to Metric&#8217;s tools), and is shipped in time according to Product&#8217;s roadmap.</p>
+
+<h2 id='support_and_qa'>Support and QA</h2>
+
+<p><strong>The Support Team</strong> and <strong>QA Team</strong> gather post-implementation data. Trying to understand how these changes affect the end-users by spotting the flaws and by gathering feedback.</p>
+
+<p><a href='http://input.mozilla.org/en-US/'><img src='https://farm8.staticflickr.com/7135/8157514312_4b7ca672a5_b.jpg' alt='Live Feedback From input.mozilla.org' /></a> <em>Live Feedback From input.mozilla.org</em>, <a href='http://input.mozilla.org/en-US/'>input.mozilla.org</a>.</p>
+
+<p>This is another way to &#8220;listen&#8221; to the user. Measuring the amount of crashes, finding where regressions happened, extracting information from the support forums, analysing the feedback shared by the beta users,…</p>
+
+<h1 id='an_example_save_for_later'>An example: &#8220;Save For Later&#8221;</h1>
+
+<p><a href='https://blog.mozilla.org/ux/2012/10/save-for-later/'><img src='https://blog.mozilla.org/ux/files/2012/10/15.jpg' alt='Save For Later' /></a></p>
+
+<p>I strongly encourage you to read <a href='https://blog.mozilla.org/ux/2012/10/save-for-later/'>Brian Groudan&#8217;s article</a>. Brian shares his work on a &#8220;Save For Later&#8221; feature for Firefox. I&#8217;d like to highlight some elements:</p>
+
+<p>&#8220;Save For Later&#8221; project timeline:</p>
+
+<ol>
+<li>Planning</li>
+
+<li>Competitive analysis</li>
+
+<li>Develop &amp; Pilot Study</li>
+
+<li>Screen Participants &amp; Begin Study</li>
+
+<li>Interview Participants</li>
+
+<li>Synthesize research</li>
+
+<li>Design Ideation</li>
+
+<li>Present Finding and Recommandations</li>
+</ol>
+
+<p>Studies:</p>
+
+<blockquote>
+<p>&#8220;Research phase: Out of 60 profiles, I carefully selected ten people to participate in this study. These participants represented a wide demographic of users.&#8221;</p>
+</blockquote>
+
+<p>Surveys:</p>
+
+<blockquote>
+<p>&#8220;Survey of over 5,000 Firefox users&#8221;</p>
+</blockquote>
+
+<p>And then, if the product team thinks this is something we need to have in Firefox by the next quarter, they will work on defining the requirements and work with engineering team to integrate that into Firefox.</p>
+<hr />
+<p>So yeah, when we build a feature in Firefox, it&#8217;s not as simple a &#8220;developer decide to&#8221;, it&#8217;s a lot more serious than that. We put some brilliant mind into a room for weeks/months, they do studies, gather data, come to conclusions, prototype, confront results with other data and other teams, iterate.</p>
+
+<p>So next you see a comment like &#8220;Firefox developers don&#8217;t listen to users&#8221;, please, point them to this article ;)</p>
+<style>
+blockquote {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px dotted grey;
+}
+article img {
+  border: 1px dashed grey;
+  padding: 5px;
+}
+article hr {
+  border: 0;
+  border-bottom: 1px dashed #AAA;
+}
+</style>
+
+    <footer>
+      <span>05 Nov 2012</span>
+        / <a onclick="window.open('http://twitter.com/share?text=Shaping a Firefox feature - how does it work?&via=paulrouget&url=http%3A%2F%2Fpaulrouget.com%2Fe/featuredesign','','width=400,height=300,personalbar=0,toolbar=0,scrollbars=1,resizable=1'); return false;" href="http://twitter.com/share?text=Shaping a Firefox feature - how does it work?&via=paulrouget&url=http%3A%2F%2Fpaulrouget.com%2Fe/featuredesign" id="twitter" title="tweet this" target="_blank">
+            <span>tweet&nbsp;this</span>
+        </a>
+
+        
+    </footer>
+</article>
+
+
+
+</body>
+
+<aside>
+  <p><a href="http://paulrouget.com"><img id="avatar" src="http://paulrouget.com/assets/twitter_avatar.jpg"></a>Hi. I'm Paul Rouget (<a href="/s/contact">contact</a>). I work at <a href="http://mozilla.org">Mozilla</a>. I write <a href="https://wiki.mozilla.org/DevTools">code</a>. I give talks. I <a href="http://twitter.com/paulrouget">tweet</a>.
+  This is my blog (<a href="http://paulrouget.com/index.xml">rss</a>).
+  <hr>
+</aside>
+
+<!-- Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22781000-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>

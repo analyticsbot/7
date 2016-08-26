@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">(function() { var a=window,b="jstiming",d="tick";var e=function(c){this.t={};this.tick=function(c,p,h){h=void 0!=h?h:(new Date).getTime();this.t[c]=[h,p]};this[d]("start",null,c)},f=new e;a.jstiming={Timer:e,load:f};if(a.performance&&a.performance.timing){var g=a.performance.timing,j=a[b].load,k=g.navigationStart,l=g.responseStart;0<k&&l>=k&&(j[d]("_wtsrt",void 0,k),j[d]("wtsrt_","_wtsrt",l),j[d]("tbsd_","wtsrt_"))}
+try{var m=null;a.chrome&&a.chrome.csi&&(m=Math.floor(a.chrome.csi().pageT),j&&0<k&&(j[d]("_tbnd",void 0,a.chrome.csi().startE),j[d]("tbnd_","_tbnd",k)));null==m&&a.gtbExternal&&(m=a.gtbExternal.pageT());null==m&&a.external&&(m=a.external.pageT,j&&0<k&&(j[d]("_tbnd",void 0,a.external.startE),j[d]("tbnd_","_tbnd",k)));m&&(a[b].pt=m)}catch(n){};a.tickAboveFold=function(c){var i=0;if(c.offsetParent){do i+=c.offsetTop;while(c=c.offsetParent)}c=i;750>=c&&a[b].load[d]("aft")};var q=!1;function r(){q||(q=!0,a[b].load[d]("firstScrollTime"))}a.addEventListener?a.addEventListener("scroll",r,!1):a.attachEvent("onscroll",r);
+ })();</script>
+<meta content='true' name='MSSmartTagsPreventParsing'/>
+<meta content='blogger' name='generator'/>
+<link href='http://googledesktop.blogspot.com/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='http://googledesktop.blogspot.com/2009/07/google-desktop-now-supports-64-bit.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="Inside Google Desktop - Atom" href="http://googledesktop.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Inside Google Desktop - RSS" href="http://googledesktop.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Inside Google Desktop - Atom" href="http://www.blogger.com/feeds/17816401/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=17816401" />
+<link rel="alternate" type="application/atom+xml" title="Inside Google Desktop - Atom" href="http://googledesktop.blogspot.com/feeds/2269385026222061565/comments/default" />
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Inside Google Desktop: Google Desktop now supports 64 bit Windows</title>
+<link href='http://www2.blogger.com/widgets/3319451950-blogarchive.css' rel='stylesheet' type='text/css'/><link href='http://www2.blogger.com/widgets/2791266615-blog.css' rel='stylesheet' type='text/css'/><!-- --><link type='text/css' rel='stylesheet' href='//www.blogger.com/static/v1/widgets/1937454905-widget_css_bundle.css' />
+<link type="text/css" rel="stylesheet" href="//www.blogger.com/dyn-css/authorization.css?targetBlogID=17816401&zx=0c5589fa-afd6-4d33-9b0f-983a1f573d00"/>
+<style type='text/css'>@import url('http://www2.blogger.com/css/blog_controls.css');
+@import url('http://www2.blogger.com/dyn-css/authorization.css?blogID=8975829421217267474');
+</style>
+<link href='http://www.google.com/uds/css/gsearch.css' rel='stylesheet' type='text/css'/>
+<style id='page-skin-1' type='text/css'><!--
+/*
+/* Variable definitions
+====================
+<Variable name="bgcolor" description="Page Background Color"
+type="color" default="#fff">
+<Variable name="textcolor" description="Text Color"
+type="color" default="#333">
+<Variable name="linkcolor" description="Link Color"
+type="color" default="#58a">
+<Variable name="pagetitlecolor" description="Blog Title Color"
+type="color" default="#929292">
+<Variable name="pagesubtitlecolor" description="Blog Sub Title Color"
+type="color" default="#929292">
+<Variable name="descriptioncolor" description="Blog Description Color"
+type="color" default="#666666">
+<Variable name="titlecolor" description="Post Title Color"
+type="color" default="#c60">
+<Variable name="bordercolor" description="Border Color"
+type="color" default="#ccc">
+<Variable name="sidebarcolor" description="Sidebar Title Color"
+type="color" default="#000000">
+<Variable name="sidebartextcolor" description="Sidebar Text Color"
+type="color" default="#666">
+<Variable name="visitedlinkcolor" description="Visited Link Color"
+type="color" default="#999">
+<Variable name="bodyfont" description="Text Font"
+type="font" default="normal normal 100% Arial, sans-serif">
+<Variable name="headerfont" description="Sidebar Title Font"
+type="font"
+default="normal normal 95% Arial, sans-serif">
+<Variable name="pagetitlefont" description="Blog Title Font"
+type="font"
+default="normal normal 150% Arial, sans-serif">
+<Variable name="pagesubtitlefont" description="Blog Sub Title Font"
+type="font"
+default="normal normal 50% Arial, sans-serif">
+<Variable name="descriptionfont" description="Blog Description Font"
+type="font"
+default="normal normal 100% Arial, sans-serif">
+<Variable name="postfooterfont" description="Post Footer Font"
+type="font"
+default="normal normal 78% Arial, sans-serif">
+*/
+/* Use this with templates/template-twocol.html */
+body {
+background:#ffffff;
+margin:0;
+color:#333333;
+font-size/* */:/**/small;
+font-size: /**/small;
+text-align: center;
+}
+a img {
+border-width:0;
+}
+/* Header
+-----------------------------------------------
+*/
+#searchcontrol {
+width : 180px;
+}
+#searchResults {
+margin-right: 25px;
+}
+#searchResults .gsc-control {
+width : 100%;
+}
+#searchResults .gsc-resultsbox-visible {
+border-bottom : 1px solid #e9e9e9;
+margin-bottom : 10px;
+}
+#header-wrapper {
+margin:0 auto 15px;
+min-width:550px;
+}
+#header {
+margin: 5px;
+color:#929292;
+}
+#logo {
+background-image:url('http://photos1.blogger.com/x/blogger2/6993/2174/1600/z/539790/gse_multipart13348.png');
+background-repeat:no-repeat;
+padding-left:225px;
+padding-top:46px;
+height:90px;
+width:550px;
+font: Arial, sans-serif;
+}
+#logo h1 {
+color:#929292;
+padding:0px;
+margin:0px;
+font: Arial, Helvetica, sans-serif;
+font-size:18px;
+font-weight:bold;
+}
+#logo h2 {
+color:#929292;
+padding:0px;
+margin:0px;
+font: Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+#header h1 {
+margin:5px 5px 0;
+padding:15px 20px .25em;
+line-height:1.2em;
+text-transform:uppercase;
+letter-spacing:.2em;
+}
+#header .description {
+margin:0;
+padding:15px 0;
+max-width:700px;
+font: normal normal 100% Arial, sans-serif;
+color: #666666;
+}
+/* Outer-Wrapper
+----------------------------------------------- */
+#outer-wrapper {
+margin:10px 0px 0px 0px;
+padding:0px;
+text-align:left;
+font: normal normal 100% Arial, sans-serif;
+width:760px;
+}
+#main-wrapper {
+width:550px;
+margin:0 0px 5px;
+float:left;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;      /* fix for long non-text content breaking IE sidebar float */
+}
+#sidebar-wrapper {
+margin-left:10px;
+padding-left:10px;
+width: 180px;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;      /* fix for long non-text content breaking IE sidebar float */
+}
+/* Headings
+----------------------------------------------- */
+h2 {
+margin:1.5em 0 .75em;
+font:normal normal 95% Arial, sans-serif;
+color:#666666;
+}
+/* Posts
+-----------------------------------------------
+*/
+h2.date-header {
+margin:0;
+padding:0;
+}
+h2.post-author {
+margin:0 0 .5em;
+padding-top:0;
+}
+.byline-author {
+margin: 0;
+padding: 0 0 0 0;
+color: #666666;
+}
+.post {
+margin:.5em 0 1.5em 0;
+border-bottom:1px dotted #cccccc;
+padding-bottom:1.5em;
+}
+.post-body p {
+margin-bottom:0;
+padding-bottom:0;
+}
+.post h3 {
+margin:.25em 0 0 0;
+padding:0;
+font-size:160%;
+font-weight:normal;
+line-height:1.4em;
+color:#5588aa;
+}
+.post h3 a, .post h3 a:visited, .post h3 strong {
+display:block;
+text-decoration:none;
+color:#5588aa;
+font-weight:normal;
+margin-bottom:0;
+padding-bottom:0;
+}
+.post h3 strong, .post h3 a:hover {
+color:#333333;
+}
+.post p {
+}
+.post-footer {
+margin: .75em 0;
+color:#666666;
+font: normal normal 100% Arial, sans-serif;
+line-height: 1.4em;
+}
+.comment-link {
+margin-left:.6em;
+}
+.post img {
+padding:4px;
+border:1px solid #cccccc;
+}
+.post blockquote {
+margin:1em 20px;
+}
+.post blockquote p {
+margin:.75em 0;
+}
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+margin:.25em 0 .5em 0;
+padding:0 0 4px;
+font-size:160%;
+font-weight:normal;
+line-height:1.4em;
+color:#73afdf;
+}
+#comments-block {
+margin:1em 0 1.5em;
+line-height:1.6em;
+}
+#comments-block .comment-author {
+margin:.5em 0;
+}
+#comments-block .comment-body {
+margin:.25em 0 0;
+}
+#comments-block .comment-footer {
+margin:-.25em 0 2em;
+line-height: 1.4em;
+text-transform:uppercase;
+letter-spacing:.1em;
+}
+#comments-block .comment-body p {
+margin:0 0 .75em;
+}
+.deleted-comment {
+font-style:italic;
+color:gray;
+}
+#blog-pager-newer-link {
+float: left;
+}
+#blog-pager-older-link {
+float: right;
+}
+#blog-pager {
+text-align: center;
+}
+.feed-links {
+clear: both;
+line-height: 2.5em;
+}
+/* Sidebar Content
+----------------------------------------------- */
+.sidebar {
+color: #666666;
+line-height: 1.5em;
+}
+.sidebar h2 {
+margin:1em 0 .25em 0;
+padding:7px 0 2px;
+font: Arial, Helvetica, sans-serif;
+font-size:115%;
+font-weight:bold;
+}
+.sidebar ul {
+list-style:none;
+margin:0 0 0 0;
+padding:0 0 0 0;
+text-indent:none;
+}
+.sidebar li {
+margin:0;
+padding:0 0 .25em 0px;
+line-height:1.5em;
+}
+.smalllink {
+font-size:75%;
+color:#666666;
+}
+.listelement {
+margin-bottom: .7em;
+}
+padding:
+.sidebar .widget, .main .widget {
+margin:0 0 1.5em;
+padding:0 0 1.5em;
+}
+.main .Blog {
+border-bottom-width: 0;
+margin-left: 5px;
+}
+/* Profile
+----------------------------------------------- */
+.profile-img {
+float: left;
+margin: 0 5px 5px 0;
+padding: 4px;
+border: 1px solid #cccccc;
+}
+.profile-data {
+margin:0;
+text-transform:uppercase;
+letter-spacing:.1em;
+font: normal normal 78% Arial, sans-serif;
+color: #666666;
+font-weight: bold;
+line-height: 1.6em;
+}
+.profile-datablock {
+margin:.5em 0 .5em;
+}
+.profile-textblock {
+margin: 0.5em 0;
+line-height: 1.6em;
+}
+.profile-link {
+font: normal normal 78% Arial, sans-serif;
+text-transform: uppercase;
+letter-spacing: .1em;
+}
+/* Footer
+----------------------------------------------- */
+#footer {
+margin:0 auto;
+clear:both;
+padding-top:15px;
+line-height: 1.6em;
+text-align: left;
+font: normal normal 100% Arial, sans-serif;
+}
+/** Page structure tweaks for layout editor wireframe */
+body#layout #header {
+margin-left: 0px;
+margin-right: 0px;
+}
+
+--></style>
+<script src='http://www.google.com/uds/api?file=uds.js&v=1.0&key=ABQIAAAA_YJR13Pfd1DLDQs4kgKbQxRvHa1rM5v4P_JhI7QEoc8mliIjYBROUfTZKKhEaSSkvSQFUUsCCU_Gpg' type='text/javascript'></script>
+<script language='Javascript' type='text/javascript'>
+    //<![CDATA[
+
+    function OnLoad() {
+      var controlRoot = document.getElementById("searchResults");
+      // Create a search control
+      var searchControl = new GSearchControl();
+      searchControl.setLinkTarget(GSearch.LINK_TARGET_SELF);
+      searchControl.setResultSetSize(GSearch.LARGE_RESULTSET);
+
+      // Tell the searcher to draw itself and tell it where to attach
+       
+      var searchFormElement = document.getElementById("searchcontrol");
+      var drawOptions = new GdrawOptions();
+      drawOptions.setSearchFormRoot(searchFormElement);
+      drawOptions.setDrawMode(GSearchControl.DRAW_MODE_TABBED);
+      
+        // This Blog
+      var searcher = new GwebSearch();
+      searcher.setSiteRestriction("http://googledesktop.blogspot.com/");
+      searcher.setUserDefinedLabel("This Blog");
+      searchControl.addSearcher(searcher);
+
+      // Official Google Blogs
+      var searcher = new GwebSearch();
+      searcher.setSiteRestriction("010222979794876194725:abdomvzqczg");
+      searcher.setUserDefinedLabel("Google Blogs");
+      searchControl.addSearcher(searcher);
+
+      // the web
+      searcher = new GwebSearch();
+      searchControl.addSearcher(searcher);
+
+      // all blogs
+      searcher = new GblogSearch();
+      searchControl.addSearcher(searcher);
+
+      // news
+      searcher = new GnewsSearch();
+      searchControl.addSearcher(searcher);
+
+      // draw it
+      searchControl.draw(controlRoot, drawOptions);
+
+    }
+
+//function registerLoadHandler(handler) {
+    //  var node = window;
+    //  if (node.addEventListener) {
+    //    node.addEventListener("load", handler, false);
+    //  } else if (node.attachEvent) {
+    //    node.attachEvent("onload", handler);
+    //  } else {
+    //    node['onload'] = handler;
+    //  }
+    //  return true;
+    //}
+
+    //registerLoadHandler(OnLoad);
+    //]]>
+</script>
+<script type="text/javascript">var a=navigator,b="userAgent",c="indexOf",f="&m=1",g="(^|&)m=",h="?",i="?m=1";function j(){var d=window.location.href,e=d.split(h);switch(e.length){case 1:return d+i;case 2:return 0<=e[1].search(g)?null:d+f;default:return null}}if(-1!=a[b][c]("Mobile")&&-1!=a[b][c]("WebKit")&&-1==a[b][c]("iPad")||-1!=a[b][c]("Opera Mini")||-1!=a[b][c]("IEMobile")){var k=j();k&&window.location.replace(k)};
+</script><script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script></head>
+<body>
+<div class='navbar section' id='navbar'><div class='widget Navbar' id='Navbar1'><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+        gapi.load("iframes-styles-bubble", function() {
+          if (window.iframes && iframes.open) {
+            iframes.open(
+                '//www.blogger.com/navbar.g?targetBlogID\07517816401\46blogName\75Inside+Google+Desktop\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75BLUE\46layoutType\75LAYOUTS\46searchRoot\75http://googledesktop.blogspot.com/search\46blogLocale\75en_US\46v\0752\46homepageUrl\75http://googledesktop.blogspot.com/\46targetPostID\0752269385026222061565\46blogPostOrPageUrl\75http://googledesktop.blogspot.com/2009/07/google-desktop-now-supports-64-bit.html\46vt\0751030135095103781260',
+                {
+                  container: "navbar-iframe-container",
+                  id: "navbar-iframe"
+                },
+                {
+                });
+          }
+        });
+      </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div></div>
+<center>
+<div id='outer-wrapper'><div id='wrap2'>
+<!-- skip links for text browsers -->
+<span id='skiplinks' style='display:none;'>
+<a href='#main'>skip to main </a> |
+      <a href='#sidebar'>skip to sidebar</a>
+</span>
+<div id='content-wrapper'>
+<div id='main-wrapper'>
+<div id='logo' onClick='window.location="http://googledesktop.blogspot.com/";' style='cursor:pointer;'><h1>Inside Google Desktop</h1><h2>
+The official source for information about Google Desktop.</h2>
+<div class='header section' id='header'><div class='widget Header' id='Header1'>
+<p class='description'><span>
+</span></p>
+</div></div>
+</div>
+<div id='searchResults'></div>
+<div class='main section' id='main'><div class='widget Blog' id='Blog1'>
+<div class='blog-posts'>
+<div class='post uncustomized-post-template'>
+<a name='2269385026222061565'></a>
+<h3 class='post-title'>
+<a href='http://googledesktop.blogspot.com/2009/07/google-desktop-now-supports-64-bit.html'>Google Desktop now supports 64 bit Windows</a>
+</h3>
+<div class='post-body'>
+<h2 class='date-header'>Wednesday, July 08, 2009
+4:48 PM
+</h2>
+Last September we released <a href="http://googleblog.blogspot.com/2008/09/google-desktop-58-for-windows-increased.html">Google Desktop version 5.8</a>, which was lighter, faster and free of trans-fats. We also <a href="http://googledesktop.blogspot.com/2008/09/when-you-speak-we-listen.html">asked for any feedback</a>, and users responded with "how about 64 bit support?" Well, as of today Google Desktop supports 64 bit Windows - go ahead, <a href="http://desktop.google.com/?utm_campaign=en&utm_source=en-us-et-dskblog&utm_medium=et">give it a try</a>.<br /><br />In addition to supporting 64 bit Windows systems, Google Desktop now supports the latest browsers as well (<a href="http://www.google.com/chrome/index.html?hl=en&brand=CHMP&utm_campaign=et&utm_source=en-et-na-us-dskblg&utm_medium=et">Google Chrome</a>, Firefox 3, & Internet Explorer 8). Most browsers now integrate safe browsing solutions to protect users from malware and phishing. This is similar to what the Google Desktop Safebrowsing feature accomplishes. <br /><br />To ensure that Google Desktop offers an efficient, optimal experience we will be removing the Safebrowsing feature on July 31. We encourage everyone to make sure they are upgrading to a browser that protects them from malware and phishing. <br /><br />We hope you enjoy using <a href="http://desktop.google.com/">Google Desktop</a> on 64 bit Windows systems!   <br /><br /><span class="byline-author">Posted by Jason Arbon, Google Desktop Team</span>
+<div style='clear: both;'></div>
+</div>
+<div class='post-footer'>
+<p class='post-footer-line post-footer-line-1'>
+<span class='post-comment-link'>
+</span>
+<a href='http://googledesktop.blogspot.com/2009/07/google-desktop-now-supports-64-bit.html' title='permanent link'>Permalink</a>
+<span class='post-icons'>
+<span class='item-action'>
+<a href='http://www.blogger.com/email-post.g?blogID=17816401&postID=2269385026222061565' title='Email Post'>
+<span class='email-post-icon'>&#160;</span>
+</a>
+</span>
+<span class='item-control blog-admin pid-1496703487'>
+<a href='http://www.blogger.com/post-edit.g?blogID=17816401&postID=2269385026222061565&from=pencil' title='Edit Post'>
+<img alt='' class='icon-action' height='18' src='http://img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+</a>
+</span>
+</span>
+</p>
+<p class='post-footer-line post-footer-line-2'>
+<span class='post-labels'>
+Labels:
+<a href='http://googledesktop.blogspot.com/search/label/Announcements' rel='tag'>Announcements</a>
+</span>
+</p>
+<p class='post-footer-line post-footer-line-3'></p>
+</div>
+</div>
+<div class='comments' id='comments'>
+<a name='comments'></a>
+<div id='backlinks-container'>
+<div id='Blog1_backlinks-container'>
+<a name='links'></a><h4>
+</h4>
+<p class='comment-footer'>
+<a class='comment-link' href='' id='Blog1_backlinks-create-link' target='_blank'>
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class='blog-pager' id='blog-pager'>
+<span id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='http://googledesktop.blogspot.com/2011/09/google-desktop-update.html' id='Blog1_blog-pager-newer-link' title='Newer Post'>Newer Post</a>
+</span>
+<span id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='http://googledesktop.blogspot.com/2009/06/reader-gadget.html' id='Blog1_blog-pager-older-link' title='Older Post'>Older Post</a>
+</span>
+<a class='home-link' href='http://googledesktop.blogspot.com/'>Home</a>
+</div>
+<div class='clear'></div>
+</div></div>
+</div>
+<div id='sidebar-wrapper'>
+<div id='searchcontrol'></div>
+<script language='Javascript' type='text/javascript'>OnLoad();</script>
+<div class='sidebar section' id='sidebar'><div class='widget HTML' id='HTML2'>
+<div class='widget-content'>
+<a href="googledesktop.blogspot.com/atom.xml"><img src="http://www.google.com/images/feed-icon.gif"/></a> <a href="http://googledesktop.blogspot.com/atom.xml">Site Feed</a><br/>
+<a href="http://fusion.google.com/add?feedurl=http%3A//googledesktop.blogspot.com/atom.xml"><img border="0" alt="Add to Google" style="padding-top:5px;" width="104" src="http://buttons.googlesyndication.com/fusion/add.gif" height="17"/></a>
+<br/>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=HTML&widgetId=HTML2&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML2"));' target='configHTML2' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML3'>
+<div class='widget-content'>
+<p><a href="http://feeds.feedburner.com/blogspot/HMLi"><img width="88" style="border:0" alt="" src="http://feeds.feedburner.com/~fc/blogspot/HMLi?bg=99CCFF&amp;fg=444444&amp;anim=0" height="26"/></a></p>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=HTML&widgetId=HTML3&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML3"));' target='configHTML3' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget BlogArchive' id='BlogArchive1'>
+<h2>Archives</h2>
+<div class='widget-content'>
+<div id='ArchiveList'>
+<div id='BlogArchive1_ArchiveList'>
+<select id='BlogArchive1_ArchiveMenu'>
+<option value=''>Archives</option>
+<option value='http://googledesktop.blogspot.com/2011_09_01_archive.html'>September (1)</option>
+<option value='http://googledesktop.blogspot.com/2009_07_01_archive.html'>July (1)</option>
+<option value='http://googledesktop.blogspot.com/2009_06_01_archive.html'>June (1)</option>
+<option value='http://googledesktop.blogspot.com/2009_04_01_archive.html'>April (4)</option>
+<option value='http://googledesktop.blogspot.com/2009_03_01_archive.html'>March (1)</option>
+<option value='http://googledesktop.blogspot.com/2009_01_01_archive.html'>January (1)</option>
+<option value='http://googledesktop.blogspot.com/2008_12_01_archive.html'>December (5)</option>
+<option value='http://googledesktop.blogspot.com/2008_11_01_archive.html'>November (4)</option>
+<option value='http://googledesktop.blogspot.com/2008_10_01_archive.html'>October (4)</option>
+<option value='http://googledesktop.blogspot.com/2008_09_01_archive.html'>September (6)</option>
+<option value='http://googledesktop.blogspot.com/2008_08_01_archive.html'>August (5)</option>
+<option value='http://googledesktop.blogspot.com/2008_07_01_archive.html'>July (4)</option>
+<option value='http://googledesktop.blogspot.com/2008_06_01_archive.html'>June (7)</option>
+<option value='http://googledesktop.blogspot.com/2008_05_01_archive.html'>May (3)</option>
+<option value='http://googledesktop.blogspot.com/2008_04_01_archive.html'>April (5)</option>
+<option value='http://googledesktop.blogspot.com/2008_03_01_archive.html'>March (4)</option>
+<option value='http://googledesktop.blogspot.com/2008_02_01_archive.html'>February (2)</option>
+<option value='http://googledesktop.blogspot.com/2008_01_01_archive.html'>January (2)</option>
+<option value='http://googledesktop.blogspot.com/2007_12_01_archive.html'>December (3)</option>
+<option value='http://googledesktop.blogspot.com/2007_11_01_archive.html'>November (1)</option>
+<option value='http://googledesktop.blogspot.com/2007_10_01_archive.html'>October (4)</option>
+<option value='http://googledesktop.blogspot.com/2007_09_01_archive.html'>September (1)</option>
+<option value='http://googledesktop.blogspot.com/2007_07_01_archive.html'>July (1)</option>
+<option value='http://googledesktop.blogspot.com/2007_06_01_archive.html'>June (2)</option>
+<option value='http://googledesktop.blogspot.com/2007_05_01_archive.html'>May (1)</option>
+<option value='http://googledesktop.blogspot.com/2007_04_01_archive.html'>April (2)</option>
+<option value='http://googledesktop.blogspot.com/2007_03_01_archive.html'>March (2)</option>
+<option value='http://googledesktop.blogspot.com/2007_02_01_archive.html'>February (2)</option>
+<option value='http://googledesktop.blogspot.com/2007_01_01_archive.html'>January (2)</option>
+<option value='http://googledesktop.blogspot.com/2006_12_01_archive.html'>December (3)</option>
+<option value='http://googledesktop.blogspot.com/2006_11_01_archive.html'>November (2)</option>
+<option value='http://googledesktop.blogspot.com/2006_10_01_archive.html'>October (2)</option>
+<option value='http://googledesktop.blogspot.com/2006_09_01_archive.html'>September (2)</option>
+<option value='http://googledesktop.blogspot.com/2006_08_01_archive.html'>August (4)</option>
+<option value='http://googledesktop.blogspot.com/2006_07_01_archive.html'>July (5)</option>
+<option value='http://googledesktop.blogspot.com/2006_06_01_archive.html'>June (2)</option>
+<option value='http://googledesktop.blogspot.com/2006_05_01_archive.html'>May (1)</option>
+<option value='http://googledesktop.blogspot.com/2006_04_01_archive.html'>April (1)</option>
+<option value='http://googledesktop.blogspot.com/2006_03_01_archive.html'>March (2)</option>
+<option value='http://googledesktop.blogspot.com/2006_02_01_archive.html'>February (4)</option>
+<option value='http://googledesktop.blogspot.com/2006_01_01_archive.html'>January (2)</option>
+<option value='http://googledesktop.blogspot.com/2005_12_01_archive.html'>December (6)</option>
+<option value='http://googledesktop.blogspot.com/2005_11_01_archive.html'>November (7)</option>
+</select>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget HTML' id='HTML6'>
+<h2 class='title'>More Blogs from Google</h2>
+<div class='widget-content'>
+Visit our <a href="http://www.google.com/press/blogs/directory.html#tab0"> directory</a> for more information about Google blogs.
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=HTML&widgetId=HTML6&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML6"));' target='configHTML6' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget LinkList' id='LinkList3'>
+<h2>Useful Links</h2>
+<div class='widget-content'>
+<ul>
+<li><a href='http://groups.google.com/group/Google-Desktop'>Google Desktop Help</a></li>
+<li><a href='http://desktop.google.com/authors'>Developer Hall of Fame</a></li>
+<li><a href='http://desktop.google.com/feeds/gadgets.xml'>RSS Feed: Latest Gadgets</a></li>
+<li><a href='http://desktop.google.com/plugins/'>Download Gadgets</a></li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=LinkList&widgetId=LinkList3&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList3"));' target='configLinkList3' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget LinkList' id='LinkList1'>
+<h2>Developer Links</h2>
+<div class='widget-content'>
+<ul>
+<li><a href='http://desktop.google.com/dev/index.html'>Google Desktop SDK</a></li>
+<li><a href='http://googledesktopapis.blogspot.com/'>Google Desktop APIs Blog</a></li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=LinkList&widgetId=LinkList1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList1"));' target='configLinkList1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget Followers' id='Followers1'>
+<h2 class='title'>Followers</h2>
+<div class='widget-content'>
+<div id='Followers1-wrapper'>
+<div style='margin-right:2px;'>
+<script type="text/javascript">
+        if (!window.google || !google.friendconnect) {
+          document.write('<script type="text/javascript"' +
+              'src="http://www.google.com/friendconnect/script/friendconnect.js">' +
+              '</scr' + 'ipt>');
+        }
+      </script>
+<script type="text/javascript">
+      if (!window.registeredBloggerCallbacks) {
+        window.registeredBloggerCallbacks = true;
+
+        
+
+        
+        gadgets.rpc.register('requestReload', function() {
+          document.location.reload();
+        });
+
+        
+        gadgets.rpc.register('requestSignOut', function(siteId) {
+          
+          google.friendconnect.container.openSocialSiteId = siteId;
+          google.friendconnect.requestSignOut();
+        });
+      }
+    </script>
+<script type="text/javascript">
+    
+    function registerGetBlogUrls() {
+      gadgets.rpc.register('getBlogUrls', function() {
+        var holder = {};
+        
+          
+            
+            
+              holder.currentPost = "http://www.blogger.com/feeds/17816401/posts/default/2269385026222061565";
+            
+            
+            
+              holder.currentComments = "http://www.blogger.com/feeds/17816401/2269385026222061565/comments/default";
+            
+            holder.currentPostUrl = "";
+            holder.currentPostId = 2269385026222061565
+          
+          
+          
+            holder.postFeed = "http://www.blogger.com/feeds/17816401/posts/default";
+          
+          
+          
+            holder.commentFeed = "http://www.blogger.com/feeds/17816401/comments/default";
+          
+          holder.currentBlogUrl = "http://googledesktop.blogspot.com/";
+          holder.currentBlogId = "17816401";
+        
+        return holder;
+      });
+    }
+  </script>
+<script type="text/javascript">
+  if (!window.registeredCommonBloggerCallbacks) {
+    window.registeredCommonBloggerCallbacks = true;
+
+    gadgets.rpc.register('resize_iframe', function(height) {
+      var el = document.getElementById(this['f']);
+      if (el) {
+        el.style.height = height + 'px';
+      }
+    });
+
+    
+    gadgets.rpc.register('set_pref', function() {});
+
+    registerGetBlogUrls();
+  }
+  </script>
+<div id="div-ylfqv65op590" style="width: 100%; "></div>
+<script type="text/javascript">
+    var skin = {};
+    skin['FACE_SIZE'] = '32';
+    skin['HEIGHT'] = "260";
+    skin['TITLE'] = "Followers";
+    skin['BORDER_COLOR'] = "transparent";
+    skin['ENDCAP_BG_COLOR'] = "transparent";
+    skin['ENDCAP_TEXT_COLOR'] = "#666666";
+    skin['ENDCAP_LINK_COLOR'] = "#5588aa";
+    skin['ALTERNATE_BG_COLOR'] = "transparent";
+    
+    skin['CONTENT_BG_COLOR'] = "transparent";
+    skin['CONTENT_LINK_COLOR'] = "#5588aa";
+    skin['CONTENT_TEXT_COLOR'] = "#666666";
+    skin['CONTENT_SECONDARY_LINK_COLOR'] = "#5588aa";
+    skin['CONTENT_SECONDARY_TEXT_COLOR'] = "#666666";
+    skin['CONTENT_HEADLINE_COLOR'] = "#5588aa";
+    skin['FONT_FACE'] = "normal normal 100% Arial, sans-serif";
+    google.friendconnect.container.setParentUrl("/");
+    google.friendconnect.container["renderMembersGadget"](
+    {id: "div-ylfqv65op590",
+     height: 260,
+     
+     
+     
+     site: "01210229262065528431",
+     
+     locale: 'en_US' },
+     skin);
+  </script>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=Followers&widgetId=Followers1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("Followers1"));' target='configFollowers1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget LinkList' id='LinkList2'>
+<h2>More Google</h2>
+<div class='widget-content'>
+<ul>
+<li><a href='http://www.google.com/'>Web Search</a></li>
+<li><a href='http://downloads.google.com/'>Downloads</a></li>
+<li><a href='http://images.google.com/'>Image Search</a></li>
+<li><a href='http://maps.google.com/'>Maps</a></li>
+<li><a href='http://labs.google.com/'>Labs</a></li>
+<li><a href='http://news.google.com/'>News</a></li>
+<li><a href='http://www.google.com/press/zeitgeist.html'>Zeitgeist</a></li>
+<li><a href='http://mobile.google.com/'>Mobile</a></li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=LinkList&widgetId=LinkList2&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList2"));' target='configLinkList2' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget HTML' id='HTML4'>
+<div class='widget-content'>
+<br/><br/>The official Google Desktop Blog is powered by <a href="http://www.blogger.com">Blogger</a>
+
+<br/><br/>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=HTML&widgetId=HTML4&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML4"));' target='configHTML4' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget BloggerButton' id='BloggerButton1'>
+<div class='widget-content'>
+<a href='http://www.blogger.com'><img alt='Powered By Blogger' src='http://www.blogger.com/buttons/blogger-powerby-blue.gif'/></a>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=BloggerButton&widgetId=BloggerButton1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("BloggerButton1"));' target='configBloggerButton1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div></div>
+<br/><br/><br/>
+</div>
+<!-- spacer for skins that want sidebar and main to be the same height-->
+</div><!-- end content-wrapper -->
+<div class='footer'>
+<div class='section' id='footer'><div class='widget HTML' id='HTML1'>
+<div class='widget-content'>
+Copyright &#169; 2008 Google Inc. All rights reserved.<br/>
+   <a href="http://www.google.com/privacy.html">Privacy Policy</a> | 
+	      <a href="http://www.google.com/terms_of_service.html">Terms of Service</a>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=17816401&widgetType=HTML&widgetId=HTML1&action=editWidget&sectionId=footer' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target='configHTML1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div></div>
+</div>
+</div></div>
+</center><!-- end outer-wrapper -->
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'>
+</script>
+<script type='text/javascript'>
+_uacct = "UA-18007-3";
+urchinTracker();
+</script>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="//www.blogger.com/static/v1/widgets/2000000996-widgets.js"></script>
+<script type='text/javascript'>
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '17816401';BLOG_attachCsiOnload('item_'); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d17816401','//googledesktop.blogspot.com/2009/07/google-desktop-now-supports-64-bit.html','17816401');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '17816401', 'bloggerUrl': 'http://www.blogger.com', 'title': 'Inside Google Desktop', 'pageType': 'item', 'url': 'http://googledesktop.blogspot.com/2009/07/google-desktop-now-supports-64-bit.html', 'canonicalUrl': 'http://googledesktop.blogspot.com/2009/07/google-desktop-now-supports-64-bit.html', 'canonicalHomepageUrl': 'http://googledesktop.blogspot.com/', 'homepageUrl': 'http://googledesktop.blogspot.com/', 'blogspotFaviconUrl': 'http://googledesktop.blogspot.com/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': '', 'searchLabel': '', 'searchQuery': '', 'pageName': 'Google Desktop now supports 64 bit Windows', 'pageTitle': 'Inside Google Desktop: Google Desktop now supports 64 bit Windows', 'encoding': 'UTF-8', 'locale': 'en-US', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Inside Google Desktop - Atom\42 href\75\42http://googledesktop.blogspot.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Inside Google Desktop - RSS\42 href\75\42http://googledesktop.blogspot.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Inside Google Desktop - Atom\42 href\75\42http://www.blogger.com/feeds/17816401/posts/default\42 /\76\n\74link rel\75\42EditURI\42 type\75\42application/rsd+xml\42 title\75\42RSD\42 href\75\42http://www.blogger.com/rsd.g?blogID\07517816401\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Inside Google Desktop - Atom\42 href\75\42http://googledesktop.blogspot.com/feeds/2269385026222061565/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'imageSrcTag': '', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var a\75window,b\75\42jstiming\42,d\75\42tick\42;var e\75function(c){this.t\75{};this.tick\75function(c,p,h){h\75void 0!\75h?h:(new Date).getTime();this.t[c]\75[h,p]};this[d](\42start\42,null,c)},f\75new e;a.jstiming\75{Timer:e,load:f};if(a.performance\46\46a.performance.timing){var g\75a.performance.timing,j\75a[b].load,k\75g.navigationStart,l\75g.responseStart;0\74k\46\46l\76\75k\46\46(j[d](\42_wtsrt\42,void 0,k),j[d](\42wtsrt_\42,\42_wtsrt\42,l),j[d](\42tbsd_\42,\42wtsrt_\42))}\ntry{var m\75null;a.chrome\46\46a.chrome.csi\46\46(m\75Math.floor(a.chrome.csi().pageT),j\46\0460\74k\46\46(j[d](\42_tbnd\42,void 0,a.chrome.csi().startE),j[d](\42tbnd_\42,\42_tbnd\42,k)));null\75\75m\46\46a.gtbExternal\46\46(m\75a.gtbExternal.pageT());null\75\75m\46\46a.external\46\46(m\75a.external.pageT,j\46\0460\74k\46\46(j[d](\42_tbnd\42,void 0,a.external.startE),j[d](\42tbnd_\42,\42_tbnd\42,k)));m\46\46(a[b].pt\75m)}catch(n){};a.tickAboveFold\75function(c){var i\0750;if(c.offsetParent){do i+\75c.offsetTop;while(c\75c.offsetParent)}c\75i;750\76\75c\46\46a[b].load[d](\42aft\42)};var q\75!1;function r(){q||(q\75!0,a[b].load[d](\42firstScrollTime\42))}a.addEventListener?a.addEventListener(\42scroll\42,r,!1):a.attachEvent(\42onscroll\42,r);\n })();\74/script\076', 'mobileHeadScript': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/7728d91bbda5af3c'}}, {'name': 'skin', 'data': {'vars': {'sidebartextcolor': '#666666', 'linkcolor': '#5588aa', 'visitedlinkcolor': '#999999', 'textcolor': '#333333', 'headerfont': 'normal normal 95% Arial, sans-serif', 'pagetitlefont': 'normal normal 150% Arial, sans-serif', 'bgcolor': '#ffffff', 'descriptioncolor': '#666666', 'pagesubtitlecolor': '#929292', 'titlecolor': '#5588aa', 'bordercolor': '#cccccc', 'postfooterfont': 'normal normal 78% Arial, sans-serif', 'pagetitlecolor': '#929292', 'bodyfont': 'normal normal 100% Arial, sans-serif', 'descriptionfont': 'normal normal 100% Arial, sans-serif', 'sidebarcolor': '#666666', 'pagesubtitlefont': 'normal normal 50% Arial, sans-serif'}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '/?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '/?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '/?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '/?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '/?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '/?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '/?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'footer', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'sidebar', null, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML6', 'sidebar', null, document.getElementById('HTML6'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList3', 'sidebar', null, document.getElementById('LinkList3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList1', 'sidebar', null, document.getElementById('LinkList1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FollowersView', new _WidgetInfo('Followers1', 'sidebar', null, document.getElementById('Followers1'), {'title': 'Followers', 'codeSnippet': '\74script type\75\42text/javascript\42\76\n        if (!window.google || !google.friendconnect) {\n          document.write(\47\74script type\75\42text/javascript\42\47 +\n              \47src\75\42http://www.google.com/friendconnect/script/friendconnect.js\42\76\47 +\n              \47\74/scr\47 + \47ipt\76\47);\n        }\n      \74/script\76\n\74script type\75\42text/javascript\42\76\n      if (!window.registeredBloggerCallbacks) {\n        window.registeredBloggerCallbacks \75 true;\n\n        \n\n        \n        gadgets.rpc.register(\47requestReload\47, function() {\n          document.location.reload();\n        });\n\n        \n        gadgets.rpc.register(\47requestSignOut\47, function(siteId) {\n          \n          google.friendconnect.container.openSocialSiteId \75 siteId;\n          google.friendconnect.requestSignOut();\n        });\n      }\n    \74/script\76\n\74script type\75\42text/javascript\42\76\n    \n    function registerGetBlogUrls() {\n      gadgets.rpc.register(\47getBlogUrls\47, function() {\n        var holder \75 {};\n        \n          \n            \n            \n              holder.currentPost \75 \42http://www.blogger.com/feeds/17816401/posts/default/2269385026222061565\42;\n            \n            \n            \n              holder.currentComments \75 \42http://www.blogger.com/feeds/17816401/2269385026222061565/comments/default\42;\n            \n            holder.currentPostUrl \75 \42\42;\n            holder.currentPostId \75 2269385026222061565\n          \n          \n          \n            holder.postFeed \75 \42http://www.blogger.com/feeds/17816401/posts/default\42;\n          \n          \n          \n            holder.commentFeed \75 \42http://www.blogger.com/feeds/17816401/comments/default\42;\n          \n          holder.currentBlogUrl \75 \42http://googledesktop.blogspot.com/\42;\n          holder.currentBlogId \75 \04217816401\42;\n        \n        return holder;\n      });\n    }\n  \74/script\76\n\74script type\75\42text/javascript\42\76\n  if (!window.registeredCommonBloggerCallbacks) {\n    window.registeredCommonBloggerCallbacks \75 true;\n\n    gadgets.rpc.register(\47resize_iframe\47, function(height) {\n      var el \75 document.getElementById(this[\47f\47]);\n      if (el) {\n        el.style.height \75 height + \47px\47;\n      }\n    });\n\n    \n    gadgets.rpc.register(\47set_pref\47, function() {});\n\n    registerGetBlogUrls();\n  }\n  \74/script\76\n\74div id\75\42div-1evy67gn6lccg\42 style\75\42width: 100%; \42\76\74/div\76\n\74script type\75\42text/javascript\42\76\n    var skin \75 {};\n    skin[\47FACE_SIZE\47] \75 \04732\47;\n    skin[\47HEIGHT\47] \75 \042260\42;\n    skin[\47TITLE\47] \75 \42Followers\42;\n    skin[\47BORDER_COLOR\47] \75 \42transparent\42;\n    skin[\47ENDCAP_BG_COLOR\47] \75 \42transparent\42;\n    skin[\47ENDCAP_TEXT_COLOR\47] \75 \42#666666\42;\n    skin[\47ENDCAP_LINK_COLOR\47] \75 \42#5588aa\42;\n    skin[\47ALTERNATE_BG_COLOR\47] \75 \42transparent\42;\n    \n    skin[\47CONTENT_BG_COLOR\47] \75 \42transparent\42;\n    skin[\47CONTENT_LINK_COLOR\47] \75 \42#5588aa\42;\n    skin[\47CONTENT_TEXT_COLOR\47] \75 \42#666666\42;\n    skin[\47CONTENT_SECONDARY_LINK_COLOR\47] \75 \42#5588aa\42;\n    skin[\47CONTENT_SECONDARY_TEXT_COLOR\47] \75 \42#666666\42;\n    skin[\47CONTENT_HEADLINE_COLOR\47] \75 \42#5588aa\42;\n    skin[\47FONT_FACE\47] \75 \42normal normal 100% Arial, sans-serif\42;\n    google.friendconnect.container.setParentUrl(\42/\42);\n    google.friendconnect.container[\42renderMembersGadget\42](\n    {id: \42div-1evy67gn6lccg\42,\n     height: 260,\n     \n     \n     \n     site: \04201210229262065528431\42,\n     \n     locale: \47en_US\47 },\n     skin);\n  \74/script\076'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList2', 'sidebar', null, document.getElementById('LinkList2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'sidebar', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BloggerButtonView', new _WidgetInfo('BloggerButton1', 'sidebar', null, document.getElementById('BloggerButton1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'showBacklinks': true, 'postId': '2269385026222061565', 'lightboxEnabled': true, 'lightboxModuleUrl': '//www.blogger.com/static/v1/jsbin/3339358681-lbx.js', 'lightboxCssUrl': '//www.blogger.com/static/v1/v-css/228702327-lightbox_bundle.css'}, 'displayModeFull'));
+</script>
+</body>
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="Author" content="Robert Nyman">
+	<title>The new Editor for Mozilla Hacks - Robert&#039;s talk</title>	
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/robertnyman">
+	<link rel="stylesheet" href="http://robertnyman.com/wp-content/themes/hk-html5/style.css" type="text/css" media="screen">
+	
+	<!--[if gte IE 8]><!--> 
+		<link rel="stylesheet" href="http://robertnyman.com/wp-content/themes/hk-html5/css/images-b64.css" type="text/css" media="screen">
+	<!--<![endif]-->
+	<!--[if lt IE 8]>
+		<link rel="stylesheet" href="http://robertnyman.com/wp-content/themes/hk-html5/css/images.css" type="text/css" media="screen">
+	<![endif]-->
+	
+	<!--[if lt IE 7]>
+		<link rel="stylesheet" href="/wp-content/themes/hk-html5/css/ie.css" type="text/css">
+	<![endif]-->
+	
+	<!--[if lte IE 8]>
+		<script src="/wp-content/themes/hk-html5/js/html5.js"></script>
+	<![endif]-->
+	
+	<link rel="pingback" href="http://robertnyman.com/xmlrpc.php">
+    	<link rel='archives' title='September 2012' href='http://robertnyman.com/2012/09/'>
+	<link rel='archives' title='August 2012' href='http://robertnyman.com/2012/08/'>
+	<link rel='archives' title='July 2012' href='http://robertnyman.com/2012/07/'>
+	<link rel='archives' title='May 2012' href='http://robertnyman.com/2012/05/'>
+	<link rel='archives' title='April 2012' href='http://robertnyman.com/2012/04/'>
+	<link rel='archives' title='March 2012' href='http://robertnyman.com/2012/03/'>
+	<link rel='archives' title='February 2012' href='http://robertnyman.com/2012/02/'>
+	<link rel='archives' title='January 2012' href='http://robertnyman.com/2012/01/'>
+	<link rel='archives' title='December 2011' href='http://robertnyman.com/2011/12/'>
+	<link rel='archives' title='November 2011' href='http://robertnyman.com/2011/11/'>
+	<link rel='archives' title='October 2011' href='http://robertnyman.com/2011/10/'>
+	<link rel='archives' title='September 2011' href='http://robertnyman.com/2011/09/'>
+	<link rel='archives' title='August 2011' href='http://robertnyman.com/2011/08/'>
+	<link rel='archives' title='July 2011' href='http://robertnyman.com/2011/07/'>
+	<link rel='archives' title='June 2011' href='http://robertnyman.com/2011/06/'>
+	<link rel='archives' title='May 2011' href='http://robertnyman.com/2011/05/'>
+	<link rel='archives' title='April 2011' href='http://robertnyman.com/2011/04/'>
+	<link rel='archives' title='March 2011' href='http://robertnyman.com/2011/03/'>
+	<link rel='archives' title='February 2011' href='http://robertnyman.com/2011/02/'>
+	<link rel='archives' title='January 2011' href='http://robertnyman.com/2011/01/'>
+	<link rel='archives' title='December 2010' href='http://robertnyman.com/2010/12/'>
+	<link rel='archives' title='November 2010' href='http://robertnyman.com/2010/11/'>
+	<link rel='archives' title='October 2010' href='http://robertnyman.com/2010/10/'>
+	<link rel='archives' title='September 2010' href='http://robertnyman.com/2010/09/'>
+	<link rel='archives' title='June 2010' href='http://robertnyman.com/2010/06/'>
+	<link rel='archives' title='May 2010' href='http://robertnyman.com/2010/05/'>
+	<link rel='archives' title='April 2010' href='http://robertnyman.com/2010/04/'>
+	<link rel='archives' title='March 2010' href='http://robertnyman.com/2010/03/'>
+	<link rel='archives' title='February 2010' href='http://robertnyman.com/2010/02/'>
+	<link rel='archives' title='January 2010' href='http://robertnyman.com/2010/01/'>
+	<link rel='archives' title='December 2009' href='http://robertnyman.com/2009/12/'>
+	<link rel='archives' title='November 2009' href='http://robertnyman.com/2009/11/'>
+	<link rel='archives' title='October 2009' href='http://robertnyman.com/2009/10/'>
+	<link rel='archives' title='September 2009' href='http://robertnyman.com/2009/09/'>
+	<link rel='archives' title='August 2009' href='http://robertnyman.com/2009/08/'>
+	<link rel='archives' title='July 2009' href='http://robertnyman.com/2009/07/'>
+	<link rel='archives' title='June 2009' href='http://robertnyman.com/2009/06/'>
+	<link rel='archives' title='May 2009' href='http://robertnyman.com/2009/05/'>
+	<link rel='archives' title='April 2009' href='http://robertnyman.com/2009/04/'>
+	<link rel='archives' title='March 2009' href='http://robertnyman.com/2009/03/'>
+	<link rel='archives' title='February 2009' href='http://robertnyman.com/2009/02/'>
+	<link rel='archives' title='January 2009' href='http://robertnyman.com/2009/01/'>
+	<link rel='archives' title='December 2008' href='http://robertnyman.com/2008/12/'>
+	<link rel='archives' title='November 2008' href='http://robertnyman.com/2008/11/'>
+	<link rel='archives' title='October 2008' href='http://robertnyman.com/2008/10/'>
+	<link rel='archives' title='September 2008' href='http://robertnyman.com/2008/09/'>
+	<link rel='archives' title='August 2008' href='http://robertnyman.com/2008/08/'>
+	<link rel='archives' title='June 2008' href='http://robertnyman.com/2008/06/'>
+	<link rel='archives' title='May 2008' href='http://robertnyman.com/2008/05/'>
+	<link rel='archives' title='April 2008' href='http://robertnyman.com/2008/04/'>
+	<link rel='archives' title='March 2008' href='http://robertnyman.com/2008/03/'>
+	<link rel='archives' title='February 2008' href='http://robertnyman.com/2008/02/'>
+	<link rel='archives' title='January 2008' href='http://robertnyman.com/2008/01/'>
+	<link rel='archives' title='December 2007' href='http://robertnyman.com/2007/12/'>
+	<link rel='archives' title='November 2007' href='http://robertnyman.com/2007/11/'>
+	<link rel='archives' title='October 2007' href='http://robertnyman.com/2007/10/'>
+	<link rel='archives' title='September 2007' href='http://robertnyman.com/2007/09/'>
+	<link rel='archives' title='August 2007' href='http://robertnyman.com/2007/08/'>
+	<link rel='archives' title='June 2007' href='http://robertnyman.com/2007/06/'>
+	<link rel='archives' title='May 2007' href='http://robertnyman.com/2007/05/'>
+	<link rel='archives' title='April 2007' href='http://robertnyman.com/2007/04/'>
+	<link rel='archives' title='March 2007' href='http://robertnyman.com/2007/03/'>
+	<link rel='archives' title='February 2007' href='http://robertnyman.com/2007/02/'>
+	<link rel='archives' title='January 2007' href='http://robertnyman.com/2007/01/'>
+	<link rel='archives' title='December 2006' href='http://robertnyman.com/2006/12/'>
+	<link rel='archives' title='November 2006' href='http://robertnyman.com/2006/11/'>
+	<link rel='archives' title='October 2006' href='http://robertnyman.com/2006/10/'>
+	<link rel='archives' title='September 2006' href='http://robertnyman.com/2006/09/'>
+	<link rel='archives' title='August 2006' href='http://robertnyman.com/2006/08/'>
+	<link rel='archives' title='April 2006' href='http://robertnyman.com/2006/04/'>
+	<link rel='archives' title='March 2006' href='http://robertnyman.com/2006/03/'>
+	<link rel='archives' title='February 2006' href='http://robertnyman.com/2006/02/'>
+	<link rel='archives' title='January 2006' href='http://robertnyman.com/2006/01/'>
+	<link rel='archives' title='December 2005' href='http://robertnyman.com/2005/12/'>
+	<link rel='archives' title='November 2005' href='http://robertnyman.com/2005/11/'>
+	<link rel='archives' title='October 2005' href='http://robertnyman.com/2005/10/'>
+	<link rel='archives' title='September 2005' href='http://robertnyman.com/2005/09/'>
+	<link rel='archives' title='August 2005' href='http://robertnyman.com/2005/08/'>
+	<link rel='archives' title='July 2005' href='http://robertnyman.com/2005/07/'>
+	<link rel='archives' title='June 2005' href='http://robertnyman.com/2005/06/'>
+	<link rel='archives' title='May 2005' href='http://robertnyman.com/2005/05/'>
+	<link rel='archives' title='April 2005' href='http://robertnyman.com/2005/04/'>
+	<link rel='archives' title='March 2005' href='http://robertnyman.com/2005/03/'>
+	<link rel="alternate" type="application/rss+xml" title="Robert&#039;s talk &raquo; The new Editor for Mozilla Hacks Comments Feed" href="http://robertnyman.com/2012/09/19/the-new-editor-for-mozilla-hacks/feed/">
+<style type="text/css">img.nothumb{border:0;margin:0 0 0 2px !important;}</style>
+<!-- Tweet This v1.8.3 b037 mode alpha -->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://robertnyman.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://robertnyman.com/wp-includes/wlwmanifest.xml"> 
+<link rel='prev' title='Life, and how we choose to live it' href='http://robertnyman.com/2012/09/02/life-and-how-we-choose-to-live-it/'>
+
+<link rel='shortlink' href='http://is.gd/rwzThU'>
+
+<!-- All in One SEO Pack 1.6.15.2 by Michael Torbert of Semper Fi Web Designob_start_detected [-1,-1] -->
+<meta name="description" content="I've always loved blogging, writing about things I'm interested in and then sharing and discussing it with like-minded people! Sometimes passionately agreeing,">
+<meta name="keywords" content="developing,mozilla,technology">
+<link rel="canonical" href="http://robertnyman.com/2012/09/19/the-new-editor-for-mozilla-hacks/">
+<!-- /all in one seo pack -->
+<script type="text/javascript">var src="http://robertnyman.com/wp-content/plugins/wordfence/visitor.php?hid=92E8C22E1F0AB405A17B750F0B90F5B6"; if(window.location.protocol == "https:"){ src = src.replace("http:", "https:"); } var wfHTImg = new Image();  wfHTImg.src=src;</script></head>
+
+<body>	
+	
+	<div id="container">
+		
+		<div id="main">
+		
+			<header id="header" role="banner">
+				<h1><a href="http://robertnyman.com" accesskey="1" class="logo" title="Go to the start page of Robert's talk"><img src="http://robertnyman.com/wp-content/themes/hk-html5/images/logo.jpg" alt="Robert's talk"></a></h1>
+				<h2>
+					We can’t change history, but we can change the future.<br>
+					Be nice to each other.
+				</h2>
+				
+				<div id="skip-links">
+					<a href="#content" accesskey="s">Skip to main content</a>
+					<a href="#navigation" accesskey="n">Skip to navigation</a>
+					<a href="#additional-content" accesskey="a">Skip to additional content</a>
+				</div>
+				
+				<nav id="main-navigation" role="navigation">
+					<ul>
+						<li><a href="http://robertnyman.com/about" accesskey="0" title="Information about the author, Robert Nyman, and copyright information">About</a></li>
+						<li><a href="http://robertnyman.com/contact" accesskey="7" title="Contact information">Contact</a></li>
+						<li><a href="http://robertnyman.com/code-libraries" title="JavaScript code libraries and Adobe AIR applications ">Code</a></li>
+						<li><a href="http://robertnyman.com/feeds" class="rss" title="The RSS feeds available for this web site">RSS feeds</a></li>
+						<li><a href="http://robertnyman.com/speaking" title="Information about and slides from my speaking performances">Speaking</a></li>
+						<li><a href="http://robertnyman.com/archives" title="Archives over all published posts">Archives</a></li>
+						<li><a href="http://robertnyman.com/geekmeet" title="Information about Geek Meet">Geek Meet</a></li>
+					</ul>
+				</nav>
+			</header>
+<div id="content">
+	
+	<div id="inner-content" role="main">
+				
+								
+				
+				<article class="post">
+					<header>
+						<h1>The new Editor for Mozilla Hacks</h1>
+						<time datetime="2012-09-19" class="date">Published on Wednesday, September 19, 2012</time>
+					</header>
+					
+					<p>I&#8217;ve always loved blogging, writing about things I&#8217;m interested in and then sharing and discussing it with like-minded people! Sometimes passionately agreeing, sometimes not so much. <img src='http://robertnyman.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley'>  But I believe the discussion has always been good, and as long as it&#8217;s respectful, it&#8217;s quite constructive and an excellent base for building relations and bonds with people.</p>
+<p><span id="more-2378"></span></p>
+<h2>The latest year</h2>
+<p><a href="http://robertnyman.com/2011/03/24/my-new-job-technical-evangelist-for-mozilla/">I joined Mozilla almost 14 months ago</a>, and since then I&#8217;ve put <a href="http://robertnyman.com/2011/12/31/summing-up-2011/">a lot of time into travel</a>, <a href="http://lanyrd.com/profile/robertnyman/">giving presentations</a> and meeting web developers in different places. Parallel to that, I&#8217;ve blogged a good amount for the <a href="https://hacks.mozilla.org/">Mozilla Hacks blog</a> about web development and the Open Web in general.</p>
+<p>Writing and working with that blog is probably one of the reasons I haven&#8217;t been that active in my own blog here, but I hope to be able to improve that as well. At times the channels overlap, but mostly they&#8217;re complementing each other.</p>
+<h2>Becoming the Editor of Mozilla Hacks</h2>
+<p>The Mozilla Hacks blog has been around for a few years now, as part of Mozilla&#8217;s Developer Engagement initiative. While we in the team have been writing for it on occasion and based on general availability, it hasn&#8217;t gotten the attention it deserves from us. We have come to the conclusion that it is an amazing opportunity for outreach and it is now one of our dedicated priorities!</p>
+<p>I have just taken over as the Editor of Mozilla Hacks, and this means that I will put even more of my time into improving the blog and how we work with it. I believe it&#8217;s vital for Mozilla to engage with our community, and developers everywhere, by producing both quality content and taking part in the discussion with them.</p>
+<p>Developers, their knowledge and their choices are very important assets in keeping the web open, and we want to ensure we make that as optimal as possible; by teaching, sharing knowledge and respect with them.</p>
+<p>Also, and I can&#8217;t stress this enough: Mozilla Hacks is, just like <a href="https://developer.mozilla.org/">MDN (Mozilla Developer Network)</a>, a web browser agnostic resource, focused on the Open Web and sharing knowledge with all web developers out there.</p>
+<h2>Visions &amp; goals</h2>
+<p>With Mozilla we strive to keep as much information as possible open, for the good of everyone. In line with that, if you are interested, the <a href="https://wiki.mozilla.org/Engagement/Developer_Engagement/Hacks_blog">goals, responsibilities and guidelines for Mozilla Hacks</a> are publicly available. </p>
+<p>I&#8217;m a big fan of being very clear and consistent, and I believe Mozilla Hacks will succeed even more with a proper structure.</p>
+<p>Things that have changed so far:</p>
+<ul>
+<li>Currently we have 93 authors, which is a good challenge when it comes to privileges and workflow</li>
+<li><a href="https://wiki.mozilla.org/Engagement/Developer_Engagement/Hacks_blog">Guidelines and responsibilities</a> are described in public</li>
+<li>We have created a <a href="https://github.com/mozilla/mozhacks/">GitHub repository for developers</a> to easily see, fork and use the code we have in blog posts </li>
+<li>We&#8217;re looking into localization, to make the content available to as many as possible</li>
+<li>We&#8217;re working on how to get the best metrics for Mozilla Hacks, and will share data on that as we progress</li>
+</ul>
+<h2>Write for Mozilla Hacks</h2>
+<p>I would love to bring a good amount of guest authors to Mozilla Hacks, for us to get more diverse content and for you to potentially reach a new audience! I hope that the credibility, goodwill and size of the Mozilla Hacks audience together with the help I and Developer Engagement will give you are important factors for doing that!</p>
+<p>From a personal branding perspective: We highlight the post author for each blog post, with links to your personal web site, Twitter and more. Generally, we don&#8217;t want to reblog existing articles in Mozilla Hacks, but if there&#8217;s a topic you love and know more about, please consider having an alternate version for Mozilla Hacks.</p>
+<p>If you want to write about something, but is unsure about the writing itself, comment handling or similar, talk to me! I&#8217;m here, and I will help you all the way!</p>
+<p>Questions, thoughts or you just can&#8217;t hold back your interest anymore? Let me know! Contact me at robnyman [at] mozilla [dot] com</p>
+<h2>Conclusion</h2>
+<p>I&#8217;ll continue to blog here in my personal blog, but I will also cover a lot of topics in the Mozilla Hacks blog. Please consider reading, sharing or contributing to Mozilla Hacks!</p>
+<p>Naturally I&#8217;m still a Technical Evangelist for Mozilla, doing talks and more, but Mozilla Hacks will be were the majority of my time will go.</p>
+<div class="tweetthis" style="text-align:left;"><p> <a target="_blank" rel="nofollow" class="tt" href="http://twitter.com/intent/tweet?text=The+new+Editor+for+Mozilla+Hacks+-+http%3A%2F%2Fis.gd%2FrwzThU" title="Post about or comment this post on Twitter"><img class="nothumb" src="http://robertnyman.com/wp-content/plugins/tweet-this/icons/en/twitter/tt-twitter2.png" alt="Post to Twitter"></a> <a target="_blank" rel="nofollow" class="tt" href="http://twitter.com/intent/tweet?text=The+new+Editor+for+Mozilla+Hacks+-+http%3A%2F%2Fis.gd%2FrwzThU" title="Post about or comment this post on Twitter">Tweet a comment</a></p></div>
+					
+					<div class="follow-me">
+						<a href="http://twitter.com/robertnyman" class="follow-on-twitter">Follow me on <span>Twitter</span></a>
+                        <a href="http://robertnyman.com/feed/" class="rss">RSS</a>
+					</div>
+					
+										
+					<footer class="comment-info comment-info-single">
+												Posted in <a href="http://robertnyman.com/category/developing/" title="View all posts in Developing" rel="category tag">Developing</a>,<a href="http://robertnyman.com/category/mozilla/" title="View all posts in Mozilla" rel="category tag">Mozilla</a>,<a href="http://robertnyman.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</a>						| <a href="#comment-container">6 Comments</a>
+						| <a href="#twitter-reactions-header" id="twitter-reactions-metadata"></a>
+					</footer>
+					
+				</article>
+				
+				
+		
+	<div id="comment-container">
+			<h3 id="comments">
+			6 Comments			<span id="twitter-reactions-count"></span>
+		</h3>
+		<ul id="comment-feeds">
+			<li><a href="http://robertnyman.com/2012/09/19/the-new-editor-for-mozilla-hacks/feed/" class="rss">RSS feed for comments on this post</a></li>
+			<li><a href="http://feeds.feedburner.com/RobertsTalkComments" class="rss">RSS feed for comments on all posts</a></li>
+		</ul>
+			
+		<ul class="comments site-comments">
+	
+					
+			
+				
+					<li  class="alt-comment" id="comment-930444">					
+										<img src="http://www.gravatar.com/avatar/1fc57e948d57bbb3f015f1f98f5e4dc1?s=40&amp;d=http://robertnyman.com/images/anonymous-comment.jpg" width="40" height="40" alt="" class="comment-author-image gravatar-1fc57e948d57bbb3f015f1f98f5e4dc1">
+						<span class="comment-no">#1</span>
+
+															<a href="https://twitter.com/quinnhigurashi" title="Visit Quinn" rel="nofollow">Quinn</a>
+													
+				
+										
+						<br><a href="#comment-930444" title="">September 19th, 2012 at 16:14</a> 						<div class="comment-text">
+							<p>Okay, that&#8217;s how&#8217;s going on. Congratulations!</p>
+						
+						</div>	
+					</li>
+	
+								
+	
+					
+			
+				
+					<li  id="comment-930616">					
+										<img src="http://www.gravatar.com/avatar/e479973385adf656f8c709b85df57b08?s=40&amp;d=http://robertnyman.com/images/anonymous-comment.jpg" width="40" height="40" alt="" class="comment-author-image gravatar-e479973385adf656f8c709b85df57b08">
+						<span class="comment-no">#2</span>
+
+															Sander Aarts													
+				
+										
+						<br><a href="#comment-930616" title="">September 19th, 2012 at 19:33</a> 						<div class="comment-text">
+							<p>Congratulations man. Awesome!</p>
+						
+						</div>	
+					</li>
+	
+								
+	
+					
+			
+				
+					<li  class="alt-comment" id="comment-930644">					
+										<img src="http://www.gravatar.com/avatar/c47bf5e271115acb3820392b0a5c9574?s=40&amp;d=http://robertnyman.com/images/anonymous-comment.jpg" width="40" height="40" alt="" class="comment-author-image gravatar-c47bf5e271115acb3820392b0a5c9574">
+						<span class="comment-no">#3</span>
+
+															<a href="http://www.bram.us/" title="Visit Bram Van Damme | Bramus!" rel="nofollow">Bram Van Damme | Bramus!</a>
+													
+				
+										
+						<br><a href="#comment-930644" title="">September 19th, 2012 at 20:04</a> 						<div class="comment-text">
+							<p>Congratulations, Robert!</p>
+						
+						</div>	
+					</li>
+	
+								
+	
+					
+			
+									<li class="author" id="comment-930662">					
+										<img src="http://www.gravatar.com/avatar/98a8f4f391111e31811a56f286cd3f6d?s=40&amp;d=http://robertnyman.com/images/anonymous-comment.jpg" width="40" height="40" alt="" class="comment-author-image gravatar-98a8f4f391111e31811a56f286cd3f6d">
+						<span class="comment-no">#4</span>
+
+															<a href="http://www.robertnyman.com" title="Visit Robert Nyman" rel="nofollow">Robert Nyman - author</a>
+													
+				
+										
+						<br><a href="#comment-930662" title="">September 19th, 2012 at 20:19</a> 						<div class="comment-text">
+							<p>Quinn, Sander, Bram,</p>
+<p>Thank you very much!</p>
+						
+						</div>	
+					</li>
+	
+								
+	
+					
+			
+				
+					<li  class="alt-comment" id="comment-955961">					
+										<img src="http://www.gravatar.com/avatar/5f8d061eb2bf260d99278eec01147ee2?s=40&amp;d=http://robertnyman.com/images/anonymous-comment.jpg" width="40" height="40" alt="" class="comment-author-image gravatar-5f8d061eb2bf260d99278eec01147ee2">
+						<span class="comment-no">#5</span>
+
+															Jeff													
+				
+										
+						<br><a href="#comment-955961" title="">October 26th, 2012 at 17:32</a> 						<div class="comment-text">
+							<p>When do you expect a WebRTC &#8220;Hello World&#8221; conversation example to be available?  Like two tin-cans with string &#8211; two PCs with headphones/mics where each party can say &#8220;hello world&#8221; (or &#8220;Watson come here&#8221; might be more appropriate).</p>
+<p>I would love to have the Javascript code right now even if it is not yet fully operational.</p>
+						
+						</div>	
+					</li>
+	
+								
+	
+					
+			
+									<li class="author" id="comment-956872">					
+										<img src="http://www.gravatar.com/avatar/98a8f4f391111e31811a56f286cd3f6d?s=40&amp;d=http://robertnyman.com/images/anonymous-comment.jpg" width="40" height="40" alt="" class="comment-author-image gravatar-98a8f4f391111e31811a56f286cd3f6d">
+						<span class="comment-no">#6</span>
+
+															<a href="http://robertnyman.com" title="Visit Robert Nyman" rel="nofollow">Robert Nyman - author</a>
+													
+				
+										
+						<br><a href="#comment-956872" title="">October 29th, 2012 at 0:29</a> 						<div class="comment-text">
+							<p>Jeff,</p>
+<p>Oh, hard to say when it will be shipped, exactly. Goal is within a few months. Please stay tuned to the <a href="https://hacks.mozilla.org/" rel="nofollow">Mozilla Hacks blog</a> for updates!</p>
+						
+						</div>	
+					</li>
+	
+								
+	
+			
+		</ul>
+		<p class="text-align-center">
+			<a href="#respond">Write a comment</a>
+		</p>
+	
+	 	
+	
+		
+	
+		
+	<div id="twitter-reactions"></div>
+	
+	<form action="http://robertnyman.com/wp-comments-post.php" method="post" id="commentform">
+	
+		
+	<div id="respond">
+		
+		<h3>Share your thoughts:</h3>
+	
+		<label for="author">Name (required):</label>
+		<input type="text" name="author" id="author" value="">		
+	
+		<label for="email">E-mail address (required, will not be published). Get a <a href="http://www.gravatar.com/">Gravatar</a> to have  your personal image displayed next to your comment. <em>Comments with an invalid e-mail address will be removed</em>:</label>
+		<input type="text" name="email" id="email" value="">		
+	
+	
+		<label for="url">Web site:</label>
+		<input type="text" name="url" id="url" value="">		
+	
+	
+		
+		<p><strong>HTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; . If you want to display code examples, please remember to write &amp;lt; for &lt; and &amp;gt; for &gt;.</p>
+		<textarea name="comment" id="comment" cols="20" rows="10"></textarea>		
+		<input type="hidden" name="comment_post_ID" value="2378">
+	</div>
+	<h4>Comment preview </h4>
+	<div id="comment-preview"></div>
+	<div><input name="submit" type="submit" id="submit" value="Send">
+	<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e48506c5a0"></p>	</div>
+	
+	</form>
+	
+		
+					
+				</div>
+				
+				
+
+				</div>
+			</div>
+		</div>
+		
+		<!-- Syntax highlighting -->
+		<script type="text/javascript" src="/syntax-highlighter/scripts/shHTMLJavaScript.js"></script>
+		<script type="text/javascript">
+				SyntaxHighlighter.all();
+		</script>
+		
+		<aside id="sidebar" role="complementary">
+
+	<div id="navigation">
+		<div id="navigation-inner">
+			<h3>Recent posts</h3>
+			<ul>
+					<li><a href='http://robertnyman.com/2012/09/19/the-new-editor-for-mozilla-hacks/' title='The new Editor for Mozilla Hacks'>The new Editor for Mozilla Hacks</a></li>
+	<li><a href='http://robertnyman.com/2012/09/02/life-and-how-we-choose-to-live-it/' title='Life, and how we choose to live it'>Life, and how we choose to live it</a></li>
+	<li><a href='http://robertnyman.com/2012/08/21/geek-meet-september-2012-with-jonathan-snook/' title='Geek Meet September 2012 with Jonathan Snook'>Geek Meet September 2012 with Jonathan Snook</a></li>
+	<li><a href='http://robertnyman.com/2012/07/08/pearl-jam-in-stockholm-july-7th-2012-an-amazing-experience/' title='Pearl Jam in Stockholm July 7th 2012 &#8211; an amazing experience!'>Pearl Jam in Stockholm July 7th 2012 &#8211; an amazing experience!</a></li>
+	<li><a href='http://robertnyman.com/2012/05/29/my-trip-to-russia-moscow-and-the-toster-conference/' title='My trip to Russia, Moscow, and the .toster conference'>My trip to Russia, Moscow, and the .toster conference</a></li>
+			</ul>
+			
+			<h4><a href="http://robertnyman.com/most-popular-posts" title="The most popular and read posts" class="more">Most popular posts</a></h4>
+			<h4><a href="http://robertnyman.com/archives" title="The archive containing all the posts since March 2005" class="more">Archive of all posts</a></h4>
+			
+			<h3><label for="s">Search</label></h3>
+			<form method="post" id="search-form" action="/index.php">
+				<div role="search">
+					<input type="search" value="" name="s" id="s" accesskey="4" class="ajax-suggestion url-/">
+					<input type="submit" id="searchsubmit" value="Search">
+				</div>
+			</form>
+			
+			<a id="feedburner" href="http://feeds.feedburner.com/robertnyman"><img src="http://feeds.feedburner.com/~fc/robertnyman?bg=222221&amp;fg=FFFFFF&amp;anim=0" height="26" width="88" alt=""></a>
+			
+			<a href="http://twitter.com/robertnyman">
+				<img src="http://button.twittercounter.com/avatar/?u=robertnyman" alt="Follow me on Twitter">
+			</a>
+
+			<ul class="twitter"><li>No public Twitter messages.</li></ul>			
+			<h3>Upcoming speaking</h3>
+			<div class="lanyrd-target-splat">
+				<a href="http://lanyrd.com/people/robertnyman/" class="lanyrd-splat lanyrd-number-3 lanyrd-context-future lanyrd-type-speaking" rel="me">All my conferences on Lanyrd</a>
+			</div>			
+			<script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+			
+			
+			
+<h3>Other places on the web</h3>
+<ul><li> <a href="http://www.myshopping.com.au/PT--84_Software_Adobe__fs_1465_e__">Adobe Software</a> </li>
+<li> <a href="http://www.crunchbase.com/company/astonish-results">Coaching by Astonish Results</a> </li>
+</ul>			
+			<h3>HTML5 demos &amp; tests</h3>
+			<ul>
+				<li><a href="http://robertnyman.com/html5/html5-simple-example.html">HTML5 example with new elements and WAI-ARIA landmark roles</a></li>
+				<li><a href="http://robertnyman.com/html5/canvas/canvas-demo.html">Canvas</a></li>
+				<li><a href="http://robertnyman.com/html5/data-attributes/data-attributes.html">Custom data attributes</a></li>
+				<li><a href="http://robertnyman.com/html5/fileapi/fileapi.html">File API for reading file information and selecting multiple files</a></li>
+				<li><a href="http://robertnyman.com/html5/fileapi-upload/fileapi-upload.html">File API for choosing, uploading, previewing and seeing progress for multiple files</a></li>
+				<li><a href="http://robertnyman.com/html5/geolocation/current-location.html">Geolocation - show current location</a></li>
+				<li><a href="http://robertnyman.com/html5/geolocation/current-location-and-directions.html">Geolocation - show directions</a></li>
+				<li><a href="http://robertnyman.com/html5/history-api/history-api.html">History API</a></li>
+				<li><a href="http://robertnyman.com/html5/webstorage/webStorage.html">localStorage &amp; sessionStorage (Web Storage)</a></li>
+				<li><a href="http://robertnyman.com/html5/offline/offline.html">Offline Web Applications</a></li>
+				<li><a href="http://robertnyman.com/html5/offline/online-offline-events.html">Online/Offline events</a></li>
+				<li><a href="http://robertnyman.com/html5/offline/online-offline-polling.html">Online polling</a></li>
+				<li><a href="http://robertnyman.com/html5/postMessage/postMessage.html">postMessage</a></li>
+				<li><a href="http://robertnyman.com/html5/svg/svg.html">SVG (Scalable Vector Graphics)</a></li>
+				<li><a href="http://robertnyman.com/html5/video/video-demo.html">Video</a></li>
+				<li><a href="http://robertnyman.com/html5/webworkers/webWorkers.html">Web Workers</a></li>
+			</ul>
+			
+			<h3>CSS3 demos &amp; tests</h3>
+			<ul>
+				
+				<li><a href="http://robertnyman.com/css3/css-animations/css-animations-simple.html">CSS3 Animations - simple</a></li>
+				<li><a href="http://robertnyman.com/css3/css-animations/css-animations-percentage.html">CSS3 Animations - with keyframes, iterations and more</a></li>
+				<li><a href="http://robertnyman.com/css3/background-size/background-size.html">CSS3 background-size</a></li>
+				<li><a href="http://robertnyman.com/css3/background-clip/background-clip.html">CSS3 background-clip/background-origin</a></li>
+				<li><a href="http://robertnyman.com/css3/border-colors/border-colors.html">CSS3 border-colors</a></li>
+				<li><a href="http://robertnyman.com/css3/border-image/border-image.html">CSS3 border-image</a></li>
+				<li><a href="http://robertnyman.com/css3/border-radius/border-radius.html">CSS3 border-radius (rounded corners)</a></li>
+				<li><a href="http://robertnyman.com/css3/box-sizing/box-sizing.html">CSS3 box-sizing</a></li>
+				<li><a href="http://robertnyman.com/css3/calc/calc.html">CSS3 calc()</a></li>
+				<li><a href="http://robertnyman.com/css3/drop-shadow/drop-shadow.html">CSS3 Drop shadow</a></li>
+				<li><a href="http://robertnyman.com/css3/flexible-box-layout/flexible-box-layout.html">CSS3 Flexible Box Layout Module</a></li>
+				<li><a href="http://robertnyman.com/css3/font-face/font-face.html">CSS3 font-face</a></li>
+				<li><a href="http://robertnyman.com/css3/gradients/gradients.html">CSS3 gradients</a></li>
+				<li><a href="http://robertnyman.com/css3/hsla/hsla.html">CSS3 HSLa</a></li>
+				<li><a href="http://robertnyman.com/css3/media-queries/media-queries.html">CSS3 media queries</a></li>
+				<li><a href="http://robertnyman.com/css3/multi-column-layout/multi-column-layout.html">CSS3 Multi Column Layout</a></li>
+				<li><a href="http://robertnyman.com/css3/multiple-backgrounds/multiple-backgrounds.html">CSS3 Multiple backgrounds</a></li>
+				<li><a href="http://robertnyman.com/css3/outline-offset/outline-offset.html">CSS3 outline-offset</a></li>
+				<li><a href="http://robertnyman.com/css3/pointer-events/pointer-events.html">CSS3 Pointer events</a></li>
+				<li><a href="http://robertnyman.com/css3/resize/resize.html">CSS3 resize</a></li>
+				<li><a href="http://robertnyman.com/css3/rgba/rgba.html">CSS3 RGBa</a></li>
+				<li><a href="http://robertnyman.com/css3/text-shadow/text-shadow.html">CSS3 text-shadow</a></li>
+				<li><a href="http://robertnyman.com/css3/css-transitions/css-transitions-simple.html">CSS3 Transitions simple</a></li>
+				<li><a href="http://robertnyman.com/css3/css-transitions/css-transitions-rotation.html">CSS3 Transitions rotation</a></li>
+				<li><a href="http://robertnyman.com/css3/css-transitions/css-transitions-mac-os-x-stacks.html">CSS3 Transitions - Mac OS X Stacks</a></li>
+				<li><a href="http://robertnyman.com/css3/word-wrap/word-wrap.html">CSS3 word-wrap</a></li>
+			</ul>
+			
+			<h3>JavaScript series</h3>
+			<ul>
+				<li><a href="http://robertnyman.com/2008/10/06/javascript-inheritance-how-and-why/" title="An introduction an evaulation of prototype inheritance vs. mimicked class-based options">JavaScript inheritance - how and why</a></li>
+				<li><a href="http://robertnyman.com/2008/10/29/javascript-namespacing-an-alternative-to-javascript-inheritance/" title="Introducing the idea of namespacing instead of JavaScript inheritance in certain cases">JavaScript namespacing - an alternative to JavaScript inheritance</a></li>
+				<li><a href="http://robertnyman.com/2008/10/09/explaining-javascript-scope-and-closures/" title="Going into detail about how scope and closures work in JavaScript">Explaining JavaScript scope and closures</a></li>
+				<li><a href="http://robertnyman.com/2008/10/14/javascript-how-to-get-private-privileged-public-and-static-members-properties-and-methods/" title="Giving a rundown of how you get, or simulate, member types used in more traditional object-oriented programming">JavaScript: how to get private, privileged, public and static members (properties and methods)</a></li>
+				<li><a href="http://robertnyman.com/2008/10/21/javascript-inheritance-experimenting-with-syntax-alternatives-and-private-variables/" title="Exploring JavaScript object creation options and their pros and cons">JavaScript inheritance - experimenting with syntax alternatives and private variables</a></li>
+			</ul>
+			
+			<h3>JavaScript tests &amp; compatibility tables</h3>
+			<ul>
+				<li><a href="http://robertnyman.com/javascript/">All JavaScript tests &amp; Compatibility tables</a></li>
+				<li><a href="http://robertnyman.com/javascript/javascript-1.6.html">JavaScript 1.6</a></li>
+				<li><a href="http://robertnyman.com/javascript/javascript-1.7.html">JavaScript 1.7</a></li>
+				<li><a href="http://robertnyman.com/javascript/javascript-1.8.html">JavaScript 1.8</a></li>
+				<li><a href="http://robertnyman.com/javascript/javascript-1.8.1.html">JavaScript 1.8.1</a></li>
+				<li><a href="http://robertnyman.com/javascript/javascript-getters-setters.html">Getters and setters, and Object.defineProperty</a></li>
+				<li><a href="http://robertnyman.com/javascript/javascript-dom-storage.html">DOM Storage / Web Storage</a></li>
+				<li><a href="http://robertnyman.com/javascript/javascript-native-json.html">Native JSON</a></li>
+			</ul>
+			
+			<h3>Firefox extensions</h3>
+			<ul>
+				<li><a href="https://addons.mozilla.org/en-US/firefox/addon/11905" title="Finds HTML elements matching chosen CSS selector(s) or XPath expression - extension to Firebug">Firefinder</a></li>
+				<li><a href="https://addons.mozilla.org/en-US/firefox/addon/10260" title="Improve the Flickr photo set viewing by adding thumbnail clicks, keyboard shortcuts and in-set slideshow features">Flickr Gallery Plus!</a></li>
+				<li><a href="https://jetpackgallery.mozillalabs.com/jetpacks/260" title="HTML Validator is an extension to validate the HTML code of the current web page">HTML Validator (Jetpack)</a></li>
+				<li><a href="https://addons.mozilla.org/en-US/firefox/addon/9640" title="Find inline JavaScript events, inline styling and javascript: links in a web page">Inline Code Finder</a></li>
+				<li><a href="https://addons.mozilla.org/en-US/firefox/addon/9641" title="Find inline JavaScript events, inline styling and javascript: links in a web page - available as an extension to Firebug">Inline Code Finder for Firebug</a></li>
+				<li><a href="https://addons.mozilla.org/en-US/firefox/addon/9505" title="Find all HTML elements with inline events and javascript: links">Obtrusive JavaScript Checker</a></li>
+			</ul>
+			
+			<h3>Google Chrome extensions</h3>
+			<ul>
+				<li><a href="https://chrome.google.com/extensions/detail/jpbdadanpfcfmeddaeloakgnnbefhmlj" title="Improve the Flickr photo set viewing by adding thumbnail clicks, keyboard shortcuts and in-set slideshow features">Flickr Gallery Plus! for Google Chrome</a></li>
+				<li><a href="https://chrome.google.com/extensions/detail/cgndfbhngibokieehnjhbjkkhbfmhojo" title="HTML Validator is an extension to validate the HTML code of the current web page, inline or in a new tab.">HTML Validator for Google Chrome</a></li>
+				<li><a href="https://chrome.google.com/extensions/detail/lfllandeffkmadbndfckhdbkekdfahom/" title="Find inline JavaScript events, inline styling and javascript: links in a web page">Inline Code Finder for Google Chrome</a></li>
+			</ul>			
+			
+			<h3>Greasemonkey userscripts</h3>
+			<ul>
+				<li><a href="http://code.google.com/p/flickrgalleryplus/" title="Userscript to improve the Flickr photo set viewing by adding thumbnail clicks, keyboard shortcuts and in-set slideshow features - supports Firefox, Safari, Google Chrome and Opera">Flickr Gallery Plus! userscript</a></li>
+				<li><a href="http://code.google.com/p/obtrusivejavascriptchecker/" title="Userscript to find all HTML elements with inline events and javascript: links">Obtrusive JavaScript Checker userscript</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="additional-content">
+		<div id="additional-content-inner">
+			
+			<h3>Pictures</h3>
+			<div id="flickr-wrapper">
+				
+				<script type="text/javascript" src="http://www.flickr.com/badge_code.gne?nsid=39641067@N00&amp;count=10&amp;display=random&amp;name=0&amp;size=thumb&amp;raw=1"></script>
+				<h4>
+					<a href="http://pics.robertnyman.com/" class="more">Robert's pics</a>
+				</h4>
+				<h4>
+					<a href="http://www.flickr.com/photos/robertnyman/" class="more">On Flickr</a>
+				</h4>
+			</div>
+			
+						
+				
+			
+			<h3>Web sites</h3>
+			<ul>
+				<li><a href="http://www.fucked.se" title="Fucked.se - Entertaining and outrageous">Fucked.</a></li>
+			     <li><a href="/jordenrunt" title="A web site in Swedish about my round the world-trip in 2002" class="in-swedish">Jorden runt</a></li>
+			    <li><a href="/roblab" title="Robert's laboratory with code examples, tips and tricks">RobLab</a></li>    
+			    <li><a href="/rome" title="Travel stories and more from my Rome trip 2005">Rome trip</a></li>
+			</ul>
+
+			<h3>Categories</h3>
+			<ul class="categories">
+				 	<li class="cat-item cat-item-23"><a href="http://robertnyman.com/category/media-ajax/" title="View all posts filed under @media Ajax">@media Ajax</a> (2)
+</li>
+	<li class="cat-item cat-item-26"><a href="http://robertnyman.com/category/adobe-air/" title="View all posts filed under Adobe AIR">Adobe AIR</a> (9)
+</li>
+	<li class="cat-item cat-item-18"><a href="http://robertnyman.com/category/applemac/" title="Apple- and Mac-related posts">Apple/Mac</a> (42)
+</li>
+	<li class="cat-item cat-item-22"><a href="http://robertnyman.com/category/charity/" title="View all posts filed under Charity">Charity</a> (6)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://robertnyman.com/category/css/" title="Styling things...">CSS</a> (108)
+</li>
+	<li class="cat-item cat-item-21"><a href="http://robertnyman.com/category/developer-links/" title="View all posts filed under Developer links">Developer links</a> (1)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://robertnyman.com/category/developing/" title="Developing in general">Developing</a> (461)
+</li>
+	<li class="cat-item cat-item-25"><a href="http://robertnyman.com/category/domassistant/" title="View all posts filed under DOMAssistant">DOMAssistant</a> (25)
+</li>
+	<li class="cat-item cat-item-37"><a href="http://robertnyman.com/category/eumozcamp09/" title="View all posts filed under eumozcamp09">eumozcamp09</a> (4)
+</li>
+	<li class="cat-item cat-item-32"><a href="http://robertnyman.com/category/firefox-extensions/" title="View all posts filed under Firefox extensions">Firefox extensions</a> (22)
+</li>
+	<li class="cat-item cat-item-12"><a href="http://robertnyman.com/category/fun/" title="Fun things">Fun</a> (86)
+</li>
+	<li class="cat-item cat-item-15"><a href="http://robertnyman.com/category/geek-meet/" title="Posts about the Geek Meet event.">Geek Meet</a> (32)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://robertnyman.com/category/general/" title="For anything that doesn&#039;t fit into the other categories...">General</a> (98)
+</li>
+	<li class="cat-item cat-item-19"><a href="http://robertnyman.com/category/google/" title="Posts regarding Google">Google</a> (49)
+</li>
+	<li class="cat-item cat-item-29"><a href="http://robertnyman.com/category/greasemonkey/" title="View all posts filed under Greasemonkey">Greasemonkey</a> (7)
+</li>
+	<li class="cat-item cat-item-2"><a href="http://robertnyman.com/category/html5-html-xhtml/" title="HTML5, HTML and XHTML-related posts">HTML5/HTML/XHTML</a> (135)
+</li>
+	<li class="cat-item cat-item-31"><a href="http://robertnyman.com/category/iphone/" title="View all posts filed under iPhone">iPhone</a> (12)
+</li>
+	<li class="cat-item cat-item-8"><a href="http://robertnyman.com/category/javascript/" title="JavaScript tips and tricks">JavaScript</a> (180)
+</li>
+	<li class="cat-item cat-item-27"><a href="http://robertnyman.com/category/jquery/" title="View all posts filed under jQuery">jQuery</a> (4)
+</li>
+	<li class="cat-item cat-item-33"><a href="http://robertnyman.com/category/maowberlin09/" title="View all posts filed under maowberlin09">maowberlin09</a> (1)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://robertnyman.com/category/movies/" title="Movie reviews and discussions">Movies</a> (12)
+</li>
+	<li class="cat-item cat-item-35"><a href="http://robertnyman.com/category/mozilla/" title="View all posts filed under Mozilla">Mozilla</a> (43)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://robertnyman.com/category/music/" title="Concert stories and other music-related posts.">Music</a> (26)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://robertnyman.com/category/personallife/" title="For life reflections or more personal posts ">Personal/life</a> (121)
+</li>
+	<li class="cat-item cat-item-16"><a href="http://robertnyman.com/category/pressinterviews/" title="Collections of moments when I&#039;ve featured in the press or in an interview">Press/Interviews</a> (13)
+</li>
+	<li class="cat-item cat-item-17"><a href="http://robertnyman.com/category/reviewstests/" title="Reviews and tests of different web services and products">Reviews/tests</a> (54)
+</li>
+	<li class="cat-item cat-item-38"><a href="http://robertnyman.com/category/roberts-read/" title="View all posts filed under roberts-read">roberts-read</a> (10)
+</li>
+	<li class="cat-item cat-item-34"><a href="http://robertnyman.com/category/speaking/" title="View all posts filed under Speaking">Speaking</a> (26)
+</li>
+	<li class="cat-item cat-item-28"><a href="http://robertnyman.com/category/spotify/" title="View all posts filed under Spotify">Spotify</a> (7)
+</li>
+	<li class="cat-item cat-item-14"><a href="http://robertnyman.com/category/sxsw-2006/" title="Posts about the SXSW Interactive Festival 2006">SXSW 2006</a> (7)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://robertnyman.com/category/technology/" title="General posts about technology or reviewing stuff">Technology</a> (470)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://robertnyman.com/category/travel/" title="Travel stories">Travel</a> (36)
+</li>
+	<li class="cat-item cat-item-30"><a href="http://robertnyman.com/category/ubiquity/" title="View all posts filed under Ubiquity">Ubiquity</a> (4)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://robertnyman.com/category/web-browsers/" title="Musings or information about web browsers">Web browsers</a> (191)
+</li>
+			</ul>
+			
+			<h3 id="blogroll">Blogroll</h3>
+			<ul>
+				<li><a href="http://www.456bereastreet.com/" title="456 Berea Street | Web Standards, Accessibility, Usability">456 Berea Street</a></li>
+<li><a href="http://www.autisticcuckoo.net/" title="Life, Jeeps and Web Standards @ The Autistic Cuckoo">Autistic Cuckoo</a></li>
+<li><a href="http://friendlybit.com/" title="Emil writes about web developing ups and downs">Friendly Bit</a></li>
+<li><a href="http://fucked.se" title="An extraordinary web site">Fucked.</a></li>
+<li><a href="http://www.jeroenmulder.com/" title="JeroenMulder.com / Weblog">Jeroen Mulder</a></li>
+<li><a href="http://www.kurafire.net/" title="Faruk Ates and his writings">KuraFire</a></li>
+<li><a href="http://www.quirksmode.org/" title="QuirksMode &#8211; for all your browser quirks">QuirksMode</a></li>
+<li><a href="http://muffinresearch.co.uk/" title="Muffin Research Labs by Stuart Colville">Stuart Colville</a></li>
+			</ul>
+			
+			<h3>JavaScript libraries</h3>
+			<ul>
+				<li><a href="http://robertnyman.com/dlite/" class="dlite" title="dLite - a JavaScript library with less features, and more control">dLite</a></li>
+				<li><a href="http://www.domassistant.com/" class="domassistant" title="DOMAssistant - the modular lightweight JavaScript library, with CSS selectors and AJAX">DOMAssistant</a></li>
+			</ul>
+			
+			<h3>JavaScript assorted</h3>
+			<ul>
+				<li><a href="http://robertnyman.com/2008/06/09/how-to-update-adobe-air-applications-automatically-with-javascript-airupdaterjs/" title="How to update Adobe AIR applications automatically with JavaScript">AIRUpdater</a></li>
+				<li><a href="http://code.google.com/p/ajaxformsplugin/" title="AJAXForms is a plugin to DOMAssistant, and offers the possibility to submit forms dynamically through AJAX without posting the entire page.">DOMAssistantAJAXForms</a></li>
+				<li><a href="http://robertnyman.com/2007/04/19/flashreplace-a-light-weight-javascript-to-insert-flash-movies-into-your-web-page/" title="FlashReplace - A light-weight JavaScript to insert Flash movies into your web page">FlashReplace</a></li>
+				<li><a href="http://robertnyman.com/2008/05/27/the-ultimate-getelementsbyclassname-anno-2008/" title="Get all HTML elements with the same class name">getElementsByClassName</a></li>
+			</ul>
+			
+			<h3>JavaScript badges</h3>
+			<ul>
+				<li><a href="http://robertnyman.com/2008/09/12/about-friendfeed-and-friendfeedbadge-present-your-friendfeed-in-your-own-web-site/" title="Offers a fast and lean JSON-based Friendfeed badge">FriendFeedBadge</a></li>
+				<li><a href="http://robertnyman.com/2008/09/19/tumblrbadge-a-tumblr-badge-script/" title="Use this JavaScript? badge to present Tumblr posts in a web page. Supports text, photo, quote, link and chat posts.">tumblrBadge</a></li>
+			</ul>
+			
+			<h3>JavaScript concept libraries</h3>
+			<ul>
+				<li><a href="http://robertnyman.com/ajax-s/" title="A slideshow based on AJAX technology">AJAX-S</a></li>
+				<li><a href="http://robertnyman.com/ajax-suggestions/" title="An AJAX script for getting search results/suggestions dynamically through AJAX">AJAX Suggestions</a></li>
+				<li><a href="http://robertnyman.com/ask" title="A code library for easier, accessible and usable AJAX implementations">ASK - AJAX Source Kit</a></li>
+				<li><a href="http://robertnyman.com/fat/" title="A JavaScript library for all kinds of focusing effects.">FaT - Focus at This</a></li>
+				<li><a href="http://robertnyman.com/glt" title="A JavaScript-library for creating good-looking tooltips">GLT - Good-Looking Tooltips</a></li>
+				<li><a href="http://robertnyman.com/picture-slides" title="PictureSlides is a plugin to DOMAssistant and jQuery, and is a highly customizable JavaScript-based way to easily turn your images into a collection viewable as a slideshow, and with fading effects">PictureSlides</a></li>
+			</ul>
+			
+			<h3>Adobe AIR applications</h3>
+			<ul>
+				<li><a href="http://robertnyman.com/facedesk" class="facedesk" title="Run Facebook as a local application - no need to have it in a web browser anymore">facedesk</a></li>
+				<li><a href="http://robertnyman.com/gmdesk" class="gmdesk" title="Run GMail, Google Calendar, Google Docs and Google Maps in a native stand-alone application - don't clutter your web browser">GMDesk</a></li>
+				<li><a href="http://robertnyman.com/memory" class="memory" title="Download and play the beloved Memory game!">Memory</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</aside>			<footer id="footer" role="contentinfo">		
+			<p>&copy; Robert Nyman, unless stated otherwise.</p>
+		</footer>
+		
+	</div>
+	
+	<div id="search-result-suggestions">
+		<h4>Top results</h4>
+		<div id="search-results"></div>			
+	</div>
+	
+	<script src="/wp-content/themes/hk-html5/js/nymanCompressed.js"></script>	
+	<!--<script src="http://search.twitter.com/search.json?callback=twitterReactions&amp;q=http://robertnyman.com/2012/09/19/the-new-editor-for-mozilla-hacks/"></script>-->
+	<script src="http://otter.topsy.com/trackbacks.js?callback=twitterReactions&amp;perpage=100&amp;url=http://robertnyman.com/2012/09/19/the-new-editor-for-mozilla-hacks/"></script>
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-56164-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		
+		var sc_project=593937,
+			sc_partition=4,
+			sc_security="175a1fec";
+	</script>
+
+	<script src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+	
+</body>
+</html>

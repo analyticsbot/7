@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!--
+	generated 17 seconds ago
+	generated in 0.471 seconds
+	served from batcache in 0.002 seconds
+	expires in 283 seconds
+-->
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CTP of Windows XP Targeting with C++ in Visual Studio 2012 &laquo; Sutter’s Mill</title>
+<link rel="stylesheet" href="http://s0.wp.com/wp-content/themes/pub/mistylook/style.css?m=1340298656g" type="text/css" media="screen" />
+<link rel="pingback" href="http://herbsutter.com/xmlrpc.php" />
+		<script src='http://r-login.wordpress.com/remote-login.php?action=js&amp;host=herbsutter.com&amp;id=3379246&amp;t=1351532266&amp;back=herbsutter.com%2F2012%2F10%2F09%2Fctp-of-windows-xp-targeting-with-c-in-visual-studio-2012%2F' type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Sutter’s Mill &raquo; Feed" href="http://herbsutter.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sutter’s Mill &raquo; Comments Feed" href="http://herbsutter.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sutter’s Mill &raquo; CTP of Windows XP Targeting with C++ in Visual Studio&nbsp;2012 Comments Feed" href="http://herbsutter.com/2012/10/09/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel='stylesheet' id='all-css-0' href='http://s1.wp.com/_static/??/wp-includes/js/thickbox/thickbox.css,/wp-content/blog-plugins/loggedout-follow/widget.css,/wp-content/mu-plugins/infinity/themes/pub/mistylook.css,/wp-content/mu-plugins/post-flair/style.css,/wp-content/themes/h4/global.css,/wp-content/mu-plugins/widgets/css/widget-grid-and-list.css?m=1351293556j' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css-0' href='http://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1335386953g' type='text/css' media='print' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s2.wp.com/_static/??/wp-includes/js/jquery/jquery.js,/wp-content/blog-plugins/loggedout-follow/widget.js,/wp-includes/js/comment-reply.min.js,/wp-content/mu-plugins/widgets/js/widget-bump-view.js?m=1349903959j'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://herbsutter.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://herbsutter.wordpress.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Poll: What features would you like to see added soonest in your favorite C++&nbsp;compiler?' href='http://herbsutter.com/2012/10/03/poll-what-features-would-you-like-to-see-added-soonest-in-your-favorite-c-compiler/' />
+<link rel='next' title='Reader Q&amp;A: volatile&nbsp;(again)' href='http://herbsutter.com/2012/10/16/reader-qa-volatile-again/' />
+<meta name="generator" content="WordPress.com" />
+<link rel='canonical' href='http://herbsutter.com/2012/10/09/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012/' />
+<link rel='shortlink' href='http://wp.me/peb5Y-qf' />
+<link rel="alternate" type="application/json+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=http%3A%2F%2Fherbsutter.com%2F2012%2F10%2F09%2Fctp-of-windows-xp-targeting-with-c-in-visual-studio-2012%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=http%3A%2F%2Fherbsutter.com%2F2012%2F10%2F09%2Fctp-of-windows-xp-targeting-with-c-in-visual-studio-2012%2F&amp;for=wpcom-auto-discovery" /><meta property="og:type" content="article" />
+<meta property="og:title" content="CTP of Windows XP Targeting with C++ in Visual Studio&nbsp;2012" />
+<meta property="og:url" content="http://herbsutter.com/2012/10/09/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012/" />
+<meta property="og:description" content="The three by-far-most-requested “missing features” from Visual C++ 2012 were: Conformance: Keep adding more C++11 language conformance features. XP Targeting: Deliver the ability to build applicati..." />
+<meta property="og:site_name" content="Sutter’s Mill" />
+<meta property="og:image" content="http://i2.wp.com/herbsutter.files.wordpress.com/2012/10/image.png?fit=400%2C400" />
+<meta name="twitter:image" content="http://i2.wp.com/herbsutter.files.wordpress.com/2012/10/image.png" />
+<meta name="twitter:card" content="photo" />
+<meta name="twitter:creator:id" content="48935569" />
+<link rel="shortcut icon" type="image/x-icon" href="http://1.gravatar.com/blavatar/5195dd0a8c9cac430b4dea04192bcb0c?s=16" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="http://1.gravatar.com/blavatar/5195dd0a8c9cac430b4dea04192bcb0c?s=16" sizes="16x16" />
+<link rel="apple-touch-icon-precomposed" href="http://0.gravatar.com/blavatar/4554b8d24c7f200dc5e2e1b18db1893f?s=114" />
+<link rel='openid.server' href='http://herbsutter.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='http://herbsutter.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="http://herbsutter.com/osd.xml" title="Sutter’s Mill" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com" />
+		<style>
+		/* <![CDATA[ */
+		/* Block: reblog */
+		
+		.reblog-from img                   { margin: 0 10px 0 0; vertical-align: middle; padding: 0; border: 0; }
+		.reblogger-note img.avatar         { float: left; padding: 0; border: 0; }
+		.reblogger-note-content            { margin: 0 0 20px; }
+		.reblog-post .wpcom-enhanced-excerpt-content { border-left: 3px solid #eee; padding-left: 15px; }
+		.reblog-post ul.thumb-list         { display: block; list-style: none; margin: 2px 0; padding: 0; clear: both; }
+		.reblog-post ul.thumb-list li      { display: inline; margin: 0; padding: 0 1px; border: 0; }
+		.reblog-post ul.thumb-list li a    { margin: 0; padding: 0; border: 0; }
+		.reblog-post ul.thumb-list li img  { margin: 0; padding: 0; border: 0; }
+		
+		.reblog-post .wpcom-enhanced-excerpt { clear: both; }
+		
+		.reblog-post .wpcom-enhanced-excerpt address,
+		.reblog-post .wpcom-enhanced-excerpt li,
+		.reblog-post .wpcom-enhanced-excerpt h1,
+		.reblog-post .wpcom-enhanced-excerpt h2,
+		.reblog-post .wpcom-enhanced-excerpt h3,
+		.reblog-post .wpcom-enhanced-excerpt h4,
+		.reblog-post .wpcom-enhanced-excerpt h5,
+		.reblog-post .wpcom-enhanced-excerpt h6,
+		.reblog-post .wpcom-enhanced-excerpt p { font-size: 100% !important; }
+		
+		.reblog-post .wpcom-enhanced-excerpt blockquote,
+		.reblog-post .wpcom-enhanced-excerpt pre,
+		.reblog-post .wpcom-enhanced-excerpt code,
+		.reblog-post .wpcom-enhanced-excerpt q { font-size: 98% !important; }
+		
+
+		/* ]]> */		
+		</style>
+		<script type="text/javascript" src="//use.typekit.net/eyo0tqd.js"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<style type="text/css">/* Site Title */ .wf-loading #header h1 { visibility: hidden; } .wf-active #header h1 { font-variant: normal; font-family: ff-dagny-web-pro-1,ff-dagny-web-pro-2,Georgia,Verdana,Arial,Serif; font-style: normal; font-weight: 400; } 
+/* Headings */ .wf-loading #content h1,.wf-loading h2,.wf-loading h3,.wf-loading h4,.wf-loading h5,.wf-loading h6 { visibility: hidden; } .wf-active #content h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-active h6 { font-family: ff-dagny-web-pro-1,ff-dagny-web-pro-2,Georgia,Verdana,Arial,Serif; font-style: normal; font-weight: 400; font-variant: normal; } .wf-loading #header h2 { visibility: hidden; } .wf-active #header h2 { font-weight: 400; font-family: ff-dagny-web-pro-1,ff-dagny-web-pro-2,Tahoma,Verdana,Arial,Serif; font-style: normal; font-variant: normal; } .wf-loading #content h3 { visibility: hidden; } .wf-active #content h3 { font-weight: 400; } .wf-loading #content .post h2 { visibility: hidden; } .wf-active #content .post h2 { font-weight: 400; } .wf-loading li.sidebox h2 { visibility: hidden; } .wf-active li.sidebox h2 { font-weight: 400; font-variant: normal; } .wf-loading .post h4 { visibility: hidden; } .wf-active .post h4 { font-weight: 400; font-family: ff-dagny-web-pro-1,ff-dagny-web-pro-2,Verdana,Tahoma,Arial,Serif; font-style: normal; font-variant: normal; } .wf-loading .post h4 em { visibility: hidden; } .wf-active .post h4 em { font-style: normal; font-weight: 400; } 
+/* Body Text */ .wf-loading body { visibility: hidden; } .wf-active body { font-family: museo-slab-1,museo-slab-2,verdana,tahoma,arial,sans-serif; font-variant: normal; font-size: 90%; } .wf-loading #navigation { visibility: hidden; } .wf-active #navigation { font-family: museo-slab-1,museo-slab-2,MS,Tahoma,Verdana,Arial,Serif; font-variant: normal; } .wf-loading #navigation ul li.search { visibility: hidden; } .wf-active #navigation ul li.search { font-size: 1.06em; } .wf-loading #navigation ul li.search input#searchsubmit { visibility: hidden; } .wf-active #navigation ul li.search input#searchsubmit { font-size: 1.06em; } .wf-loading #content .post-info,.wf-loading #content .postmetadata { visibility: hidden; } .wf-active #content .post-info,.wf-active #content .postmetadata { font-size: 1.06em; } .wf-loading #sidebar { visibility: hidden; } .wf-active #sidebar { font-size: 1.06em; } .wf-loading #footer p.right { visibility: hidden; } .wf-active #footer p.right { font-size: 1.06em; } .wf-loading .commentnum { visibility: hidden; } .wf-active .commentnum { font-size: 1.77em; } .wf-loading .commentlist li .cmtinfo { visibility: hidden; } .wf-active .commentlist li .cmtinfo { font-size: 1.18em; } .wf-loading .commentlist li .cmtinfo em { visibility: hidden; } .wf-active .commentlist li .cmtinfo em { font-size: 1.06em; } .wf-loading #respond label { visibility: hidden; } .wf-active #respond label { font-size: 12px; } .wf-loading #respond .required { visibility: hidden; } .wf-active #respond .required { font-size: 12px; } .wf-loading #respond .subscribe-label { visibility: hidden; } .wf-active #respond .subscribe-label { font-size: 14px; } .wf-loading #respond .comment-notes { visibility: hidden; } .wf-active #respond .comment-notes { font-size: 13px; } .wf-loading .wp-caption p.wp-caption-text { visibility: hidden; } .wf-active .wp-caption p.wp-caption-text { font-size: 13px; } 
+</style>
+<meta name="application-name" content="Sutter’s Mill" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Herb Sutter on software, hardware, and concurrency" /><meta name="msapplication-task" content="name=Subscribe;action-uri=http://herbsutter.com/feed/;icon-uri=http://1.gravatar.com/blavatar/5195dd0a8c9cac430b4dea04192bcb0c?s=16" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="title" content="CTP of Windows XP Targeting with C++ in Visual Studio&nbsp;2012 | Sutter’s Mill on WordPress.com" />
+<meta name="description" content="The three by-far-most-requested “missing features” from Visual C++ 2012 were: Conformance: Keep adding more C++11 language conformance features. XP Targeting: Deliver the ability to build applications that could run on Windows XP, as well as Windows Vista, 7, and 8. Desktop Express: Deliver a free VC++ Express compiler that can be used to create traditional&hellip;" />
+<style type="text/css">
+			#header h1 a,
+		#header h2 {
+			color: #265E15 !important;
+		}
+				#headerimage {
+			background: url('http://herbsutter.files.wordpress.com/2011/10/cropped-blog-header.jpg') no-repeat;
+			height: 200px;
+		}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="http://s1.wp.com/?custom-css=1&#038;csblog=eb5Y&#038;cscache=6&#038;csrev=19" />
+</head>
+<body id="section-index" class="single single-post postid-1627 single-format-standard typekit-enabled highlander-enabled highlander-light">
+
+
+<div id="navigation" class="clearfix">
+		<div class="menu">
+		<ul>
+			<li ><a href="http://herbsutter.com/" title="Home">Home</a></li>
+			<li class="page_item page-item-912"><a href="http://herbsutter.com/welcome-to-the-jungle/">Welcome to the&nbsp;Jungle</a></li>
+<li class="page_item page-item-864"><a href="http://herbsutter.com/gotw/">GotW</a></li>
+<li class="page_item page-item-761"><a href="http://herbsutter.com/elements-of-modern-c-style/">Elements of Modern C++&nbsp;Style</a></li>
+<li class="page_item page-item-2"><a href="http://herbsutter.com/about/">About</a></li>
+									<li class="search"><form method="get" id="searchform" action="http://herbsutter.com"><input type="text" class="textbox" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></form></li>
+					</ul>
+	</div>
+</div><!-- end id:navigation -->
+
+<div id="container">
+
+<div id="header">
+<h1><a href="http://herbsutter.com/" title="Sutter’s Mill">Sutter’s Mill</a></h1>
+<h2>Herb Sutter on software, hardware, and concurrency</h2>
+</div><!-- end id:header -->
+
+
+	
+		<div id="feedarea">
+	<dl>
+		<dt><strong>Feeds:</strong></dt>
+
+			<dd><a href="http://herbsutter.com/feed/">Posts</a></dd>
+	
+			<dd><a href="http://herbsutter.com/comments/feed/">Comments</a></dd>
+		</dl>
+	</div><!-- end id:feedarea -->
+	
+	<div id="headerimage">
+</div><!-- end id:headerimage -->
+
+<div id="content">
+<div id="content-main">
+
+		
+									<div class="postnav">
+				<div class="alignleft">&laquo; <a href="http://herbsutter.com/2012/10/03/poll-what-features-would-you-like-to-see-added-soonest-in-your-favorite-c-compiler/" rel="prev">Poll: What features would you like to see added soonest in your favorite C++&nbsp;compiler?</a></div>
+				<div class="alignright"><a href="http://herbsutter.com/2012/10/16/reader-qa-volatile-again/" rel="next">Reader Q&amp;A: volatile&nbsp;(again)</a> &raquo;</div>
+			</div>
+			
+			<div class="post-1627 post type-post status-publish format-standard hentry category-c category-microsoft" id="post-1627">
+				<div class="posttitle">
+					<h2>CTP of Windows XP Targeting with C++ in Visual Studio&nbsp;2012</h2>
+					<p class="post-info">2012-10-09 by <a href="http://herbsutter.com/author/herbsutter/" title="Posts by Herb Sutter">Herb Sutter</a>  </p>
+				</div>
+
+				<div class="entry">
+					<p>The three by-far-most-requested “missing features” from Visual C++ 2012 were:</p>
+<ol>
+<li><strong>Conformance:</strong> Keep adding more C++11 language conformance features.</li>
+<li><strong>XP Targeting:</strong> Deliver the ability to build applications that could run on Windows XP, as well as Windows Vista, 7, and 8.</li>
+<li><strong>Desktop Express:</strong> Deliver a free VC++ Express compiler that can be used to create traditional Windows desktop apps, not just Windows Store apps.</li>
+</ol>
+<p>Over the spring and summer, we promised to address these “soon after VC++ 2012 ships.”</p>
+<p>Well, VC++ 2012 shipped four weeks ago.</p>
+<p>What’s happened since then?</p>
+<p>&#160;</p>
+<p><strong><font size="4">3. </font></strong>On the same day VS2012 shipped, four weeks ago, we also <a href="http://herbsutter.com/2012/09/12/vc-2012-desktop-expres-free/">announced and released Visual Studio 2012 <strong>Desktop Express</strong></a> – a free Visual Studio version for writing traditional Windows applications.</p>
+<p>&#160;</p>
+<p><a href="http://blogs.msdn.com/cfs-filesystemfile.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-65-69/7725.xptarget.png"><img title="image" style="border-top:0;border-right:0;background-image:none;border-bottom:0;float:right;padding-top:0;padding-left:0;margin:0 0 10px 10px;border-left:0;display:inline;padding-right:0;" border="0" alt="image" align="right" src="http://herbsutter.files.wordpress.com/2012/10/image.png?w=364&#038;h=135" width="364" height="135" /></a><strong><font size="4">2. </font></strong>Today, we are pleased to share a <a href="http://blogs.msdn.com/b/vcblog/archive/2012/10/08/10357555.aspx">“community tech preview” (CTP) of <strong>Windows XP targeting </strong>in Visual C++ 2012</a>, being delivered as part of Visual Studio 2012 Update 1 CTP 3. You can download the preview <strong><a href="http://aka.ms/ms3oxw">here</a></strong>. See the announcement page for details, known issues, and full release information.</p>
+<p>&#160;</p>
+<p><strong><font size="4">1. </font></strong>Stay tuned…</p>
+<div id="jp-post-flair" class="sharedaddy"></div>									</div>
+
+				<p class="postmetadata">
+					Posted in <a href="http://herbsutter.com/category/c/" title="View all posts in C++" rel="category tag">C++</a>, <a href="http://herbsutter.com/category/microsoft/" title="View all posts in Microsoft" rel="category tag">Microsoft</a> | 											16 Comments									</p>
+				
+<!-- You can start editing here. -->
+
+<h3 id="comments">16 Responses</h3>
+
+	<ol class="commentlist">
+			<li class="comment even thread-even depth-1 highlander-comment" id="comment-6280">
+		<div id="div-comment-6280">
+		<div class="cmtinfo"><em> on <a href="#comment-6280" title="">2012-10-09 at 9:00 am</a></em> <img alt='' src='http://2.gravatar.com/avatar/26230e55188637785a569c6ec8ca0f3f?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>Olaf van der Spek</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6280"></div><p>Oh, nice! Let&#8217;s hope Boost adds support for this toolset soon and I think a lot of people will be very happy.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6281">
+		<div id="div-comment-6281">
+		<div class="cmtinfo"><em> on <a href="#comment-6281" title="">2012-10-09 at 9:03 am</a></em> <img alt='' src='http://1.gravatar.com/avatar/45eb253e73a0c9ec7042d218fca8a96f?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>Fernando</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6281"></div><p>Can you elaborate on the new conformance changes?</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment even thread-even depth-1 highlander-comment" id="comment-6282">
+		<div id="div-comment-6282">
+		<div class="cmtinfo"><em> on <a href="#comment-6282" title="">2012-10-09 at 9:14 am</a></em> <img alt='' src='http://0.gravatar.com/avatar/6da9993d8784d5bfacf9f781dfa8ea39?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite><a href='http://gravatar.com/tomkirbygreen' rel='external nofollow' class='url'>Tom Kirby-GreenTom</a></cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6282"></div><p>The Windows XP stuff is great and I&#8217;ll be trying out a build of our product with it this week, but I&#8217;m super interested to hear about the Standard conformance improvements. Come on Herb, don&#8217;t be coy :-)</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6283">
+		<div id="div-comment-6283">
+		<div class="cmtinfo"><em> on <a href="#comment-6283" title="">2012-10-09 at 9:39 am</a></em> <img alt='' src='http://2.gravatar.com/avatar/bc6a715808d9aae0ddeefb1e47e482a6?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>John</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6283"></div><p>Hugely disappointed that Microsoft introduced a new toolset to handle XP.  Are you trying to make XP support painful?  If some damn fool broke the SDK headers in Windows 8, (1) said fool should be fired (which will make Mini-MSFT happy), and (2) the headers should be fixed.  The SDK headers are already full of #ifdef&#8217;s to selectively expose API&#8217;s based on target OS version.  Shipping the Windows 7 headers is a huge kludge to avoid doing the job properly.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment even thread-even depth-1 highlander-comment" id="comment-6284">
+		<div id="div-comment-6284">
+		<div class="cmtinfo"><em> on <a href="#comment-6284" title="">2012-10-09 at 10:02 am</a></em> <img alt='' src='http://1.gravatar.com/avatar/108f1cab7e23383b4df998bc828b6276?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>snemarch</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6284"></div><p>Too bad it requires Yet A Build Target, requires an older SDK, and doesn&#8217;t support remote debugging.</p>
+<p>But at least it&#8217;s a step in the right direction, compared to the clusterf**k &#8220;multitargetting&#8221; of previous versions. Kudos for listening to your users and at least doing an honest attempt :)</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6288">
+		<div id="div-comment-6288">
+		<div class="cmtinfo"><em> on <a href="#comment-6288" title="">2012-10-09 at 5:16 pm</a></em> <img alt='' src='http://2.gravatar.com/avatar/b90b7328ae19e294defc1f63a6ff4ee4?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>Alex</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6288"></div><p>It does not support static code analysis. That pretty much kills it for us.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment even thread-even depth-1 highlander-comment" id="comment-6292">
+		<div id="div-comment-6292">
+		<div class="cmtinfo"><em> on <a href="#comment-6292" title="">2012-10-09 at 11:58 pm</a></em> <img alt='' src='http://0.gravatar.com/avatar/9682e616470cdf758c1f6362ec700d5d?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>mem64k</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6292"></div><p>Great news! We still have to support a lot of XP machines and we are very exited about the new features of VS2012. Finally we can use them too&#8230;</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6293">
+		<div id="div-comment-6293">
+		<div class="cmtinfo"><em> on <a href="#comment-6293" title="">2012-10-10 at 1:03 am</a></em> <img alt='' src='http://0.gravatar.com/avatar/6aea6e2f57f2a7b1cd6870375fbdc42f?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>Ivan</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6293"></div><p>Good news, and things are gonna get better in the future&#8230; and Im not a insider or naive&#8230;<br />
+Why do i say that then you might ask&#8230; because of a certain fruit company :) that dumped a lot of money into a certain compiler so MS must dump money in VC++ or it will become irrelevant for native devel on Win, what is ofc unacceptable.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment even thread-even depth-1 highlander-comment" id="comment-6307">
+		<div id="div-comment-6307">
+		<div class="cmtinfo"><em> on <a href="#comment-6307" title="">2012-10-10 at 6:19 pm</a></em> <img alt='' src='http://0.gravatar.com/avatar/903395fabfd85cc6da4f3de8a6a9110e?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>Uh IV</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6307"></div><p>I have WDExpress Desktop.  No TFS (none wanted).  I do want XP target.  What do I download for that, and only that?  I had to test on XP today and found out the PE is not a PE anymore; it&#8217;s an abomination!  Apparently.  XP thinks so.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment byuser comment-author-herbsutter bypostauthor odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6310">
+		<div id="div-comment-6310">
+		<div class="cmtinfo"><em> on <a href="#comment-6310" title="">2012-10-11 at 7:50 am</a></em> <img alt='' src='http://0.gravatar.com/avatar/c0ba56bfd231f8f04feb057728975181?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite><a href='http://www.herbsutter.com' rel='external nofollow' class='url'>Herb Sutter</a></cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6310"></div><p>Re why ship this as a distinct toolset: It&#8217;s because we had to target a different SDK. One of our team members has responded with more details on the linked blog post&#8217;s comments&#8230; repeating here:</p>
+<blockquote><p>[Ibrahim Damlaj] The reason we have reintroduced the Windows 7 SDK is that the Windows 8 SDK has officially dropped support for Windows XP and Windows Server 2003. What this means is that the binaries under the “Windows Kits/8.0/bin” directory are no longer guaranteed to generate code that runs on Windows XP/2003. Additionally, the Windows 8 SDK headers and libs may have removed deprecated Windows XP APIs with no mitigation. [Y]ou may choose to target the standard SDK by not switching to v110_xp. However, if your application compiles and runs we cannot guarantee it will continue to do so in future releases and updates of Visual Studio.</p></blockquote>
+<p>So to ensure that XP targeting really does create binaries that can run on XP, you have to target the Windows 7 SDK, and that means a different toolset target.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment even thread-even depth-1 highlander-comment" id="comment-6314">
+		<div id="div-comment-6314">
+		<div class="cmtinfo"><em> on <a href="#comment-6314" title="">2012-10-11 at 10:32 am</a></em> <img alt='' src='http://2.gravatar.com/avatar/bc6a715808d9aae0ddeefb1e47e482a6?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>John</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6314"></div><p>&#8220;because we had to target a different SDK&#8221;</p>
+<p>You didn&#8217;t *have* to &#8212; you chose to.</p>
+<p>&#8220;Windows 8 SDK has officially dropped support for Windows XP and Windows Server 2003&#8243;</p>
+<p>From my perspective, that&#8217;s a bug in the Windows 8 SDK.  A bug reported long before the product shipped, that could have been fixed before RTM if you wanted to.  Instead, you made a choice to &#8220;support&#8221; XP with the least work possible (least work for you, not least work for ISV&#8217;s).</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6317">
+		<div id="div-comment-6317">
+		<div class="cmtinfo"><em> on <a href="#comment-6317" title="">2012-10-11 at 3:53 pm</a></em> <img alt='' src='http://2.gravatar.com/avatar/88857afb6b5614e2b05f4ca5c8ae75d7?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>Neil</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6317"></div><p>I don&#8217;t think it&#8217;s unreasonable for the latest SDK to &#8220;only&#8221; support 3 versions of Windows.  They have to draw a line somewhere!</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment even thread-even depth-1 highlander-comment" id="comment-6323">
+		<div id="div-comment-6323">
+		<div class="cmtinfo"><em> on <a href="#comment-6323" title="">2012-10-11 at 11:45 pm</a></em> <img alt='' src='http://1.gravatar.com/avatar/7720399cc2e5b03eba8addacd3e39c6b?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>PH</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6323"></div><p>@John: This decision is likeyl beyond the scope of the Visual Studio team. For the PSDK guys, this would mean they have to support XP with every update of the SDK &#8211; remember, the SDK isn&#8217;t just headers. *I* wouldn&#8217;t want to make that promise.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6360">
+		<div id="div-comment-6360">
+		<div class="cmtinfo"><em> on <a href="#comment-6360" title="">2012-10-16 at 6:34 am</a></em> <img alt='' src='http://0.gravatar.com/avatar/f9edde9a9be311917c16c14b4394c415?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite><a href='http://tedwvc.wordpress.com' rel='external nofollow' class='url'>Ted</a></cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6360"></div><p>Guys, the XP stuff works with the Windows 8 SDK.  No need to change to the other platform toolset if you really don&#8217;t want to.  I have done a lot of testing with very large projects.  The reason they do this (state that the separate 7.1 SDK toolset is required) is to protect themselves for future &#8220;breaks&#8221; of the Windows 8 SDK, so they don&#8217;t have to ask the Windows team to support Windows XP in the Windows 8 SDK.  But unofficially, it supports it fine.  The ONLY change you need to make to your project is to change the linker subsystem from 6.0 to 5.01.  That&#8217;s it.  Of course, Windows 8 SDK has removed a lot of obsolete headers, such as MAPI, outlook headers, etc.  So if you really want to support those old headers, use the 7.1 SDK toolset.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment even thread-even depth-1 highlander-comment" id="comment-6380">
+		<div id="div-comment-6380">
+		<div class="cmtinfo"><em> on <a href="#comment-6380" title="">2012-10-16 at 8:29 pm</a></em> <img alt='' src='http://2.gravatar.com/avatar/b90b7328ae19e294defc1f63a6ff4ee4?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>Alex</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6380"></div><p>You will have to link everything statically. Not really an option.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6391">
+		<div id="div-comment-6391">
+		<div class="cmtinfo"><em> on <a href="#comment-6391" title="">2012-10-17 at 4:26 pm</a></em> <img alt='' src='http://0.gravatar.com/avatar/f44fd32208a1240f093ed0a59c950c0d?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /> <cite>Mike</cite></div>
+						<div class="pd-rating" id="pd_rating_holder_468178_comm_6391"></div><p>No need for static linking.  the new versions of vcredist_x86.exe (not yet released but will be in November with the final), msvcr110.dll, mfc110, etc work just fine under XP.  Not sure where you got the idea that static linking was required for this new XP targeting solution.</p>
+			<br style="clear: both" />
+		</div>
+</li>
+	</ol>
+
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+	<br />
+
+  	<p class="nocomments">Comments are closed.</p>
+  <div class="post-content">
+<p>
+</p>
+</div>
+
+			</div>
+
+		
+		<p align="center"></p>
+
+	</div><!-- end id:content-main -->
+<div id="sidebar">
+<ul>
+<li class="sidebox"><h2><label for="subscribe-field">Follow by email</label></h2>
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="subscribe-blog">
+														<p><input type="text" name="email" style="width: 95%; padding: 1px 2px" value="" id="subscribe-field"/></p>
+				
+				<p>
+					<input type="hidden" name="action" value="subscribe"/>
+					<input type="hidden" name="blog_id" value="3379246"/>
+					<input type="hidden" name="source" value="http://herbsutter.com/2012/10/09/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012/"/>
+					<input type="hidden" name="sub-type" value="widget"/>
+					<input type="hidden" name="redirect_fragment" value="blog_subscription-3" />
+					<input type="hidden" id="_wpnonce" name="_wpnonce" value="f597f8a50b" />					<input type="submit" value="Subscribe" />
+				</p>
+			</form>
+			
+</li><li class="sidebox"><h2><a href='http://twitter.com/herbsutter'>Tweets</a></h2><ul class='tweets'>
+			<li>
+				The Future of C++: Live broadcast this Friday: In my talk on Friday, there will be announcements of broad intere... <a href="http://bit.ly/SUYASa"> bit.ly/SUYASa</a> 				<a href="http://twitter.com/herbsutter/statuses/262955841278320640" class="timesince">1&nbsp;hour&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				@<a href='http://twitter.com/halberenson'>halberenson</a> gets it: <a href="http://hal2020.com/2012/10/28/understanding-the-microsoft-surface-a-sort-of-review/"> hal2020.com/2012/10/28/und…</a> Most insightful Surface coverage I&#039;ve read (useful whether Surface is for you or not) 				<a href="http://twitter.com/herbsutter/statuses/262781616198406144" class="timesince">12&nbsp;hours&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				Reader Q&amp;A: volatile (again): Sarmad Asgher asked a variant of a perennial question:
+I am implementing multi pro... <a href="http://bit.ly/TZ416E"> bit.ly/TZ416E</a> 				<a href="http://twitter.com/herbsutter/statuses/258234336699097088" class="timesince">1&nbsp;week&nbsp;ago</a>
+			</li>
+
+			</ul><a href="http://twitter.com/herbsutter"  class='twitter-follow-button' data-show-count='false' data-link-color='#265e15' data-text-color='#333333'>Follow @herbsutter</a></li><li class="sidebox"><h2>Popular</h2><ul><li><a href="http://herbsutter.com/2012/10/29/the-future-of-c-live-broadcast-this-friday/" class="bump-view" data-bump-view="tp">The Future of C++: Live broadcast this Friday</a></li>
+<li><a href="http://herbsutter.com/elements-of-modern-c-style/" class="bump-view" data-bump-view="tp">Elements of Modern C++ Style</a></li>
+<li><a href="http://herbsutter.com/2011/09/07/my-c-and-beyond-intro-c-renaissance/" class="bump-view" data-bump-view="tp">My C++ and Beyond Intro: C++ Renaissance</a></li>
+</ul></li><li class="sidebox"><h2>Categories</h2>		<ul>
+			<li class="cat-item cat-item-291"><a href="http://herbsutter.com/category/apple/" title="View all posts filed under Apple">Apple</a>
+</li>
+	<li class="cat-item cat-item-49277"><a href="http://herbsutter.com/category/c-net/" title="View all posts filed under C# / .NET">C# / .NET</a>
+</li>
+	<li class="cat-item cat-item-2426"><a href="http://herbsutter.com/category/c/" title="View all posts filed under C++">C++</a>
+</li>
+	<li class="cat-item cat-item-69816"><a href="http://herbsutter.com/category/cloud/" title="View all posts filed under Cloud">Cloud</a>
+</li>
+	<li class="cat-item cat-item-214618"><a href="http://herbsutter.com/category/concurrency/" title="View all posts filed under Concurrency">Concurrency</a>
+</li>
+	<li class="cat-item cat-item-8259773"><a href="http://herbsutter.com/category/effective-concurrency/" title="View all posts filed under Effective Concurrency">Effective Concurrency</a>
+</li>
+	<li class="cat-item cat-item-3696745"><a href="http://herbsutter.com/category/friday-thoughts/" title="View all posts filed under Friday Thoughts">Friday Thoughts</a>
+</li>
+	<li class="cat-item cat-item-3867746"><a href="http://herbsutter.com/category/c/gotw/" title="View all posts filed under GotW">GotW</a>
+</li>
+	<li class="cat-item cat-item-79"><a href="http://herbsutter.com/category/hardware/" title="View all posts filed under Hardware">Hardware</a>
+</li>
+	<li class="cat-item cat-item-1017"><a href="http://herbsutter.com/category/java/" title="View all posts filed under Java">Java</a>
+</li>
+	<li class="cat-item cat-item-637"><a href="http://herbsutter.com/category/microsoft/" title="View all posts filed under Microsoft">Microsoft</a>
+</li>
+	<li class="cat-item cat-item-420845"><a href="http://herbsutter.com/category/opinion-editorial/" title="View all posts filed under Opinion &amp; Editorial">Opinion &amp; Editorial</a>
+</li>
+	<li class="cat-item cat-item-1633077"><a href="http://herbsutter.com/category/reader-qa/" title="View all posts filed under Reader Q&amp;A">Reader Q&amp;A</a>
+</li>
+	<li class="cat-item cat-item-2301"><a href="http://herbsutter.com/category/software-development/" title="View all posts filed under Software Development">Software Development</a>
+</li>
+	<li class="cat-item cat-item-393523"><a href="http://herbsutter.com/category/talks-events/" title="View all posts filed under Talks &amp; Events">Talks &amp; Events</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://herbsutter.com/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-151"><a href="http://herbsutter.com/category/web/" title="View all posts filed under Web">Web</a>
+</li>
+		</ul>
+</li></ul>
+</div><!-- end id:sidebar -->
+</div><!-- end id:content -->
+</div><!-- end id:container -->
+<div id="footer">
+	<div id="colophon">
+		<p><a href="http://wordpress.com/?ref=footer" rel="generator">Blog at WordPress.com</a>.</p>
+		<p>Theme: <a href="http://theme.wordpress.com/credits/herbsutter.com/" title="Learn more about how this site is customized with the Custom Design upgrade">Customized MistyLook</a> by WPThemes.</p>
+		<br class="clear" />
+	</div><!-- end #colophon-->
+</div><!-- end #footer-->
+
+<script type="text/javascript">
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":",language.en,type.wpcom"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+</script>
+<noscript><div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=%2Clanguage.en%2Ctype.wpcom" height="1" width="1" alt="" /></div></noscript>
+
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201244ab'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1318621548g'></script>
+<script>jQuery(document).ready(function($){ Gravatar.profile_cb = function( h, d ) { WPGroHo.syncProfileData( h, d );	}; Gravatar.my_hash = WPGroHo.my_hash; Gravatar.init( 'body', '#wp-admin-bar-my-account' ); });</script>	<div style="display:none">
+	<div class="grofile-hash-map-26230e55188637785a569c6ec8ca0f3f">
+	</div>
+	<div class="grofile-hash-map-45eb253e73a0c9ec7042d218fca8a96f">
+	</div>
+	<div class="grofile-hash-map-6da9993d8784d5bfacf9f781dfa8ea39">
+	</div>
+	<div class="grofile-hash-map-bc6a715808d9aae0ddeefb1e47e482a6">
+	</div>
+	<div class="grofile-hash-map-108f1cab7e23383b4df998bc828b6276">
+	</div>
+	<div class="grofile-hash-map-b90b7328ae19e294defc1f63a6ff4ee4">
+	</div>
+	<div class="grofile-hash-map-9682e616470cdf758c1f6362ec700d5d">
+	</div>
+	<div class="grofile-hash-map-6aea6e2f57f2a7b1cd6870375fbdc42f">
+	</div>
+	<div class="grofile-hash-map-903395fabfd85cc6da4f3de8a6a9110e">
+	</div>
+	<div class="grofile-hash-map-c0ba56bfd231f8f04feb057728975181">
+	</div>
+	<div class="grofile-hash-map-88857afb6b5614e2b05f4ca5c8ae75d7">
+	</div>
+	<div class="grofile-hash-map-7720399cc2e5b03eba8addacd3e39c6b">
+	</div>
+	<div class="grofile-hash-map-f9edde9a9be311917c16c14b4394c415">
+	</div>
+	<div class="grofile-hash-map-f44fd32208a1240f093ed0a59c950c0d">
+	</div>
+	</div>
+
+	<div id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id='bsub-text'>Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow &ldquo;Sutter’s Mill&rdquo;</label></h3>
+
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Join 1,063 other followers</p>
+			<p><input type="email" name="email" style="width: 95%; padding: 1px 2px" value="Enter your email address" onfocus='this.value=(this.value=="Enter your email address") ? "" : this.value;' onblur='this.value=(this.value=="") ? "Enter email address" : this.value;'  id="loggedout-follow-field"/></p>
+
+			<input type="hidden" name="action" value="subscribe"/>
+			<input type="hidden" name="blog_id" value="3379246"/>
+			<input type="hidden" name="source" value="http://herbsutter.com/2012/10/09/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012/"/>
+			<input type="hidden" name="sub-type" value="loggedout-follow"/>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="f597f8a50b" /><input type="hidden" name="_wp_http_referer" value="/2012/10/09/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012/" />
+			<p id='bsub-subscribe-button'><input type="submit" value="Sign me up" /></p>
+			</form>
+					<div id='bsub-credit'><a href="http://wordpress.com/signup/?ref=lof">Powered by WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+<script type='text/javascript' charset='UTF-8' id='polldaddyRatings'><!--//--><![CDATA[//><!--
+PDRTJS_settings_468178_comm_6280={"id":468178,"unique_id":"wp-comment-6280","title":"Oh%2C%20nice%21%20Let%26%23039%3Bs%20hope%20Boost%20adds%20support%20for%20this%20toolset%20soon%20and%20I%20think%20a%20lot%20of%20people%20will%20be%20very%20happy....","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6280","item_id":"_comm_6280"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6280 == 'undefined' ){PDRTJS_468178_comm_6280 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6280 );}}PDRTJS_settings_468178_comm_6281={"id":468178,"unique_id":"wp-comment-6281","title":"Can%20you%20elaborate%20on%20the%20new%20conformance%20changes%3F...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6281","item_id":"_comm_6281"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6281 == 'undefined' ){PDRTJS_468178_comm_6281 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6281 );}}PDRTJS_settings_468178_comm_6282={"id":468178,"unique_id":"wp-comment-6282","title":"The%20Windows%20XP%20stuff%20is%20great%20and%20I%26%23039%3Bll%20be%20trying%20out%20a%20build%20of%20our%20product%20with%20it%20this%20week%2C%20but%20I%26%23039%3Bm%20super%20interested%20to%20hear%20about%20the%20Standard%20conformance%20improvements.%20Come%20on%20Herb%2C%20don%26%23039%3Bt%20be...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6282","item_id":"_comm_6282"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6282 == 'undefined' ){PDRTJS_468178_comm_6282 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6282 );}}PDRTJS_settings_468178_comm_6283={"id":468178,"unique_id":"wp-comment-6283","title":"Hugely%20disappointed%20that%20Microsoft%20introduced%20a%20new%20toolset%20to%20handle%20XP.%20%20Are%20you%20trying%20to%20make%20XP%20support%20painful%3F%20%20If%20some%20damn%20fool%20broke%20the%20SDK%20headers%20in%20Windows%208%2C%20%281%29%20said%20fool%20should%20b...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6283","item_id":"_comm_6283"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6283 == 'undefined' ){PDRTJS_468178_comm_6283 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6283 );}}PDRTJS_settings_468178_comm_6284={"id":468178,"unique_id":"wp-comment-6284","title":"Too%20bad%20it%20requires%20Yet%20A%20Build%20Target%2C%20requires%20an%20older%20SDK%2C%20and%20doesn%26%23039%3Bt%20support%20remote%20debugging.But%20at%20least%20it%26%23039%3Bs%20a%20step%20in%20the%20right%20direction%2C%20compared%20to%20the%20clusterf%2A%2Ak%20%26quot%3Bmultitargetting%26quot%3B%20...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6284","item_id":"_comm_6284"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6284 == 'undefined' ){PDRTJS_468178_comm_6284 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6284 );}}PDRTJS_settings_468178_comm_6288={"id":468178,"unique_id":"wp-comment-6288","title":"It%20does%20not%20support%20static%20code%20analysis.%20That%20pretty%20much%20kills%20it%20for%20us....","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6288","item_id":"_comm_6288"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6288 == 'undefined' ){PDRTJS_468178_comm_6288 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6288 );}}PDRTJS_settings_468178_comm_6292={"id":468178,"unique_id":"wp-comment-6292","title":"Great%20news%21%20We%20still%20have%20to%20support%20a%20lot%20of%20XP%20machines%20and%20we%20are%20very%20exited%20about%20the%20new%20features%20of%20VS2012.%20Finally%20we%20can%20use%20them%20too......","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6292","item_id":"_comm_6292"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6292 == 'undefined' ){PDRTJS_468178_comm_6292 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6292 );}}PDRTJS_settings_468178_comm_6293={"id":468178,"unique_id":"wp-comment-6293","title":"Good%20news%2C%20and%20things%20are%20gonna%20get%20better%20in%20the%20future...%20and%20Im%20not%20a%20insider%20or%20naive...%20Why%20do%20i%20say%20that%20then%20you%20might%20ask...%20because%20of%20a%20certain%20fruit%20company%20%3A%29%20that%20dumped%20a%20lot%20of%20mon...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6293","item_id":"_comm_6293"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6293 == 'undefined' ){PDRTJS_468178_comm_6293 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6293 );}}PDRTJS_settings_468178_comm_6307={"id":468178,"unique_id":"wp-comment-6307","title":"I%20have%20WDExpress%20Desktop.%20%20No%20TFS%20%28none%20wanted%29.%20%20I%20do%20want%20XP%20target.%20%20What%20do%20I%20download%20for%20that%2C%20and%20only%20that%3F%20%20I%20had%20to%20test%20on%20XP%20today%20and%20found%20out%20the%20PE%20is%20not%20a%20PE%20anymore%3B%20it%26%23039%3Bs%20an%20ab...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6307","item_id":"_comm_6307"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6307 == 'undefined' ){PDRTJS_468178_comm_6307 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6307 );}}PDRTJS_settings_468178_comm_6310={"id":468178,"unique_id":"wp-comment-6310","title":"Re%20why%20ship%20this%20as%20a%20distinct%20toolset%3A%20It%26%23039%3Bs%20because%20we%20had%20to%20target%20a%20different%20SDK.%20One%20of%20our%20team%20members%20has%20responded%20with%20more%20details%20on%20the%20linked%20blog%20post%26%23039%3Bs%20comments...%20repeating%20here...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6310","item_id":"_comm_6310"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6310 == 'undefined' ){PDRTJS_468178_comm_6310 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6310 );}}PDRTJS_settings_468178_comm_6314={"id":468178,"unique_id":"wp-comment-6314","title":"%26quot%3Bbecause%20we%20had%20to%20target%20a%20different%20SDK%26quot%3BYou%20didn%26%23039%3Bt%20%2Ahave%2A%20to%20--%20you%20chose%20to.%26quot%3BWindows%208%20SDK%20has%20officially%20dropped%20support%20for%20Windows%20XP%20and%20Windows%20Server%202003%26quot%3BFrom%20my%20perspective%2C%20that%26%23039%3Bs%20a%20b...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6314","item_id":"_comm_6314"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6314 == 'undefined' ){PDRTJS_468178_comm_6314 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6314 );}}PDRTJS_settings_468178_comm_6317={"id":468178,"unique_id":"wp-comment-6317","title":"I%20don%26%23039%3Bt%20think%20it%26%23039%3Bs%20unreasonable%20for%20the%20latest%20SDK%20to%20%26quot%3Bonly%26quot%3B%20support%203%20versions%20of%20Windows.%20%20They%20have%20to%20draw%20a%20line%20somewhere%21...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6317","item_id":"_comm_6317"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6317 == 'undefined' ){PDRTJS_468178_comm_6317 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6317 );}}PDRTJS_settings_468178_comm_6323={"id":468178,"unique_id":"wp-comment-6323","title":"%40John%3A%20This%20decision%20is%20likeyl%20beyond%20the%20scope%20of%20the%20Visual%20Studio%20team.%20For%20the%20PSDK%20guys%2C%20this%20would%20mean%20they%20have%20to%20support%20XP%20with%20every%20update%20of%20the%20SDK%20-%20remember%2C%20the%20SDK%20isn%26%23039%3Bt%20just%20h...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6323","item_id":"_comm_6323"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6323 == 'undefined' ){PDRTJS_468178_comm_6323 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6323 );}}PDRTJS_settings_468178_comm_6360={"id":468178,"unique_id":"wp-comment-6360","title":"Guys%2C%20the%20XP%20stuff%20works%20with%20the%20Windows%208%20SDK.%20%20No%20need%20to%20change%20to%20the%20other%20platform%20toolset%20if%20you%20really%20don%26%23039%3Bt%20want%20to.%20%20I%20have%20done%20a%20lot%20of%20testing%20with%20very%20large%20projects.%20%20The%20reason%20...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6360","item_id":"_comm_6360"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6360 == 'undefined' ){PDRTJS_468178_comm_6360 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6360 );}}PDRTJS_settings_468178_comm_6380={"id":468178,"unique_id":"wp-comment-6380","title":"You%20will%20have%20to%20link%20everything%20statically.%20Not%20really%20an%20option....","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6380","item_id":"_comm_6380"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6380 == 'undefined' ){PDRTJS_468178_comm_6380 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6380 );}}PDRTJS_settings_468178_comm_6391={"id":468178,"unique_id":"wp-comment-6391","title":"No%20need%20for%20static%20linking.%20%20the%20new%20versions%20of%20vcredist_x86.exe%20%28not%20yet%20released%20but%20will%20be%20in%20November%20with%20the%20final%29%2C%20msvcr110.dll%2C%20mfc110%2C%20etc%20work%20just%20fine%20under%20XP.%20%20Not%20sure%20where%20you...","permalink":"http:\/\/herbsutter.com\/2012\/10\/09\/ctp-of-windows-xp-targeting-with-c-in-visual-studio-2012\/#comment-6391","item_id":"_comm_6391"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_468178_comm_6391 == 'undefined' ){PDRTJS_468178_comm_6391 = new PDRTJS_RATING( PDRTJS_settings_468178_comm_6391 );}}
+//--><!]]></script><script type='text/javascript' charset='UTF-8' src='http://i.polldaddy.com/ratings/rating.js'></script><script type='text/javascript' src='http://platform.twitter.com/widgets.js?ver=20111117'></script>
+<script type="text/javascript" src="http://b.scorecardresearch.com/beacon.js"></script><script type="text/javascript">try{COMSCORE.beacon({c1:2,c2:7518284});}catch(e){}</script><noscript><p class="robots-nocontent"><img src="http://b.scorecardresearch.com/p?cj=1c1=2&#038;c2=7518284" alt="" style="display:none" width="1" height="1" /></p></noscript><script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/herbsutter.wordpress.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/herbsutter.wordpress.com\/wp-includes\/js\/thickbox\/tb-close.png"};
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/herbsutter.wordpress.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/herbsutter.wordpress.com\/wp-includes\/js\/thickbox\/tb-close.png"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s2.wp.com/_static/??/wp-content/js/devicepx.js,/wp-includes/js/thickbox/thickbox.js?m=1349105731j'></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="http://s.stats.wordpress.com/w.js?21" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'3379246','v':'wpcom','user_id':'0','post':'1627','subd':'herbsutter'});
+ex_go({'crypt':'UE40eW5QN0p8M2Y/RE1TaVhzUzFMbjdWNHpwZGhTayxPSUFCMGRVYVNrSFguN3FwSmQ5RGtNX3VQcj1yVzhiflM1THQtLGFdQ2toOXYlSDUsNEtDaGstWm9DWVQuY1FFMFNqZEZrXWVJWU5oRl9MR2pjQ3RLSitRPVRqUXJ5XU9YdS1CeFFSUWswSE98THh6T29wM1FKeWl4LTArL2EyeTFmLko/a0V+VHQuVWpDeVBib2lualk2SVNBTy0mdld3T3RaTFk1Z3gsek03WXRJanQ1cVUlPWJ0ekE2TS5XMlY2bWwvJXV8RVlGZ2t6LVE0d0Z6MTdFPURSS0piJktYV1dCS2J1MGgrSE9wfDAreHVwdS9WP3o0WU1XTnZ2ei4sa2U5VDFKRUlucWV8Rm1KfEdBSmR5ZFZ1Q2xBZltlOGdmMz0mVFBULw=='});
+addLoadEvent(function(){linktracker_init('3379246',1627);});
+	</script>
+<noscript><img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+</body>
+</html>

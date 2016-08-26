@@ -1,0 +1,845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Today&#8217;s Recipe: Today&#8217;s Recipe: Apple-Date Betty - Everyday Food Blog - MarthaStewart.com</title>
+<link rel="icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://images.marthastewart.com/images/assets/style/reset.css" />
+<link rel="stylesheet" type="text/css" href="http://images.marthastewart.com/images/assets/style/mslo.css" />
+<link rel="stylesheet" type="text/css" href="http://images.marthastewart.com/images/assets/style/food.css" />
+<link rel="stylesheet" type="text/css" href="http://images.marthastewart.com/images/assets/style/thickbox.css" />
+<link rel="stylesheet" href="/wp-content/themes/martha-theme/style.css" type="text/css" media="screen" />
+<!--[if lte IE 7]>
+<link href="http://dailywag.marthastewart.com/global-includes/css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.blog .album-carousel .jcarousel-prev-horizontal {
+    left: 5px;
+}
+</style>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Everyday Food Blog &#8211; MarthaStewart.com RSS Feed" href="http://everydayfoodblog.marthastewart.com/feed" />
+<link rel="alternate" type="application/atom+xml" title="Everyday Food Blog &#8211; MarthaStewart.com Atom Feed" href="http://everydayfoodblog.marthastewart.com/feed/atom" />
+<link rel="pingback" href="http://everydayfoodblog.marthastewart.com/xmlrpc.php" />
+
+<script src="http://dailywag.marthastewart.com/global-includes/scripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://dailywag.marthastewart.com/global-includes/scripts/jquery.jcarousel.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://dailywag.marthastewart.com/global-includes/scripts/jquery-ui-core.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://dailywag.marthastewart.com/global-includes/scripts/jquery-ui-accordion.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://dailywag.marthastewart.com/global-includes/scripts/jcycle.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://dailywag.marthastewart.com/global-includes/scripts/thickbox.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://images.marthastewart.com/images/assets/script/modules.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">
+//bust out of the frame
+
+if(top.location != location) {
+	top.location.href = document.location.href;
+}
+
+$(document).ready(function() {
+  /* moved to footer - NM 5/22
+	$('.carousel-skin').css('display', 'block');
+	$('.ngg-imagebrowser.picasa').css('visibility', 'visible');
+  */
+	$('.album-carousel').jcarousel({
+    scroll: 3,
+		wrap: 'both'
+  });
+	$('.album-carousel img').hover(
+	function () {
+		var title = $(this).attr('alt');
+		$('.photo-name').text(title);
+	},
+	function () {
+		$('.photo-name').text('');
+	});
+    $('#accordion').accordion({
+		header: "h3"
+	});
+	$('.photo-carousel').jcarousel({
+		scroll: 4, 
+		wrap: 'both'
+	});
+	$('.pic').each(function() {
+		var theID = "#" + $(this).attr("id");
+		var navID = "#imagebrowser-" + $(this).attr("id") + " .counter small span";
+		var nextLink = "#next-" + $(this).attr("id");
+		var backLink = "#back-" + $(this).attr("id");
+		var navPager = "#nav-" + $(this).attr("id");
+		var thePic = $(this).attr("id");
+		var first = true; 	
+		$(theID).cycle({ 
+		    fx:     'fade', 
+		    speed:  'fast', 
+		    timeout: 0, 
+		    next:   nextLink, 
+		    prev:   backLink,
+		    pager:  navPager,
+		    after:  onAfter,
+			pagerAnchorBuilder: function(idx, slide) { 
+		    	// return selector string for existing anchor 
+		    	return navPager+' li:eq(' + idx + ') a'; 
+		    }
+		});
+		
+		function onAfter() {
+			if (first) { 
+		        first = false; 
+		        return; 
+		    } 
+			//submitOmnitureFromSP();
+			var htmlStr = $('#' + thePic + ' div:visible .caption span').html();
+			
+			$(navID).html(htmlStr);
+			var theAd = $("#ad_300-250 iframe").attr("src");
+			var theAdLead = $("#ms-article-hdr-ad iframe").attr("src");
+		
+			top.frames['adrefresh_lead'].location.href = theAdLead;
+			top.frames['adrefresh_300'].location.href = theAd;
+			
+			// omniture
+			var s=s_gi(s_account);
+			s.linkTrackVars='eVar13,eVar22,eVar30,prop2,prop12,prop36,events';
+			s.linkTrackEvents='event16';
+			s.eVar13='food/Everyday Food Blog';
+			s.eVar22=" : Blog Archive    :  Today&#8217;s Recipe: Today&#8217;s Recipe: Apple-Date Betty"
+			s.eVar30="food blog";
+			s.prop2='food/Everyday Food Blog';
+			s.prop12=getPageUrl();
+			s.prop36='food/Everyday Food Blog';
+			s.events='event16';
+			s.tl(this,'o','InlineNav');		
+			//var s=s_gi(s_account); s.linkTrackVars='eVar13,events,prop2,prop36'; s.linkTrackEvents='event16'; s.eVar13='food/Everyday Food Blog'; s.prop2='food/Everyday Food Blog'; s.prop36='food/Everyday Food Blog'; s.events='event16';s.tl(this,'o','InlineNav');
+		}
+	});
+
+	// omniture click tag
+	$("#commentform #submit").click(function() {
+		var authorValue = $("#author").val().length;
+		var emailValue = $("#email").val().length;
+		var commentValue = $("#comment").val().length;
+		if (authorValue > 0 && emailValue > 0 && commentValue > 0) {
+			var s=s_gi(s_account);
+			s.linkTrackVars='events';
+			s.linkTrackEvents='event9';
+			s.events='event9';
+			s.tl(this,'o','Comments');
+		}
+	});
+	
+	/* omniture tag
+	$("#submit").click(function(){
+		var s=s_gi(s_account);
+		s.linkTrackVars='events';
+		s.linkTrackEvents='event9';
+		s.events='event9';
+		s.tl(this,'o','Comments');
+	});
+	*/
+});
+
+</script>
+<link rel="alternate" type="application/rss+xml" title="Everyday Food Blog - MarthaStewart.com &raquo; Today&#039;s Recipe: Today&#039;s Recipe: Apple-Date Betty Comments Feed" href="http://everydayfoodblog.marthastewart.com/2012/11/todays-recipe-slow-cooker-sweet-and-spicy-chicken-2.html/feed" />
+<link rel='stylesheet' id='avatars-css'  href='http://everydayfoodblog.marthastewart.com/wp-content/plugins/add-local-avatar/avatars.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='imgareaselect-css'  href='http://everydayfoodblog.marthastewart.com/wp-includes/js/imgareaselect/imgareaselect.css?ver=0.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='http://everydayfoodblog.marthastewart.com/wp-includes/js/thickbox/thickbox.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='author-avatars-shortcode-css'  href='http://everydayfoodblog.marthastewart.com/wp-content/plugins/author-avatars/css/shortcode.css?ver=1.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='social_comments-css'  href='http://everydayfoodblog.marthastewart.com/wp-content/plugins/social/assets/comments.css?ver=2.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-polls-css'  href='http://everydayfoodblog.marthastewart.com/wp-content/plugins/wp-polls/polls-css.css?ver=2.50' type='text/css' media='all' />
+<link rel='stylesheet' id='author-avatars-widget-css'  href='http://everydayfoodblog.marthastewart.com/wp-content/plugins/author-avatars/css/widget.css?ver=1.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://everydayfoodblog.marthastewart.com/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
+<script type='text/javascript' src='http://everydayfoodblog.marthastewart.com/wp-includes/js/comment-reply.js?ver=3.4.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://everydayfoodblog.marthastewart.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://everydayfoodblog.marthastewart.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Today&#039;s Recipe: Slow-Cooker Sweet and Spicy Chicken' href='http://everydayfoodblog.marthastewart.com/2012/10/todays-recipe-slow-cooker-sweet-and-spicy-chicken.html' />
+<meta name="generator" content="WordPress 3.4.2" />
+<link rel='shortlink' href='http://everydayfoodblog.marthastewart.com/?p=12503' />
+
+<!-- All in One SEO Pack 1.6.11 by Michael Torbert of Semper Fi Web Design[301,424] -->
+<meta name="description" content="This dessert is as American as apple betty. No, we don't mean pie. Brown betties have been around since colonial times, with good reason. They're so much" />
+<meta name="keywords" content="miscellaneous" />
+<link rel="canonical" href="http://everydayfoodblog.marthastewart.com/2012/11/todays-recipe-slow-cooker-sweet-and-spicy-chicken-2.html" />
+<!-- /all in one seo pack -->
+<!-- Meta tags added by Robots Meta: http://yoast.com/wordpress/meta-robots-wordpress-plugin/ -->
+<meta name="robots" content="noodp,noydir" />
+
+<!-- Start Of Script Generated By WP-PageNavi 2.31 -->
+<link rel="stylesheet" href="http://everydayfoodblog.marthastewart.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css" type="text/css" media="screen" />
+<!-- End Of Script Generated By WP-PageNavi 2.31 -->
+<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('http://everydayfoodblog.marthastewart.com/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+</style>
+
+<!-- Start Of Script Generated By WP-PostViews 1.31 -->
+<script type='text/javascript' src='http://everydayfoodblog.marthastewart.com/wp-includes/js/tw-sack.js?ver=1.6.1'></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	var postviews_ajax_url = 'http://everydayfoodblog.marthastewart.com/wp-content/plugins/wp-postviews/wp-postviews.php';
+	postviews_count = new sack(postviews_ajax_url);
+	postviews_count.setVar("postviews_id", 12503);
+	postviews_count.method = 'GET';
+	postviews_count.runAJAX();
+	postviews_count = null;
+/* ]]> */
+</script>
+<!-- End Of Script Generated By WP-PostViews 1.31 -->
+<link rel="stylesheet" href="http://dailywag.marthastewart.com/global-includes/css/blogs.css" type="text/css" media="screen" />
+
+</head>
+<body id="edf" class="blog">
+<!-- SiteCatalyst code version: H.1. 
+ Copyright 1997-2005 Omniture, Inc. 
+ More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript">
+var s_account="marthacom,marthacomglobal"
+</script>
+<script language="JavaScript" type="text/javascript" src="http://images.marthastewart.com/images/assets/script/craftsdept/s_code.js"></script>
+<script language="JavaScript" type="text/javascript">
+/* You may give each page an identifying name, server, and channel on the next lines. */
+s.pageName="Everyday Food Blog - MarthaStewart.com : Blog Archive    :  Today&#8217;s Recipe: Today&#8217;s Recipe: Apple-Date Betty"
+s.server="wordpress"
+s.pageType=""
+s.channel="Blogs"
+s.prop1=""
+s.prop2="food/Everyday Food Blog"
+s.prop3=""
+s.prop4="MSLO-BLOG"
+s.prop5=""
+s.prop6=""
+s.prop12=getPageUrl()
+s.prop34="Danielle Black"
+s.prop36="food/Everyday Food Blog"
+/* E-commerce Variables */
+s.campaign=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+s.eVar6=""
+s.eVar13="food/Everyday Food Blog"
+s.eVar22="Everyday Food Blog - MarthaStewart.com : Blog Archive    :  Today&#8217;s Recipe: Today&#8217;s Recipe: Apple-Date Betty"
+s.eVar29="MSLO-BLOG"
+s.eVar30="food"
+s.eVar34="Danielle Black"
+s.events="event4"
+/* Hierarchy Variables */
+s.hier1=""
+s.hier2=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+function submitOmnitureFromSP() {
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code);
+}
+submitOmnitureFromSP(); 
+</script>
+<!-- End SiteCatalyst code version: H.1. -->
+<!-- Start Quantcast tag -->
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<script type="text/javascript">_qoptions = { tags:"wordpress.extended" }; _qacct="p-fcYWUmj5YbYKM"; quantserve();</script>
+<noscript>
+<a href="http://www.quantcast.com/p-fcYWUmj5YbYKM" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-fcYWUmj5YbYKM.gif?tags=wordpress.extended" style="display: none" border="0" height="1" width="1" alt="Quantcast"/></a>
+</noscript>
+<!-- End Quantcast tag -->
+<div class="page">
+
+<script src="http://images.marthastewart.com/images/assets/script/syndication/mslo_masthead.js" type="text/javascript" charset="utf-8"></script>
+
+<div id="ms-article-hdr-ad" class="fixed-ad">
+
+<!-- Begin of DoubleClick Ad Tag --> 
+<script language="JavaScript" type="text/javascript"> 
+if(typeof ord == 'undefined'){
+  ord=Math.floor(Math.random()*9999999999999999);
+}
+kw="";
+document.write('<iframe width="728" height="90" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" name="adrefresh_lead" src="http://ad.doubleclick.net/adi/mso.site/food/blog;content_type=channel;position=leaderboard;sz=728x90;tile=1;ord=' + ord + '?" >');
+ if (navigator.userAgent.indexOf("Gecko")==-1){
+//document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/mso.site/food/blog;content_type=channel;position=leaderboard;sz=728x90;tile=1;ord=' + ord + '?" type="text/javascript"><\/script>');
+}
+document.write('</iframe>');
+</script> 
+<noscript> 
+<a href="http://ad.doubleclick.net/jump/mso.site/food/blog;content_type=channel;position=leaderboard;sz=728x90;tile=1;ord=3194576387570248?" target="_self"> 
+<img src="http://ad.doubleclick.net/ad/mso.site/food/blog;content_type=channel;position=leaderboard;sz=728x90;tile=1;ord=3194576387570248?" width="" height="" border="0" alt=""> 
+</a> 
+</noscript> 
+<!-- End DoubleClick Ad Tag --> 
+</div>
+
+<div class="page twocol nonav wideone clearfix">
+<div class="columns">
+<div class="col1 column">
+
+	
+			<h1 id="hdr-img"><a href="/">Everyday Food Blog</a></h1>
+	
+<div id="left-sidebar">
+   
+    <div id="categories" class="left-module">
+    <h3>Categories</h3>
+		<ul id="list-cats">
+        	<li><a href="/category/photo-galleries/">Photo Galleries</a></li>
+				<li class="cat-item cat-item-8"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/ask-the-editors" title="View all posts filed under Ask the Editors">Ask the Editors</a>
+</li>
+	<li class="cat-item cat-item-88"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/at-the-store" title="View all posts filed under At the Store">At the Store</a>
+</li>
+	<li class="cat-item cat-item-3"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/behind-the-scenes" title="View all posts filed under Behind the Scenes">Behind the Scenes</a>
+</li>
+	<li class="cat-item cat-item-62"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/breakfast" title="View all posts filed under Breakfast">Breakfast</a>
+</li>
+	<li class="cat-item cat-item-89"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/celebrations-and-holidays" title="View all posts filed under Celebrations and Holidays">Celebrations and Holidays</a>
+</li>
+	<li class="cat-item cat-item-90"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/cheap-tricks" title="View all posts filed under Cheap Tricks">Cheap Tricks</a>
+</li>
+	<li class="cat-item cat-item-507"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/cocktail-oclock" title="View all posts filed under Cocktail O&#039;Clock">Cocktail O&#039;Clock</a>
+</li>
+	<li class="cat-item cat-item-950"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/contests-and-giveaways" title="View all posts filed under Contests and Giveaways">Contests and Giveaways</a>
+</li>
+	<li class="cat-item cat-item-10"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/cooking-for-a-small-kitchen" title="View all posts filed under Cooking for a Small Kitchen">Cooking for a Small Kitchen</a>
+</li>
+	<li class="cat-item cat-item-683"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/dinner" title="View all posts filed under Dinner">Dinner</a>
+</li>
+	<li class="cat-item cat-item-51"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/drinks" title="View all posts filed under Drinks">Drinks</a>
+</li>
+	<li class="cat-item cat-item-218"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/healthy-eat-smart" title="View all posts filed under Eat Smart">Eat Smart</a>
+</li>
+	<li class="cat-item cat-item-1403"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/edf-cooks" title="View all posts filed under EDF Cooks">EDF Cooks</a>
+</li>
+	<li class="cat-item cat-item-97"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/edf-loves" title="View all posts filed under EDF Loves">EDF Loves</a>
+</li>
+	<li class="cat-item cat-item-1355"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/edf-on-the-road" title="View all posts filed under EDF on the Road">EDF on the Road</a>
+</li>
+	<li class="cat-item cat-item-1230"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/expert-advice" title="View all posts filed under Expert Advice">Expert Advice</a>
+</li>
+	<li class="cat-item cat-item-1473"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/fast-forward" title="View all posts filed under Fast-Forward">Fast-Forward</a>
+</li>
+	<li class="cat-item cat-item-91"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/friends-of-edf" title="View all posts filed under Friends of EDF">Friends of EDF</a>
+</li>
+	<li class="cat-item cat-item-92"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/guilty-pleasure" title="View all posts filed under Guilty Pleasure">Guilty Pleasure</a>
+</li>
+	<li class="cat-item cat-item-9"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/how-to" title="View all posts filed under How-To">How-To</a>
+</li>
+	<li class="cat-item cat-item-15"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/in-season" title="View all posts filed under In Season">In Season</a>
+</li>
+	<li class="cat-item cat-item-1242"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/in-the-issue" title="View all posts filed under In the Issue">In the Issue</a>
+</li>
+	<li class="cat-item cat-item-93"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/in-the-test-kitchen" title="View all posts filed under In the Test Kitchen">In the Test Kitchen</a>
+</li>
+	<li class="cat-item cat-item-1402"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/instant-party" title="View all posts filed under Instant Party">Instant Party</a>
+</li>
+	<li class="cat-item cat-item-1374"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/kitchen-camera" title="View all posts filed under Kitchen Cam">Kitchen Cam</a>
+</li>
+	<li class="cat-item cat-item-71"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/lunch" title="View all posts filed under Lunch Break">Lunch Break</a>
+</li>
+	<li class="cat-item cat-item-1"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/miscellaneous" title="View all posts filed under Miscellaneous">Miscellaneous</a>
+</li>
+	<li class="cat-item cat-item-1377"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/news-bites" title="View all posts filed under News Bites">News Bites</a>
+</li>
+	<li class="cat-item cat-item-7"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/out-and-about" title="View all posts filed under Out &amp; About">Out &amp; About</a>
+</li>
+	<li class="cat-item cat-item-940"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/poll" title="View all posts filed under Poll">Poll</a>
+</li>
+	<li class="cat-item cat-item-1358"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/sarah-carey" title="View all posts filed under Sarah Carey">Sarah Carey</a>
+</li>
+	<li class="cat-item cat-item-94"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/shortcuts" title="View all posts filed under Shortcuts">Shortcuts</a>
+</li>
+	<li class="cat-item cat-item-95"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/snacktime" title="View all posts filed under Snacktime">Snacktime</a>
+</li>
+	<li class="cat-item cat-item-1356"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/special-diets" title="View all posts filed under Special Diets">Special Diets</a>
+</li>
+	<li class="cat-item cat-item-96"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/sweet-spot" title="View all posts filed under Sweet Spot">Sweet Spot</a>
+</li>
+	<li class="cat-item cat-item-4"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/tips-tools-tricks" title="View all posts filed under Tips, Tools, and Tricks">Tips, Tools, and Tricks</a>
+</li>
+	<li class="cat-item cat-item-179"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/todays-recipe" title="View all posts filed under Today&#039;s Recipe">Today&#039;s Recipe</a>
+</li>
+	<li class="cat-item cat-item-1502"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/too-much-of-a-good-thing" title="View all posts filed under Too Much of a Good Thing">Too Much of a Good Thing</a>
+</li>
+	<li class="cat-item cat-item-98"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/tools-of-the-trade" title="View all posts filed under Tools of the Trade">Tools of the Trade</a>
+</li>
+	<li class="cat-item cat-item-130"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/vegetarian" title="View all posts filed under Vegetarian">Vegetarian</a>
+</li>
+	<li class="cat-item cat-item-5"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/video" title="View all posts filed under Video">Video</a>
+</li>
+	<li class="cat-item cat-item-1446"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/weighty-topics" title="View all posts filed under Weighty Topics">Weighty Topics</a>
+</li>
+	<li class="cat-item cat-item-99"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/whats-on" title="View all posts filed under What&#039;s On">What&#039;s On</a>
+</li>
+	<li class="cat-item cat-item-1376"><a rel="nofollow" href="http://everydayfoodblog.marthastewart.com/category/whats-that-food" title="View all posts filed under WTF? What&#039;s that Food?">WTF? What&#039;s that Food?</a>
+</li>
+       </ul>
+     </div>
+     
+    
+     <!--
+<div class="left-module">
+     	<h3>Meet Our Team</h3>
+        <ul>
+        			<li><a href="/author/aconway">Amy Conway</a></li>
+			
+	       	    				<li><a href="/author/alast">Anna Last</a></li>
+			
+	       				<li><a href="/author/alevin">Ann Levin</a></li>
+			
+	       				<li><a href="/author/asickelka">Alison Sickelka</a></li>
+			
+	       				<li><a href="/author/asteiman">Adina Steiman</a></li>
+			
+	       	    				<li><a href="/author/cgarcia">Chana Garcia</a></li>
+			
+	       				<li><a href="/author/clam">Chi Lam</a></li>
+			
+	       				<li><a href="/author/cmattox">Charlyne Mattox</a></li>
+			
+	       	    	    				<li><a href="/author/dperry">Dawn Perry</a></li>
+			
+	       				<li><a href="/author/eeakin">Beth Eakin</a></li>
+			
+	       	    	    	    	    	    	    	    	    				<li><a href="/author/hhayes">Hannah Hayes</a></li>
+			
+	       				<li><a href="/author/hmeldrom">Heather Meldrom</a></li>
+			
+	       				<li><a href="/author/hyoung">Heather Young</a></li>
+			
+	       	    				<li><a href="/author/jbrownstein">Julia Brownstein</a></li>
+			
+	       				<li><a href="/author/jdamuck">Jessie Damuck</a></li>
+			
+	       				<li><a href="/author/jdillard">Jessica Dillard</a></li>
+			
+	       				<li><a href="/author/jma">Julie Ma</a></li>
+			
+	       				<li><a href="/author/jmcconnel">Jordan McConnel</a></li>
+			
+	       	    				<li><a href="/author/jventresca">Jane Ventresca</a></li>
+			
+	       				<li><a href="/author/khilgendorf">Kirsten Hilgendorf</a></li>
+			
+	       				<li><a href="/author/khymore">Khalil Hymore</a></li>
+			
+	       				<li><a href="/author/kmiller">Kellee Miller</a></li>
+			
+	       				<li><a href="/author/kvala">Kelsey Vala</a></li>
+			
+	       				<li><a href="/author/lstockton">Lesley Stockton</a></li>
+			
+	       				<li><a href="/author/mbloom">Molly Bloom</a></li>
+			
+	       	    	    				<li><a href="/author/nneusch">Natalie Neusch</a></li>
+			
+	       				<li><a href="/author/rlufrano">Rosanne Lufrano</a></li>
+			
+	       	    				<li><a href="/author/scarey">Sarah Carey</a></li>
+			
+	       				<li><a href="/author/sseneviratne">Samantha Seneviratne</a></li>
+			
+	       	    	              
+         </ul>
+   </div>
+-->
+  
+   <div class="left-module mcircle">
+          <h3>Sites We Like</h3>
+          <ul>
+         	   <li><a href="http://101cookbooks.com" target="_blank">101 Cookbooks</a></li>
+<li><a href="http://aliceqfoodie.blogspot.com/" target="_blank">Alice Q. Foodie</a></li>
+<li><a href="http://bitten.blogs.nytimes.com/" target="_blank">Bitten</a></li>
+<li><a href="http://chocolateandzucchini.com/" target="_blank">Chocolate and Zucchini</a></li>
+<li><a href="http://www.chow.com/" target="_blank">Chow</a></li>
+<li><a href="http://cookandeat.com/" target="_blank">Cook and Eat</a></li>
+<li><a href="http://cupcakestakethecake.blogspot.com/" target="_blank">Cupcakes Take the Cake</a></li>
+<li><a href="http://www.doriegreenspan.com/" target="_blank">Dorie Greenspan</a></li>
+<li><a href="http://www.emerils.com/cooking-blog/" target="_blank">Emerils.com Cooking Blog</a></li>
+<li><a href="http://nymag.com/daily/food" target="_blank">Grub Street</a></li>
+<li><a href="http://www.hostesswiththemostess.com/" target="_blank">Hostess with the Mostess</a></li>
+<li><a href="http://blogs1.marthastewart.com/radioblog/" target="_blank">Living on 112</a></li>
+<li><a href="http://mattbites.com/" target="_blank">MattBites</a></li>
+<li><a href="http://www.napafarmhouse1885.blogspot.com/" target="_blank">Napa Farmhouse</a></li>
+<li><a href="http://orangette.blogspot.com/" target="_blank">Orangette</a></li>
+<li><a href="http://www.seriouseats.com/" target="_blank">Serious Eats</a></li>
+<li><a href="http://smittenkitchen.com/" target="_blank">Smitten Kitchen</a></li>
+<li><a href="http://steamykitchen.com/" target="_blank">Steamy Kitchen</a></li>
+<li><a href="http://blogs1.marthastewart.com/weddings/" target="_blank">The Bride’s Guide</a></li>
+<li><a href="http://thecraftsdept.com/" target="_blank">The Crafts Dept.</a></li>
+<li><a href="http://www.thefoodsection.com/" target="_blank">The Food Section</a></li>
+<li><a href="http://www.thekitchn.com/" target="_blank">The Kitchn</a></li>
+<li><a href="http://www.themarthablog.com/" target="_blank">The Martha Blog</a></li>
+<li><a href="http://thepioneerwoman.com/" target="_blank">The Pioneer Woman</a></li>
+<li><a href="http://www.thewednesdaychef.com/" target="_blank">The Wednesday Chef</a></li>
+<li><a href="http://www.thisweekfordinner.com/" target="_blank">This Week for Dinner</a></li>
+          </ul>
+   </div>
+   <div class="left-module">
+          <h3>RSS</h3>
+          <ul>
+         	   <li><a href="http://feeds.feedburner.com/EverydayFoodBlog" class="rss-icon">Subscribe to the Feed</a></li>
+          </ul>
+   </div>
+
+</div>
+	<div id="content" class="narrowcolumn">
+
+		<div class="navigation">
+			<div class="left"><a href="http://everydayfoodblog.marthastewart.com/2012/10/todays-recipe-slow-cooker-sweet-and-spicy-chicken.html" rel="prev">Previous Post</a></div>
+			<div class="right"></div>
+	</div>
+        
+		<div class="post-12503 post type-post status-publish format-standard hentry category-miscellaneous" id="post-12503">
+			<span class="post-date">November 1, 2012 </span>
+				<h2>Today's Recipe: Today's Recipe: Apple-Date Betty</h2>
+                <small>Posted by <a href="http://everydayfoodblog.marthastewart.com/author/dblack" title="Posts by Danielle Black" rel="author">Danielle Black</a></small>
+
+			<div class="entry">
+				<p><script src="http://player.ooyala.com/player.js?height=280&#038;deepLinkEmbedCode=Fid2hjNjohF-nuEVj43uWTbSEqY9a0tu&#038;embedCode=Fid2hjNjohF-nuEVj43uWTbSEqY9a0tu&#038;video_pcode=MyMGo6h73X-jHfvV7pidoDm3o4bK&#038;width=450"></script></p>
+<p>This dessert is as American as apple betty. No, we don't mean pie. Brown betties have been around since colonial times, with good reason. They're so much easier to make than pie. No finicky crust. No rolling. Instead, buttery toasted bread stands in, but you still get that fabulous spiced-apple flavor that you would from a pie.</p>
+<p><a href="http://www.marthastewart.com/945579/apple-date-betty" target="_self">Click here for the recipe.</a></p>
+
+								<div class="share-comments"><script type="text/javascript" charset="utf-8" src="http://w.sharethis.com/widget/?wp=2.7&publisher=44c06571-443b-4a47-9084-5af70e1df8b8"></script> <a href="http://everydayfoodblog.marthastewart.com/2012/11/todays-recipe-slow-cooker-sweet-and-spicy-chicken-2.html#respond" class="comment-link"  rel="nofollow" title="Comment on Today&#039;s Recipe: Today&#039;s Recipe: Apple-Date Betty">Add Comment</a></div>
+			
+				<p class="postmetadata">
+				
+				 Posted by <a href="http://everydayfoodblog.marthastewart.com/author/dblack" title="Posts by Danielle Black" rel="author">Danielle Black</a> on November 1, 2012 in <a href="http://everydayfoodblog.marthastewart.com/category/miscellaneous" title="View all posts in Miscellaneous" rel="category tag">Miscellaneous</a>    </p>
+          
+		
+
+			</div>
+		</div>
+
+	<div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="http://everydayfoodblog.marthastewart.com/index.php?social_controller=auth&#038;social_action=reload_form&#038;redirect_to=http://everydayfoodblog.marthastewart.com/2012/11/todays-recipe-slow-cooker-sweet-and-spicy-chicken-2.html&#038;post_id=12503" />
+			Logging In...		</div>
+										<div id="respond">
+				<h3 id="reply-title"><span>Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2012/11/todays-recipe-slow-cooker-sweet-and-spicy-chicken-2.html#respond" style="display:none;">cancel</a></small></span></h3>
+									<form action="http://everydayfoodblog.marthastewart.com/wp-comments-post.php" method="post" id="commentform">
+						<div class="social-sign-in-links social-clearfix">
+		<a class="social-twitter social-imr social-login comments" href="http://everydayfoodblog.marthastewart.com/index.php?social_controller=auth&#038;social_action=authorize&#038;target=https%3A%2F%2Fsopresto.mailchimp.com%2Ftwitter%2Fauthorize&#038;post_id=12503" id="twitter_signin" target="_blank">Sign in with Twitter</a>
+		<a class="social-facebook social-imr social-login comments" href="http://everydayfoodblog.marthastewart.com/index.php?social_controller=auth&#038;social_action=authorize&#038;target=https%3A%2F%2Fsopresto.mailchimp.com%2Ffacebook%2Fauthorize%3Freq_perms%3Dpublish_stream&#038;post_id=12503" id="facebook_signin" target="_blank">Sign in with Facebook</a>
+	</div>
+<div class="social-divider">
+	<span>or</span>
+</div>
+																				<p class="social-input-row social-input-row-author"><label for="author" class="social-label">Name</label><input id="author" name="author" class="social-input" required="required" type="text" value="" /></p>
+<p class="social-input-row social-input-row-email"><label for="email" class="social-label">Email</label><input id="email" name="email" class="social-input" required="required" type="text" value="" /><small class="social-help">Not published</small></p>
+<p class="social-input-row social-input-row-url"><label for="url" class="social-label">Website</label><input id="url" name="url" class="social-input" type="text" value="" /></p>
+												<p class="social-input-row social-input-row-comment"><label for="comment" class="social-label">Comment</label><textarea id="comment" name="comment" class="social-input" required="required"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post It" />
+							<input type='hidden' name='comment_post_ID' value='12503' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+<input type="hidden" id="use_twitter_reply" name="use_twitter_reply" value="0" /><input type="hidden" id="in_reply_to_status_id" name="in_reply_to_status_id" value="" />						</p>
+						<div id="commentform-extras"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9b178b5df5" /></p></div>					</form>
+							</div><!-- #respond -->
+							</div>
+	<div id="social-tabs-comments">
+			</div>
+	<!-- #Comments Tabs -->
+	</div>
+
+	
+	</div>
+        </div>
+
+        <div id="right-sidebar" class="col2 column">
+
+                    <div class="right-module clearfix promo">
+
+					<a href="https://martha.zt01.net/EF/August/5.php"><img class="left" src="http://everydayfoodblog.marthastewart.com/wp-content/uploads/2012/01/edf-jan-feb.jpg" alt="Subscribe to Everyday Food" /></a><h3 class="right"><a href="https://martha.zt01.net/EF/August/5.php">Subscribe to Everyday Food</a></h3><p class="right">10 issues only $15 -- in print and on your iPad®</p><ul><li><a target="_blank" href="https://martha.zt01.net/EF/August/5.php">Subscribe</a></li></ul>
+                        </div>
+
+                        
+                        <!--[if gt IE 7]><!-->
+                        <div class="right-module newsletter-blog">
+                          <iframe width="275" style="margin: 0 auto;" scrolling="no" height="214" frameborder="0" src="https://my.marthastewart.com/emf/newsletter-block/2075732481" class="nl-frame"></iframe>
+                        </div>
+                        <!--<![endif]-->
+
+
+                  		<div class="right-module">
+                        <h3>Search Everyday Food Blog</h3>
+                        	<form method="get" id="searchform" class="clearfix" action="http://everydayfoodblog.marthastewart.com/">
+<div><input type="text" value="" name="s" id="s" />
+<input type="image" id="searchsubmit" value="Search" src="/img/search-btn.gif" onclick="var s=s_gi(s_account); s.linkTrackVars='events'; s.linkTrackEvents='event1'; s.events='event1';s.tl(this,'o','search button')"/>
+</div>
+</form>
+                        </div>
+
+                      <div id="ad_300-250" class="module adzone">
+						<script type="text/javascript" language="JavaScript">
+							document.write('<iframe name="adrefresh_300" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" height="250" width="300" src="http://ad.doubleclick.net/adi/mso.site/food/blog;sz=300x250;tile=6;ord=' + ord + '?">');
+							 if (navigator.userAgent.indexOf("Gecko")==-1){
+							//document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/mso.site/food/blog;content_type=channel;sz=300x250;tile=6;ord=' + ord + '?" type="text/javascript"><\/script>');
+							 }
+							 document.write('</iframe>');
+						</script>
+						<noscript>
+							<a href="http://ad.doubleclick.net/jump/mso.site/food/blog;content_type=channel;sz=300x250;tile=6;ord=3194576387570248?" target="_self">
+							<img src="http://ad.doubleclick.net/ad/mso.site/food/blog;content_type=channel;sz=300x250;tile=6;ord=3194576387570248?" width="" height="" border="0" alt="">
+							</a>
+						</noscript>
+
+						</div>
+
+						<div class="right-module clearfix promo">
+
+						<a href="http://shop.marthastewart.com/Everyday-Food-Great-Food-Fast/A/0307354164.htm"><img class="left" src="http://everydayfoodblog.marthastewart.com/wp-content/uploads/2009/11/greatfoodfast.jpg" alt="Everyday Food: Great Food Fast" /></a><h3 class="right"><a href="http://shop.marthastewart.com/Everyday-Food-Great-Food-Fast/A/0307354164.htm">Everyday Food: Great Food Fast</a></h3><p class="right">Get our bestselling cookbook, with 250 recipes for easy, delicious meals all year long.</p><ul><li><a target="_blank" href="http://shop.marthastewart.com/Everyday-Food-Great-Food-Fast/A/0307354164.htm">Check it out</a></li></ul>
+                       </div>
+
+
+
+						<!--
+<div class="right-module clearfix promo todays-recipe">
+
+						<a href="http://www.marthastewart.com/recipe/penne-with-ricotta-and-pine-nuts"><img class="left" src="http://images.marthastewart.com/images/content/tv/ms_living_tv/2007Q1/tvs9474_s.jpg" alt="Penne with Ricotta and Pine Nuts" /></a><h3 class="right"><a href="http://www.marthastewart.com/recipe/penne-with-ricotta-and-pine-nuts">Today's Recipe</a></h3><span class="recipe-name"><a href="http://www.marthastewart.com/recipe/penne-with-ricotta-and-pine-nuts">Penne with Ricotta and Pine Nuts</a></span><ul><li><a target="_blank" href="http://www.marthastewart.com/recipe/penne-with-ricotta-and-pine-nuts"><strong>Get Recipe</strong></a></li></ul>
+	                    </div>
+-->
+
+
+
+
+<div id="side-photos" class="right-module">
+                        <h3>Photo Galleries</h3>
+                        <div class="album-carousel carousel-skin">
+                        <ul>
+				          
+
+					       <li>
+					       		<div class="bg-img-s"><a href="http://everydayfoodblog.marthastewart.com/2012/06/delicious-mexican-food-and-lovely-company-in-san-antonio.html"><img src="http://lh6.ggpht.com/--5TG7o6-5Ss/T8ZEwklp5PI/AAAAAAAAEOs/dx7LX5y8aK4/barbacoa%252520pit.jpg?imgmax=144" alt="delicious Mexican food and lovely company in San Antonio" /></a></div>					       </li>
+
+					       
+
+					       <li>
+					       		<div class="bg-img-s"><a href="http://everydayfoodblog.marthastewart.com/2011/07/unusual-find-at-the-farmers-market.html"><img src="http://lh6.ggpht.com/-f_9ZxtHU-W4/TiRP6lVXh2I/AAAAAAAAD_Q/abR0BeXNW-I/ostrich5.jpg?imgmax=144" alt="unusual find at the farmers' market" /></a></div>					       </li>
+
+					       
+
+					       <li>
+					       		<div class="bg-img-s"><a href="http://everydayfoodblog.marthastewart.com/2011/07/fancy-food-show-2011.html"><img src="http://lh6.ggpht.com/-CSoQiURXujg/TiRgZm6vDzI/AAAAAAAAEAY/yJk19PDJIYE/ffs5.jpg?imgmax=144" alt="Fancy Food show 2011" /></a></div>					       </li>
+
+					       
+
+					       <li>
+					       		<div class="bg-img-s"><a href="http://everydayfoodblog.marthastewart.com/2011/06/julyaugust-issue-hits-the-stands.html"><img src="http://lh4.ggpht.com/-mHmyGPo022c/TgC5Uu4Fy6I/AAAAAAAAD6E/13RoHEFCkSE/Peach%252520and%252520Almond%252520Smoothie%252520HS%252520JULY%252520AUG%252520%25252711.jpg?imgmax=144" alt="July/August Issue Hits the Stands!" /></a></div>					       </li>
+
+					       
+
+					       <li>
+					       		<div class="bg-img-s"><a href="http://everydayfoodblog.marthastewart.com/2011/06/sweet-cherry-pie.html"><img src="http://lh6.ggpht.com/-Twp7tJp8VUc/TfecZW6VcBI/AAAAAAAAD20/9StituQ2CaM/IMG_2785.JPG?imgmax=144" alt="sweet cherry pie" /></a></div>					       </li>
+
+					       
+
+					       <li>
+					       		<div class="bg-img-s"><a href="http://everydayfoodblog.marthastewart.com/2011/05/prepping-for-summer-produce-at-local-farm.html"><img src="http://lh5.ggpht.com/-hbXld_Kh9HI/Td_MIkdLYmI/AAAAAAAAD10/L_5DbBDtdY0/IMG_2656.jpg?imgmax=144" alt="Prepping for summer produce at local farm" /></a></div>					       </li>
+
+					       
+
+					       <li>
+					       		<div class="bg-img-s"><a href="http://everydayfoodblog.marthastewart.com/2011/05/behind-the-scenes-with-martha-making-french-toast.html"><img src="http://lh3.ggpht.com/-6swwAso0Vx8/TdwA_FLSNbI/AAAAAAAADzY/QnAcwlKvTG4/IMG_2959.JPG?imgmax=144" alt="Behind the Scenes with Martha making French Toast" /></a></div>					       </li>
+
+					       
+
+					       <li>
+					       		<div class="bg-img-s"><a href="http://everydayfoodblog.marthastewart.com/2011/05/our-test-kitchen-mothers-day-brunch-with-bloggers.html"><img src="http://lh4.ggpht.com/-jGGLsqgGBmM/TcBNmcrqM1I/AAAAAAAADv8/yKkWwaWR8ic/IMG_1468.jpg?imgmax=144" alt="our test kitchen mother's day brunch with bloggers" /></a></div>					       </li>
+
+					       
+
+					       <li>
+					       		<div class="bg-img-s"><a href="http://everydayfoodblog.marthastewart.com/2011/03/behind-the-scenes-ipad-video-shoot.html"><img src="http://lh3.ggpht.com/-ihgKupd8Zas/TZNSmGsLGUI/AAAAAAAADsc/Ha1yhvAAKY8/IMG_2988.jpg?imgmax=144" alt="behind the scenes: ipad video shoot" /></a></div>					       </li>
+
+					       
+                         </ul>
+                        </div>
+                        <div class="photo-name">&nbsp;</div>
+                      </div>
+
+
+
+                      <!--
+<div class="right-module">
+                        <h3><a href="http://twitter.com/everydayfood" target="_blank">Follow Everyday Food on Twitter</a></h3>
+
+                        <a class="twitter-timeline" href="https://twitter.com/twitterapi" data-widget-id="YOUR-WIDGET-ID-HERE">Tweets by @twitterapi</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                                              </div>
+-->
+
+
+			<div class="right-module">
+				<a class="twitter-timeline" href="https://twitter.com/everydayfood" data-widget-id="261891207897157632">Tweets by @everydayfood</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+			</div>
+
+
+
+                      <div id="ad_300-250-2" class="module adzone">
+						<script type="text/javascript" language="JavaScript">
+							document.write('<iframe name="adrefresh_300" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" height="250" width="300" src="http://ad.doubleclick.net/adi/mso.site/food/blog;sz=300x250;tile=7;ord=' + ord + '?">');
+							 if (navigator.userAgent.indexOf("Gecko")==-1){
+							//document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/mso.site/food/blog;content_type=channel;sz=300x250;tile=6;ord=' + ord + '?" type="text/javascript"><\/script>');
+							 }
+							 document.write('</iframe>');
+						</script>
+						<noscript>
+							<a href="http://ad.doubleclick.net/jump/mso.site/food/blog;content_type=channel;sz=300x250;tile=6;ord=3194576387570248?" target="_self">
+							<img src="http://ad.doubleclick.net/ad/mso.site/food/blog;content_type=channel;sz=300x250;tile=6;ord=3194576387570248?" width="" height="" border="0" alt="">
+							</a>
+						</noscript>
+
+					 </div>
+
+
+                      <div id="accordion" class="right-module">
+                        <div id="latest-posts">
+                          <h3><a href="#">Latest Posts</a></h3>
+                          <ul>
+                                                                                    <li><a href="http://everydayfoodblog.marthastewart.com/2012/11/todays-recipe-slow-cooker-sweet-and-spicy-chicken-2.html" rel="bookmark" title="Permanent Link to &ldquo;Today's Recipe: Today's Recipe: Apple-Date Betty&rdquo;">
+                              Today's Recipe: Today's Recipe: Apple-Date Betty                              </a></li>
+                                                        <li><a href="http://everydayfoodblog.marthastewart.com/2012/10/todays-recipe-slow-cooker-sweet-and-spicy-chicken.html" rel="bookmark" title="Permanent Link to &ldquo;Today's Recipe: Slow-Cooker Sweet and Spicy Chicken&rdquo;">
+                              Today's Recipe: Slow-Cooker Sweet and Spicy Chicken                              </a></li>
+                                                        <li><a href="http://everydayfoodblog.marthastewart.com/2012/10/wtf-whats-that-food-black-radishes.html" rel="bookmark" title="Permanent Link to &ldquo;WTF: What's That Food? Black Radishes&rdquo;">
+                              WTF: What's That Food? Black Radishes                              </a></li>
+                                                        <li><a href="http://everydayfoodblog.marthastewart.com/2012/10/todays-recipe-hearty-chickpea-stew.html" rel="bookmark" title="Permanent Link to &ldquo;Today's Recipe: Hearty Chickpea Stew&rdquo;">
+                              Today's Recipe: Hearty Chickpea Stew                              </a></li>
+                                                        <li><a href="http://everydayfoodblog.marthastewart.com/2012/10/everyday-food-has-a-new-windows-8-app.html" rel="bookmark" title="Permanent Link to &ldquo;Everyday Food Has a New Windows 8 App!&rdquo;">
+                              Everyday Food Has a New Windows 8 App!                              </a></li>
+                                                        <li><a href="http://everydayfoodblog.marthastewart.com/2012/10/todays-recipe-broccoli-ham-calzone.html" rel="bookmark" title="Permanent Link to &ldquo;Today's Recipe: Broccoli-Ham Calzone&rdquo;">
+                              Today's Recipe: Broccoli-Ham Calzone                              </a></li>
+                                                        <li><a href="http://everydayfoodblog.marthastewart.com/2012/10/cocktail-oclock-trick-or-treat.html" rel="bookmark" title="Permanent Link to &ldquo;Cocktail O'Clock: Trick or Treat?&rdquo;">
+                              Cocktail O'Clock: Trick or Treat?                              </a></li>
+                                                      </ul>
+                        </div>
+                        <div id="most-read">
+                          <h3><a href="#">Most Read Posts</a></h3>
+                          <ul>
+                            <li><a href="http://everydayfoodblog.marthastewart.com/2010/11/the-relish-tray.html"  title="the relish tray">the relish tray</a> - 23,890 views</li><li><a href="http://everydayfoodblog.marthastewart.com/2012/08/pressure-cooker-giveaway.html"  title="Pressure Cooker Giveaway">Pressure Cooker Giveaway</a> - 17,244 views</li><li><a href="http://everydayfoodblog.marthastewart.com/2011/08/qa-with-deb-perelman-of-smitten-kitchen.html"  title="Q&#038;A with Deb Perelman of Smitten Kitchen">Q&#038;A with Deb Perelman of Smitten Kitchen</a> - 15,024 views</li><li><a href="http://everydayfoodblog.marthastewart.com/2011/12/breakfast-recipes-for-a-crowd.html"  title="breakfast recipes for a crowd">breakfast recipes for a crowd</a> - 12,573 views</li><li><a href="http://everydayfoodblog.marthastewart.com/2011/04/cocktail-oclock-boozy-iced-coffee.html"  title="cocktail o'clock:  boozy iced coffee">cocktail o'clock:  boozy iced coffee</a> - 11,704 views</li><li><a href="http://everydayfoodblog.marthastewart.com/2010/06/cold-brewed-iced-coffee.html"  title="cold-brewed iced coffee">cold-brewed iced coffee</a> - 11,460 views</li><li><a href="http://everydayfoodblog.marthastewart.com/2010/05/make-ahead-oatmeal-trick.html"  title="make-ahead oatmeal trick">make-ahead oatmeal trick</a> - 10,565 views</li>                          </ul>
+                        </div>
+                        <div id="most-comments">
+                          <h3><a href="#">Most Commented Posts</a></h3>
+                          <ul>
+                            <li><a href="http://everydayfoodblog.marthastewart.com/2012/08/pressure-cooker-giveaway.html" title="Pressure Cooker Giveaway">Pressure Cooker Giveaway</a></li><li><a href="http://everydayfoodblog.marthastewart.com/2010/11/win-an-oil-free-turkey-fryer-2.html" title="Contest! Win an oil-free turkey fryer">Contest! Win an oil-free turkey fryer</a></li><li><a href="http://everydayfoodblog.marthastewart.com/2010/11/our-food-editors-are-standing-by-to-take-your-questions.html" title="Our food editors are standing by to take your questions!">Our food editors are standing by to take your questions!</a></li><li><a href="http://everydayfoodblog.marthastewart.com/2011/06/everyday-food-app-upgrade.html" title="Everyday Food App upgrade!">Everyday Food App upgrade!</a></li><li><a href="http://everydayfoodblog.marthastewart.com/2011/03/edf-asks-wtf-whats-this-food-3.html" title="update - edf asks: wtf (what's this food?)">update - edf asks: wtf (what's this food?)</a></li><li><a href="http://everydayfoodblog.marthastewart.com/2011/04/send-your-summer-snacks.html" title="send your summer snacks for chance to be in our magazine!">send your summer snacks for chance to be in our magazine!</a></li><li><a href="http://everydayfoodblog.marthastewart.com/2010/04/pop-quiz-guess-this-mystery-food.html" title="pop quiz: mystery food revealed!">pop quiz: mystery food revealed!</a></li>                          </ul>
+                        </div>
+                      </div>
+
+                        <div class="right-module archive-menus">
+        				<h3>Archive</h3>
+				   		<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+				      	<option value="\">Everyday Food Blog Archive</option>
+				      	<option value='http://everydayfoodblog.marthastewart.com/2012/11'> November 2012 &nbsp;(1)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/10'> October 2012 &nbsp;(47)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/09'> September 2012 &nbsp;(37)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/08'> August 2012 &nbsp;(49)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/07'> July 2012 &nbsp;(44)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/06'> June 2012 &nbsp;(33)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/05'> May 2012 &nbsp;(34)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/04'> April 2012 &nbsp;(29)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/03'> March 2012 &nbsp;(13)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/02'> February 2012 &nbsp;(15)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2012/01'> January 2012 &nbsp;(33)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/12'> December 2011 &nbsp;(32)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/11'> November 2011 &nbsp;(34)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/10'> October 2011 &nbsp;(38)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/09'> September 2011 &nbsp;(34)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/08'> August 2011 &nbsp;(41)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/07'> July 2011 &nbsp;(28)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/06'> June 2011 &nbsp;(36)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/05'> May 2011 &nbsp;(36)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/04'> April 2011 &nbsp;(43)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/03'> March 2011 &nbsp;(44)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/02'> February 2011 &nbsp;(39)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2011/01'> January 2011 &nbsp;(47)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/12'> December 2010 &nbsp;(57)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/11'> November 2010 &nbsp;(66)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/10'> October 2010 &nbsp;(60)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/09'> September 2010 &nbsp;(66)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/08'> August 2010 &nbsp;(57)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/07'> July 2010 &nbsp;(53)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/06'> June 2010 &nbsp;(55)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/05'> May 2010 &nbsp;(46)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/04'> April 2010 &nbsp;(65)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/03'> March 2010 &nbsp;(68)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/02'> February 2010 &nbsp;(53)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2010/01'> January 2010 &nbsp;(43)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2009/12'> December 2009 &nbsp;(65)</option>
+	<option value='http://everydayfoodblog.marthastewart.com/2009/11'> November 2009 &nbsp;(31)</option>
+ </select>
+				     </div>
+
+
+				     <div align="center"><iframe height="440" width="300" frameborder="0" scrolling="no" src="http://www.marthastewart.com/portalext/community/aggregate-blogs?af=MarthasCircleBlogs"></iframe></div>
+
+
+                 </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-668867-15");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<div id="ms-global-footer"></div> 
+
+<!-- footer text links --> 
+ 
+<script type="text/javascript" charset="utf-8"> 
+	var rsc = "footer_blogs";
+</script> 
+ 
+<script src="http://images.marthastewart.com/images/assets/script/syndication/mslo_footer.js" type="text/javascript" charset="utf-8"></script> 
+
+<script type="text/javascript" src="http://s.skimresources.com/js/2948X635862.skimlinks.js"></script> 
+</div> 
+<script type='text/javascript' src='http://everydayfoodblog.marthastewart.com/wp-includes/js/imgareaselect/jquery.imgareaselect.js?ver=0.9.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/everydayfoodblog.marthastewart.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/everydayfoodblog.marthastewart.com\/wp-includes\/js\/thickbox\/tb-close.png"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://everydayfoodblog.marthastewart.com/wp-includes/js/thickbox/thickbox.js?ver=3.1-20111117'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Post a Reply"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://everydayfoodblog.marthastewart.com/wp-content/plugins/social/assets/social.js?ver=2.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/everydayfoodblog.marthastewart.com\/wp-content\/plugins\/wp-polls\/wp-polls.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://everydayfoodblog.marthastewart.com/wp-content/plugins/wp-polls/polls-js.js?ver=2.50'></script>
+  
+<script src=" http://images.marthastewart.com/images/assets/script/blogs-external-tracking.js"> </script>
+
+
+<script type="text/javascript">
+$('.carousel-skin').css('display', 'block');
+$('.ngg-imagebrowser.picasa').css('visibility', 'visible');
+</script>
+
+</body>
+</html>
+
+<!-- Dynamic page generated in 4.969 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2012-11-06 13:23:53 -->

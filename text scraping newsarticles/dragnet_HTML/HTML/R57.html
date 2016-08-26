@@ -1,0 +1,453 @@
+
+<head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="http://www.allaboutagile.com/wp-content/themes/allaboutagile/style.css" type="text/css"/>
+
+<!-- SEO -->
+<title>  The Agile Lumberjack:  Why Batched Requirements Are Not As Sensible As You Think | All About Agile</title>
+
+<!-- GOOGLE WEBMASTER TOOLS --> 
+<meta name="google-site-verification" content="we0-j1KXlAAjAzXVp4kV0tiTBj9wTIYxwHf7YbovvJw" />
+
+<!-- GOOGLE AD MANAGER/DFP -->
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-1033564004246584");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-1033564004246584", "Leaderboard");
+GA_googleAddSlot("ca-pub-1033564004246584", "SponsorMPU");
+GA_googleAddSlot("ca-pub-1033564004246584", "InnerMPU");
+GA_googleAddSlot("ca-pub-1033564004246584", "2nd-MPU");
+GA_googleAddSlot("ca-pub-1033564004246584", "MiddleBanner");
+GA_googleAddSlot("ca-pub-1033564004246584", "AdSquare1");
+GA_googleAddSlot("ca-pub-1033564004246584", "AdSquare2");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="All About Agile &raquo; The Agile Lumberjack:  Why Batched Requirements Are Not As Sensible As You Think Comments Feed" href="http://www.allaboutagile.com/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/feed/" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.allaboutagile.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.allaboutagile.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Retrospectives, Part 1: In Your Own Sweet Way' href='http://www.allaboutagile.com/retrospectives-part-1-in-your-own-sweet-way/' />
+<meta name="generator" content="WordPress 3.4.2" />
+<link rel='shortlink' href='http://www.allaboutagile.com/?p=12922' />
+<meta name="description" content="Let&#039;s say you&#039;re a Business Analyst, and you&#039;re okay.  You&#039;ve done your job for years.  You are a subject matter expert in your own right, and you get the job done.  Suddenly, a sparkly-eyed Agile Guru (SEAG) shows up at your workplace and asks you to stop writing a &quot;requirements document&quot; that holistically describes the software your developer friends will be building.  Instead, the SEAG" />
+<link rel="canonical" href="http://www.allaboutagile.com/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/" />
+<style type="text/css">
+	#bsbm_form { clear:both; margin:20px 0; }
+	#bsbm_form label { font-size: 16px; font-weight:bold; color: #999; margin:0; padding:10px 0;}
+	#bsbm_form .question { font-size: 14px; font-weight:normal; margin:0; padding:5px 0;}
+	#bsbm_form .answer { font-size: 12px; font-weight:normal;}
+	#bsbm_form .notice { font-size: 11px; font-weight:normal;}	
+</style>
+  
+
+</head>
+
+<body>  
+
+<div id="container">  
+	<div id="header">  
+
+		<div id="leaderboard">
+		<script type='text/javascript'>
+		GA_googleFillSlot("Leaderboard");
+		</script>
+		</div>
+
+		<p><a href="http://www.allaboutagile.com"><img title="All About Agile | Agile Development Made Easy!" src="http://www.allaboutagile.com/aaa-logo.jpg" width="250" height="65" alt="All About Agile | Agile Development Made Easy" /></a></p>
+
+	</div>  
+
+	<div id="navigation">
+	<ul>
+	<li><a id="menuitem1" href="http://www.allaboutagile.com" title="Agile Content">Content</a></li>
+	<li><a href="http://www.agile-community.com/" target="_blank" title="Agile Community">Community</a></li>
+	<li><a href="http://www.allaboutagile.com/agile-consulting/" title="Agile Consulting">Consulting</a></li>
+	<li><a href="http://www.allaboutagile.com/category/agile-book-presentations/" title="Agile Book & Presentations">Book & Presentations</a></li>
+	<li><a href="http://www.allaboutagile.com/about/" title="About All About Agile">About aaa</a></li>
+	</ul>
+	</div>
+
+	<div id="subnav">
+	<a href="http://www.allaboutagile.com/category/10-key-principles-of-agile/">What Is Agile?  10 Key Principles of Agile</a><br>
+	<a href="http://www.allaboutagile.com/category/how-to-implement-scrum-in-10-easy-steps/">How To Implement Scrum in 10 Easy Steps</a><br>
+	<a href="http://www.allaboutagile.com/category/agile-materials/">Agile Book & Presentations</a><br>
+	<a href="http://www.allaboutagile.com/category/agile-adoption/">Agile Adoption</a><br>
+	<a href="http://www.allaboutagile.com/category/agile-estimating/">Agile Estimating</a><br>
+	<a href="http://www.allaboutagile.com/category/agile-leadership/">Agile Leadership</a><br>
+	<a href="http://www.allaboutagile.com/category/agile-planning/">Agile Planning</a><br>
+	<a href="http://www.allaboutagile.com/category/agile-project-management/">Agile Project Management</a><br>
+	<a href="http://www.allaboutagile.com/category/agile-teams/">Agile Teams</a><br>
+	<a href="http://www.allaboutagile.com/category/agile-testing/">Agile Testing</a><br>
+	<a href="http://www.allaboutagile.com/category/agile-user-stories/">Agile User Stories</a><br>
+	<a href="http://www.allaboutagile.com/category/lean-development/">Lean Development</a><br>
+	<a href="http://www.allaboutagile.com/category/scrum/">Scrum</a>
+	</div><div id="content-container">
+	<div id="content">
+
+		
+			<p></p>
+			<h1>The Agile Lumberjack:  Why Batched Requirements Are Not As Sensible As You Think</h1>
+ 
+							<div id="byline">
+				<p>by <a href="http://www.allaboutagile.com/author/elena-m-yatzeck/">Elena M Yatzeck</a>, 19 October 2012 | <a href="http://www.allaboutagile.com/category/agile-blogosphere/" title="View all posts in The Agile Blogosphere" rel="category tag">The Agile Blogosphere</a></p>  
+		   		</div>
+			
+			<p><i>This post is from <a href="http://pagilista.blogspot.com/" rel="nofollow">Pragmatic Agilist</a> by Elena M Yatzeck. Click <a href="http://pagilista.blogspot.com/2012/10/the-agile-lumberjack-why-batched.html">here</a> to see the original post in full.</i></p><p></p>Let's say you're a Business Analyst, and you're okay.
+You've done your job for years.  You are a subject matter expert in your own right, and you get the job done.
+
+Suddenly, a sparkly-eyed Agile Guru (SEAG)
+shows up at your workplace and asks you to stop writing a "requirements
+document" that holistically describes the software your developer
+friends will be building.  Instead, the SEAG...<p></p><b><a rel="nofollow" href="http://pagilista.blogspot.com/2012/10/the-agile-lumberjack-why-batched.html" rel="nofollow">read more</a></b>
+			<p></p>
+			<!-- MiddleBanner -->
+			<script type='text/javascript'>
+			GA_googleFillSlot("MiddleBanner");
+			</script>
+			<p></p>
+
+			
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are open, but there are no comments. -->
+
+	 
+
+<div id="respond">
+
+<h3>Leave a Reply</h3>
+
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&amp;utm_content=FeedBurner#respond" style="display:none;">Click here to cancel reply.</a></small>
+</div>
+
+
+<form action="http://www.allaboutagile.com/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' />
+<label for="author"><small>Name (required)</small></label></p>
+
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' />
+<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+<label for="url"><small>Website</small></label></p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+
+<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type='hidden' name='comment_post_ID' value='12922' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<div id="bsbm_form"><label for="bsbm_question">Security Question:</label>
+	<div class="question">What is 2 + 4 ?</div>
+	<div class="answer">
+	<input type="text" tabindex="" name="mathvalue2" value="" />
+		<div style="display:none">Please leave these two fields as-is:
+		<input type="text" name="mathvalue0" value="2" />
+		<input type="text" name="mathvalue1" value="4" />
+		</div>
+	</div>
+	<div class="notice">Please do this simple sum so I know you are human:)</div></div>
+</form>
+
+</div>
+
+
+		
+		<p align="center"></p>
+
+	</div>
+
+<div id="sidebar">
+
+<ul id="sidebar">
+<li id="text-15" class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="//www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load('search', '1');
+  google.setOnLoadCallback(function() {
+    google.search.CustomSearchControl.attachAutoCompletion(
+      '016302800701794462853:atq5qprs1ha',
+      document.getElementById('q'),
+      'cse-search-box');
+  });
+</script>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="016302800701794462853:atq5qprs1ha" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" id="q" autocomplete="off" size="31" />
+    <input type="submit" name="sa" value="  Search  " />
+  </div>
+</form>
+<script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=en"></script></div>
+		</li>
+<li id="text-6" class="widget widget_text"><h2 class="widgettitle">All About Agile &#8211; by Kelly Waters</h2>
+			<div class="textwidget"><a href="http://www.allaboutagile.com/what-is-agile-10-key-principles/">What is agile?</a><br>
+<a href="http://feedburner.google.com/fb/a/mailverify?uri=allaboutagile&loc=en_US" target="_blank">Keep up with email alerts</a><br>
+<a href="http://www.twitter.com/kelly_waters" target="_blank">Follow me on Twitter</a><br>
+<a href="http://feeds.feedburner.com/allaboutagile" target="_blank">Subscribe to RSS feed</a><br>
+<a href="http://www.linkedin.com/in/kellywaters" target="_blank">View my LinkedIn profile</a><br></div>
+		</li>
+<li id="text-20" class="widget widget_text"><h2 class="widgettitle">Read My Book!</h2>
+			<div class="textwidget"><a href="http://www.allaboutagile.com/all-about-agile-the-book-2/"><img src="http://www.allaboutagile.com/wp-content/uploads/2012/04/book-cover.jpg" height="200" width="225"/></a></div>
+		</li>
+<li id="text-7" class="widget widget_text"><h2 class="widgettitle">Agile Development Topics</h2>
+			<div class="textwidget"><a href="http://www.allaboutagile.com/category/10-key-principles-of-agile/">What Is Agile?  10 Key Principles of Agile</a><br>
+<a href="http://www.allaboutagile.com/category/how-to-implement-scrum-in-10-easy-steps/">How To Implement Scrum in 10 Easy Steps</a><br>
+<a href="http://www.allaboutagile.com/category/agile-book-presentations/">Agile Book & Presentations</a><br>
+<a href="http://www.allaboutagile.com/category/agile-adoption/">Agile Adoption</a><br>
+<a href="http://www.allaboutagile.com/category/agile-estimating/">Agile Estimating</a><br>
+<a href="http://www.allaboutagile.com/category/agile-leadership/">Agile Leadership</a><br>
+<a href="http://www.allaboutagile.com/category/agile-planning/">Agile Planning</a><br>
+<a href="http://www.allaboutagile.com/category/agile-project-management/">Agile Project Management</a><br>
+<a href="http://www.allaboutagile.com/category/agile-teams/">Agile Teams</a><br>
+<a href="http://www.allaboutagile.com/category/agile-testing/">Agile Testing</a><br>
+<a href="http://www.allaboutagile.com/category/agile-user-stories/">Agile User Stories</a><br>
+<a href="http://www.allaboutagile.com/category/lean-development/">Lean Development</a><br>
+<a href="http://www.allaboutagile.com/category/scrum/">Scrum</a><br></div>
+		</li>
+		<li id="recent-posts-3" class="widget widget_recent_entries">		<h2 class="widgettitle">Latest Posts</h2>
+		<ul>
+				<li><a href="http://www.allaboutagile.com/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/" title="The Agile Lumberjack:  Why Batched Requirements Are Not As Sensible As You Think">The Agile Lumberjack:  Why Batched Requirements Are Not As Sensible As You Think</a></li>
+				<li><a href="http://www.allaboutagile.com/retrospectives-part-1-in-your-own-sweet-way/" title="Retrospectives, Part 1: In Your Own Sweet Way">Retrospectives, Part 1: In Your Own Sweet Way</a></li>
+				<li><a href="http://www.allaboutagile.com/3-methods-to-increase-business-value/" title="3 Methods to increase Business Value">3 Methods to increase Business Value</a></li>
+				<li><a href="http://www.allaboutagile.com/my-current-top-10-favorite-quotes/" title="My Current Top 10 Favorite Quotes">My Current Top 10 Favorite Quotes</a></li>
+				<li><a href="http://www.allaboutagile.com/agile-project-management-for-government/" title="Agile Project Management for Government">Agile Project Management for Government</a></li>
+				</ul>
+		</li>
+<li id="text-8" class="widget widget_text">			<div class="textwidget"><script type='text/javascript'>
+GA_googleFillSlot("AdSquare2");
+</script>
+
+<span id="adsquare-right"><script type='text/javascript'>
+GA_googleFillSlot("AdSquare1");
+</script></span></div>
+		</li>
+<li id="text-14" class="widget widget_text"><h2 class="widgettitle">My 10 Most Popular Posts of All Time</h2>
+			<div class="textwidget"><a href="http://www.allaboutagile.com/category/10-key-principles-of-agile/">10 Key Principles of Agile</a><br>
+<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps/">How To Implement Scrum in 10 Easy Steps</a><br>
+<a href="http://www.allaboutagile.com/writing-good-user-stories/">Writing Good User Stories</a><br>
+<a href="http://www.allaboutagile.com/user-story-example/">User Story Example</a><br>
+<a href="http://www.allaboutagile.com/agile-estimating-the-secret-to-delivering-on-time/">Agile Estimating: The Secret To Delivering On Time</a><br>
+<a href="http://www.allaboutagile.com/how-agile-are-you-take-this-42-point-test/">How Agile Are You? Take This 42 Point Test</a><br>
+<a href="http://www.allaboutagile.com/10-good-reasons-to-do-agile-development/">10 Good Reasons To Do Agile Development</a><br>
+<a href="http://www.allaboutagile.com/disadvantages-of-agile-development/">Disadvantages of Agile Development</a><br>
+<a href="http://www.allaboutagile.com/7-key-principles-of-lean-software-development-2/">7 Key Principles of Lean Development</a><br>
+<a href="http://www.allaboutagile.com/how-to-prioritise-part-ii/">How To Prioritise Quickly & Intuitively</a><br></div>
+		</li>
+<li id="text-3" class="widget widget_text">			<div class="textwidget"><br>
+<br>
+<!-- 2nd-MPU -->
+<script type='text/javascript'>
+GA_googleFillSlot("2nd-MPU");
+</script></div>
+		</li>
+<li id="linkcat-2" class="widget widget_links"><h2 class="widgettitle">The Agile Blogosphere</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.agileadvice.com" title="All Things Agile: Scrum, OpenAgile, XP &amp; Lean" target="_blank">Agile Advice &#8211; Working With Agile Methods (Scrum, OpenAgile, Lean)</a></li>
+<li><a href="http://agileanarchy.wordpress.com" target="_blank">Agile Anarchy</a></li>
+<li><a href="http://agilecoach.typepad.com/agile-coaching/" title="Thoughts about Coaching Agile teams." target="_blank">Agile Coaching &#8211; by Rachel Davies</a></li>
+<li><a href="http://agilecomplexificationinverter.blogspot.com/" title="David&#8217;s thoughts rants and ramblings on Agile software development theory and practice.
+
+David Koontz is a practicing Agile Coach.  He practices because it is the only way to get to Carnegie Hall.">Agile Complexification Inverter</a></li>
+<li><a href="http://blog.agiledad.com/" title="AgileDad is currently one of just over 100 Certified Scrum Trainers worldwide. He has worked hands on as a GUI web developer, quality assurance analyst, automated test engineer, senior product manager, senior project manager, ScrumMaster, agile coach, con" target="_blank">Agile Dad</a></li>
+<li><a href="http://www.rallydev.com/agileblog" title="Agile software development best practices, culture, and insights with Ryan Martens and Jean Tabaka of Rally Software." target="_blank">Agile Development Blog: Scaling Software Agility</a></li>
+<li><a href="http://agilepainrelief.com" title="Best practices for your goals" target="_blank">Agile Pain Relief</a></li>
+<li><a href="http://blog.agilebuddy.com/" title="This blog covers all aspects of Agile project management." target="_blank">Agile Project Management</a></li>
+<li><a href="http://www.testertroubles.com/">Agile Testing | Tester Troubles</a></li>
+<li><a href="https://www.ibm.com/developerworks/mydeveloperworks/blogs/ambler" title="Agility@Scale: Strategies for Scaling Agile Software Development" target="_blank">Agility@Scale &#8211; by Scott Ambler</a></li>
+<li><a href="http://bradapp.blogspot.com/" title="Agile CM / ALM Environments" target="_blank">Brad Appleton&#8217;s ACME Blog</a></li>
+<li><a href="http://damonpoole.blogspot.com/" title="Agile Development Material for the DIY&#8217;er" target="_blank">Do It Yourself Agile</a></li>
+<li><a href="http://www.targetprocess.com/blog" title="Scrum, Lean, Kanban, Visualization, User Experience" target="_blank">Edge of Chaos | Agile Development Blog</a></li>
+<li><a href="http://www.energizedwork.com/weblog" title="This is the blog of Simon Baker and Gus Power of Energized Work.">Energized Work | agile in action</a></li>
+<li><a href="http://www.estherderby.com" title="designing your environment for agile success" target="_blank">esther derby associates, inc.</a></li>
+<li><a href="http://blog.gdinwiddie.com" title="Effective software development" target="_blank">George Dinwiddie&#8217;s blog</a></li>
+<li><a href="http://www.gettingagile.com" title="Real World Application of Agile in Technology and Business" target="_blank">Getting Agile &#8211; by Chris Sterling</a></li>
+<li><a href="http://www.implementingscrum.com" title="Starting Tough Conversations about Software Development">Implementing Scrum » Blog</a></li>
+<li><a href="http://jimhighsmith.com" title="Adaptive Imagineering: Changing the way IT does business" target="_blank">Jim Highsmith.com</a></li>
+<li><a href="http://kelly-waters.me" title="Kelly Waters | Your Virtual Executive Coach.">Kelly Waters</a></li>
+<li><a href="http://www.leadingagile.com" title="Agile Training &gt; Agile Coaching &gt; Agile Transformation | Atlanta, GA" target="_blank">LeadingAgile</a></li>
+<li><a href="http://leadinganswers.typepad.com/leading_answers/" title="Leadership and Agile Project Management ideas, observations and resources." target="_blank">LeadingAnswers: Leadership and Agile Project Management Blog</a></li>
+<li><a href="http://leansoftwareengineering.com" title="Essays on the Continuous Delivery of High Quality Information Systems" target="_blank">Lean Software Engineering</a></li>
+<li><a href="http://www.leanagiletraining.com/blog" title="Thoughts on Business, and how Agile, Lean, Scrum, XP, and Agile Project Management can help businesses run better" target="_blank">LeanAgileTraining</a></li>
+<li><a href="http://blog.lithespeed.com/" title="A blog about driving organizational change, primarily through Agile, Lean and Six Sigma. We explore and relate Agile Project Management, Scrum, Extreme Programming, Lean and Six Sigma systems analysis and process improvement, the Theory of Constraints and" target="_blank">LitheSpeed</a></li>
+<li><a href="http://martinfowler.com/feed.atom" title="Master feed of news and updates from martinfowler.com">Martin Fowler</a></li>
+<li><a href="http://agileleadership.blogspot.com/" title="Agile leadership is different to traditional project management. Self-organizing teams, flat hierarchies, fast response-times, frequent changes, require a different style of working with people, but also new techniques. In this blog I want to cover once i" target="_blank">On Agile Leadership</a></li>
+<li><a href="http://practicalagility.blogspot.com/" title="Rants &amp; musings on Agile Software Development, Craftsmanship and making the software world a better place." target="_blank">Practical Agility</a></li>
+<li><a href="http://pagilista.blogspot.com/" title="Non-zealot reflections on real life agile leadership, management and analysis practices.">Pragmatic Agilist</a></li>
+<li><a href="http://www.wrike.com/projectmanagement.htm" title="Project Management Post Channel" target="_blank">Project Management 2.0</a></li>
+<li><a href="http://blog.mountaingoatsoftware.com" title="Succeeding With Agile®" target="_blank">Succeeding With Agile &#8211; by Mike Cohn</a></li>
+<li><a href="http://tynerblain.com/blog" title="Software product success." target="_blank">Tyner Blain</a></li>
+<li><a href="http://blog.versionone.com/blog/versionone/rss" title="VersionOne">VersionOne</a></li>
+<li><a href="http://xprogramming.com" title="an agile software development resource">xProgramming.com</a></li>
+
+	</ul>
+</li>
+
+<li id="global-translator" class="widget widget_global_translator"><h2 class="widgettitle">Translator</h2>
+
+<!--FLAG_BAR_BEGIN--><div id="translation_bar"><map id="gltr_flags_map" name="gltr_flags_map"><area shape='rect' coords='0,0,16,11' href='http://www.allaboutagile.com/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_en'   title='English'/><area shape='rect' coords='20,0,36,11' href='http://www.allaboutagile.com/it/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_it'   title='Italian'/><area shape='rect' coords='40,0,56,11' href='http://www.allaboutagile.com/ko/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_ko'   title='Korean'/><area shape='rect' coords='60,0,76,11' href='http://www.allaboutagile.com/zh-CN/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_zh-CN'   title='Chinese (Simplified)'/><area shape='rect' coords='80,0,96,11' href='http://www.allaboutagile.com/zh-TW/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_zh-TW'   title='Chinese (Traditional)'/><area shape='rect' coords='100,0,116,11' href='http://www.allaboutagile.com/pt/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_pt'   title='Portuguese'/><area shape='rect' coords='120,0,136,11' href='http://www.allaboutagile.com/de/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_de'   title='German'/><area shape='rect' coords='140,0,156,11' href='http://www.allaboutagile.com/fr/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_fr'   title='French'/><area shape='rect' coords='160,0,176,11' href='http://www.allaboutagile.com/es/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_es'   title='Spanish'/><area shape='rect' coords='180,0,196,11' href='http://www.allaboutagile.com/ja/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_ja'   title='Japanese'/><area shape='rect' coords='200,0,216,11' href='http://www.allaboutagile.com/ar/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_ar'   title='Arabic'/><area shape='rect' coords='220,0,236,11' href='http://www.allaboutagile.com/ru/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_ru'   title='Russian'/><area shape='rect' coords='240,0,256,11' href='http://www.allaboutagile.com/el/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_el'   title='Greek'/><area shape='rect' coords='260,0,276,11' href='http://www.allaboutagile.com/nl/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_nl'   title='Dutch'/><area shape='rect' coords='280,0,296,11' href='http://www.allaboutagile.com/bg/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_bg'   title='Bulgarian'/><area shape='rect' coords='0,15,16,26' href='http://www.allaboutagile.com/cs/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_cs'   title='Czech'/><area shape='rect' coords='20,15,36,26' href='http://www.allaboutagile.com/hr/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_hr'   title='Croatian'/><area shape='rect' coords='40,15,56,26' href='http://www.allaboutagile.com/da/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_da'   title='Danish'/><area shape='rect' coords='60,15,76,26' href='http://www.allaboutagile.com/fi/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_fi'   title='Finnish'/><area shape='rect' coords='80,15,96,26' href='http://www.allaboutagile.com/hi/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_hi'   title='Hindi'/><area shape='rect' coords='100,15,116,26' href='http://www.allaboutagile.com/pl/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_pl'   title='Polish'/><area shape='rect' coords='120,15,136,26' href='http://www.allaboutagile.com/ro/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_ro'   title='Romanian'/><area shape='rect' coords='140,15,156,26' href='http://www.allaboutagile.com/sv/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_sv'   title='Swedish'/><area shape='rect' coords='160,15,176,26' href='http://www.allaboutagile.com/no/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_no'   title='Norwegian'/><area shape='rect' coords='180,15,196,26' href='http://www.allaboutagile.com/ca/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_ca'   title='Catalan'/><area shape='rect' coords='200,15,216,26' href='http://www.allaboutagile.com/tl/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_tl'   title='Filipino'/><area shape='rect' coords='220,15,236,26' href='http://www.allaboutagile.com/iw/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_iw'   title='Hebrew'/><area shape='rect' coords='240,15,256,26' href='http://www.allaboutagile.com/id/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_id'   title='Indonesian'/><area shape='rect' coords='260,15,276,26' href='http://www.allaboutagile.com/lv/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_lv'   title='Latvian'/><area shape='rect' coords='280,15,296,26' href='http://www.allaboutagile.com/lt/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_lt'   title='Lithuanian'/><area shape='rect' coords='0,30,16,41' href='http://www.allaboutagile.com/sr/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_sr'   title='Serbian'/><area shape='rect' coords='20,30,36,41' href='http://www.allaboutagile.com/sk/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_sk'   title='Slovak'/><area shape='rect' coords='40,30,56,41' href='http://www.allaboutagile.com/sl/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_sl'   title='Slovenian'/><area shape='rect' coords='60,30,76,41' href='http://www.allaboutagile.com/uk/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_uk'   title='Ukrainian'/><area shape='rect' coords='80,30,96,41' href='http://www.allaboutagile.com/vi/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_vi'   title='Vietnamese'/><area shape='rect' coords='100,30,116,41' href='http://www.allaboutagile.com/sq/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_sq'   title='Albanian'/><area shape='rect' coords='120,30,136,41' href='http://www.allaboutagile.com/et/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_et'   title='Estonian'/><area shape='rect' coords='140,30,156,41' href='http://www.allaboutagile.com/gl/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_gl'   title='Galician'/><area shape='rect' coords='160,30,176,41' href='http://www.allaboutagile.com/mt/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_mt'   title='Maltese'/><area shape='rect' coords='180,30,196,41' href='http://www.allaboutagile.com/th/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_th'   title='Thai'/><area shape='rect' coords='200,30,216,41' href='http://www.allaboutagile.com/tr/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_tr'   title='Turkish'/><area shape='rect' coords='220,30,236,41' href='http://www.allaboutagile.com/hu/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_hu'   title='Hungarian'/><area shape='rect' coords='240,30,256,41' href='http://www.allaboutagile.com/be/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_be'   title='Belarus'/><area shape='rect' coords='260,30,276,41' href='http://www.allaboutagile.com/ga/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_ga'   title='Irish'/><area shape='rect' coords='280,30,296,41' href='http://www.allaboutagile.com/is/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_is'   title='Icelandic'/><area shape='rect' coords='0,45,16,56' href='http://www.allaboutagile.com/mk/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_mk'   title='Macedonian'/><area shape='rect' coords='20,45,36,56' href='http://www.allaboutagile.com/ms/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_ms'   title='Malay'/><area shape='rect' coords='40,45,56,56' href='http://www.allaboutagile.com/fa/the-agile-lumberjack-why-batched-requirements-are-not-as-sensible-as-you-think/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+allaboutagile+%28All+About+Agile+%7C+Agile+Development+Made+Easy%21%29&utm_content=FeedBurner' id='flag_fa'   title='Persian'/></map><img style='border:0px;' src='http://www.allaboutagile.com/wp-content/plugins/global-translator/gltr_image_map.png' usemap='#gltr_flags_map'/></div><div id="transl_sign"></div><!--FLAG_BAR_END-->
+</li>
+<li id="text-19" class="widget widget_text">			<div class="textwidget"><br></div>
+		</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="footer">
+
+	<div id="footer-top">
+
+		<div id="footer-left">
+		<h2>Agile Development Topics</h2>
+		<a href="http://www.allaboutagile.com/category/10-key-principles-of-agile/">What Is Agile?  10 Key Principles of Agile</a><br>
+		<a href="http://www.allaboutagile.com/category/how-to-implement-scrum-in-10-easy-steps/">How To Implement Scrum in 10 Easy Steps</a><br>
+		<a href="http://www.allaboutagile.com/category/agile-book-presentations/">Agile Book & Presentations</a><br>
+		<a href="http://www.allaboutagile.com/category/agile-adoption/">Agile Adoption</a><br>
+		<a href="http://www.allaboutagile.com/category/agile-estimating/">Agile Estimating</a><br>
+		<a href="http://www.allaboutagile.com/category/agile-leadership/">Agile Leadership</a><br>
+		<a href="http://www.allaboutagile.com/category/agile-planning/">Agile Planning</a><br>
+		<a href="http://www.allaboutagile.com/category/agile-project-management/">Agile Project Management</a><br>
+		<a href="http://www.allaboutagile.com/category/agile-teams/">Agile Teams</a><br>
+		<a href="http://www.allaboutagile.com/category/agile-testing/">Agile Testing</a><br>
+		<a href="http://www.allaboutagile.com/category/agile-user-stories/">Agile User Stories</a><br>
+		<a href="http://www.allaboutagile.com/category/lean-development/">Lean Development</a><br>
+		<a href="http://www.allaboutagile.com/category/scrum/">Scrum</a><br>
+		</div>
+
+		<div id="footer-middle">
+		<h2>10 Key Principles of Agile</h2>
+		<a href="http://www.allaboutagile.com/category/10-key-principles-of-agile/">10 Key Principles of Agile Development</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-1-active-user-involvement-is-imperative/">1 - Active User Involvement Is Imperative</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-2-agile-development-teams-must-be-empowered/">2 - Agile Teams Must Be Empowered</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-3-time-waits-for-no-man/">3 - Time Waits For No Man</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-4-agile-requirements-are-barely-sufficient/">4 - Agile Requirements Are Barely Sufficient</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-5-how-do-you-eat-an-elephant/">5 - How Do You Eat An Elephant?</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-6-fast-but-not-so-furious/">6 - Fast But Not So Furious</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-7-done-means-done/">7 - Done Means DONE!</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-8-enough-is-enough/">8 - Enough Is Enough</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-9-agile-testing-is-not-for-dummies/">9 - Agile Testing Is Not For Dummies</a><br>
+		<a href="http://www.allaboutagile.com/agile-principle-10-no-place-for-snipers/">10 - No Place For Snipers</a><br>
+		</div>
+
+		<div id="footer-right">
+		<h2>How To Implement Scrum</h2>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps/">How To Implement Scrum in 10 Easy Steps</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-1-get-your-backlog-in-order/">1 - Get Your Backlog In Order</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-2-how-to-estimate-your-product-backlog/">2 - How To Estimate Your Product Backlog</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-3-sprint-planning-requirements/">3 - Sprint Planning (Requirements)</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-4-sprint-planning-tasks/">4 - Sprint Planning (Tasks)</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-5-create-a-collaborative-workspace/">5 - Create a Collaborative Workspace</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-6-sprint/">6 - Sprint!</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-7-stand-up-and-be-counted/">7 - Stand Up and Be Counted!</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-8-track-progress-with-a-daily-burndown-chart/">8 - Track Progress / Daily Burndown Chart</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-9-finish-when-you-said-you-would/">9 - Finish When You Said You Would</a><br>
+		<a href="http://www.allaboutagile.com/how-to-implement-scrum-in-10-easy-steps-step-10-review-reflect-repeat/">10 - Review, Reflect, Repeat</a><br>
+		</div>
+
+	</div>
+
+	<div id="footer-bottom">
+	<br><h2>All About Agile | Agile Development Made Easy!</h2>
+	What is agile?  All you need to know about agile development and agile project management <br>using agile IT development methods such as Scrum, Extreme Programming and Lean.<br>
+	<br>© All About Agile - Agile Development Made Easy!
+	<br><a href="http://www.allaboutagile.com/advertise">Advertising info</a> | <a href="mailto:kelly@allaboutagile.com">Contact me</a>
+	</div>
+
+</div>  
+  
+</div>  
+  
+  
+
+<!-- GOOGLE ANALYTICS --> 
+</script> <script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1333261-13']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+})();
+</script>
+  
+<!-- DROPDOWN MENU -->
+<script type="text/javascript">
+
+function showmenu() 
+{
+navbox = document.getElementById("subnav");
+menuitem = document.getElementById("menuitem1");
+menuitem.style.color = "#fff";
+menuitem.style.background = "#000";
+navbox.style.left = getPositionLeft(menuitem);
+navbox.style.display = "block";
+}
+
+function getPositionLeft(This){
+var el = This;var pL = 0;
+while(el){pL+=el.offsetLeft;el=el.offsetParent;}
+return pL
+}
+
+function hidemenu() 
+{
+navbox = document.getElementById("subnav");
+menuitem = document.getElementById("menuitem1");
+menuitem.style.color = "#000";
+menuitem.style.background = "#F0F0F0";
+navbox.style.display = "none";
+}
+
+// add event handling
+window.onload = function()
+{
+	menuitem = document.getElementById("menuitem1");
+	if (menuitem.addEventListener) { 
+		menuitem.addEventListener( 'mouseover', showmenu, false);
+		menuitem.addEventListener( 'mouseout', hidemenu, false);
+	}
+	else if (menuitem.attachEvent) {
+		menuitem.attachEvent( 'onmouseover', showmenu );
+		menuitem.attachEvent( 'onmouseout', hidemenu );
+	}
+	else {
+		menuitem.onmouseover = showmenu;
+		menuitem.onmouseout = hidemenu;
+	}
+	navbox = document.getElementById("subnav");
+	if (navbox.addEventListener) { 
+		navbox.addEventListener( 'mouseover', showmenu, false);
+		navbox.addEventListener( 'mouseout', hidemenu, false);
+	}
+	else if (navbox.attachEvent) {
+		navbox.attachEvent( 'onmouseover', showmenu );
+		navbox.attachEvent( 'onmouseout', hidemenu );
+	}
+	else {
+		navbox.onmouseover = showmenu;
+		navbox.onmouseout = hidemenu;
+	}
+} 
+</script>
+
+</body>  
+</html> 
+
+</div>
